@@ -1,0 +1,368 @@
+SIWC Lesson 8:
+  title: Lean Startup, Iteration, and Building Better Tools with Eric Ries
+  summary: Eric Ries, co-founder of Answer.ai and author of The Lean Startup, discusses
+    the importance of rapid iteration, feedback loops, and building tools that enable
+    faster learning cycles. He shares insights from his experience developing the
+    Lean Startup methodology and how similar principles apply to software development
+    and AI tools. Key themes include the value of small batch sizes, the importance
+    of clearly defined expectations and hypotheses, and creating environments that
+    enable serendipitous innovation. Eric also provides feedback on SolveIT's approach
+    and new features like ghost text completion.
+  youtube_description: 'Join Eric Ries, co-founder of Answer.ai and author of The Lean
+    Startup, for an insightful discussion about:
+
+
+    - The principles behind Lean Startup methodology and rapid iteration
+
+    - Why small batch sizes and quick feedback loops are crucial for innovation
+
+    - How to measure success when building new products and tools
+
+    - The importance of being your own customer when developing software
+
+    - Demo and discussion of SolveIT''s new ghost text completion feature
+
+    - Creating environments that enable serendipitous innovation
+
+
+    Eric shares stories from his entrepreneurial journey and explains why having rigid
+    plans can sometimes hinder progress more than help it. A fascinating look at modern
+    software development, AI tools, and building better systems for learning and iteration.'
+SIWC Lesson 9:
+  title: 'Building with AI APIs: Embeddings, Image Generation and More'
+  summary: 'This lesson explores how to leverage various AI APIs to build interesting
+    applications without needing to run your own infrastructure. Key topics covered
+    include:
+
+
+    1. Using Google''s text embedding model to create a simple semantic search system
+    over Wikipedia articles
+
+    2. Working with image generation APIs like Replicate''s SDXL to create AI art
+
+    3. Chaining together multiple AI services (LLMs, image generation, text-to-speech)
+    to create more complex applications
+
+    4. Discussion of different API providers and their tradeoffs in terms of speed,
+    cost and capabilities
+
+
+    The lesson emphasizes how modern AI development often involves combining existing
+    API services rather than training models from scratch. It demonstrates practical
+    techniques for rapid prototyping and experimentation with these services.'
+  youtube_description: 'Learn how to build applications using AI APIs without needing
+    GPUs or complex infrastructure. This lesson covers:
+
+    - Text embeddings and semantic search with Google''s embedding model
+
+    - Image generation with Replicate''s SDXL
+
+    - Chaining multiple AI services together
+
+    - Comparing different API providers
+
+
+    Join Jeremy Howard and Johno Muller as they demonstrate practical techniques for
+    working with modern AI services.'
+SIWC - lesson1:
+  title: SolveIT Platform Introduction and First Coding Problem
+  summary: 'This lesson introduces the SolveIT platform and walks through solving
+    the first Advent of Code 2023 problem. Key points covered:
+
+
+    1. Platform logistics and usage guidelines:
+
+    - 2GB disk quota limit
+
+    - Being mindful of CPU usage
+
+    - Discord navigation and organization tips
+
+
+    2. Introduction to SolveIT platform features:
+
+    - Code, notes, and AI assistance integration
+
+    - Variable tracking and autocompletion
+
+    - Dialogue-based problem solving approach
+
+
+    3. Practical coding demonstration:
+
+    - Solving Advent of Code Day 1 Part A
+
+    - Step-by-step problem breakdown
+
+    - Using Python basics with string manipulation
+
+    - Testing and iterative development approach
+
+
+    4. Teaching methodology:
+
+    - Dialogue engineering concept
+
+    - Importance of checking documentation
+
+    - Breaking problems into small testable steps'
+  youtube_description: Learn about the new SolveIT platform and follow along as Jeremy
+    Howard and Johno Lange demonstrate solving the first Advent of Code 2023 problem.
+    This lesson covers platform features, coding best practices, and introduces dialogue
+    engineering as an approach to problem solving with AI assistance.
+SIWC Lesson 11:
+  title: Creating Web Apps with SolveIT and FastHTML
+  summary: 'This lesson demonstrates how to create web applications using SolveIT
+    and FastHTML, featuring a practical example of building a blog. The lesson covers:
+
+
+    1. Using AI tools (ChatGPT, Claude) to generate initial web pages
+
+    2. Working with FastHTML and Monster UI components
+
+    3. Creating interactive web applications piece by piece
+
+    4. Converting markdown blog posts into styled web content
+
+    5. Setting up a local development environment
+
+    6. The advantages of using FastHTML over traditional web frameworks
+
+
+    The lesson emphasizes an iterative approach to web development, combining AI assistance
+    with direct coding, and showcases how FastHTML simplifies web development compared
+    to traditional frameworks.'
+  youtube_description: Learn how to create web applications using SolveIT and FastHTML
+    in this comprehensive lesson. Starting with a fun example of creating a Sasquatch
+    life coach landing page, the lesson demonstrates various approaches to web development
+    - from using AI tools to writing code directly. Key topics include working with
+    FastHTML components, Monster UI styling, markdown conversion, and setting up a
+    local development environment. Perfect for both beginners and experienced developers
+    looking to streamline their web development process.
+SIWC Lesson 10:
+  title: Building an R&D Company with Eric Ries
+  summary: 'A discussion between Jeremy Howard and Eric Ries about building Answer
+    AI as an R&D company focused on beneficial AI development. Key topics include:
+
+
+    - The importance of having a clear vision and values while maintaining flexibility
+    to learn and adapt
+
+    - Why Answer AI chose to be a Public Benefit Corporation and limit headcount to
+    10-12 people
+
+    - The role of metrics and measurement in startups, and how the appropriate tools
+    depend on context
+
+    - Building products and companies with internal coherence derived from first principles
+
+    - Creating and nurturing communities around new technologies
+
+    - The value of trustworthiness as a strategic asset'
+  youtube_description: Eric Ries joins Jeremy Howard to discuss building Answer AI
+    as an R&D company focused on beneficial AI development. They explore topics including
+    company vision and values, being a Public Benefit Corporation, appropriate use
+    of metrics, product development, and building communities. The conversation provides
+    insights into creating coherent organizations derived from first principles rather
+    than following conventional approaches.
+SIWC Lesson 12:
+  title: Building a Blog with Fast HTML and Monster UI
+  summary: In this lesson, the instructors demonstrate how to build a blog interface
+    using Fast HTML and Monster UI components. They show how to create blog post cards
+    with titles, images, descriptions, dates, authors and category tags in a grid
+    layout. The lesson covers working with HTML components, styling with Monster UI
+    classes, handling missing data gracefully, and setting up basic routing and interactivity.
+    The instructors emphasize a step-by-step, bottom-up approach to building web interfaces
+    using Solvert's interactive environment before moving the code to VS Code.
+  youtube_description: "Learn how to build a dynamic blog interface using Fast HTML\
+    \ and Monster UI components. Key topics covered:\n\n- Creating reusable blog post\
+    \ card components\n- Working with HTML tags and Monster UI styling classes  \n\
+    - Handling images, text truncation and missing data\n- Setting up grid layouts\
+    \ and responsive design\n- Basic routing and page navigation\n- Adding interactivity\
+    \ with HTMX\n- Development workflow between Solvert and VS Code\n\nThe lesson\
+    \ demonstrates a step-by-step approach to building web interfaces, with immediate\
+    \ visual feedback in Solvert's interactive environment."
+SIWC Lesson 2:
+  title: 'SolveIT Lesson 2: Advent of Code and Programming Best Practices'
+  summary: "This lesson covered several key topics:\n\n1. Logistics updates about\
+    \ Discord notifications and volume quotas\n2. Introduction of pair programming\
+    \ practice sessions\n3. Detailed walkthrough of solving Advent of Code Day 1 Part\
+    \ B\n4. Discussion of programming best practices including:\n   - Taking small\
+    \ steps and testing each step\n   - Using list comprehensions effectively\n  \
+    \ - Debugging strategies\n   - Code organization and documentation\n5. Tips for\
+    \ using the SolveIT environment and sharing solutions\n\nThe lesson emphasized\
+    \ the importance of showing your work process rather than just the final solution,\
+    \ and demonstrated live coding techniques for solving programming problems step-by-step."
+  youtube_description: In this second lesson of SolveIT, Jeremy Howard and Johno Lange
+    demonstrate problem-solving techniques using Advent of Code challenges. The lesson
+    covers Python programming concepts like list comprehensions, debugging strategies,
+    and best practices for incremental development. Key focus is placed on showing
+    work process and using the SolveIT environment effectively.
+SIWC Lesson 3:
+  title: 'SolveIT Lesson 3: Platform Updates, Non-Advent Problems, and Day 2'
+  summary: This lesson covered platform updates, showcased community examples, and
+    demonstrated applying the SolveIT methodology to non-Advent of Code problems.
+    The instructors covered LLM evaluations, data wrangling in Google Colab, and worked
+    through Advent of Code Day 2. The lesson concluded with a speed run demonstration
+    of a previous problem solution.
+  youtube_description: 'Key topics covered:
+
+    - Platform updates and troubleshooting tips
+
+    - Community dialogue examples and learning approaches
+
+    - LLM evaluation methodology demonstration
+
+    - Data wrangling example using Google Colab
+
+    - Advent of Code Day 2 solution walkthrough
+
+    - Speed run demonstration of previous problem
+
+    - Discussion of course direction and future topics'
+SIWC Lesson 7:
+  title: Web Scraping and Graph Problem Classification with Claude
+  summary: 'In this lesson, Jeremy Howard and Johnno demonstrate how to use web scraping
+    and language models to analyze Advent of Code 2024 problems and identify which
+    ones could benefit from graph-based solutions. They cover:
+
+
+    1. Web scraping techniques using Beautiful Soup and CSS selectors
+
+    2. Working with the Claude API through the Claude-at library
+
+    3. Using structured output to get consistent responses from language models
+
+    4. Parallel processing of multiple problems
+
+    5. Best practices for exploring new libraries and documentation
+
+
+    The lesson emphasizes an incremental, test-as-you-go approach while building practical
+    tools.'
+  youtube_description: 'Learn how to combine web scraping and AI to analyze coding
+    problems. This lesson covers:
+
+    - Web scraping with Beautiful Soup
+
+    - Working with CSS selectors
+
+    - Using Claude API for structured analysis
+
+    - Parallel processing techniques
+
+    - Best practices for learning new libraries
+
+
+    Key tools and concepts:
+
+    - Beautiful Soup library
+
+    - CSS selectors
+
+    - Claude-at library
+
+    - Structured output
+
+    - Parallel processing'
+SIWC Lesson 6:
+  title: Building Reusable Code and Tools with NB Dev
+  summary: 'This lesson covered several key topics around building reusable code and
+    tools:
+
+
+    1. Creating reusable modules in SolveIT by exporting code from dialogues
+
+    2. Building a backup tool using NB Dev for incremental development and testing
+
+    3. Problem solving techniques demonstrated through Advent of Code Day 12 solution:
+
+    - Using visualizations and diagrams
+
+    - Breaking problems into smaller pieces
+
+    - Testing with simple examples
+
+    - Leveraging existing tools like scipy.ndimage.label
+
+
+    4. Code organization and tools:
+
+    - Using classes for state management and organization
+
+    - The zip function for working with multiple lists
+
+    - Regular expressions for parsing
+
+    - FastCore utilities like @patch and store_attr
+
+
+    The lesson emphasized iterative development, testing, and creating shareable artifacts
+    from problem-solving processes.'
+  youtube_description: "Learn how to build reusable code and tools using NB Dev, demonstrated\
+    \ through creating a backup system and solving Advent of Code problems. Topics\
+    \ include:\n\n- Creating reusable modules in SolveIT\n- Iterative development\
+    \ with NB Dev \n- Problem solving techniques and visualization\n- Code organization\
+    \ with classes and utilities\n- Working with zip, regex, and FastCore tools\n\n\
+    Key themes: exploratory programming, testing, and creating shareable artifacts."
+SIWC Lesson 4:
+  title: Shell Sage and Learning Strategies with SolveIT
+  summary: 'This lesson covered two main topics:
+
+
+    1. Shell Sage - A new AI terminal assistant:
+
+    - Created by Nate to provide AI assistance directly in the terminal
+
+    - Uses Tmux to maintain context awareness
+
+    - Helps with system administration tasks like finding large files
+
+    - Currently requires Anthropic API key but will support other LLM providers
+
+    - Open source and welcomes contributions
+
+
+    2. Learning Strategies:
+
+    - Demonstrated effective learning approaches using SolveIT
+
+    - Showed how to break down complex topics into smaller pieces
+
+    - Used Python decorators as an example
+
+    - Emphasized importance of testing and verifying understanding at each step
+
+    - Discussed using Claude projects and context for documentation'
+  youtube_description: Learn about Shell Sage, a new AI terminal assistant that provides
+    context-aware help directly in your terminal. See how to effectively learn new
+    programming concepts by breaking them down into manageable pieces and testing
+    understanding at each step. Includes discussion of Python decorators, Claude projects,
+    and documentation strategies.
+SIWC Lesson 5:
+  title: Solving Problems with Sets and Regular Expressions
+  summary: 'This lesson covered several key topics around problem solving:
+
+
+    1. Using regular expressions with the regex library to parse structured text data,
+    building patterns incrementally and using captures
+
+    2. Working with sets in Python for finding intersections and unions of collections
+
+    3. Solving Advent of Code Day 4 Part A using these techniques
+
+    4. Discussion of recursion concepts through file system traversal examples
+
+    5. Tips for maintaining momentum with challenging problems like Advent of Code
+
+
+    The lesson emphasized the importance of breaking down problems into small steps,
+    testing incrementally, and building reusable components that can help solve future
+    problems more easily.'
+  youtube_description: "Learn problem solving techniques using Python sets and regular\
+    \ expressions:\n- Using the regex library for parsing structured text\n- Working\
+    \ with Python sets for collection operations  \n- Solving Advent of Code problems\
+    \ step by step\n- File system traversal and recursion concepts\n- Tips for tackling\
+    \ challenging programming problems\n\nThe lesson demonstrates how breaking down\
+    \ complex problems and building reusable components leads to more maintainable\
+    \ solutions."
