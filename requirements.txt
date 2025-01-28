@@ -1,0 +1,7 @@
+fastcore
+httpx
+python-fasthtml
+beautifulsoup4
+replicate
+claudette
+yt-dlp

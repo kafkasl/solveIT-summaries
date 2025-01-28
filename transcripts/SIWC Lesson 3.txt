@@ -1,0 +1,3623 @@
+Okay, we are alive.
+
+That's exciting stuff.
+
+Before we officially start, a couple of quick, or really one quick logistics thing, which is the solver platform itself is changing, you know, somewhat regularly at the moment.
+
+And it's a good idea if you come across any problems.
+
+The first thing you should do is restart it.
+
+So I'll just quickly show you how to do that.
+
+Make sure I've got my screen sharing.
+
+I've got to redo the portion I share.
+
+I see the negative share.
+
+Oh, there we go.
+
+It's already remembered.
+
+Okay, can you see my screen?
+
+Okay, John.
+
+Yes, not the address bar anything, but just the content.
+
+So this is what we call the dashboard.
+
+And on the dashboard, there's a button here that says stop solve it.
+
+So if you click stop solve it, that will close down your little running Python interpreter instance of solve it.
+
+It's currently no visual indication of that, but it does work.
+
+And then click connect to solve it and you'll get a new URL.
+
+So when you do that, that will give you the latest version of the software.
+
+If you don't do that, your software won't be updated.
+
+Then the second thing to mention is that there was a bug in how we were saving the messages that was causing us when we exported to a notebook to not work.
+
+So if you ever have any problems exporting your dialogue, then what you should do is to click run all.
+
+And the reason for that is that run all will just cause all of the messages to be regenerated with the latest format.
+
+And that should fix any problems.
+
+We haven't heard of anybody with any problems after doing those two steps.
+
+So those are a couple of things to remember.
+
+And I remembered my keyboard shortcut to stop sharing.
+
+So that's exciting.
+
+Okay, John, I'll leave it to you for the official welcome and get started.
+
+Cool.
+
+Welcome, everybody.
+
+This is the third lesson.
+
+And so the plan for today is slightly different.
+
+We thought you've probably had a good dose of Advent of code.
+
+And we are going to keep doing those.
+
+We're all from judging from the discord finding them pretty addictive and fun.
+
+But for a bit of a break, we're going to start with, well, we'll have a very short segment just featuring some of our sort of favorite dialogues or pieces of dialogue that have been shared in the discord.
+
+Then we'll look at Jeremy and I each taking an example of a non-advent of code problem and applying the same solvents methodology to it.
+
+So I'll be talking about language model evaluations.
+
+And then Jeremy will be showing a sort of, I think it's blue sky data wrangling and using Google collab rather than the solvents platform, but showing you can still do all the same steps.
+
+And then once we're done with that, we'll switch back into Advent of code mode.
+
+We'll work on the day two problem.
+
+And then potentially if there's time, Jeremy will show us a speed run of I think the previous day solution right at the end.
+
+I think we might make time.
+
+So yeah, this might be a slightly longer lesson, but if you want to take a break, especially if you're watching live, if you feel like, okay, an hour in you want to pause, there's always going to be the recording there available so you can stop and come back to it at a later time.
+
+Sound good?
+
+Sounds great.
+
+Cool.
+
+All right.
+
+So I'll start by sharing.
+
+It's a piece of dialogue and a quote from one of the community members.
+
+So starting with the piece of dialogue, and this is going to be topical because today I'll use a little bit in my example of something called a regular expression.
+
+But we're not going to teach them further.
+
+Maybe.
+
+Oh, yeah, let's do that.
+
+Or make it wider.
+
+There we go.
+
+Yeah.
+
+Okay, cool.
+
+Yeah.
+
+Yeah, that's great.
+
+Cool.
+
+So using the regular expression library and Python.
+
+But I thought this was just such a perfect illustration of, okay, I want to do something.
+
+And it has it's something that has a potential to be a little bit intimidating and complicated.
+
+But what they've done is they've printed out the docs, then they've taken their sample, they've looked at it, right?
+
+This is if for those who don't recognize it, the 2024 advent of code challenge.
+
+And then they just piece by piece building up this expression.
+
+So we checking out what if I'm just looking for the string?
+
+What if I'm then, you know, it's like one step at a time looking at the outputs each time.
+
+So it's a very intuitive way to get a feel for like, okay, is this doing what I'm hoping it's doing?
+
+Yes.
+
+I'll give you a really convenient way to do that is to hit command shift up arrow.
+
+That keystroke shortcut might change.
+
+But then shift up arrow creates a new message with the contents of the previous one as your starting point.
+
+So it's a really nice way to go through like that.
+
+Yeah.
+
+Anyway, so I just wanted to feature that the rest of the dialogue is also good.
+
+And this is from Paul also been, yeah, lots of commenting and sharing in the discord, which we really appreciate.
+
+And then I thought I'd also pull up this quote just to show that the brainwashing, the reeducation, I don't want to call it anything negative, but the method is sinking in.
+
+So after lesson two and some advent of code, I had to go back to working with cursor.
+
+And there's this dissonance, right?
+
+Something felt off, something felt wrong, getting these full answers.
+
+And they found that surprising.
+
+I've noticed that too.
+
+And the analogy I've been using with people is when you read about junk food, right, you read about all the chemicals going into this ultra processed, you know, ultra optimized, tasty snack, it's a negative, it's a feeling.
+
+It's like, oh, okay, I know that this is not what I want.
+
+I want healthy food.
+
+Yeah.
+
+So it's a little bit of brain re rewiring going on.
+
+And I don't want to say, look, we've got the magical method that's much better, but it is fun that people are starting to realize, oh, this is this is a nice way of doing things.
+
+To the point where there's a little bit of dissonance going back to the the other ways.
+
+There's a few things we do to try to encourage that rewiring.
+
+Some of the things are things that people whose brains have not yet been sufficiently washed don't like.
+
+But for example, the extremely small row at the bottom where you type, it's meant to be encouraging you to not type too much there is very small, it grows as you add more.
+
+And if you really have to, there's a button you can press to make it bigger.
+
+But I've never, ever pressed it.
+
+And I encourage you not to press it.
+
+You know, and it's looks, you know, like a chatbot.
+
+It's a ridiculously powerful chatbot.
+
+But hopefully we're trying to rewind right your brain into this idea.
+
+And even the words we use, we call it dialogues, we call it messages, we're doing everything we can to encourage your brain to think of this as a new and different thing.
+
+Cool.
+
+Jeremy, did you have someone that you wanted to feature as well?
+
+And there were so many good ones.
+
+So it's kind of just a random selection this time.
+
+I wouldn't even say I'm wanting to highlight particularly good ones.
+
+But rather, I am interested in kind of highlighting, you know, interesting, you know, or different kind of things.
+
+So let me share my screen.
+
+So this one, Miko Napoli, I think it's Kit on the discord.
+
+I thought this was interesting from Miko.
+
+They said they basically adding commands, new commands to solve it by using English.
+
+And he says, when I tell you to summarize, I want you to, if I say review, it means, if I say brainstorm, it means, and then you can see that being used here.
+
+So it's kind of helping to really make the things that we're learning work better by making them ergonomic, by making them convenient.
+
+So it's like, okay, summarize.
+
+There it is.
+
+Okay, brainstorm.
+
+So yeah, I like this idea of like, that this is a platform that you can really play with and experiment with.
+
+Cool, fantastic.
+
+Anyway, so do keep sharing your tricks, your packs, your discoveries.
+
+We really appreciate seeing that on the discord.
+
+Okay, I think now we can get into the show and telly nonadventive code part of the proceedings.
+
+Okay, so I'll just share my Google Chrome.
+
+The topic of this one is fairly near and dear to our hearts.
+
+This is something that myself and a lot of my friends spend a lot of time working on and thinking about and debating about.
+
+And the idea is, how do you measure how good a language model is?
+
+Right?
+
+So a language model, the kinds of things that power our AI thing and chat GPT and all of these experiences, like what is the metrics that you say, oh, this version is better, especially if you're trying to adapt it and change it.
+
+And the answer is, well, you need to find some ways of quantifying that.
+
+And so evils is this whole space of like, how do I try and quantify a good language model or better or worse?
+
+And so there's a broad array of ways of doing that, right?
+
+There's some showing people different options and having them choose.
+
+There's some multiple choice questions.
+
+There's some having it produce code and running the code.
+
+And there's some that just have questions with specific, like there's one valid correct answer.
+
+And so the example I thought I'd use today is something called GSM-AK.
+
+So if you search for...
+
+And, John, if I can just jump in for a moment, I just wanted to mention, like, it's hard to understate the importance of this area.
+
+I don't know if you'll remember, but when I think it was chat GPT, the original chat GPT based on 3.5 came out.
+
+The folks at OpenAI said, like, hey, if any of you want special preview access to our newer model, which will kind of be GPT-4, you can get it by creating good evals for us.
+
+That was literally the only way.
+
+So, you know, for OpenAI, the thing they most cared about was evals.
+
+So this idea of, like, if you can measure something, which is like, how good is this model?
+
+Then you're a long way towards making it better.
+
+But it's amazing how badly done evals are on the whole.
+
+And I think there's approach.
+
+I've had a sneak peek of this one already.
+
+And the approach that I know shows here to me is a really cool way to do at least some types of evals.
+
+Sure.
+
+Thanks, Jeremy.
+
+Okay.
+
+Right.
+
+So this is an eval that's got a bunch of questions and answers that we'd like to ask the model.
+
+So I googled around for the name.
+
+I went and found the data.
+
+And so let's jump in.
+
+And I'm not going to live code this.
+
+I'm instead just going to walk you through the notebook.
+
+And this is GSM8K.
+
+This is what this is, the great score math.
+
+Great score math.
+
+Okay.
+
+So this is like the most common eval pretty much used for math.
+
+Well, I'd say I've stopped seeing it in results tables because all the models have gotten close to 100%.
+
+You know, it's like, oh, 90 something percent.
+
+So people have stopped using it so much.
+
+They found harder ones, but it's a good up until last year.
+
+This was the like, oh, I think can also do maths.
+
+Okay.
+
+So we're going to walk through the steps.
+
+I'll run the code as we see it, but I'll not be like live coding much.
+
+Starting with how do we get the data?
+
+Right.
+
+And so the premise here, I didn't want to introduce anything that we haven't already covered without showing you how you might get the answer from the LLM.
+
+And so I began with the question.
+
+I want to get the data from this URL.
+
+How do I get the text?
+
+And I have a preference for not using requests when I can use HTMLPX, but you could leave that bit out.
+
+But watch.
+
+Okay.
+
+I'll copy this response just because I want it around.
+
+When I submit this, I'm not going to get that response that you just saw.
+
+Instead, it says, oh, let me help you.
+
+Would you like to try writing it yourself?
+
+Would you prefer me to show you the solution directly?
+
+Right.
+
+So this is doing what it's supposed to do.
+
+It's very much an education mode.
+
+But in this notebook, I'm more like, I want to get things done and I want to be moving a little faster.
+
+So that's great.
+
+I can add another prompt that says, you know, direct answers, please.
+
+Right.
+
+Or you could explain what you're doing.
+
+Look, I'll ask if I need to.
+
+But then one way to get this to be the standard, well, actually, I could probably just leave this here.
+
+Or you could copy the entire response and just edit the initial one.
+
+Right.
+
+So this is up to you, which you prefer.
+
+I kind of like just saying, okay, let's just have just the concise response right from the start.
+
+And then I can delete the follow on.
+
+And from now on, every time I ask a question, it's going to hopefully be in the same zone of like, oh, here's what you want to do.
+
+There's a little bit of explanation if I want to dig in, I can.
+
+But yeah, that's another example like, was it the example Jeremy showed with a little custom prompt here, some commands I'd like to have.
+
+Jeremy, I know you have other ways of eliciting similar like behavior changes.
+
+Yeah, sometimes particularly, if it's really wanting to have you help yourself, I just, you know, so if I haven't even got the answer I wish I'd had, I modify its first answer to say, yes, I'd be happy to help you with that.
+
+Just before I do, can you confirm you don't wish to do this one yourself?
+
+And then I change that.
+
+So that's the output.
+
+And then I say, yes, please.
+
+And then I submit that and then it outputs.
+
+And again, I agree, I found the same thing.
+
+Once you've demonstrated through editing its output, the behavior that you wish to see in it, it basically behaves that way.
+
+It can over time forget a little bit if the dialogue gets too long, in which case you just do it a second time.
+
+Cool.
+
+And the Miko, Dr.
+
+Miko, the person who I just showed his dialogue earlier, as asked in the chat, whether the learning mode toggle does something similar.
+
+So the learning mode toggle in the dashboard changes the system prompt to basically remove almost all of it and just leaves behind a minimal system prompt that just says, here's the platform you're on, be as helpful as possible, and it just does it.
+
+Right.
+
+So I turned that off and now I got the behavior right away.
+
+And so that's also an option.
+
+Sometimes it's nice to try and keep it in edu mode so that it does prompt you, hey, let's do this one light at a time and let's do it a bit more granularly.
+
+But if you just want to get things done and you don't mind, that's why we have that toggle is sometimes you just want that.
+
+Okay.
+
+So we've got the code from the model.
+
+Here's how we can pull this data into a piece of text.
+
+And so now we have a piece of text.
+
+We have question.
+
+There's a question.
+
+We have, it looks like a long explanation of the answer.
+
+But we can see at the end, there's the actual answer we want.
+
+And so this is a real life example, but it feels kind of like an event of code, right?
+
+You can really start to see how we can, we can split on certain strings and we want to be able to go through all the questions.
+
+But what we'll probably do is start by looking at one and kind of just explain this briefly.
+
+So this is basically what all evals look like.
+
+They contain a question that you're meant to pass to your model.
+
+And then they've got kind of a model answer.
+
+What's the expected answer?
+
+Now you don't have to have the exact answer that it provides.
+
+In this case, you're considered correct if your answer has the number at the end.
+
+So this is basically pretty much all evals in AI look in this specific format.
+
+Exactly.
+
+Okay.
+
+So our goal is to take this piece of string.
+
+How do we turn this into some more useful structure?
+
+I'm leaning on the AI to say, what is this JSONL thing?
+
+Because that's another new concept.
+
+We have this idea of JSON.
+
+We could dig in after this to say, okay, tell me more about that.
+
+But with the code that it helps us with, we've turned that one big wall of text into some individual dictionaries.
+
+So this is a list of dictionaries.
+
+This is not something we can work with a little bit more.
+
+You can see we're just looking at some of the problems at every stage.
+
+Like what does this look like?
+
+Starting to write down notes.
+
+Are the answers always integers?
+
+Do they always follow this symbol?
+
+And I'm starting to think to myself, okay, if I'm going to apply this set of questions to a model, what are some things I should be aware of?
+
+So, okay, we can start by saying, let's see if we can pull out the answers.
+
+Do they always follow this for hash signs in that space?
+
+So this might not exist.
+
+There we go.
+
+Yeah, there we go.
+
+Okay, it looks like they all are integers, but they currently here are strings.
+
+You can turn them into integers.
+
+Let's run that.
+
+Oh, we get an error.
+
+Somewhere deep in the bowels, not in the first 20, is something slightly different.
+
+This is a fairly common thing that humans do.
+
+We put commas to separate the thousands.
+
+So right away, if you were just coding this up, maybe you'd heard Hamel or someone else saying, hey, you should look at your data.
+
+You looked at the first three, you said, oh, I just compare the string, the string here with the string of whatever the model responds.
+
+And then if it's not the same, it's incorrect.
+
+But if the string is 1080 without the comma, you're going to get a little hiccup there.
+
+Okay, just the whole point of this is to be validating any of our assumptions as we go.
+
+And then slowly building up to saying like something a bit more robust.
+
+In this case, we've got to make sure that if we're finding a, if we're getting that final, final answer here, we're removing any of these like little formatting sprinkles.
+
+Here's a good point to just stop for a moment because there's a really common question.
+
+And I don't think we have the answer.
+
+But the question that a lot of people ask for this kind of thing is like, okay, you made a mistake, or your premise was wrong.
+
+You've learned something new about the data.
+
+You fixed it.
+
+Now what?
+
+Do you go back and delete that incorrect direction?
+
+You're going to save this as a gist or maybe turn it into a notebook for NB Dev or whatever.
+
+Or do you leave it in?
+
+And I think in this case, if you were trying to create some kind of useful artifact here, I would say either leave it in or edit it right away to add markdown notes or whatever to say like, be careful.
+
+There's a comma here.
+
+Here's an example and display it.
+
+We deal with it as follows.
+
+The important thing, because in either case, the reader of this, which might be you in six months time, we'll look at it and go like, oh, I see.
+
+So although we haven't had the AI bit until very recently, that fast AI we've been coding this way for over five years, I think, with NB Dev.
+
+And so I've now experienced many, many times in my life the situation of coming back.
+
+I am the maintainer of like over a hundred modules.
+
+I don't have them all in my head.
+
+Some of them work very well and I just leave them alone and somebody notices about two years later, I come back to it.
+
+I don't know what's going on.
+
+And I'm so thankful when I have left behind those traces of why I did what I did.
+
+Yeah, yeah, exactly.
+
+And so here it's, I mean, depending on what system you're running on, you might not want something that actually throws a value error when you try and run everything, but definitely keeping some sort of note of that, even if it's just a little comment.
+
+Yeah, just a good service for your future self.
+
+And we'll talk a little bit more about moving out of the Solvix exploratory dialogue into some finished products.
+
+And we'll keep building on that over the course.
+
+Cool.
+
+Okay, so we're starting to get a feel for our data.
+
+We're starting to get a feel for what the answers looked like.
+
+We've picked up at least one possible bug.
+
+And we've made sure that we're dealing with that.
+
+The next step is probably to keep looking at the data a little more closely.
+
+Right.
+
+So to really scrutinize this, this is one thing I almost always do.
+
+If I'm doing any sort of, oh, I'm going to run through all of these sample questions, I'm going to run through anything like that.
+
+Sit there, you can, in Jupyter, control enter to just run a cell repeatedly.
+
+Here, we can just keep running and seeing, let me actually look at these questions.
+
+What are the kinds of things we're planning to feed to the model?
+
+This is a very easy way to catch cases where there's absolutely no text or it's completely garbled or some pre-processing has messed up and put the wrong column in the wrong place.
+
+So sit there, physically do a few examples.
+
+Realize, oh, I think the previous example that I had there is like, it's a little bit strangely worded, but I do kind of agree with the answer that they have.
+
+In GSM 8K, there's at least five questions where the official ground truth answer is incorrect.
+
+But yeah, just sitting there and spending some time just really looking through, okay, what's the reasoning here?
+
+And to give you a sense of like how rare it is to actually do this in this rigorous way where we're looking at everything carefully, those mistakes in GSM 8K, the most popular eval for language model math capabilities for years were not noticed until a few months ago.
+
+If anybody had bothered to just go through it like this, that would never have happened.
+
+Yeah, yeah, pretty staggering.
+
+Okay, so we've got our questions.
+
+We've convinced ourselves what those questions look like, which is an important step.
+
+We've checked that we can get the like official answer.
+
+It's now time to ask the LLM.
+
+And so just like HTTPX and request or something new, how do we ask a language model a question?
+
+So what I did at this stage is I went and put, I thought we should try a different language model.
+
+I had a version.
+
+So you're going to eval an actual language model, do it for real?
+
+Exactly.
+
+So I went to Together AI.
+
+I know they have a lot of models, right?
+
+You can go scroll through.
+
+They're very good at taking open source releases and putting them up.
+
+So we entered their docs, quick start seemed like a good place.
+
+And then I copied this URL into this tool, web2md.answer.ai.
+
+Right.
+
+And when you paste a URL in there, it's going to go and fetch the HTML.
+
+And you can edit this here if you like.
+
+Or you can go straight to the markdown and you'll see this is the extracted markdown contents of that page.
+
+Right.
+
+And you could take just the relative bits or you could take the whole lot.
+
+And then in Solvit, in Settings, you can add LLM context.
+
+You'll see here I have Together docs.
+
+This is that quick start page.
+
+And what this means is that the language model, even if it's a relatively new library or some unknown API, it's got this reference there that it can draw from when it's answering your questions.
+
+And you've hopefully also read some of those docs, but it means that the two of you together now have access to this in the context.
+
+And as an alternative, you can also paste stuff into a note message.
+
+And those look very similar when they're passed to Claude in the back end.
+
+So feel free to use either.
+
+I just wanted to mention, by the way, that Web2MD thing.
+
+I use it all the time.
+
+And a lot of my colleagues use it all the time.
+
+And it took me an hour or two to have a working version of that up and deployed.
+
+I was mentioning that to say, like, I think our expectations about the kind of like utilities you can just build for yourself and others, the game's changed now.
+
+You don't need to rely on other people's services for everything.
+
+If you come up with an idea, you know, with the help of AI and also in that case, it was very much with the help of fast HTML and being able to deploy it to railway in a single line.
+
+You know, I'm just saying, I guess, my, well, I'm saying to people here is be bold with your expectations of what you can achieve, but not too bold with your plans about like what things are going to look like.
+
+Like, I didn't try to make WebMD some amazingly sophisticated looking application.
+
+I just wanted to create something that worked for me, you know, and it's totally good enough.
+
+You know, so I was like, oh, it's kind of annoying.
+
+I have to scroll down to get to the markdown, for example.
+
+So I added that little go to markdown link, you know, and, you know, it's like I've got a little copy button in the top right, which I found by if you wave over it, there's that little thing.
+
+You know, I just added the little things I wanted as I needed them.
+
+But it's a really simple little, you know, it fits on one screen of code, if I remember correctly.
+
+Great.
+
+Okay, so thanks to that context that we got from that Web to markdown tool.
+
+We can then follow the AIRs recommendation.
+
+And so here, literally all this is doing is extracting from those docs.
+
+And I could see in the docs even, this is probably what I want.
+
+But I'm also in this environment where I can, I can just run this, right?
+
+I can pass in an example that it gives me, I can look at the completions.
+
+And so then when I'm exploring here, the way you write this is not to write it all out at once, you look at the response, right?
+
+And then you say, okay, I probably want this bit of data, right?
+
+Okay, so that's response.choices.
+
+And because we already have response defined, I can see it has a dot choices, right?
+
+So slowly, but surely you can start to like, pull into this data as opposed to having to perfectly memorize the API.
+
+So, John, you, you hadn't worked with this API before, you hadn't worked with this model before.
+
+And so like, it's, you know, and rather than being like, oh, I'm not somebody who knows how to do this, you got in the mode of like, I will figure this out as I go.
+
+By experimenting.
+
+Yeah, exactly.
+
+Just slowly drilling in, looking at the, looking at the examples.
+
+And it's nice as well, because if I just started with this, that gives me what I want.
+
+But I can also see here, oh, by the way, I've got a usage that might be handy later.
+
+I've got total tokens and a finished reason that might be handy later.
+
+You know, it's like, okay, cool, that's just there.
+
+I can see it.
+
+And once I'm done with this section, and that scrolls off the screen, that's fine if it doesn't get used.
+
+But it's nice to have there as reference.
+
+And then once I've understood it, I can put it in a little function.
+
+And like, oh, here's my, here's my, each of these lines of code I've just run.
+
+I cannot test that out and make sure that it's doing what I expect.
+
+It's answering a new question that I pass in.
+
+Okay, so I'll speed up a little we ready to start going through the questions.
+
+And rather than beginning with a for loop again, it's like, let's pull a random question.
+
+Let's look at it.
+
+Let's look at the answer.
+
+And then let's get the model's answer.
+
+And we see, okay, the model doesn't just give us a number, it gives us a long answer to find the price, we divided the total price, and it gives us the final answer 16.
+
+Cool.
+
+So it's correct.
+
+We get to the, again, something, feeling a little advent of Cody, how do I find maybe the last integer in the string?
+
+How do I do that?
+
+This is regular expressions, which is a topic for a future lesson.
+
+Okay, I'm a little scared of those, but I can, I can check them out.
+
+Right.
+
+I don't have my answer.
+
+Yeah.
+
+And these are, these are all like, not so scary.
+
+When you can see, okay, that's my input.
+
+I'm looking for this, I could ask it if I wanted.
+
+Let's go prompt, plain, what that rejects does.
+
+You know, at any time you can start drilling in and testing out examples.
+
+Cool.
+
+Matching any digits, one or more of the previous thing, matches the digits in a row, that sounds fine.
+
+Finding all of them and then getting the last one.
+
+Okay, I understand that now.
+
+You know, it's, it's, it's pretty approachable.
+
+And then instead of still, okay, charging ahead, still not confident, let's run this on a few examples.
+
+And what I noticed last time, AI found one where it made a mistake, that was great.
+
+I could look and see it was mistaken in its reasoning, that I was still pulling out the right like answer.
+
+When I tried another model, I got a case like this, right?
+
+It does the calculations correctly.
+
+The correct answer was 10.
+
+But when you pull out with this magical regular expression that I've got, you pull out the last integer, what you end up finding is zero.
+
+This is an edge case, you're basically, so you've constructed an edge case in order to make sure it works.
+
+Yeah.
+
+And, and actually the way I found this is I started, I put 10 examples through.
+
+And then I was printing out whether or not the answers matched.
+
+And it was like, yes, yes, yes, yes, no, yes, yes, yes.
+
+Okay, let me look at the one where it didn't match.
+
+What was the correct answer?
+
+10.
+
+What was the model response?
+
+Oh, the model response was this, wait, that's right.
+
+It just had some extra formatting.
+
+So if you just very costly, you know, sent all 8,000 or whatever questions through the model, and then you get your accuracy percentage is 92%, well, fine.
+
+But if you're really drilling in, hey, what did the mistake look like?
+
+Oh, I think 10 should be marked as correct.
+
+You know, it seems reasonable.
+
+Okay, I can get the AI to help me write that regex, I could drill in and test it out.
+
+Check it on my hypothetical answer.
+
+Oh, speaking of, we saw commas earlier, I should check that.
+
+Right.
+
+So here's Mila inventing an edge case.
+
+I haven't even seen a model ever do this.
+
+But what if it did, if the answer was 100,000, that should probably be right.
+
+So just starting to think through like, where does this fall, starting to run it on a few samples, find the mistakes.
+
+We're now catching places where, you know, you could miss these and your model would be fine 80%, 85%.
+
+But it could be 87%.
+
+And then someone else runs their own tests and they've caught different cases.
+
+Oh, wait, your code was wrong.
+
+And my model's better than your, you know, it's just a lot easier when you're able to do this.
+
+You've got these answers, one by one as strings, you can look at the models for reasoning.
+
+Yeah, I find this, this kind of general approach, exploring step by step, doing one sample, then five, then 10, pulling them at random, not just from the start.
+
+It really does help to catch a lot of bugs early rather than running into them, or just never catching them at all.
+
+Okay, so that's the lightning overview of an example of starting to explore an evaluation.
+
+I think if you've done advent of code, we've done the part where we do this for one example.
+
+And then we tried for the sample data.
+
+There's the obvious final step, which is to just loop through all the samples, or through 100 samples or whatever you choose to do.
+
+And I thought I'd take this chance to start talking about a question that I've seen come up a fair bit on the Discord, which is like, okay, this is all well and good, this exploratory stuff.
+
+How do we go from that to something final, right?
+
+Because the solver dialogue isn't isn't a final thing.
+
+If I'm going to be running this eval in production, while I'm training my model, what does that look like?
+
+And so there's multiple ways and we'll spend some time on them.
+
+But the one I thought I'd show is very different to just asking the model to do this at the start, but the end result looks very similar.
+
+So I'm saying, okay, I think we've got all the bits.
+
+Can you save me some time by turning this all into a .py file?
+
+I'd like to be able to pass in the model name so I can evaluate different models, and the number of questions.
+
+And the AI assistant very helpfully gives me a dump of text.
+
+And this is what you get if you ask chat GPT, hey, could you create an eval that uses gsm8k to evaluate a language model?
+
+But the difference here is that if you look through this, this is text that we wrote, right?
+
+We ran this and then we looked at the result.
+
+This is text that we wrote, we ran this and we looked at the result and we know why you have to do this, replace the commerce here.
+
+This is code that we wrote.
+
+This is code that we wrote, you know, we've done all of this.
+
+So I can read this big chunk of checks from the model.
+
+And I'm not super happy with it.
+
+But at least I'm a lot more confident than if this just gave this to me blind.
+
+And I quickly copied and pasted it.
+
+And I wouldn't notice if this line here was missing, but the comma replacement.
+
+So once you've done all the hard work of doing it line by line, having the language model help to put it all together, totally fine.
+
+I dumped it all in a file.
+
+We can run it.
+
+You'll notice I had it print out, right?
+
+So we're still looking at the data as much as we can.
+
+Definitely don't stop logging once it's all formalized.
+
+I think there was one mistake here.
+
+Yeah, right.
+
+One mistake where I got it wrong, looked at the model, sent that question to it a few times.
+
+Yep, it's just genuinely getting it wrong.
+
+We've got our final accuracy.
+
+So we have an eval that we can run.
+
+And there's definitely still some things we could do.
+
+But hopefully this shows you the approach, this kind of careful, bit by bit exploration of performance as opposed to just blindly running some code and hoping for the best.
+
+Yeah, and I think you kind of, I mean, as you tend to do, you're understating things a lot, Jono.
+
+Like I've seen whole teams of people being given a task of spending a week's, you know, creating a GSM, aka eval.
+
+Yeah, you know, the fact that you can rip it together in a software dialogue, you know, and it'll be better than previous ones.
+
+Because you dealt with all these issues.
+
+I've so often seen people spend months building a model.
+
+And then they do the evals, get like zero on GSM, aka, and go like, Oh, that's a shame.
+
+Pretty the model's no good.
+
+That's it.
+
+I'm just like, Oh, that's not how you do it.
+
+Well, that is how everyone does it.
+
+But yeah, so I've got something I'll do a little more quickly, just to give a quick sense of some of the stuff Jono is talking about.
+
+And specifically, I'm going to show you a collab notebook.
+
+So as probably all of you know, by now, you can click on export on a dialogue to create an IPyNB file that you can put in a gist, or that you can put on your own computer.
+
+If you then go file, upload notebook, you can actually click GitHub and paste in your gist here, or you can upload your file here.
+
+And I did that to create this.
+
+And the reason I did it is because I wanted to give people a tool that they can use.
+
+I wanted it for myself.
+
+So the tool basically is for for Blue Sky, which if you haven't come across it, it's a kind of a Twitter replacement where a lot of basically academics and AI researchers have now moved to.
+
+So if you kind of want to be on the cutting edge of what's happening in those fields, Blue Sky is probably the best place to be.
+
+So here's somebody talking about my LLM's text proposal, for example.
+
+And yeah, I wanted to follow people that cut down my follower, to people I follow, to only follow people that are following me back, because I'd notice they seem to interact with me better.
+
+And I had never used a Blue Sky API before.
+
+But again, my feeling now is like, oh, it's not that there are people who know things and don't know things.
+
+There are just things I don't know yet.
+
+And so I didn't keep any of the AI stuff in here, because this is like the artifact I wanted to provide people in the end.
+
+But I just did a very similar thing to Jono, said like, how the hell do I log in?
+
+It's like, okay, well, you need to install this AT Proto, that's actually the protocol Blue Sky uses.
+
+And then this is how you log in.
+
+And then you can see at each step, I'm doing very much the solver thing, I'm checking, you know, as I go, what just happened.
+
+So I created this from client login, when I ran that, I saw it return something.
+
+So I gave it a name, and then I looked inside it, and like, oh, this is the profiles post count profile view, they call it post count followers count, follows count, like I checked that against the Blue Sky web UI to see like, oh, they look, they look good.
+
+And then solve it helped me write a little function that goes through all of the pages.
+
+And basically the approach I use of using this thing called capital L and feeding everything through it is something that we'll probably see today.
+
+So really, really common technique for this style of programming.
+
+And then as I went through, I, you know, checked, okay, I think I've got a list of the people who follow the, that I follow.
+
+I've got a list of the people that follow me.
+
+And then it's just like, okay, create a set of one minus the other.
+
+And you don't see it here, but I kind of did a bit more checking to looking at the names on that list and just scrolling through them to make sure because I'm about to go through and actually unfollow them.
+
+I don't want to destroy my feed by screwing something up.
+
+So yeah, this is a good example of like, again, using this approach and checking everything as you go.
+
+But in this case, ending up with an artifact that I then went on to blue sky and I shared it.
+
+And I said, hey, if anybody else wants to be able to do this, here's the Colab and the way I did it was just to click that file, upload notebook and tweaked it a little bit.
+
+And now other people can use this as well.
+
+And you could do some work in that Colab notebook.
+
+But in this case, there's like a, the thing that you shared isn't the same as the process, right?
+
+You didn't have the AI prompts and the explorations and the tests.
+
+And so it's just a matter of like, okay, I have my version and often I'll even do this in Colab, save a copy, delete all of the extraneous bits, maybe just leave a little bit of explanation, put, you know, what it is at the top and then share it's a very easy sort of seamless way to give someone else a piece of software in that place where they can then go and explore it if they want, or they can just pick around all.
+
+Yeah.
+
+And, and John, I did think about clicking the export dot pie and giving people a script.
+
+But then I thought like, I don't think I want to give people the ability just to run this thing that's going to modify their account without encouraging them to look at it because, you know, I'm, you know, something could go wrong basically.
+
+So I thought this is best to provide people with a more of an explorable artifact.
+
+Fantastic.
+
+All right.
+
+Well, I hope you enjoyed the show and tell.
+
+I guess now we go back to advent of code.
+
+All right.
+
+Oh, cool.
+
+Okay.
+
+So we're doing day two, right?
+
+And you're, I'm going to drive, you're going to navigate.
+
+Yeah, that sounds good.
+
+Okay.
+
+And while you're loading up, I want to remind people the 2024 advent of code started.
+
+I think we're three days in.
+
+And a lot of the folks on the discord for this course are competing and sharing solutions and working on that too.
+
+So we're, I think going to stick with the 2023 ones for the lesson demos, but definitely fun to be applying those same techniques to the 2024 version.
+
+And do keep an eye on the, on the discussions there if you want to be part of that ongoing thing.
+
+That reminds me, can I just quickly show something that people might be interested in?
+
+This won't be too much of a spoiler, but this is today's one.
+
+Sorry, not day four.
+
+I went 2023, 2024, day three.
+
+But I just wanted to show something which is the, this is the data they provide.
+
+And basically they say like, oh, anything that says multiply, you have to multiply those numbers together.
+
+And then you have to add all those up, which is easy enough, except if the last thing you saw was don't, then everything after that, you don't multiply until you see do.
+
+And then keep multiplying, adding, multiplying, adding until you see don't.
+
+And this is actually all the code.
+
+I'm sorry, all the data they provided.
+
+I literally wrote, printed out the whole thing.
+
+But you can see probably here what I've done, which is it was absolutely critical for me to be able to explore this visually.
+
+Right?
+
+I, I couldn't do it.
+
+I can only work with stuff I can see.
+
+That's how my brain works.
+
+I'm very visual.
+
+So what I did here is we support a lot of the same things that Jupiter supports, which we'll gradually get around to actually documenting.
+
+But what are the Ms percent percent HTML, if you type percent percent HTML, and then some HTML, then it literally check this out.
+
+If I go into the output, let's say inspect, then inside the inspect, you can actually see style is here.
+
+It's actually inserted that HTML into the DOM, into the web page that, that, that solvents running in.
+
+So then I was able to say, oh, replace everything that says do with span class equals do and everything that says don't with span class equals don't having made them green and red.
+
+And now I can see immediately, like, okay.
+
+And then the other thing I did, which I won't show you the code, because that's kind of fundamental to this was I also added bold to the parts that I'm going to multiply and non bold to the bits I want.
+
+And this is like really easy for me to say to see, oh, this is going to work.
+
+Soon as I've done this, I'm like, I know this is going to work.
+
+Because I go through and like, okay, that's all from the dude of the don't, it's all bold.
+
+Okay, there's don't don't don't don't don't don't don't don't do is all not bold.
+
+And so I could scroll through and see.
+
+And yeah, so this idea of like find this is the very much a poly idea is like find a way to visualize he's diagram, which is very mathy thing, but really find a way to visualize the what you're working on so that your brain can look at it and your brain's good at seeing color and variations in size and things like that.
+
+So that's a little, little tip.
+
+Okay, so we want to do so I just prepared this by getting the data imported.
+
+So get data day two year 2023.
+
+Let me know if anybody has trouble seeing this and I can make it bigger.
+
+And then I've got I added a little to the summary of poly, I added a comment, which just summarizes the things the heuristics and the steps.
+
+And here is the question.
+
+So I guess if we strip over the story, hopefully everybody's had a look at this by now, if you haven't, you know, maybe if you're watching this on video, you should stop and go back and have a look and have a go at it.
+
+Right.
+
+But basically, we're going to go through a number of games.
+
+And each one has an ID.
+
+And then each one has a number of handfuls of balls.
+
+Like so.
+
+And there is a kind of maximum possible handful of each type of ball.
+
+So I think they're technically cubes.
+
+Cubes.
+
+Well, there you go.
+
+I've caught the balls.
+
+Very Australian of you.
+
+What are you saying?
+
+Okay, so I'm just going to do the brain dead stuff.
+
+That's kind of my job, right?
+
+Sam, he calls Sam dot split lines.
+
+Lines.
+
+Sorry, Sam equals lines equals.
+
+Line equals lines.
+
+Zero.
+
+So it's nice to kind of have, you know, if you don't have a navigator like Joe, no, it's nice to have a process.
+
+And so I'm going to.
+
+All right.
+
+So yeah, tell me what to do, Drano.
+
+Okay, so let's look at the, can you go to the advent of code one for a second?
+
+Let's try and exercise the restate the problem part.
+
+So there's a few things.
+
+There's some sort of max amount, right?
+
+What would be possible if we only had 12 red, 13 green and 14 blue cubes?
+
+So that's like the upper limit for how many cubes we could possibly take out.
+
+Because if there's only 12, a game would be impossible if it's it up, but I took out 20.
+
+And that's in a, in a, in a handful, right?
+
+Like in, you know, like none of, it's not though I have to add these things up or something.
+
+It's just saying like, if he pulled out more than 12 red cubes, you know, actually what's really helpful is to look at the ones that say aren't possible.
+
+So this is my favorite bit of AOC is the test cases.
+
+So game three, I see that's not possible.
+
+Nice.
+
+And so if, if I was to restate the problem, it would be that we're trying to find possible games and a possible game means that you never pull out more of a color than that maximum.
+
+And they're pulling out and then putting them back.
+
+So if you were to look at these, like look at the sample.
+
+Sorry.
+
+So look through possible games and identify those where any sample is.
+
+Tell me what else to tell the thing.
+
+Any sample is more cubes than the max for that color.
+
+More cubes than the maximum for that color.
+
+Okay.
+
+We happy with that?
+
+I think so.
+
+And so just manually looking at the sample and trying to think like, what is my eye doing when I'm reading that game one, three blue, fine, four red, fine, one red, fine, two green, like those all look fine because they're all really low numbers.
+
+Game two likewise.
+
+I'm just skimming through one by one.
+
+Okay.
+
+None of those are at all close to the maximums.
+
+Game three, reading right to left, eight green, that's fine.
+
+That's less than, sorry.
+
+Yeah.
+
+So left to right.
+
+It's fine.
+
+It's fine.
+
+And then we get to 20 red.
+
+I know us folks from the Southern Hemisphere, we do everything backwards, Johnno, but you know, we should go along with the norms here.
+
+Go the norms.
+
+Okay.
+
+So reading along line three until like I hit 20 red and that layers up the part of my brain that says, hey, hang on a minute.
+
+The max for red was 12 or 30.
+
+To be honest, I forgot.
+
+So yeah, we should write that down.
+
+Definitely worth copying that in.
+
+And so this, this is like manually solving it.
+
+This is often a useful process.
+
+You saw with Jeremy's like visualization on the HTML that was really helpful for being able to check that it was in the right track.
+
+But even like, I mean, we're, we're waving our hands and moving our mouse around to try and illustrate something in our heads, which is very physical, very spatial, like looking through and then thinking what is the computer version of that?
+
+Yeah.
+
+Simplify the problem.
+
+Yeah.
+
+I think I might, maybe I should have, let's see.
+
+So, okay.
+
+So restate the problem.
+
+Yeah, there isn't actually something here in polio, which is a really missing piece, which is more of a, of a Feynman thing.
+
+So Feynman always said, you know, he was one of the greatest physicists of the 20th century.
+
+And he always said he refused to start working on any problem or studying any paper until he had like a physical analogy of it in his head or like laid out in front of him that he could like do manually.
+
+So I think that's another problem solving characteristic we should add as a key step, which is what you just did there.
+
+Okay.
+
+So that, that starts to hint at some directions, right?
+
+We want to go through all of the drawers, start looking for anywhere.
+
+The number there is larger than the max number should be for that color.
+
+But before we do that, well, I think now is probably a good time to talk about it.
+
+The, it's very tempting to rush in, right?
+
+And as soon as I saw this, I was like, okay, I think I've got an idea, right?
+
+I've started thinking of an algorithm I'm going through looking for the specific thing.
+
+It's very easy to start jumping in and writing code.
+
+But one thing that you'll notice with a lot of the advent of code days is they reward a little bit of careful thoughts and consideration in part one.
+
+And often that'll pay dividends in part two, because you'll need to do something more complicated than whatever the initial task is.
+
+Right?
+
+So you'll, you'll see, no, the else one this, oh, actually, there's this extra complication.
+
+Part two.
+
+So maybe we should do step back, step, step forward, consider alternatives before we carry out the plan.
+
+Yeah.
+
+And so maybe, Jamie, do you want to like, what are you thinking when you're looking at the data?
+
+What are some of the, to be honest, Jono, my approach here wasn't, you know, when I looked at this the first time, wasn't that kind of thoughtful?
+
+I just kind of thought like, oh, I will parse this, you know, my mind immediately goes to parsing.
+
+And I want something that's basically be able to do a data structure with three kind of colon, and then a list of handfuls and then each one kind of green, eight, blue, six, red, 20.
+
+But listening to you describe it, I'm thinking like, well, that doesn't actually make sense because there's, at no point did you mention handfuls.
+
+So the fact that there's a semicolon here saying that this is a separate handful to this, it's kind of interesting, it sounds entirely irrelevant to me.
+
+Although this is an insight I've really got from you, this is your, this is your insight.
+
+But, you know, it's an insight you don't need to solve this, and I'd be interested in solving it without the insight as well.
+
+But I think with the insight, you know, it's easier.
+
+Well, let's start, let's start pulling out what we think we might need, Ben.
+
+So for example, we definitely need the game IDs, because for the final solution, they say we want to sum the IDs of all possible games.
+
+So let's go from line to try and get some sort of ID.
+
+So I'm guessing you're planning to split on colon.
+
+Yeah, is that all right?
+
+Yep.
+
+I'm just kind of typing until you tell me otherwise and just trying to do what you're describing.
+
+And then, you know, I like to have, you know, one thing that Paulio talks about a lot is the importance of notation.
+
+And so notation, which he describes as an auxiliary element, you know, in math, it can be very varied.
+
+And you can certainly create your own notation for these problems as well.
+
+But often, it's just as simple as naming things.
+
+So for my names, I'm going to, you know, we already know what this thing is called.
+
+This is called a game.
+
+And then I'm going to call this thing here a hand.
+
+But when it's still in a string form, it's not very easy to deal with.
+
+I'm going to put a stir at the end.
+
+And so that's going to be my notation.
+
+Does that seem like reasonable notation?
+
+Yeah, that sounds good.
+
+And we can actually, this is an ID stir because that's still not yet.
+
+Right.
+
+And then I would immediately look at it.
+
+Okay, cool.
+
+Okay, if we want to pull the ID out of the ID stir.
+
+Okay, well, that's easy.
+
+I'm just going to go ahead and do it if that's all right.
+
+So that'll be an int.
+
+It'll be an ID stir.
+
+We need to split it.
+
+It split is spaced by default.
+
+And we're going to need just the second bit of that.
+
+Happy with that?
+
+Nice.
+
+Yeah.
+
+We could probably put a function for that.
+
+But to be honest, probably don't even need it.
+
+Okay, so let's look at the game stir.
+
+Let's do it all manually.
+
+And we'll come back and you know, I'll show a nifty way of creating the function at the end.
+
+Nice.
+
+Okay, so we have, we have two options here.
+
+We could treat the hands one by one, right?
+
+The hands being the same E colon.
+
+Or from our discussion earlier saying, Oh, actually, I just, all I'm interested in for now is if any of the hands, like, so any of these values is above that threshold.
+
+So maybe if we, and this is the kind of like insight trick is if we replace the semi colon with a comma, then we've sort of simplified the problem.
+
+We've said rather than thinking of lots of hands and each hand is lots of things like, nope, just got a list of counts and colors.
+
+And I know what I need to do with those.
+
+Okay.
+
+And, you know, obviously, I'm just going to go ahead and like say, right.
+
+And so I don't always add below for things that like it's super obvious what to do.
+
+I'm happy to do it straight in line.
+
+So rather than pressing command shift up or clicking, you know, on the ad copy of message, I just clicked on the message to edit it.
+
+Because like clearly, I'm going to want to now split this.
+
+But I'm really trying to keep each one pretty simple.
+
+And this is now descriptions of sets of squares.
+
+So I'll call this square stir because it's still a string.
+
+And there's going to be lots of them, right?
+
+So maybe squares, squares, squares.
+
+Okay.
+
+And sometimes I go back later and realize my notation wasn't ideal, and I'll go back and rename things.
+
+That's fine too.
+
+Yeah.
+
+Fantastic.
+
+Okay.
+
+I think we have little enough that we don't need to make a map yet.
+
+But looking at this now, like, okay, what were we doing earlier?
+
+We were going through the game, right, which now would be going through each of these squares, drawers, and checking.
+
+Okay.
+
+Is the number there greater than the max for the color?
+
+So we should probably write down the maximums before we do more.
+
+Yeah, we do have those in this form.
+
+Did you want them in some code form, like RGB as a tuple or what, what form would you like?
+
+So should we put it in a dictionary?
+
+I would put it like a dictionary with the color as the key, so that if I have a string that says three blue, I can use the blue part to look up what the max should be.
+
+While I type that, can you please tell people what a dictionary is?
+
+I'm sure most people know, but it's totally fine, not to, but it is a really, really fundamental and useful thing.
+
+Sure.
+
+Okay.
+
+So we're familiar with lists, right?
+
+Some number of different elements, and we can access different ones by using indexing.
+
+So we feed in a number, zero for the first one, one for the next one, two for the next one, and so on.
+
+So a dictionary is a collection of items, but instead of accessing them by saying what position they are in the list, we have a specific key.
+
+And so you'll see here, Jeremy has red, colon 12.
+
+It's like the value associated with 12, with red is 12.
+
+So each one of those is like a key and then a value.
+
+And so if you wanted to find the value for red, you could type in max colors, same indexing notation, square brackets.
+
+But then instead of passing in a number, you can pass in red because that's a key.
+
+I'm going to show you two ways to make them before I do that.
+
+Because you'll see both ways.
+
+I use both ways.
+
+So you'll certainly see it with my code.
+
+But they're both the same.
+
+There's no need to do that again.
+
+Okay, so there's the main two ways to create it.
+
+So sorry, Jono, you wanted me to demonstrate now using it, right?
+
+Yeah.
+
+And notice the dynamic order complete there, because this dictionary exists, and it's a variable, you could look it in the variables pane, but it even had the completion for the different keys you could use.
+
+I'm sorry, I should use the variables pane, and I'm not making this easy for us because I don't have any, anything to help us keep ourselves guided.
+
+The advent of code problems are on the threshold of small enough that you can usually scroll around and find what you're doing.
+
+But you'll see here, there's the headings panel in variables.
+
+If you click on that part A, it'll jump to that heading.
+
+And so if you are adding nice little subheadings as you go along, it just makes it a lot easier to navigate and find where you are later.
+
+Okay.
+
+Right.
+
+So sorry, Jono.
+
+Okay, so we've done dictionaries, we can look up what the max is for a certain color.
+
+Okay, so now let's think about going through that list of squares, which we can still see on the screen.
+
+So that's convenient.
+
+Yeah.
+
+Okay, so how do I check a specific stir?
+
+So do you, so like, you know, the thing I find quite helpful is just to start typing this and it's called squares, jurors.
+
+Nice.
+
+And this is, this is something I wanted to highlight with list comprehension specifically, when you see a shared notebook, it always starts like this.
+
+You add like one clause at a time.
+
+Up, up, up, up, up.
+
+And so, okay, we're looking at these.
+
+I don't even need you to tell me what to do.
+
+You're going to make me spread them out here.
+
+Yep, exactly.
+
+Okay.
+
+And so now I'd be inclined to press, you know, now that I've got a little bit going on, I'd be inclined to press command shift up or click on the add new cell thing.
+
+Okay.
+
+Okay.
+
+So for each of these, we want to look up the max value for the second element and compare it to the integer version of the first element.
+
+So I would be inclined then to like, yep.
+
+We've gone from the stirs.
+
+I kind of wanted to like split them, right?
+
+We've already seen what they look like split.
+
+And then one nice thing you can do is since there's two things in each one, you can give them separate names.
+
+And the reason I'm doing this is because I thought we could like just make it a little, I don't know if this is helpful or not, but I just want to make it at each step, but it's a little easier for my brain to deal with.
+
+So at this point, that kind of feels like anything I've kind of got a stirs or a stir at the end, I'm inclined to like try to get rid of it, you know, right?
+
+Yeah.
+
+And rather than having this like trying to split them and get the ints of one and all that at the same time as you're doing the next step of processing, you can look at this and it's now ready, right?
+
+Because now we know I'm going through each of these, got the number, I'm comparing it to the max and I can look at the max with the color.
+
+So now I don't know if you're going to do this because we have a question in the chat, which is I'm curious how this method might work with front-end engineering.
+
+And that's a really interesting question.
+
+And the answer is we now know it works great.
+
+All of Solvert was written using a Solvert approach, or nearly all of it.
+
+So we basically used Fasthtml and anybody who's been playing around with Fasthtml, you know, might have seen that we've been adding all these notebook friendly pieces, which kind of allows us to do things very dynamically.
+
+Unfortunately, it doesn't, we haven't got the docs, but I'll just play it yet.
+
+But basically, you can write little functions and little handlers and stuff and immediately see them and play with them and put them together.
+
+So yeah, everything that we're working with was built using this process.
+
+And yeah, I found it a really enjoyable way to write it.
+
+Cool.
+
+Okay, so now Jeremy, it's like, okay, we want to go through this list and we want to do the final check.
+
+And then if they all pass, then this game is possible.
+
+I don't know if you want to talk about your special upgraded version of a list at this stage, or if you want to just do those.
+
+If you want to, if you think it's useful to use it here, let's let's do it without it then.
+
+And then we can show it.
+
+Yeah, for sure.
+
+Cool.
+
+So what did you what did you I presume you want me to start with the list comprehension like this or?
+
+Yeah, so for each of these, let's let's do instead of for, oh, let's do for num and color.
+
+Oh, yeah.
+
+And just so that we have access to those.
+
+Sure.
+
+And then let's print out num.
+
+And then the max.
+
+Well, actually, we can sort of see what we're doing.
+
+We could try just num is less than the max colors for the color.
+
+That's interesting.
+
+I'm going to try to do this.
+
+So you've just told me what you want.
+
+You want max colors for the color.
+
+So I'm just going to try and type that max.
+
+In fact, what I want to do first, I always like to see things.
+
+So max is what's called a reduction, right?
+
+Like things like some max, any, they take a list of things and turn it into a single thing.
+
+I never like to jump to it.
+
+I think always first you could just so you said the max of tell me again what you want the max of sorry, no, just looking up in our max colors dictionary.
+
+Look up in our max colors dictionary.
+
+I don't even need max.
+
+Okay, forget everything I just said.
+
+So like literally look up in max colors for the color.
+
+Yeah.
+
+Ah, got it.
+
+Okay.
+
+Okay, so this is showing me, you know, actually maybe I'll just pop in the color as well, just so we can just double check that.
+
+Nice.
+
+Okay.
+
+So this is saying, I'm just going to read back to you my understanding.
+
+This is saying that our first game had blue of three, and its max is 14.
+
+And I can check that by clicking max colors.
+
+And I see like blue 14, green three, 13, green was two.
+
+Okay, so I can see, oh, I see what you're going to do, John.
+
+You're going to say that number has to be smaller than that number.
+
+Exactly.
+
+Easy peasy.
+
+So I'm just going to go ahead and do that then.
+
+Less than or equal to.
+
+Right, because it's possible even if you get the full amount.
+
+Okay, nice.
+
+So those all have to be true.
+
+How do I find out if those are all true?
+
+Okay, so this is now, we want to reduce this list down, collapse it.
+
+If you didn't know about the methods we're just about to tell you about, you could say, well, put a zero if it's true and a one if it's false, and then I could summit and check that they're all zero.
+
+But we don't have to do that because there's very useful any and all methods.
+
+So if you type all and then this list, just like some adds up all the elements, this is saying all of these true.
+
+It's a shorthand for like, every single element is all true.
+
+If you wanted to say as long as even just one of these is true, you could use any, but in this case, all is doing exactly what we want.
+
+And you could check this, right?
+
+Like say, oh, yeah, need a list.
+
+Any of true, comma false, that should hopefully return true.
+
+But all of that same thing, again, in a list, yep.
+
+Yeah, there we go.
+
+Okay, so we can like check these out.
+
+These are very useful because often you'll see we want to say, oh, if any of the games are invalid, we should ignore this line.
+
+Or if any of the arguments have a widget upside down to the power of two, you know, we're going to do these kinds of checks a lot.
+
+And okay, I often fiddle around like this at the bottom and like, okay, fiddled.
+
+I don't need that delete below this button is useful.
+
+Be careful with some confirm, we should add a confirmation.
+
+So, Jono, I guess this driver, my job is now to put all this together into a function that you can call on every game.
+
+Is that right?
+
+Right.
+
+And we could jump straight to that.
+
+We could also like, it might be helpful to write a note here that just outlines our notation, right, to say, okay, we split the game into a number of squares.
+
+Each one is like a count and a color.
+
+We need to check this above check for all of them.
+
+We split the game into a number of squares.
+
+Each one is a count and a color.
+
+Each line is one game.
+
+Trying to think of if there's any other notation.
+
+You know, just like, especially if we were to come back to this later, having something that's this is what I was doing and the summarize command from Dr.
+
+Miko is like perfect for this.
+
+Okay, so you're going to put all this together.
+
+Do you have a trick for Well, I tell you what I found is like, yeah, I kind of have a trick, right?
+
+Is we're doing it for lines.
+
+Right.
+
+So basically everything that's working with a line is going to need to happen.
+
+Right.
+
+So here's my trick is I go back to after we've got our line.
+
+And there's a thing that's I think unique to solve it here, which is I can click copy.
+
+And I want you to notice something about after I copy, which is you see the flashing cursor.
+
+It's in the bottom left corner.
+
+I've got my the focus is on the editor.
+
+So when I do this is I put my left hand on command or control V.
+
+I press it.
+
+I enter and then I go to the next one I want.
+
+Okay, which is this one here.
+
+So I go copy.
+
+Command V.
+
+And then I go to the next one I want, which is I think I also want this one.
+
+So I'm not doing this totally mindlessly.
+
+But you know, slightly mindlessly.
+
+Max colors we don't need.
+
+That doesn't do anything squares we need.
+
+I think and then once I've done this, I'm going to let Johnno take over navigation to turn this back into a function.
+
+But I think I've now got you Johnno all the pieces you need.
+
+So then if you click anywhere on a line and press command or control X, it deletes it.
+
+Okay, and then command a and then command right square bracket.
+
+Okay, Johnno, what you want me to call this actually I can tell you what I call this function.
+
+This is creating a.
+
+Oh, this is basically checking right.
+
+So check line.
+
+And it's taking your line.
+
+Okay, I think I've all right.
+
+So I don't know if this function is remotely correct, but it's a start.
+
+Oh, and you're going to need that last piece as well, right, which was this one here.
+
+Copy.
+
+Okay.
+
+Is this already correct?
+
+What do I have to do some stuff to it?
+
+Okay.
+
+Johnno, you're muted.
+
+I was wondering why you're taking a while.
+
+I thought this was not a complicated question.
+
+I was wondering why you kept not copying the all line when I kept saying you probably also need that all line.
+
+I've got some some Thanksgiving germs.
+
+So I keep muting to hide the cuffs.
+
+Okay, so yeah, this is looking good.
+
+I know later we'll need the ID.
+
+And so you want to return that as well, maybe?
+
+Yeah, we could do that as well.
+
+Okay.
+
+And then let's check it on this line that we've been using.
+
+We're expecting this one to work.
+
+So it should return the game ID, which is one.
+
+And then the probably true because the nice thing is here that I really can turn my brain off for that bit, like, you know, because the notation is good.
+
+And because it's consistent, I'm just always, you know, for line in lines, I don't really have to think about it very much, you know, we've got a function that works in a line.
+
+So I guess I should just run it on all the lines now.
+
+Is that right?
+
+Johnno?
+
+I think so, yeah.
+
+And in the back of our head, we know I think it's line three should be false.
+
+So we can keep an eye out for that.
+
+Check line, line four, line in lines.
+
+Okay, I literally my brain's off.
+
+So one, three and four.
+
+Were they meant to be the broken ones?
+
+Yes.
+
+They were.
+
+Fantastic.
+
+Okay.
+
+So we pretty much what are we going to do with that?
+
+Well, so they say, what's the answer?
+
+What is the sum of the IDs of the possible games?
+
+Oh, cool.
+
+So that's why it's nice to have the ID.
+
+Okay, so these are checks.
+
+Okay.
+
+Again, I don't feel like I need much of a navigate here.
+
+I'm going to go for ID comma check in, I don't even need check, I just go for ID in, well, I do, for ID comma check in checks.
+
+If check, no, if not, hang on, sum up the ones that are good or sum up the ones that aren't good.
+
+The ones that are possible, I think.
+
+Okay, so if check ID.
+
+So that should be three comma four.
+
+I always like to like say to myself what it should be before I hit enter, because otherwise I'll convince myself after the fact that it's true.
+
+Okay.
+
+Yeah, it's one, two and five, those are the possible ones.
+
+Great.
+
+And then it tells us, sum it up.
+
+The sum should be eight.
+
+Okay, nice.
+
+So def solve one A on text.
+
+So lines equals, okay.
+
+Text dot split lines.
+
+Okay.
+
+And then check line, line for lines and lines.
+
+So I want that one.
+
+Copy, paste.
+
+And this one.
+
+Copy, paste.
+
+And I'm actually ready to type return, unlike last time we did this, Johnno.
+
+Solve one A with a sample should be eight.
+
+All right.
+
+Solve one A without input.
+
+I thought I had input.
+
+Did I never run that line?
+
+My bad.
+
+Two, five, nine, three.
+
+Two, five, nine, three.
+
+Okay.
+
+Fantastic.
+
+All right.
+
+If you want to do part B, it is we're okay.
+
+Cool.
+
+Let's carry on.
+
+So maybe put a tracker heading in there, and then we'll look at the problem description.
+
+Okay.
+
+So part B.
+
+So maybe actually, before I do, we talked about my favorite trick, which is fast core has a nice thing called L.
+
+It's not many things in my life I've ever given a one letter name to.
+
+Is your sense of how important I feel like it is.
+
+But I just wanted to show this thing here.
+
+That kind of thing we do a lot.
+
+Check line, line for line and lines.
+
+So there is something in Python to make it easier, which is map.
+
+And that runs a function on everything in a list, not just a list, but a list amongst other things.
+
+And it runs that function.
+
+Unfortunately, Python nowadays used to be different, but nowadays is not really designed for this kind of interactive use.
+
+And it returns something that is not readable.
+
+To make it readable, you have to turn it into a list.
+
+Just write list.
+
+So because I do things very much interactively, my preference is to not use a normal list, but use my special list.
+
+So my special list you won't be surprised to hear is called capital L.
+
+So to create a list, a capital L from a list, you just wrap it in capital L.
+
+And there's a few other things, like capital L.split.
+
+It behaves exactly like a list, as you see.
+
+And in fact, I'll be able to run all even after changing it, and it will still all work, as you see.
+
+But one nice thing is that you can -- it's got some nice methods and one of them is map.
+
+So I can say -- so the thing we were going to do here was -- this one, right?
+
+Sorry, I must actually do that by mistake.
+
+So -- oh, I remember.
+
+So, yeah.
+
+So we could now, instead, we're going to go through all the lines and do check line on each one.
+
+So you can just say lines.map.
+
+Check lines.
+
+Check line.
+
+And so that will run that function on everyone, as you see.
+
+So that's something I use a lot -- oh, I know what's going on.
+
+I keep forgetting that this ends up here.
+
+Sorry.
+
+Oh, list map.
+
+Here it is.
+
+Lines.map.
+
+Let me put this down the bottom.
+
+Copy.
+
+Paste.
+
+Okay.
+
+And then -- here -- well, I think that's enough for now.
+
+Yeah.
+
+So that's probably enough for now.
+
+So, you know, there's a map.
+
+The other thing, actually, we could do to make this a bit more map-friendly.
+
+Yeah, kind of quite like this, is let me create a new version of check line.
+
+And my new version of check line is going to say return ID if it's true.
+
+Otherwise, I'm going to return none or zero.
+
+It doesn't matter.
+
+And so I can now rerun my check line.
+
+So let's make a copy.
+
+And you'll see now I've got one, two, none, none, five.
+
+And so the reason I was showing you this is because then I can change this sum here to a map.
+
+So in this case, I could say lines.map -- sorry, I meant to put that at the bottom as well.
+
+Keep messing this up.
+
+So I could say lines.map -- okay, I want to filter out those that aren't none.
+
+So there's actually a thing built in -- again, there's a thing in Python called a filter, which is also part of capital L.
+
+So this is going to filter out all of the things that are truthy that are not none.
+
+And then I want to sum all those up.
+
+So this is like a way I find quite helpful for building things up in this repoly way.
+
+I quite like this.
+
+And these three operations are like the big three of dealing with lots of things, right?
+
+I have a whole bunch of things.
+
+I want to do some operation to all of them.
+
+That's map.
+
+I want to select some subset of them.
+
+That's filter.
+
+And then I want to reduce the result back down, like sum or any or all or mean that's reduction or reduce.
+
+Those of you that are around 10, 15 years ago might remember a Hadoop and it was all about map reduce.
+
+So Google basically came up with this thing to make this map is actually map filter reduce very fast and distributed across machines and stuff.
+
+It's like, yeah, it's like this fund -- this is like list processing.
+
+This is a similar -- this is a type of list processing.
+
+>> Cool.
+
+>> I'll give you a note here.
+
+>> Part two.
+
+>> He's called it B and A for some reason.
+
+>> Oh, right.
+
+>> Oh, they call it part two.
+
+I should stick with this.
+
+Sorry.
+
+They're not both the cubes.
+
+They're not AMB.
+
+They're one and two.
+
+My whole life's been a lie.
+
+Okay.
+
+We're going to use the same sample games.
+
+So I'd still be in time to just print them at the start here.
+
+Okay.
+
+Okay.
+
+So what's -- can you restate the problem, Jono?
+
+>> Okay.
+
+So to restate the problem, they're now asking for what is the fewest total number of cubes for which this game would be possible.
+
+And then the second part is they have some power calculation.
+
+So let's look at the first one.
+
+The fewest possible balls.
+
+It's kind of like, okay, if I had 10 of each, I could play this game.
+
+Right?
+
+If I had six of each, I could play this game.
+
+But if I had five of each, I would fail because we use six blue in the middle hand there.
+
+And so if I was to restate the problem, it's saying, in another way of putting this, what is the max for each color?
+
+What's the max count that we see?
+
+And that'll give us the number of cubes that we need to play this game and for it to be possible.
+
+So it would be like, we know what the max color's hand is.
+
+So max colors -- yeah, it's a hand basically.
+
+Max color's hand is.
+
+So if I read this back to you for game one, I would go through and say, okay, red can be 12.
+
+So it'd be like four red plus one red is five red plus zero red.
+
+So, okay.
+
+So we don't do max colors.
+
+We're just finding the maximum possible.
+
+So we don't need max colors anymore.
+
+So right?
+
+It's almost like we need a reverse engineer to that to say, oh, what was the smallest version of that max colors for which this game would still be possible?
+
+So I actually need colors.
+
+And actually, if you turn a dictionary into a list, you get its keys, which is kind of nice.
+
+So, all right.
+
+So let me say it's good that I tried to restate it because I screwed it up.
+
+So I'm going to go through each of these.
+
+Red, four plus one is five.
+
+Green, two plus two is four.
+
+So three plus six is nine.
+
+So here's my question for you.
+
+Why are you doing the plus?
+
+Because one key thing is they take it out, then they put it back in.
+
+And then the next one is, it's always from that one total.
+
+Right, I got to try a third time.
+
+Third time lucky.
+
+This is why it's good to have a pairing buddy, you know, that you always go through everything super carefully.
+
+All right, blue, three blue.
+
+You need at least three.
+
+Blue, blue, blue.
+
+No, this is higher.
+
+You need at least six.
+
+I should do it in this order.
+
+Red, four.
+
+I need at least four.
+
+Okay, green.
+
+I need at least two.
+
+Okay, so I basically go through and I find the maximum of these for each of these colors one at a time.
+
+Is that right?
+
+Yep, exactly.
+
+Okay.
+
+All right, tell me what to type.
+
+Cool.
+
+Well, let's go back and look at our previous one to see if there's pieces there that could be useful.
+
+And specifically, I want to look at your, I think we called it checks or maybe before that the squares.
+
+The squares is probably what we want.
+
+Right, so this...
+
+Oh, I see.
+
+So the semicolon still I didn't use at all.
+
+Right.
+
+Yeah.
+
+Yeah, so what we could do is we had a function, right?
+
+Um, you know, we could kind of grab this and we did that split, we did that split, we did that replace, and we did, I think like, we still want all these, right?
+
+So what I'd be inclined to do is I would call that at this point a game.
+
+And then, you know, that kind of would have been nice to do it last time because then we could just say game equals.
+
+So I always like to use underscore blah to mean create something called a blah.
+
+Might want to return?
+
+No, I don't really do that anymore.
+
+Okay, so this is all processing from before, but this looks pretty useful because if you try and like express what you were just doing, but in sort of Codi language, we're going to keep track of like the max for red, and then we're going to go through all of these and see what the max is.
+
+And then we want to do the same for green and the same for blue.
+
+Okay, let's do that.
+
+So color equals red.
+
+Well, actually color equals colors zero.
+
+Color.
+
+Okay, so should we do it for red?
+
+Sure.
+
+Okay.
+
+Oh, yeah, so I guess you're going to probably want me to go through for num comma color.
+
+I kind of like to give these single letter names.
+
+It stops them from clashing with other things and like generally loop indices, you want to be a single character because you're using them all in the same place.
+
+This idea comes from something that Larry Wall, the developer of Perl wrote about, gosh, 40 maybe years ago, which he calls Huffman encoding, basically the idea of like compress things that you're about to use again, that you use a lot and you don't have to remember into less characters.
+
+So if n comma c in game, okay, all right, you can print them and then we probably want to filter.
+
+Okay, so yeah, let's just type NC for NC in game.
+
+You might need an in.
+
+You can see Jeremy's ideal programming language is like it's probably a traditional lesson.
+
+Okay.
+
+Okay, so now I want the red ones.
+
+Oh, the red ones.
+
+Yeah.
+
+So if C is red.
+
+Well, if C is color, right, if C is color, yep.
+
+So we always just pick something, you know, and then we work with it physically.
+
+And we gradually check it out.
+
+And you want the maximum.
+
+So we don't need the color anymore, right?
+
+You just want to see the end of this point.
+
+It's nice to print it out for the intermediate step because we can check that it's all the red ones.
+
+But now all we care about is the numbers that we got.
+
+Okay, and I would be inclined to leave that there and then hit Apple Shift up arrow.
+
+And you just want the maximum of those, I think, right?
+
+Yeah.
+
+Okay, it's but on.
+
+Okay.
+
+So for red, we do one for like if we have a client to give that name Def Max for a color.
+
+And that's going to take in a game and a color.
+
+You happy with that?
+
+Okay.
+
+Max color.
+
+Game comma color.
+
+Okay.
+
+Sorry, Jenna.
+
+No, right.
+
+So now I think we're pretty much ready to then do the second step, which is their power level for this game, which is basically just a fancy way of turning it into a final answer.
+
+So if you go to the advent of code thing, you'll see there.
+
+I'm not sure we're there yet, right?
+
+Because I feel like we need to get the power.
+
+Don't we need this for all the colors?
+
+We do.
+
+Yeah.
+
+So what if we just turn this into an L?
+
+Because like, I don't know, maybe I'm just doing my kind of thing all the time.
+
+But if I just did colors dot map max color.
+
+Now I need to pass in, you know, normally when you map, max color is going to receive one thing, right?
+
+Which is the color.
+
+So what that tells me actually is I should slightly restructure this to put the color first, because that's what the map's going to pass in.
+
+And yeah, sometimes this kind of stuff, it can just help a little bit.
+
+So I've got to pass in each color at a time into max color.
+
+But what game am I doing?
+
+So there's a nice trick here with map, which is you can type game equals game.
+
+Okay, are they the right answers?
+
+Nice.
+
+Do we have something?
+
+4, 2, 6.
+
+Yeah, there we go.
+
+Nice.
+
+And because the colors are in the right order, same as theirs, it all matches.
+
+Okay, so back to Advent of Code.
+
+And that's very intentional, right?
+
+Because like red, green, blue is what our brains are used to thinking about as well, which is nice.
+
+So when we created max colors, I think we did red, green, blue.
+
+Okay, go ahead, Jono.
+
+Cool.
+
+Do you want to flip back to Advent of Code just so we can see the calculation and the answer?
+
+Yeah, okay.
+
+So they say the power is the numbers of red.
+
+Oh, okay, it doesn't even matter what order.
+
+They just all multiply together.
+
+And so for game one, that should be 48, right?
+
+4 times 6 times 2.
+
+And so it's just the...
+
+By the way, you can also see L's print out how many things are in it.
+
+And also if it's really long, it truncates it automatically.
+
+So, okay, so you would just want me to multiply these things together, right?
+
+I have a feeling.
+
+So again, I'm just going to hit Apple Shift app arrow that we can just say dot product 48.
+
+So there's a...
+
+There's a thought of Code here where using maps and products and things is like, oh, I don't know how to do those.
+
+It would be equally valid to say...
+
+Tell me what to type.
+
+Okay, so when you had the max color, so you could say max color brackets, red comma game times max color brackets, green comma game times max color brackets, blue comma game.
+
+It's totally fine to hard code things like that.
+
+Oh, your solution won't work for a million different colors.
+
+I find, especially if I'm coding on camera, I'm very impressed that Jeremy keeps his cool and does it well.
+
+It's like, oh, I'm struggling to think through the slightly more complex.
+
+Sometimes it's fine.
+
+Just look, there's three different colors.
+
+If I have three lines of code that says red is equal to this, green is equal to that, blue is equal to that.
+
+Okay, my answer is red times green times blue.
+
+No, I mean, I'm kind of embarrassed.
+
+I didn't really think of doing it that way.
+
+I just always think of maps and filters.
+
+Like, I just turned my brain off a lot.
+
+So I think your brain is more active than mine.
+
+So yeah.
+
+I just want to call out for people who are like, oh, the whole point of this and look at everyone's solutions in the Discord to see this, there's millions of ways to solve these and it's not like some are better than others.
+
+It's just that, yeah, we have our ways of preparing.
+
+Okay, cool.
+
+So this looks like it's working and we can get the power for the game.
+
+I think they want the sum of these powers for all games.
+
+We should do a power for, wait, I've got the power.
+
+Cool.
+
+Okay.
+
+So I should have given that a name.
+
+Sorry.
+
+Def, power for, and like I listened carefully to Jono's words, he said, you want the power for a game.
+
+So like that means I need to write power game.
+
+And if you can't write it like that, then there's a sign there's a problem with your notation or something's going on, right?
+
+And then you should be able to write, oh, get the power of the game.
+
+That's that cool.
+
+So now Jono wants the power of all the games.
+
+So at a game, we got by calling underscore game, right?
+
+So we should be able to say lines.map_game, right?
+
+And this is where it kind of starts to come out nicely, right?
+
+Because then that then is going to give us a game, because that's what underscore game does.
+
+So I should be able to pass that to power.
+
+Do you need dot map power?
+
+Yes.
+
+It's done turn your brain off too much.
+
+48, 12, 15, 60.
+
+And then you want those added up, right?
+
+Nice.
+
+Is that the right answer?
+
+I believe so.
+
+Okay.
+
+Cool.
+
+Okay.
+
+So you want me to do that for the input?
+
+Okay.
+
+So the lines, I'm just going to click lines.
+
+Or here.
+
+And I don't have to scroll to the bottom, right?
+
+I can just put it straight here, because it's always at the bottom.
+
+And the nice thing is with L, I can just write lines.
+
+It'll automatically do a dot, dot, dot at the end, which is rather nice.
+
+Okay.
+
+And then Oh, it's kind of easy those to copy and add.
+
+Copy, paste lines.map_game, that should be the same, right?
+
+Okay.
+
+Copy.
+
+And let's see.
+
+54699.
+
+54699.
+
+Nice.
+
+Fantastic.
+
+Hold on.
+
+And then you can collapse this too, if you like.
+
+Okay.
+
+Do you want to do quick reflection?
+
+And if you don't have a pair programmer friend, you can also just ask the AI, like, here are these things.
+
+That's two both.
+
+Yeah.
+
+Okay.
+
+Reasonable.
+
+That's always easy.
+
+We got the right answer.
+
+I think we've discussed some alternative approaches.
+
+All right.
+
+Lessons learned.
+
+I think for me, your point about like, hey, maybe you don't have to map filter everything.
+
+There's only three things you could just type them out.
+
+How about you, Jono?
+
+Yeah, I mean, I do like looking at the lines dot map dot map, you know, looking at that, it is a bit easier to read once the syntax settles in, then my O4 in this for C in this, that's split, you know, like the list comprehension chunks that do the same thing.
+
+And so I would split this onto multiple lines.
+
+And then, oh, this is actually, it's very nice.
+
+We're taking everything in lines and we're calling underscore game to turn it into a game.
+
+And then we're calling power, which takes a game and returns a power, then we're adding all those together.
+
+It's really nice to be able to look at that and see, oh, I know what that's doing, because we wrote game and we wrote power.
+
+And the notation is important, right?
+
+We work here for the notation.
+
+Yeah, exactly.
+
+Yeah.
+
+Okay, I will stop sharing my screen.
+
+Okay.
+
+So obviously, today, we're going to go well over time, such as life.
+
+And I know last time I was a bit nervous about going over time with John O because I thought like, he might want to go do something else.
+
+But then last time he spent like the next three hours doing advent of code puzzles on the voice channel.
+
+So I'm less worried about that, although you are sick now.
+
+So feel free to go anytime.
+
+I'll take that two minute break and then I'll be back.
+
+Okay, while you're doing that, I'm just going to tell people about the speedrun situation.
+
+Okay.
+
+Oh, this is good.
+
+Actually, look, I'll talk about about the chat questions.
+
+So if you have any questions, jump on to the YouTube chat.
+
+I'm not looking at the Discord chat right now.
+
+So Bashir asks how to share notebooks.
+
+Well, notebooks are easy.
+
+You just export a gist is how you get a notebook.
+
+If you mean a dialogue, you can just literally click on the URL at the top of the screen and send it to somebody else.
+
+There's no authentication other than the fact that it has a random URL.
+
+So there's a how you can share.
+
+So sharing the gist is going to share like the fixed final version.
+
+Sharing the URL means they can actually work with you on it.
+
+And then Thomas asks about TDD.
+
+So TDD is test driven development.
+
+Before I did a lot of stuff with Jupiter and nowadays with AI magic and Solvert, I actually mainly use TDD.
+
+To me, TDD is an alternative rather than an addition, but it's a great alternative.
+
+And so if you're in an environment where you're surrounded by software engineers who hate repels and notebooks and anything else, and they want to do everything with IDEs and whatnot, it's totally fine.
+
+You can kind of get quite close to this by using a lot of TDD, which is like you create, you know, rather than this exploratory approach where you write a little line of code and you check the output, it looks good and you keep going like this.
+
+Instead, you write the test of like what should the next line of code or three lines of code do, and then you write the function that makes the test pass.
+
+And so again, you just need to make sure that your environment is set up so that that is very ergonomic so that you can basically like just hit a button every time you've gone like test, implement, test, implement.
+
+And then for something like cursor, it's going to work quite well there as well.
+
+So you can start typing a comment of like, oh, test weather, blah, blah, blah, it often cursor will write a couple of lines for you.
+
+You could write, you know, comment like, let's make the test pass and then write a couple of lines for you.
+
+So I think you could get quite close actually to this in a more classic IDE place by using, you know, a good TDD thing when your tests should be running automatically and you should immediately see whether it's passed and it should only be running the one that you just added.
+
+So hey, John, we're just talking about TDD as a bit of a kind of a good replacement actually for Solver, notebooks and stuff if set up correctly.
+
+And then Boris asked about type annotations.
+
+No, I don't find type annotations at all helpful for me.
+
+Type annotations are needed in a static coding environment like VS code or cursor where they don't know the types of things in Solver or in Jupyter or in IPython.
+
+It knows the types of things.
+
+So when I type lines dot, I can see exactly what I can run in it.
+
+And I don't need type annotations to check whether the types are going to be compatible because I've just run the line of code, you know, I can tell if the types are not compatible.
+
+So type annotations are useful if you need to kind of export an artifact like a module or whatever to folks who are going to be using it in an IDE or if you're personally going to be using it in an IDE at some other time, then type annotations are kind of required.
+
+I do think type annotations also are a visual distraction, you know, the boilerplate that makes it harder to focus on the logic and the notation and it's, you know, extra cognitive work for you to add.
+
+Then one last question before we move on is Solver going to be offered as a product in the future?
+
+I mean, this is a bit of a test.
+
+We're seeing if people like it.
+
+It seems like people on the whole quite like it.
+
+More than I expected, actually, it's been nice.
+
+So I guess it's been fairly validating.
+
+And so, yeah, we'll probably look at seeing a way to make that happen.
+
+You know, early in the new year.
+
+But this is the closest, I guess, we've come to any kind of announcement like that.
+
+I guess given that we're liking it a lot ourselves, even if nobody else did, we keep building it for ourselves.
+
+So, yeah.
+
+Okay.
+
+Welcome back, Juno.
+
+Did we want to jump into a speed run or anything else to cover first?
+
+I think we've covered the bulk of the business for the day.
+
+Yeah, I mean, if we want to recap it, so we looked at some useful dialogues and tricks that people were doing.
+
+We looked at LLM evals.
+
+We looked at your blue sky example, which is using Google Colab, a fantastic, like broadly available notebook interface where you can do this kind of exploratory stuff.
+
+We talked about, so there's the ask the LLM to rewrite everything into a function at the end approach that I showed, there's the export to Colab and delete everything that's not the code version that you showed.
+
+And then there's the copy all of the relevant lines and with the manually into a function at the end version that you demoed.
+
+I think all of those are somewhat valid ways for condensing down some solution into an end product as it were.
+
+Yeah, and then we went through the advent of code day two.
+
+I think that's the that was on the to-do list for the day.
+
+So anything else is bonus and I'm looking forward to a bit of speed coding.
+
+Okay, good.
+
+Thank you.
+
+That was very helpful.
+
+All right, I will share my screen.
+
+So this next part, and we're going to basically have this at the end of every lesson is the idea.
+
+And this is more focused on people who are a bit more experienced coders.
+
+So if that's not you and you're not finding this bit useful, just turn off.
+
+Okay, it's it's we're not going to have any critical pieces of information only in the speed runs.
+
+But we'll be exercising some of the stuff a little bit more quickly in a slightly more advanced way.
+
+And just also want to get to you guys a chance to kind of see you know, what what it looks like, you know, kind of more how we actually do it in real life rather than the like, John is pretending to be less good at coding than he actually is kind of approach.
+
+Oh, a couple more questions about the rest of the course, that's really good questions.
+
+So, yeah, what are we going to be covering in the rest of the course?
+
+So the, you know, basically, so, Shams or Aman asks, are we going to be making full stack applications?
+
+No, we're not.
+
+This specifically is about solving problems with code, not about making full stack applications, making full stack applications requires solving lots of problems on the way.
+
+But yeah, this is not a full stack development course.
+
+We are thinking we might run a full stack development course in the future.
+
+But this is not that.
+
+And then Dr.
+
+Miko asks, will we see kind of more diverse examples like the interviews transcript for blog post process mentioned?
+
+Yes, we will.
+
+That was mentioned in the interview with Hamel.
+
+We will.
+
+So that'll be in the new year.
+
+Eric Reese, the creator of the Lean startup and the Long-Tag Stop Exchange amongst other things, is going to join us.
+
+And he's going to talk about like, what does this kind of stuff enable us to do?
+
+You know, at a more kind of strategic level.
+
+For those of you that don't know, he's kind of like the godfather of the modern startup movement.
+
+And hopefully, you know, we'll all get some ideas about stuff to do based on that.
+
+But certainly one key one will be Hamel's work.
+
+So for those of you that don't know, Hamel Hussein is, I would say like the world's foremost LLM application consultant today.
+
+He works at Ansar AI.
+
+And he's got a lot of really cool ways that he and the rest of us have developed to use this for, yeah, for kind of really interesting approaches.
+
+So, yeah.
+
+There'll be admin of code every day.
+
+That's us together, you know, practicing the problem-solving process.
+
+And so that's going to be kind of the heart of most days.
+
+But we're going to have all that other stuff as well.
+
+Did I miss anything, Jonah?
+
+We're like actively gathering good demos of other tasks that can be solved in this way.
+
+If you've got condensed problems that you can share on the go, yes, me working on something that would be really cool.
+
+I'm going to try and build up more and more examples like the evals one you saw today.
+
+But the key is like, we also wanted this to be for people who are somewhat new, like you're just starting out with LLM.
+
+So as we add more tools for our event of code problem solving, we'll also like, oh, now we can like build on regular expressions and requests and all these building blocks and some more demos hopefully going forward.
+
+And if you have demo requests, I love getting nerdsnaped and trying to have some things with this.
+
+Yeah, and I think talking, doing a little bit about a fast HTML app, maybe not using Solver, but just using Jupyter.
+
+Maybe we could look at, yeah, we'll have a fiddler round.
+
+We'll try to think the best way to do that.
+
+Because at the moment Solver is designed as an educational tool, not as a full stack dev tool.
+
+So we'll have a think about how best to put all that together for sure.
+
+Okay, so here we are, day two, any percent speed run.
+
+I'm not actually going to focus on speed so much as like, you know, be reasonably concise, but teach a few things as we go.
+
+But I'll kind of try and do it how I would do it.
+
+So, you know, I kind of have this standard starting point that I always just kind of copy and paste in.
+
+I need to make sure we've got the correct day here, obviously.
+
+And we obviously got the correct sample data.
+
+Oh, that's, now what are we going to do?
+
+We're going to do part, oh, we're going to do part one B of day one.
+
+That's what we're doing today, right?
+
+We're going to do, so each time this, we're going to do the previous, the speed run of the previous one.
+
+Okay.
+
+So one, ABC two, PQR, etc.
+
+Yeah, okay, so that's all fine.
+
+So it is day one.
+
+All right.
+
+And then I, you know, split it out, put it in an L, I grabbed one to start working on.
+
+I try to grab like one that's not trivially easy.
+
+Okay.
+
+So then what I need to do is find the first and the last number.
+
+And actually mainly to show you folks something, I'm going to do something obviously you can't normally do, which is work with a knowledge of what is part B or part two is going to look like because I want to show you a trick.
+
+So what I'm going to do is I'm going to create a dictionary.
+
+So normally you can turn a string into a number, but just using int on it.
+
+But here, and there aren't any zeros, but it actually, let's not, let's not assume.
+
+They don't tell you there can't be zeros.
+
+I don't think.
+
+So it's going to map from the string to the integer of the number.
+
+And so, you know, when I have a dictionary I'm using all the time, I always call it D.
+
+Again, it's going to mix life a little bit easier.
+
+And so, sorry, that's already an integer.
+
+So it's going to map from the string of it.
+
+Okay.
+
+And so then we wanted to get the first and the last one of those, right?
+
+So we need a way to basically look up each of the things in, you should always print things out first.
+
+We're going to go through each of these letters and turn it into a number.
+
+So we're going to do everything kind of the map reduce way, right?
+
+So to get a digit, we would use underscore digit.
+
+Of course, it's always underscore and the thing you want.
+
+Okay.
+
+And we're going to be passing in whatever.
+
+So return and so D.get.
+
+Okay.
+
+Oh, we haven't seen this yet.
+
+So we've already seen you can look up stuff like that.
+
+But you can also look up stuff by saying .get.
+
+Why would you do that instead?
+
+Because you can also put in stuff that doesn't exist and it won't give you an error instead it just returns none.
+
+There's something that returns none.
+
+No outputs shown.
+
+Okay.
+
+So return D.get.
+
+Okay.
+
+So we're going to just look for X and it's hardly even worth checking, but because we always, always check or at least I always, always check, I will check it on X0, which was A.
+
+Okay.
+
+And we'll also check it on X1, which is one.
+
+Okay.
+
+Which is what we want.
+
+And so now basically what I want to do is I want to take my X and as you might know, if you listify an X, it turns it into all of the separate pieces, right?
+
+So all of its bits.
+
+So if I put an L around that, then I get that as well.
+
+L has a bit of a special thing.
+
+It's actually different to a list that if I call L on a string, it doesn't split it up.
+
+And that's because quite often you want to be able to kind of like have multiple strings, you know, and not have them treated as things to be split up.
+
+So there's a nice feature in Python actually.
+
+If you want to split something up and pass all the pieces to a function, you can stick a star before it.
+
+So it's destructuring it or splitting it or whatever you want to call it.
+
+So in this case, I want to go through all of the bits of X and I want to turn them all into digits.
+
+Dot map.
+
+Okay.
+
+And then I just want the first and the last of those.
+
+And you know, it's kind of nice just to be able to make it a bit simpler.
+
+Filter.
+
+Remember, by default, that gets rid of all the things that are not true.
+
+So that's pretty cool.
+
+I can now basically say, all right, define the solution for one X.
+
+So I just go copy, paste.
+
+So I call this digits equals and then return digits first one times 10 plus the last one.
+
+And then we immediately run it.
+
+And before I run it, I check what I think it ought to be.
+
+So X is, okay, so it should be one, five, should be 15.
+
+Okay, great.
+
+So now I can basically say, cool, that's nice.
+
+So now I just want to go through all of my lines.
+
+So this takes a, an X, which is a line, I should have called it line.
+
+So I should be able to say lines dot map solve X.
+
+Just sit there.
+
+Do we not call them lines?
+
+Oh, right.
+
+I called them Xs.
+
+You see, this is why you should stick to something and not change it.
+
+You'll go crazy.
+
+Great.
+
+And then I think we had to add those together, right?
+
+And if we did add them together, we would get 142.
+
+So you can see like quite often when I'm programming this way, I'm just like gradually modifying the last line, people using stuff like Lisp and APL and so forth, tend to write in this way as well.
+
+It's like, okay, that seems to be working.
+
+So we'll then say def solve 1a, given some Xs, return that solve 1a with my Xs.
+
+Okay.
+
+And then my Xs were Lsamp dot split lines.
+
+So then I could say solve 1a input dot split lines.
+
+Okay.
+
+So then 54601 is good.
+
+And so then for part B, I think it gives me some new sample so we'll use that.
+
+And then we'll go X equals, okay, so which one should we pick?
+
+I guess just pick the first one.
+
+It's fine.
+
+X equals X is zero.
+
+Okay.
+
+So let's work on that.
+
+And so this time, actually, all we need to do is, if you remember, our get, sorry, our digit function.
+
+That's interesting.
+
+I am making it so functions that start with an underscore don't appear.
+
+I should change that.
+
+So we want something like this, but the dictionary we need to look up in should have not only zero, one, two, three, four, five, six, seven, eight, nine, but for part B, we also have to look up the words.
+
+Okay.
+
+So make a list of the word form of all of the digits from zero to nine.
+
+Okay.
+
+Great.
+
+So what I might do there is that's our words.
+
+And so we basically want us kind of second dictionary here.
+
+I just call it d2.
+
+And what we're going to do is we're going to loop through for i comma o in enumerate.
+
+So remember, if we enumerate, we get the position of it as well.
+
+So we enumerate through the words.
+
+And this is a dictionary comprehension here by putting it in curly brackets instead of square brackets, so it can create a dictionary from a loop.
+
+So the string I want is o and the value of that I want is i.
+
+And so you can see here that there's my d2.
+
+Right now, if you remember, we already had d.
+
+And so there's a nice thing in modern Python, which I think is available in all non-eol versions of Python, which is you can actually apply the pipe, which means kind of union.
+
+So I could say d is the union of d with this.
+
+And so there you go.
+
+All right.
+
+So now it's done it all in one go, which I think is rather nice.
+
+So I delete the stuff after that.
+
+Okay.
+
+And so we've got our x.
+
+Actually, what I might do is just collapse this.
+
+I don't like being able to not see very much.
+
+And I don't really need this anymore.
+
+So I just delete this.
+
+People don't need to know why, how I created that.
+
+Okay.
+
+So we've got 219.
+
+So I should now be able to basically say, okay, what did I do last time?
+
+I did a digit, did a d.get.
+
+And then I applied this to all of them.
+
+So if I copy that and paste it, let's see.
+
+And then underscore digit, did a d.get.
+
+Okay.
+
+So I can't quite do that this time.
+
+I need to do something slightly different, which is that I can't just, let's go back and grab the same code, but be careful about how we do it.
+
+So d.get isn't quite right anymore.
+
+Instead, let's just do it manually.
+
+Instead, what we want to do is say d.get o.
+
+Yeah, we actually need to go through, we need to go through 4o in d if, and then x.startswith.
+
+So basically we've got to check whether anything starts with zero, one, two, three, etc.
+
+Right.
+
+So 2 starts with 2, 8 starts with 8.
+
+So does it start with that?
+
+And then what we could do instead of having an if here, we're going for o in d.
+
+And so this is our x.
+
+Cool.
+
+So that's correct, right?
+
+2 is 2.
+
+Right.
+
+So we've gone through all of our dictionary items and checked whether it starts with, in this case it starts with, two.
+
+So we don't want all that.
+
+Actually what we could do is we can say, one thing you can do with a dictionary is you can go through each of their keys and values like this.
+
+Right.
+
+So we can say for k comma v.
+
+And the thing we want from all that is the v.
+
+And of course we wanted the if, if x.startswith.
+
+Okay.
+
+Okay, that's actually what we want.
+
+Right.
+
+Is that 2?
+
+Cool.
+
+Now we don't need the list with 2.
+
+We just want the value 2.
+
+So the convenient way to do that is to use a function from fastcore called first.
+
+So we should from fastcore.utils import first.
+
+There's something very similar in Python called next.
+
+But it's, first is a little bit more convenient.
+
+And so this actually basically is now the function we want to forget.
+
+Right.
+
+This is the thing that we want to use.
+
+So this is the thing which might surprise some of you.
+
+If we say def sorry, underscore digit.
+
+This is how we want to get a digit nowadays.
+
+And so underscore digit for our x.
+
+Okay.
+
+So now we can look back and see how did we solve it last time.
+
+We mapped underscore digit to everything.
+
+So if we map underscore digit.
+
+The first one was mapping it over all of the characters in x.
+
+Right.
+
+Because of the star.
+
+Yeah.
+
+Here it's like instead of the characters we want.
+
+We want the suffixes.
+
+Yeah.
+
+Exactly.
+
+So no worries.
+
+Let's do that.
+
+So so we can look and we can say like, okay, for i comma o in enumerate.
+
+Sometimes I'm a little too fast with my tab completion enumerate x.
+
+Right.
+
+So that's kind of our favorite trick.
+
+Right.
+
+So we want everything from there onwards.
+
+So from i onwards.
+
+That should be that's all of our possible suffixes.
+
+Does that look better, Jono?
+
+Yep.
+
+That's looking good.
+
+Okay.
+
+So I would call that suffixes.
+
+Because I just like to give things names that I'm going to know what it means.
+
+Okay. suffixes.
+
+Great.
+
+And so basically then we've got digit.
+
+We've got suffixes.
+
+So now I feel like that might be pretty close.
+
+So I'm actually going to copy this.
+
+So we're not going to do this one.
+
+We're going to do this suffixes and then map.
+
+Digit.
+
+Does that sound right?
+
+Yeah.
+
+It won't be an L, but that's okay.
+
+Well, actually, no, it won't be okay.
+
+It should be an L.
+
+Yeah.
+
+And also we should do this step by step first anyway.
+
+So that's cool.
+
+Add below.
+
+So let's add an L there.
+
+Okay.
+
+And by the way, you don't need the square brackets at some point in the future.
+
+We're going to learn about generators which removes the need for square brackets, but you can always put the square brackets.
+
+It doesn't hurt.
+
+And so then we're going to say suffixes.map.digit.filter 219.
+
+That looks nice.
+
+So we should get 29 for that one, which we do.
+
+So that's good.
+
+So let's see our solution here.
+
+Solution to 1a.copy.
+
+Which is to return, go through each of the x's and solve x.sum.
+
+Oh, maybe this is now the same.
+
+So maybe we don't need to redefine that.
+
+So solve 1a with x's should be 281.
+
+281.
+
+Okay.
+
+So then our solution was then here.
+
+So let's go copy.
+
+I shouldn't have called it solve 1a apparently.
+
+Because it's actually the solution to both.
+
+So the key thing here, 54078.
+
+And 54078.
+
+So the thing I wanted to point out here and why I kind of did it this way is to say, yeah, there's this interesting thing in Python where the definition of solve 1a used a particular function, which is called solve x.
+
+And at the time we ran this, solve x had this definition.
+
+But later on, we changed the definition and we still re-ran it.
+
+And it's kind of this nice thing about the composability of Python and the nature of it in this REPL environment or in any REPL environment in Colab, in Python, in Jupyter, where you can manipulate the environment.
+
+And so for problem solving, a lot of people consider that like bad.
+
+It's like, oh no, notebooks have state, whatever.
+
+But like, it's not bad at all.
+
+I'll tell you something else that has state.
+
+Here's something else that has state.
+
+Let me show you.
+
+It's a terminal.
+
+Right?
+
+It has files.
+
+And I can say touch hello, ls, h star.
+
+Now it's got a thing called hello in it.
+
+Like, Rn hello.
+
+Like your computer, your hard drive, everything you use, it's full of state.
+
+When we have all these tools to build up and manipulate state and delete things and search through things and so forth.
+
+And so for me, I wanted to show this way of solving this problem to say like, for a kind of more advanced usage of this style, you can lean into state, I guess.
+
+And modifying it can give you this kind of fun and interesting reuse.
+
+I don't know.
+
+What do you think, Johnno?
+
+Yeah, I mean, it makes sense, even if it's like, oh, lines, right?
+
+You start with lines being your sample data, you work on all the kinks.
+
+Then you say, okay, lines is equal to my full input.
+
+And then you rerun the function and you get your final answer.
+
+It is, you have to keep track of it, right?
+
+It's easy to overwrite something and then go back and forget.
+
+So as soon as you start doing things out of order, it's like, oh, I should be careful of this.
+
+But like you say, the same with deleting files.
+
+If you delete your config file, then you try and rerun some program, you'll get a different answer.
+
+If you make breakfast and then you eat the breakfast and then you try to eat the breakfast again, it won't work because you no longer have the breakfast.
+
+It's not a problem because you look at the bowl before you put your spoon in.
+
+You're like, oh, that's right, there's no longer breakfast.
+
+So if you're working in an environment where you're constantly looking at things, you don't forget that you've already eaten the breakfast.
+
+Yeah.
+
+And another thing about this is one reason we have the run all button is because you should be pressing it all the damn time.
+
+If your approach doesn't work unless you go here and then here and then here and then here, you're going to go crazy.
+
+Or crazy if you're here with us two hours in, you're already crazy.
+
+And so one thing I do with notebooks is I remap a keyboard shortcut to run all.
+
+And I constantly press clear kernel, run all, clear kernel, run all.
+
+And in Solvit, those next to each other clear and run all.
+
+So you clear, run all, clear, run all.
+
+Yeah, I do that a lot.
+
+Anyhow, I think that's it for the day.
+
+Anything before we say farewell?
+
+Thank you everybody for sticking with us.
+
+Thank you, sick Johnno for sticking with us in particular.
+
+I very much appreciate it as always, but particularly today when we go so far over time and and you're not particularly well, I appreciate it.

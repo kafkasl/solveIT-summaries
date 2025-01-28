@@ -1,0 +1,1991 @@
+Jono has mysteriously morphed into Nate and Yaku.
+
+I don't exactly know how that happened but hello Nate.
+
+Hello Yaku.
+
+Thanks for being here.
+
+Happy to be here.
+
+You want to say hi Yaku so your face appears?
+
+Hi everyone.
+
+Yaku is in actually in Queensland but not actually in front of that particular island display.
+
+Where's your island display from today Yaku?
+
+It's constantly changing I know.
+
+This particular island display is up in the Witsundays but it's actually where they've filmed Pirates of the Caribbean.
+
+Definitely recommend checking it out if you come to Australia.
+
+Yeah going sailing in the Witsundays is one of the best experiences of my life I've got to admit.
+
+Moving on from sailing in the Witsundays.
+
+Quick logistics notice just you should click stop solve it in your dashboard and reconnect to make sure you've got the current version because we had a quick little fix to some new functionality we'll show today which is the duplicate button which you'll find there on your server.
+
+Today we are going to start by not using solve it but instead using something that Nate released this week after giving us all at Ansarii the great joy of being able to use it for the last few weeks and it's literally a life-changing experience for me so without further ado Nate tell us what you built and how it connects to all this solve it Pizzio.
+
+Yeah so I created Shell Sage which is a bit of a mouthful.
+
+The code name at Ansarii is bash buddy which is a lot easier and friendlier but Shell Sage is a AI assistant right in your terminal and the really great thing about having an AI assistant right in your terminal is that through the power of Tmux it can actually see what you're seeing and this gives it the same sort of context awareness that you see when using solve it.
+
+So for example in solve it when you're writing to the AI assistant you can see all of your messages above whether or not that's the code and output of the code or any notes that you've written to yourself or previous messages from the AI assistant and so it can give you context specific answers that you wouldn't be able to get if you were say copying and pasting your code and stuff into say chat GPT or copying and pasting outputs from a terminal into chat GPT.
+
+And I think what happened is like a lot of us at Ansarii now when we use a KX system which is not connected like directly seeing what we're working on and connected with an AI it feels hopelessly obsolete and so you know when we were working in bash on our server for example it felt ridiculous to have to do things myself or have to tell an AI what I'm doing and what happened and so you've basically bought all that to to the terminal and oh dear somebody in the chat Justin Hong might have to be banned for bad punning just like humans shells age he put the space in before that is just terrible so yeah so why don't you what are you gonna give us a demo so we can see yes great I also want to make a quick shout out to to Richard Reese in the discord can you see my screen yeah actually I'm gonna be going through this one shortly so he's gonna get a good okay great yeah okay great yes so if you haven't seen it definitely check it out which is great and we're actually gonna do the first step anyways on a new server so let me go ahead and swap over to that so I've been teaching the answer AI team system administration in recent weeks and we're actually been using shell sage as part of that so everybody now has their own little server that they have launched a nice fresh server that we used open stack to launch automatically from the command lines I guess this is your fresh new server Nate yes and it's called sadden because I always have issues when it comes to a system administration but she'll say just turning that around so this is a very bare bones installation of Ubuntu 2024 and the only real sort of package that I've added to it is condos so that I can install she'll say this service costing you $6 a month I believe so yeah we went for the extra two gigabytes of RAM we're big ballers here at answer and so a one thing that's really nice with shell sage is you can also use it to bootstrap so if you don't have Tmux or anything installed you can also get shell sage to help you out with getting all that set up so I can do pip install shell sage to get the most recent version and we're basically in business I can type s sage to invoke shell sage and since I don't have Tmux installed if I were to try and ask it a question it will first generate an error which will be fixed in a future version very soon but if I don't want that I just have to do - - NH which stands for no history basically don't use Tmux and so I'm gonna from the audience here about what kind of computer is this we're logging into this is from a company called Genesis hosting Genesis hosting like a lot of folks uses an open standard called open stack which is really nice so by using an open stack provider we are able to basically use the same scripts and processes across all the providers we want yeah think about it as like AWS is CLI or GCPs but actually in open yes so let's go ahead and see how it's install Tmux so Tmux is you're going to be telling us more about it for now though it's suffice to say it's something that sales age needs in order to provide the context understanding of what you've typed recently and what answers you've got back recently yeah as you can see it gives me a few options and so I know that I'm on a devian slash Ubuntu server so I'm going to use the app install version and then it says I can launch Tmux by just invoking the command afterwards and also I can use a man Tmux to get some information about what Tmux is so we'll go ahead and do that history as in your yes I don't have Tmux installed so we'll probably remove the need for that pretty soon it'll check for itself whether Tmux is there and maybe give you a warning yeah you Isaac gave a really cool way of doing that so we'll be pushing a new version shortly all right so I installed that I'll go ahead and just open up Tmux man pages by typing the other command that sales age provided and so here is basically the actual documentation behind Tmux it is it stands for a terminal multiplexer and it just basically enables creating sessions and managing different types of like shell environments in a single window in a really clean and easy way and it's very popular among system administrators and so we can go ahead and read through this documentation but we have shell stage so we can use shell stage to help us out here let's go ahead and launch Tmux as you can see some stuff just changed a little bit I now I'm in like a fresh new environment I also have this bar at the bottom that's green that has some information on it and in the bottom here you have information about the session you were in don't really have to worry about it we answer just usually use one session and then within that session we'll use some other stuff like windows or panes which I'll show you shortly to have different working areas and so now let's go ahead and ask shell sage how do I use to give you a bit of a understanding of how Tmux works I just it's shell sage likely knows me a little bit too well I will just mention something though about chatting to language models which is because they are auto regressive they've learnt by completing sentences that this might seem surprising but actually they work better if you if you type grammatically correctly use correct capitalization you know that kind of thing the the reinforcement learning phase we talked about last time does help them to answer correctly even when you say who do Tmux but you know it's actually worth spending time we could you know it'd be probably maybe we should add a little grammar and capitalization fixer or something to solve it at some point but we don't currently have that so it is definitely worth spending time trying to type things carefully to get better answers yes I totally agree luckily shell sage was able to understand me in this instance so it gives me a little bit of information on what are the main things to do with Tmux as you can see there's this control B which is kind of like entering command mode in Tmux and then you have some next sort of key press that will trigger an event for example if I want to create a new window I can do control B C and now I've created a new working space session or window in this case where I can run commands that is separate from the one that I was just in.
+
+So let's focus here on the bit that I reckon everybody ought to know which I reckon you don't need to know this I would hit control D to close this one and to go back to the original one and then I would show focus on the split panes because that's what like I think everybody probably wants to know how to do and then with control BZ that is gonna really get people optimizing their Tmux.
+
+It works close makes sense yeah so one of the best things if you want to make all of your non-tech friends think you're a hacker is to split your pain into multiple different sessions into different into different panes so control B will with the double quotes will do it horizontally and then with the percent sign will do a vertical split and then to navigate around I can use control B and then arrow key so I want to go back to the main one I can control B up and now I am in the top one and all of these are separate so they don't conflict with each other or anything like that control BZ in that one so that all like maximize that pain and just yeah so control BZ basically zooms into a particular paint to make it full screen and now this is super useful if you've done a lot of outputs and you want to zoom into a particular one to focus on doing some specific tasks and then if you want to go back to the multi-pane view you just do control BZ again and you're back into the multi multi-pane example here so the only other ones I would show you perhaps before we jump into shell sage would be control BD and Tmux A because control BD is very nice because it means that you can reboot your computer go away come back tomorrow and come back to exactly where you left it including Jupiter server running long-running training jobs etc.
+
+Yeah so if any of you have suffered from like SSH and into a server running something and then your SSH connection drops or something like that and you realize that your long-running training job was killed because of it Tmux is something that you should definitely look into because of this ability to detach and have sessions always going on so if I do this control BD I have detached from the Tmux session and now I'm back into my original terminal shell environments before I launched the Tmux command as you can see all of the history still here and even the commands that I ran and if I do something like Tmux LS you can see the existing sessions that are currently available in the Tmux server so I have this session 0 that has one window and if I want to reattach back to it I would just type in Tmux A and that gets me back into whatever state that I was running in any long-running commands that I was running here would still be going on without interruption which is super useful.
+
+Quick question from the chat about authenticating so you do need an API key from Anthropic for this we will be adding other LLM providers as well but for now you need to set the Anthropic API key environment variable which if it's not currently mentioned in the read me we will make sure it's added to it.
+
+Yes.
+
+All right let's use it.
+
+Awesome okay so I have a problem with my server.
+
+Let's do it control BZ and so I have a problem with this server I have unfortunately put in a lot of data and so my space is getting limited so I need to get shell sage to kind of find out where in my file system I have my largest file so that I can clean them up so let's go ahead and ask shell sage.
+
+And this is a place that also voice can work pretty well.
+
+Yes something like transcription with whisper flow it can showcase that in a second as well but here we can see that shell sage has recommended using the sudo du command with a -ah flag and it's piping it through a bunch of stuff but it also gives us an explainer for each one of these so in this case it's running it with elevated privileges because it's trying to do it on the roots which you can do but in this case it's going to probably take a little bit too long for this demo so we'll change that in a second and then it's using this du command so this stands for disk usage and it's just formatting for us a little bit and then it'll pipe that and sort it by the top files and folder usages so let's go ahead and run this it actually even gives a quicker result one for my home directory which is actually what I want it even gives me a little warning here that it might take a large time on large system so great thank you very much shell sage okay it looks like the problem tell us okay all right let's see so let me do it with some voice great I ran the commands now what so it sees the output as well as the history of input that's the really cool thing about shell sage yeah so as you can see analyzing the output it's able to tell that oh interesting it hasn't actually used the output very well yeah it is able to navigate investigate specific directory so it does know that it is in home one to data I would have said my my request would have been more specific than yours I would have said something like oh what do you see in this output or something like this I think it's quite useful to try and again like try and be the human in the driving seat not just for solve it but also for shell sage I find it works better if I really try to drive towards the answer I'm looking for yeah I agree you think we should give it a little bit more hints or should we yeah why don't you say like you know what what do you see in these results or something like that great okay now this is way more specific I like it it even gives me the numbers so it's saying that there seems to be a lot of large video files that are taking up the space along with some image files so I even recommend some actions oh also repository with a with a large mini conda installation that I probably should clean up I can investigate further for this particular directory that seems to be taking up the most space but let's go ahead and give it a little bit more information on what exactly I want to clean up just answer a question from the chat if that's okay so Thomas asks if you type in your pseudo password will it be passed to the LLM now the answer is no but I want to explain why it's no solvert and shell sage work exactly the same way which is that the thing that's passed to the LLM the information that's passed the LLM is the information you see on your screen so in solvert everything above the current message is sent as you see it along with context if you've added that and here everything in Tmax is sent so make can you just do a control B left square bracket so control B left square bracket is puts you in scroll mode and then if you press page up a couple of times he's page up page up you don't have to teach a plan keyboard should be function up otherwise well how do you know page up there you go okay so as you can see Tmax has been keeping track of all the input and output and so that's exactly what will be sent so you won't see the pseudo password there and so if you don't see it there Claude's not going to see it either okay so let's give it a little bit more of a challenge and let's say that I want to clean up all of the files that are above 300 megabytes okay I want to clean up all of the files in the data directory that are above 300 megabytes how do I do that look good great awesome interesting to see because my recommendation would be to look at them first to be interested to see if Shell Sage makes that recommendation as well because if you've got like you know grandma's 95th birthday party for you probably want to know that yeah there you go it is so yes yeah yes and also moving them yeah you know and so I can also do it with RM and what's even greater is that it uses the proper you should be using - I so that you have to confirm whether or not you want those files actually deleted and it breaks down each one of the bits so I can also list the files here make sure that this command is actually going to do what I want it to do that one looks good and I'm gonna go ahead and delete these because I know that these are not grandma's old home video footage is luckily and I'm gonna go ahead and say I'll go ahead and confirm with Shell Sage does this look great to you cause they won't really know if those are videos you want to keep but that's true let's see what I'll say and yeah ask me to consider the different options so that's great yes I've considered them thank you very much it really wants me to back it back them up it's recommendation to GZIP them it's actually terrible which is interesting so remember these things are not always great GZIP being a MP4 won't make it any smaller at all oh interesting good fine good good call out and as you can see with the - I flag I have to confirm I wonder why I feel like yeah I think piping into RM - I might not okay and got some minor issues but anyway I think that's enough probably to get started right yeah it's anything else you wanted to talk about Shell Sage before we move on just check out the repo if you have any cool ideas also chat about it in the Discord I've been loving the energy and stuff like that that people have been sharing their experiences and feature requests and stuff like that I know everyone wants to be able to use other models so that is a top priority to to get in and if you know feel free to also contribute as well PRs are welcome and the probably the kind of amount of energy required to get started contributing to Shell Sage would be way lower than almost any other project you've come across because Nate's designed it in a really clever way so it's very concise so it's very easy to work with and understand and it's also early days it's very small also at answer AI we tend to value lower complexity more importantly than we value you know a lot of the kind of enterprise-y style software development so it's like much easier to read and work with so yeah anybody who's interested in like contributing to open source for the first time this is probably a good opportunity to do so and you can do it you know you can use Solvert or notebooks or co-lab or you know stuff like that to try and do it in a more Solvert friendly way practice what you've been learning yeah and also Nate's very helpful and patient so if you not sure how to do those things and you know there's also the community on the Solvert channel that's on the so sorry the Shell Sage channel on the Solvert server you can help you yeah I guess one other shoutout is that there was a change and so I'll be hosting the office hours after the class today with Yaku I think okay thank you Nate I will leave you to keep an eye on admin stuff that's happening thank you for joining us today of course everyone's you on the discord okay and then Yaku hello I think we're now going to move to another non-solvert thing which is a specific kind of application area of the Solvert style approach which at Ansari AI we've been using a lot over recent months and it came up with you during an office hours you were running so maybe yeah tell us about you know this idea I guess you helped out somebody with with something they asked about but afterwards I kind of said to you oh maybe we should focus actually on teaching people how they can learn themselves yeah so what came up during the office hours was that one of the students was looking to learn about generators and he sort of said that he'd read the docs and decorators right second decorators not generators oh yeah that's what I meant to say so Freudian slip if that came out wrong so yes decorators and yeah he was having trouble understanding it and he just asked if we could go through that and so we did do a little bit of a Solvert explanation but yeah as Jeremy said we probably could have done a better demonstration of how to do that yourself so that's what we're gonna do today all right let's do it all right so when I want to learn something from Solvert we're gonna assume that we we have very limited knowledge today we're quite new to even Python itself and we you know we want to learn about decorators so we're learning something new and quite early so I'm just gonna start off with the prompt so you're a typer as well Yaku what do you use voice input sometimes I've started using the voice input but currently Alfred and he'll show you see it's conflicting with the super whisper I need to fix that still so trying to learn about decorators I've read the docs but I just don't get it so kind of you know treating this like it's Jeremy and I have my own personal Jeremy and I can I can ask him questions I don't have to just watch the don't have to just watch the videos anymore I can now actually ask him questions so hey I'm trying to learn about I read the docs but I just don't get it and it should be some examples so I wouldn't start there so let's talk about how best to get the most out of this so luckily it's kind of helping you a bit right so so when you're getting help here it does help to kind of understand some basic ideas about how best to learn and how best to do education to help solve it help you so like rather than jumping into examples you can see here it's asking us some questions right so I would start out by saying like I don't know what it what do you mean functions that take other functions and what that what's that going to do with decorators or something because actually we need to start out by understanding so I would have started out by saying like hey what what's the basic idea can you give me an overview okay well I can change it no don't change it let's keep going let's go this is great we can just cancel and I would answer question two and say yeah okay so one yeah I get functions okay so again like let's try to be careful about how we type these things because the better we type the better they're kind of better the autoregressive mode's going to get in so let's say you know use capitalization say yes at a comma it makes a really big difference to the responses we're going to get okay comma I am comfortable with Python functions cool cool and it's another good reason to get voice working as it tends to give you better constructed sentences yep so let's start by understanding functions as an argument this is a key part of decorators okay function can be treated like any other object so you can assign them to variables here's a simple example to try which would like me to show you a basic example of passing a function as an argument which prefer to try writing yourself so here I would say I don't know how to do it can you show me sure I think I say yes then yeah and you can press command enter to submit or control enter okay so here's a simple example so we have to find a function say hello and we've defined something called apply greeting which takes a function and a name and then it's going to call that function with the name so when we have apply greeting and then we're going to use it by putting in the say hello function and passing it Alice as the name okay so let me just explain how that works to people so it's like it's not very straightforward yeah go ahead and submit it okay I like the way you use the copy up to code there so in the apply greeting function the way to think of it is that where it says funk in deaf apply greeting funk that funk is going to be replaced with whatever you send it so we're sending it say hello so instead of saying funk it will be say hello and name will be replaced with Alice so it's going to actually return the result of calling say hello Alice and this is literally what functions do in fact math is basically replacing symbols with other symbols according to rules as is computer science and so when you kind of do it that way you can work through it in your head to see exactly what's going on I guess we should ask what the nurse has got to do with decorators should we sure how does this like decorators so decorators a special way to use this concept it's a function that takes another function and returns a modified version so let's build on this example so here's the same idea written as a decorator so we've got this at greeting decorator function and then there's another deaf inside of it so I haven't seen that before it's kind of interesting it's a deaf inside of a deaf so I'll ask about that in a second and then let's put this at on top of get name which we didn't have a get name before so it seems like it's a slightly different example yeah so maybe we should start then by looking at the it's just a shorter way of writing colon so maybe let's copy the bottom line that it's got the ad greeting decor is yeah so if you copy that by going to the far right and clicking on the copy button this one then press Apple V and then we should try it because that's what we do we haven't defined this stuff yeah that's true so prompt yes so let's click on the previous one to modify it I can delete it that's fine yeah okay you're right so let's do it a different way so let's delete the previous one okay instead we can modify it so yes I click delete and this is actually a useful thing to show people how these actually works is it not a little late so we're gonna let's change so scroll up so that we can see that yeah click on the copy this to output button here yeah and we'll see what it actually does is that copies in all of the bits all of the code which is quite cool and so if we just delete the ad greeting decorator and the print then get rid of that get name get rid of the print everything except get rid of the get name there we go that's what we want get name is not defined oh it's get name we wanted not ad greeting decorator that we wanted yeah copy this but not with the decorator yeah we got it sorry about that okay it's all so now we should try it so what the hell yeah we've come out this a bit of a broken state haven't we oops back to this nice okay so yeah now we've got name is Alice yeah okay and then we want to actually wanted to get name equals ad greeting decorator oh it's a bit annoying because it's giving it the same name as what we started with so what if you selected it and made the def called underscore get name you know and then get name equals get yeah so we want the whole thing we just want to do it without the decorator to start with okay I'm modified to do it without the decorator so to do it without the decorator that yeah and then you use change get name to underscore get name and then copy their last line of code which says get name equals ad greeting decorator into your output and then change that last get name to underscore get name yep yeah so it's kind of like yeah trying to get this to actually demonstrated it went too many steps ahead so this is where we kind of got to be a bit careful about I guess the educational approach of these things they they often jump too many steps ahead so now you should be able to call get name and we put in a name that we want so we have Alice and okay so came back as hello Alice and our underscore get name just returns a name okay and then get name return to function so at creating decorator return to function yes returned this new function wrapper that we defined that where wrapper takes in name and then this returning this is a f string so it's going to execute inside of it so personally what what I would do at this point if I didn't fully understand it would be like hey can you break this down line by line that's right happening oops okay it takes okay so I mean the goal of this isn't to learn about decorators it's just to kind of walk through the pros and cons of the approach I think this is like useful right so we can see like in order to learn stuff with Solvert we have to be quite intentional and you know you really want to like try every example and anytime there's an example you don't understand you've got to like keep asking you know and keep going into smaller and smaller pieces and if it tries to go too far ahead you got to try to rewind and kind of go through it more you know more slowly so I think something that'd be really useful in the office hours you know is if there's ideas you know libraries, APIs, computer science techniques anything else that you've had trouble learning you know bring them to the office hours or a study group and work through them you know and say like here's me trying to learn about it here's me trying to ask the question and in the office hours we might try to really focus on you know teaching people how to fish rather than doing the fishing for them if that makes sense there's a question in the chat about like should you delete portions of the conversation if it goes too far off track and that's a yes definitely you should right if the dialogue's not going in a direction you're happy with because of the way the language model is trained it will want to continue to go on in a direction that's not very good because in the past documents it's been trained on things that tended to go badly keep going badly so instead modify one of its outputs to say what you had wished it had said you know or just delete everything from the point at which you kind of felt like it wasn't going great and and try again it's a really important to understand how these language models are trained in order to get the most out of them what do you think yeah okay yep I think well I guess we've kind of shown the concepts here learning did you want to keep going or no I just yeah wanted to get your comments or your thoughts on the process basically so yeah I guess let's see how we go after so after class today there'll be another office hours and maybe folks can join in and you guys can try this out Nate will be there too right yeah yeah for sure he will be there and yeah we can try that then okay super I've got some more examples of this kind of thing I can show if people are interested and for these examples I'm going to show a new tool which I really like and the tool I want to show is something in Claude called projects so projects are an example projects have a few things and the one is just you can add a system prompt right so when I was kind of experimenting with teaching kids calculus I just added a system prompt so that's kind of the most basic starting point and then you can see you know us doing calculus and one nice thing in Claude is that it can output artifacts which are fun and so we kind of used that to kind of ask for examples and I was trying to help the kids kind of get a sense for for the basic ideas behind calculus the more interesting part however is that you can add context now discord I was creating a discord helper which would let me right click on something in discord and choose get message link and it would basically create a bookmark of that message that I could look up and jump to later I had never used discord API before so I basically grabbed all of the documentation that I thought might be necessary and turn them into markdown files so let's just have a quick look example of that often it's quite difficult to kind of scrape documentation often it uses JavaScript it often has like like Google's ones have some kind of bot detection I don't know why you do that because it's really good to have bots using it but a really good way to do this is if you right click on docs choose inspect and then if you press left arrow until you can see basically the entire area that you want is selected like so and then you can just say copy out of HTML and then I created this thing called web2md.answer.ai that you can paste that into and underneath you can see it's turned into markdown and then what I normally do is I then click on just it right and we now have a gist that contains that documentation that we should have given it a markdown name so it actually appears markdown there we go and then what I do is I then add that to my Claude project and so you can see they all there they all are right and so with this and then I added a system prompt to say like help me create a discord app and then I would just kind of ask it basic questions like I would like to create an application in Python for discord in which I could right click on a message in a server and it would send a link to that message to a DM to me so that I could effectively book market for later based on the documentation provided does this sound like something that should be possible using this approach so like don't be too concise right tell it tell it everything you want give it all the information you need and this is kind of where I started and the other thing I forgot to do here because I started doing this back before this was an issue is I would go back to this here and I would say don't use artifacts because they're not at all useful for Python save instructions just hold on this screen Jeremy could you just show quickly where the gist was useful there where the gist was useful actually I guess in this case what was important was the well yeah I can show you you could you could actually just paste it in so maybe in this case the gist wasn't necessary you could just copy so let's go back to the project discord yeah so when you say add knowledge you can either upload or add text so yeah you actually want to either save the file locally or paste it so I guess actually in this case the gist wasn't so useful there's yeah thanks for checking so now that we've modified that to say please don't use the totally pointless artifacts which it's really over enthusiastic about it should give us something much more prosaic so you can see where was that sorry now I've lost where I was doing it anyway so I used that to create you know that that that discord thing and also to kind of document it as I went and you know similar idea Richard created a nice tutorial here for shell sage using the same approach I believe which is adding the context to a project being the kind of existing documentation that they created and one thing that's really helpful is that in these cases you know Richard exported a gist of the Claude project output unfortunately there isn't something built in to Claude currently to do that but my colleague and friend Hamel has kindly made one so you can go to Claude save and get a extension that will save it in exactly this format as you see so let me give you some tips for kind of how to create good documentation and other things you can do with this so one thing I did was I wanted to create documentation about a library I created called fast slide right and so I tried to make sure I asked very specific questions to to be like the kinds of things that I really wanted people to know the answers to right so what does fast slide add to SQLite utils you know okay show an example of doing this show an example of doing this and I'm not really getting it to just write the documentation for me I'm trying to get it to write the things that I want to kind of add to my documentation so again it's like very much a dialogue between the human and the computer even though I'm not in solvout here this is one of my favorite ones actually sorry not this one this one's one of my favorite ones one of the best books I've read for many years is this book by the guy that created a HTMLX and some other folks and it's basically all about how to create web applications from a deep understanding of the fundamentals of how the web works and I think it's amazing and I wanted to be able to provide parts of that to it'll both have something that humans can read but particularly I want to say much more concise that a language model can read so I think I've got something strange here so let me just do it here okay so I don't have the original dialogue I used to create this which is silly of me I could have should have kept it but I can show you how I made it I put all of the first chapter of the book into context and then I basically said like please summarize this for me and its first summary was crappy and I basically kept telling it how to make it better be like provide a lot more information provide a lot more examples copy things in the original and I went through about five goes until I got when I liked I modified it myself editing a few things I didn't like I then deleted everything between and so I ended up with me asking a question and it giving it a great answer and then for chapter 2 I then put chapter 2 plus chapter 1 summary in and said please create a summary of chapter 2 using the approach you see of the summary in chapter 1 here are some things particularly to look out for so I summarized the things that got wrong last time and it the second time I only had to do it like twice to get a really good answer and you can see like for a whole chapter it's got an extraordinary amount of detail and examples but it's much more concise than the book right so it's a really great reference so again I deleted the ones that I didn't like as much and so I added up with something where the answer was exactly what I would have liked added it to make it even better and then for chapter 3 I then did the same thing and then I again added the extra things that was still not quite getting right and for chapter 3 the first time it was perfect right and it's got all these great examples and details and then so I just kept adding one chapter at a time and after a couple more goes it then did a bad one again and so this time I actually kept the bad one and I said and I and I left it in the dialogue and said no no no not like that you know look at the earlier chapters to see how to do it right here the problems and so then chapter 5 again is great you know it's got all this detail and so I found I can add now this markdown of a chapter to a dialogue and immediately the language model fully understands how to use HTML and HTML really well just gonna see how I get the URL on the screen quite sure how to do that sorry I was just trying to get the URL on the screen as well but it's a bit tricky I can see it no okay great just cutting off the very bottom but hopefully you don't need the very bottom so let me show another interesting example of this which is something quite different which is there's a lot of stuff out there for creating meeting notes and to me a meeting shouldn't happen unless it's going to create some really useful output you know so for me we don't have meetings at answer AI very often at all and when we do we have a really high bar for what they're proposed to do and then so since they're meant to be really good really useful things then we want the artifacts from that to be really great right so the normal meeting notes you get from AI tend to be super concise and not really tell you what went on so when I had a meeting with Hamel I pasted the whole thing into Claude into a Claude project that I use for this purpose right so it's like here's my zoom meeting I just pasted in the full transcript and I said to it this is key I said right rewrite this to be suitable for publishing in a magazine right combine their contributions so it's less fragmented clean it up right do not lose any content this is the most important thing just do the first eight paragraphs and then stop right and so then here's the entire oopsie desi here's the so I've got a brand new keyboard which is possibly a mistake to use this because it's a really strange layout okay so here's the whole transcript right and then it's like okay here's a rewrite and it always does you know a pretty bad job so I edited it so I did a couple more versions of that said no no that wasn't right that wasn't right and then I kept you know the one that I did like and then I said great go on okay and and each time I remind it right what I want it to do you know or you can just kind of keep the dialogue going and against like yes you know more reminders about the things I want to make sure it gets better and better at you know and I just keep going small bits at a time and it ends up with a super nice shareable artifact that I shared with my team and people really appreciated it people like wow that was such a you know interesting thing to you know to you know got a lot of information out of this yeah so it's probably a bit different right I mean it probably took me 15 or 20 minutes to do rather than like zero minutes but for sharing something that's meant to be a really high quality artifact from a really important process of like you know multiple people are going to be reading or watching this thing I think it's really worth doing another example was I wanted to teach people how to use fast HTML like what's the purpose of them so I included all you know a lot of the hypermedia book I just showed you the summary of it in the project and also the fast HTML with the docs and so I'm being really very quite focused here and what I'm trying to get out of it and hoping to kind of think about the kinds of things that people often misunderstand like or what the hell's actually a hypermedia application right so that's another example of like trying to do the kind of fact based on things I'm actually getting asked on the discord to get the kind of answers that I want so I find that useful also did the same approach because fast HTML is based on starlet I wanted a really good manual for starlet I wanted people to understand the architecture of a fast HTML application again I'm just providing it and the nice thing about this approach is that each time I build these I can use more and more of them in the context for the language model and so they just keep getting better and better and that's kind of what we're looking for right if you let the language model drive a process they're generally going to get worse and worse because of kind of the limitations of these kind of autoregressive approaches but when you're doing this kind of approach each dialogue you create is better than the last one each prompt response was better than the last one you know so again here like what are the components of fast HTML how do they work together and you know again I'm kind of showing examples that I want them to show me how to do it and so I tend to kind of sometimes I provide these gist directly as links from the docs sometimes I'll go in and edit the gist right and so then this is really important because then when I use this as an input context for another Claude project right I can tell Claude like oh look out for the notes from me where I've pointed out places that previously a model misunderstood it right that is another one and it's also for humans you know humans humans that read these things and computers are going to be pretty similar so Jeremy if you wanted to summarize another book would you maybe and it was like web related would you then maybe start by taking a section of your HTML thing that you've done or the whole thing and putting that in first yeah if I'm looking for something similar where it's kind of quite a technical book with examples I would probably say like I'm looking to convert this chapter and include all the examples just like I did with this chapter with those examples absolutely so as you know yaku and I assume this is why you're asking this question this is called in context learning in AI and it basically means giving examples of desired of desired outputs for inputs language models work dramatically better like way way better when there's in context learning the problem is most people don't know how to do that because it's not particularly clear what the examples should be if I had examples I wouldn't be asking the question so here we're building up a library of of examples and again the kind of the idea here is we're trying to get in this really positive reinforcement loop where every time we use AI we get better at it and the model gets better at it exactly great okay so maybe we'll have a five minute break before we jump into Advent of code and when I come back I will also check the chat to see if anybody has any questions sound good yaku sounds good to me okay thank you sir Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+Cillin Beach Center.
+
+All right, I'm back.
+
+Are you back, Yaku?
+
+I was busy reading the Zoom comments.
+
+Excellent.
+
+Sorry, the YouTube comments.
+
+Actually, I'm not quite organized as it turns out.
+
+All right, I think I'm organized.
+
+All right, we're ready for some advent of code.
+
+And we're, what are we doing?
+
+Day three, right?
+
+Day three.
+
+Okay, so hopefully you've all had a try at this already.
+
+So let's remind ourselves as to what we're doing.
+
+And I think you're sharing, Jeremy.
+
+Okay, I should probably do that then.
+
+Oh, and I know the shortcut key.
+
+Because we don't need the URL anymore.
+
+Okay.
+
+Oh, a question in the chat.
+
+Robert's asking how I changed the answers of the AI.
+
+Nowadays, now that Solvert exists, I would just do it in Solvert.
+
+Back then, we had some different proof of concept approaches I had to use instead.
+
+But nowadays, Solvert directly lets you change the answers of the AI.
+
+So that's what I would do.
+
+All right.
+
+The gondal lift isn't working.
+
+Engine part's missing.
+
+You have to add up all the part numbers.
+
+It should be easy to work out which part's missing.
+
+There's a visual representation of the engine.
+
+Lots of numbers and symbols.
+
+Any number adjacent to a symbol, even diagonally, is a part number.
+
+So we're getting our notation.
+
+Okay, so there's a part number.
+
+Periods are not symbols.
+
+Great.
+
+So copy that.
+
+And we've got a new feature called duplicate.
+
+Thanks to Jono.
+
+So to use that, I've now created a little advent of code template.
+
+Which actually, I guess, I could also add a little bit of help to here by saying input equals getData.
+
+And actually, before I do that, we should run all.
+
+So I get some help for autocomplete.
+
+GetData.
+
+Okay, here equals 2023.
+
+And day equals 3.
+
+Great.
+
+And it doesn't really matter what the day is, because we're going to be just using this as a template.
+
+So then I'm just going to go duplicate.
+
+Then I'll click on it.
+
+And edit the title here to AOC day 3.
+
+Maybe worth leaving the day empty in your template so you don't accidentally forget to change it.
+
+I've been caught with that one, so it's always with you using the wrong days input.
+
+That's a really good idea.
+
+AOC day 3.
+
+Part 1.
+
+Okay.
+
+Okay.
+
+Import colon 50, say.
+
+Run all.
+
+Okay.
+
+So that's our sample.
+
+C code.
+
+Okay.
+
+Okay, sample equals.
+
+Okay, there we go.
+
+Okay.
+
+So what I've noticed is often people seem to find the parsing bit the hardest.
+
+I think with a solver approach, the parsing bit for me is always the easiest.
+
+And the trick is just to go into smaller and smaller pieces for the parsing, make the smallest bit work, and then gradually build back up again.
+
+Now, in this case, the goal here is we need to find all of the numbers which have a symbol next to them.
+
+So I kind of like to think about what an ideal data structure for that would look like.
+
+And I guess rather than this current one, what I really want to know is where are the numbers and where are the symbols?
+
+Where are the numbers to know if it's next to a symbol?
+
+I need to know where the number starts and where it ends.
+
+Now, I happen to know how to do that, but let's assume we don't.
+
+So we can ask.
+
+What is a concise and easy way in Python to find all of the places that where a string of digits starts and stops inside a larger string?
+
+It's not always easy to explain exactly what you want.
+
+You'll notice often, as is the case here, I misspoke and re-spoke, and generally these modern voice-to-text things tend to do a perfectly good job of figuring out that.
+
+You don't have to worry about it too much.
+
+So something that Nate added recently, which is really nice, is that any time that you in your prompt or note or the assistant in its response has a function in Bactics, it provides a hyperlink to it.
+
+So a key, key, key thing is any time that something comes up that you didn't previously know about in Shell Sage or Solvert or Claude or whatever, is stop and go learn about it.
+
+That's why this has been made as convenient as possible.
+
+So here is find iter.
+
+I'm going to turn my discord off because it keeps beeping.
+
+Find iter.
+
+Return an iterator yielding match objects over all non-overlapping matches.
+
+Oh, that sounds interesting.
+
+Non-overlapping for RE pattern and string.
+
+Now, the thing about documentation like this is it's super concise because it uses bits of jargon.
+
+That's a shorthand, which is a perfectly fine thing to do as long as you always look up the jargon.
+
+And the jargon is generally in good documentation like Python is going to be a hyperlink, an iterator, what the hell's that?
+
+An object representing a stream of data each time you call next, you get different successive items in the stream.
+
+Again, it's a good of an infinite tree of jargon, but over time you'll learn these ideas, these core ideas, and you'll better read them more quickly.
+
+What the hell's a match object?
+
+A match object.
+
+Okay, well basically the key thing to know about an object is what can it do.
+
+So you read through, it's got an expand, it's got a group.
+
+A group can take zero or more group IDs.
+
+And then the key thing is the examples.
+
+So I would read all that.
+
+Okay, but for now, I guess the key thing we want to know is basically how does it work.
+
+And the basically how does it work is what's the signature of it.
+
+So if you just pop a question mark there, okay, then you find out.
+
+Okay, it's find iter, pattern, string, flags, and a quick summary.
+
+Okay.
+
+Okay, regular expressions.
+
+I know regular expressions.
+
+So I am this guy.
+
+Because I know regular expressions.
+
+Regular expressions are amazing.
+
+They have a very, very unfair reputation as being difficult.
+
+And I think the reason for that is that they are a concise notation, you know, like math, for example.
+
+And things with a concise notation cannot be read at all like math by somebody that doesn't know the notation.
+
+It just looks mysterious, right?
+
+But just like to a Chinese speaker, Chinese is not hard to read.
+
+English is.
+
+To an English speaker, you know, Chinese is hard to read.
+
+An unfamiliar notation will be unfamiliar until you learn it.
+
+But that doesn't mean it's hard, right?
+
+Regular expressions makes things easier, right?
+
+Much easier.
+
+And there's a small subset of regular expressions that I will teach you.
+
+So that you will know enough to be this person.
+
+But yeah, don't let it bother you that they look strange.
+
+Basically, a regular expression is something that allows you to search through a string to find substrings that match a pattern.
+
+And so we're going to describe what some of those things are.
+
+Let's first of all create a joined version of the sample, just a smaller version.
+
+I'm just going to go sample.replace.
+
+And replace a new line with nothing at all.
+
+And we'll start playing with it.
+
+So a regular expression takes a pattern.
+
+What's a pattern?
+
+It's a string.
+
+So just to make this a little bit less typing for me, I will go from re import find it.
+
+So I can now just type find it.
+
+And the first thing I need to pattern.
+
+So here's a really simple pattern.
+
+For.
+
+What does for find for finds the four.
+
+That's actually the seven just to make it more interesting.
+
+Okay, where do I find it in inside my string SS and find it returns.
+
+Oh, an iterator.
+
+Right.
+
+So basically, you'll get this kind of thing a lot in Python when it says iterator.
+
+Basically, what that means is that you get something that you could then like loop through later to get all the answers from it.
+
+To do that all in one go, I can simply do this.
+
+Right.
+
+Now that's a lot of work.
+
+So let's not do that.
+
+Let's instead say define find it.
+
+This is basically a way a totally standard way you can always wrap a function and get it to do something else.
+
+If you say star args star star keyword args, that basically says pass through everything that you get sent off to something else.
+
+We just say return list re dot find it.
+
+Because I want this to work for me, you know, I want to work the way I want it to work.
+
+And I never want I always want to be able to see the list.
+
+Right.
+
+So modify your environment to make it work the way you want.
+
+So now that we've done that, we can get rid of list.
+
+Great.
+
+Okay.
+
+Just little things, slightly easy, easier to deal with.
+
+Okay.
+
+So what's it done?
+
+Well, it's looked for all the places that the pattern matches in the string.
+
+The pattern is seven.
+
+So it's told me that it's found it's matched to seven at two comma three.
+
+Okay.
+
+Now immediately we've seen something that a lot of people on the discord messed up, which is the span is the start and the end.
+
+But be careful because look, zero, one, two, this is two, that is the start.
+
+The end is past the end.
+
+Right.
+
+So be very careful.
+
+It starts at two and three is just past the end.
+
+I just like it's not bad, right?
+
+Because the difference between the two is one and this is of length one.
+
+That's fine.
+
+Right.
+
+But just be careful.
+
+So you can see that by studying our data as we go, it really helps.
+
+Right.
+
+So we found all the seven.
+
+They do that so you can slice it nicely.
+
+Fits with the slice notation.
+
+Exactly.
+
+Rangers work this way.
+
+Pretty much everything in Python works this way.
+
+Yep.
+
+I think that's a great point, Yaku.
+
+So no complaints about it, but certainly an easy mistake to make.
+
+But again, we read the docs and then we tried it and then we looked at the answer.
+
+And so we've got everything we can now.
+
+And so being in terms of a hurry with that kind of code to like win the speed races can be a bit of a mistake because what we actually want you to do is maximize the learning race here.
+
+Which is another good reason to do the 2023 version because at this point you're not going to get on the leaderboard.
+
+Okay.
+
+Now being able to find the sevens is somewhat useful, but not super useful.
+
+Let's find the digits.
+
+Okay.
+
+So here's where what I would do is I would press command shift up arrow and that creates a new cell with the same as the last cell.
+
+And I'm going to show you the first thing to learn about.
+
+And that's going to show you a really minimal set of things which will get you a really long way.
+
+The first thing I want to show you is that you can type in a set of things to look for.
+
+And a set is always in square brackets.
+
+So I want to find anything in that set.
+
+All right.
+
+So there they all are.
+
+So that's found four, six, seven, one, one, four.
+
+Okay.
+
+Let's get a close it up.
+
+Don't quite need all that on my screen at once.
+
+That's enough to know, right?
+
+But obviously that's a little bit annoying to type all that, right?
+
+So it might be useful to know that you can instead use a hyphen to say everything between zero and nine.
+
+You can also do A to Z.
+
+And there's the same thing.
+
+And now we're at the point where it's like you don't need to learn, this is called a character class, right?
+
+So this is a character class, it's all everything in this set.
+
+For what it's worth, some character classes are used enough that people have even shorter shortcuts for them.
+
+So identical to this is backslash D.
+
+Backslash D means a digit.
+
+You never need to use it.
+
+You can always use square bracket not to know.
+
+It's slightly less typing to write backslash D.
+
+There is however a bit of a problem, which is we need to put an R in front of it, and I'll show you why.
+
+If I write print backslash N, for example, as you might know, that's not actually a backslash followed by N.
+
+That's actually a new line character.
+
+So in Python, to say I actually mean a backslash, you can write an R at the front.
+
+And that means everything in this string, a backslash means a backslash.
+
+It means don't turn them into anything fancy.
+
+R, you can think of it as R for regular expressions because this is where you use them all the time.
+
+So basically any time you're using a regular expression, it's not a bad idea to get into the habit of typing R apostrophe or double quotes all the time.
+
+Okay?
+
+Great.
+
+So, we've learnt about character classes, and I said that we're going to try to stick to the minimal necessary bit.
+
+So then the second main thing to know about in regular expressions is that after a character class, which could, this is a character class, this contains number seven, is a set of possible things.
+
+This contains the set of those things.
+
+After that, you can then add a second character to say how many times do you want that to appear.
+
+By default, you want it to appear once.
+
+So there's a single four, a single six, a single seven.
+
+Okay?
+
+If I want one or more times, plus.
+
+Plus means the previous character class, one or more times, which is actually what we want, right?
+
+So if we submit that.
+
+Then I think we can agree that's looking pretty good.
+
+Four, six, seven.
+
+One, one, four.
+
+Thirty, five.
+
+You see?
+
+And they're not overlapping.
+
+So there's all the places that we want.
+
+Okay?
+
+So Dr.
+
+Miko on the chat says he quite likes writing rejects, but finds them hard to read.
+
+And they're hard to read in the same way that math is hard to read, which is two possible reasons.
+
+One is you don't know some of the symbols.
+
+And the second is you try to read it too fast.
+
+So the only way to read a regular expression is to go through every single piece bit by bit.
+
+Now one way that can make that a lot easier is to go to somewhere like redjacks 101.
+
+Yeah, redjacks101.com.
+
+And paste in your testing without the quotes.
+
+And paste in your regular expression.
+
+And say this is a Python regular expression.
+
+And notice here how it says, oh, I'm always going to put an R in front of it by default.
+
+So that's nice.
+
+And you can see exactly what's going on.
+
+Right?
+
+Zero to nine.
+
+Match a single character present in the list, zero through nine.
+
+Okay.
+
+Follow by a single character plus matches the previous token.
+
+One to infinity times.
+
+And then here you can see all the matches.
+
+Okay?
+
+So this is a good way to, you know, check your understanding.
+
+But also as you can see, solve it's also a good way to check your understanding.
+
+So let's try that then.
+
+This is looking pretty good.
+
+Let's try it in Samp.
+
+Again, this is why you, you know, want to do this stuff carefully.
+
+Make sure it all works.
+
+And like, oh, look at that.
+
+That worked too.
+
+So we don't really need that SS thing.
+
+So just delete that.
+
+There's the SS closer to what the real one is going to look like.
+
+Oh, no, they have the backslash ends in there, don't they?
+
+Yeah, they have the backslash ends.
+
+And we actually care about what line it's on.
+
+Yeah.
+
+Okay.
+
+That's what it's.
+
+So we actually need to know something.
+
+This is not quite the right answer.
+
+Like you could turn this into the right answer, to be honest, because each line is some particular length.
+
+So it's one, two, three, four, five, six, seven, eight, nine.
+
+It's ten long.
+
+So if we did like this integer divided by ten, it tells you what row it's on.
+
+And if you did this mod ten, it'll tell you what column it's on.
+
+But why use math?
+
+You don't need to.
+
+You know, I'm not a huge fan of that idea.
+
+So instead, we're going to try and do it a bit smarter, a bit simpler.
+
+And I'm going to go back, because I've got somewhere around a neat little, yeah, this.
+
+I'm just going to steal this.
+
+I'll show you this in a moment, because it comes up quite a lot.
+
+So I always like to be able to visualize things easily.
+
+I should probably put this actually in my template, because it comes up so much.
+
+But here's a command called show.
+
+And it's going to go through each row in some matrix.
+
+When I say matrix, it's just a list of strings.
+
+And it's going to print it out along with some numbers.
+
+And I'll just show you what that looks like.
+
+So if I say show, SAMP.
+
+Oh, what did I do wrong?
+
+Ah, right.
+
+So first of all, exactly.
+
+So before I would do that, I would always say lines equals SAMP.splitlines.
+
+And very often, I like to run, I've modified something up here.
+
+I want to modify, run everything below.
+
+So don't forget we have a run below button.
+
+So that runs all my messages below.
+
+And obviously this then needs to be lines.
+
+OK.
+
+So I think that's a bit easier, right?
+
+Because now I can immediately kind of see the coordinates of everything.
+
+And so I can kind of more easily now check whether I'm getting back the coordinates I want.
+
+So 467, I want to see something saying, oh, it starts at 00 and ends at 03.
+
+Just one pass the end.
+
+Or 02, depending on how we do it.
+
+Maybe we want 02.
+
+And then like 35 starts at 2, 2, and ends at 2, 3, or 4, so forth.
+
+So the row it's on is actually pretty straightforward.
+
+That's just going to be the row number as I loop through each one.
+
+And the column, we know how to get that for the start and the end.
+
+We can get from find it.
+
+So that feels reasonably straightforward, right?
+
+We can, you know, when the lines represent a matrix, I often like to just call it M.
+
+Because there's nothing particularly special about them being lines, right?
+
+So perhaps you folks remember from last time we've seen that you can go 4i, 0.
+
+0, N, N, numerate.
+
+And that just, oh yeah, and you always need parentheses in my list comprehension.
+
+Okay.
+
+So there's my row numbers.
+
+It's kind of quite nice, along with each one.
+
+And so then for each one, we want find it.
+
+And we want to find the digits.
+
+So let's grab that.
+
+And we could even say like digits RE is this.
+
+And then we'll just go copy and paste.
+
+And rather than O, we will say R, we'll say, well, we've got our new special find it, which listifies it for us, which is rather nice.
+
+And so we pass in the, we first of all, we pass in the pattern.
+
+And then we pass the thing to search through.
+
+And so here we go. 0 has two things, 4, 6, 7, and 114.
+
+Nice.
+
+One has nothing.
+
+Two has two things. 4, yeah, it looks pretty good. 9 has two things.
+
+That looks pretty nice, right?
+
+So what I like to do now then is to think about like, okay, well, what would be the nicest possible way to have this?
+
+It's basically like, oh, I want a little object which has the row number and the start and stop column.
+
+And also what digit it is.
+
+So something I find really useful for this is to be able to like instantly create any object I want.
+
+And there's a nice little thing in Python called simple namespace.
+
+And I use it so much, I tend to give it a different name.
+
+I tend to call it NS.
+
+And so basically you can create it like this.
+
+And just start creating a little object.
+
+There's my little object.
+
+So I want to create something for parts.
+
+They said a part is a string of digits.
+
+So as usual, I would call it underscore part.
+
+And it's going to take two things.
+
+It's going to take the y that it's on, which is here.
+
+And it's going to take the match object to call MO.
+
+And so we're going to return.
+
+Okay.
+
+And what are we going to return?
+
+We need the span.
+
+So let's just come back to that.
+
+So let's grab one of these, right?
+
+Let's grab this.
+
+Give this a name.
+
+Sorry, not that.
+
+Yeah, grab this.
+
+Which one do we really want?
+
+We just want one match object to play with.
+
+So how about we just grab this and we'll call this match objects.
+
+Match objects.
+
+And so that way it's going to be easier to play with one, right?
+
+So match object equals match objects 0.
+
+Match object.
+
+Okay, great.
+
+So this is where you can just save a bit of time.
+
+How do I grab the starting point, the ending point, and the matched string converted to an integer for a single match?
+
+MO.start, MO.end, MO.group.
+
+Okay, great.
+
+So return a namespace containing, so our starting X, I call X1 equals MO.start.
+
+Our end to, we'll call MO.end.
+
+But I think I want the start and the end to be semantically the same.
+
+So I'm going to subtract one from it because that's actually where it ends.
+
+And then we've got the Y, of course, which we can just pop here.
+
+And then the digit equals int MO.group.
+
+Okay.
+
+So now that we've done that, of course, we should immediately test it.
+
+So underscore part, and we're going to be passing in Y.
+
+So for the first part, that's zero.
+
+And the match object is MO.
+
+And there we go.
+
+How's that looking, Yaku?
+
+It's looking pretty good.
+
+I guess one question I had to, it's just with the namespace.
+
+Maybe you said that while I was out.
+
+Do you just prefer that over like a data class because of more concise writing?
+
+Or is there another reason you like that one?
+
+Sure.
+
+So Yaku's asking about this approach here, called a data class, which we could absolutely do, which is where you add a decorator.
+
+So since we've been seeing decorators, and so this is going to be something, it doesn't just take a function and return a function.
+
+It can also take a class and return a class.
+
+And so we could create a capital P part.
+
+And we could say X1, which is an int.
+
+And X2 is also an int.
+
+Oops, you did the wrong button.
+
+And Y is also an int.
+
+And our digit is also an int.
+
+Right.
+
+And that's totally fine as well.
+
+Sorry, what did I do wrong there?
+
+X1, int.
+
+Don't mind me.
+
+I just don't know Python.
+
+Okay.
+
+And so then you can do the same kind of thing.
+
+Now one nice thing about data classes is as long as you stick to the same order, you define them, you don't have to say all the equals.
+
+So if I go X1, X2, YD, I can say X1, sorry, X1, X2, YD.
+
+That's totally fine too.
+
+Yeah.
+
+For me, I don't know.
+
+This is an extra step.
+
+I don't like extra steps.
+
+This was less steps because I still need to write underscore part.
+
+But I'm fine with either.
+
+They're both nice that they print out.
+
+One nice thing about data classes is it prints out the type of thing.
+
+Or else this one has no type.
+
+It's just a namespace.
+
+All right.
+
+So what we now want to do is we want to get, for every row, we want to get every part.
+
+So I would be inclined then to say like I got some particular row.
+
+M, zero.
+
+And let's do things in really, really small steps.
+
+Okay.
+
+So there's my first row.
+
+There was a question Jeremy with where you've got underscore part and then you've got a zero and an MO.
+
+They're wondering why is zero and-- Yeah.
+
+Because this is what we're going to be going through, right?
+
+We're going to be going through all the rows.
+
+And so on each row, we're going to have the row number and all the matches.
+
+So that's where we get our Y from.
+
+Yeah.
+
+So in this example, we're just looking at the first row.
+
+That's what the zero is.
+
+Exactly.
+
+This match here was on the first row, index zero.
+
+Yeah.
+
+Cool.
+
+So we basically could now just grab this, right?
+
+Put that in a function maybe.
+
+So we'll copy and paste.
+
+We've already got that RE defined.
+
+So let's just say DEF row matches.
+
+Okay.
+
+For a row, return.
+
+Okay.
+
+So we're going to be going through the row.
+
+And actually, I'm making a mistake here, aren't I?
+
+Because I'm trying to do it in too many steps.
+
+So let's get rid of the DEF for now and actually do it for real.
+
+And so what I'm going to be doing then is that's my, you know, that's my row matches.
+
+Oh, and I guess did you already was 39 plus.
+
+Oh, so it's actually, we're not looping through anything.
+
+We're just doing, yes, actually what we want to do.
+
+Oh, we don't even need a numerator.
+
+Okay.
+
+So that's actually pretty straightforward.
+
+So it's good that we're doing this in small steps.
+
+So we want find iter.
+
+That's our row matches in a row.
+
+And so now we want to create parts from that.
+
+So if we now loop through each one of those, and so we'll call that row parts actually.
+
+We look through each one of those.
+
+Okay.
+
+So here they all are.
+
+And we're going to want to call underscore part.
+
+And remember underscore part takes the match object and the Y.
+
+So these are both in the first row.
+
+And the match object is going to be something that's coming out of this.
+
+Now, so they're the two things.
+
+So that's good.
+
+So something interesting about this is that we are just calling a function on everything in some list.
+
+So what I'd be inclined to do then is to change our definition of part.
+
+So it's always nice to have the thing that varies come second and you'll see why in a tick.
+
+So we're going to get lots of matches per Y.
+
+So let's put the Y second.
+
+Check that still works.
+
+Which it does.
+
+And what that means we can do is say come second.
+
+As we can say L find it a dot map underscore part.
+
+So create a part.
+
+Create a part for every match object.
+
+Now each of those parts needs to know what the Y is so we can then say Y equals 0.
+
+So either is fine but I'm just showing you this way to say there's a kind of a way of just getting a bit more into the flow of these things by recognizing that basically you're just list processing.
+
+And you can just like just mapping a function and just mapping a function.
+
+Neither is necessarily better or worse.
+
+So this is row matches.
+
+And it's for, it's quite nice to see like what do we need exactly?
+
+We need a row and we need a Y.
+
+So Y comma row.
+
+And so we can just check that works.
+
+Row matches.
+
+Zero comma row.
+
+Probably a good idea to return it.
+
+Okay so this might look familiar zero row.
+
+What's row?
+
+Remember that's our row.
+
+And so actually then we can now do this.
+
+Think about this right?
+
+We've got L, L matrix.
+
+So that's all of the rows of our matrix.
+
+Dot enumerate.
+
+So there's all the rows of our matrix with the line number followed by the line.
+
+And those are the two things that I want to pass into row matches.
+
+Now I'm going to be a bit careful here because probably I want to say dot map.
+
+Row matches.
+
+But Jakku do you see why that's not going to work?
+
+Because row matches wants to take two things.
+
+Two things exactly.
+
+It could be one thing.
+
+It's a tuple.
+
+Yeah.
+
+Tuple is just like a list but we're going to be learning a lot more about tuples in future lessons.
+
+It's a very important data structure.
+
+So we want to basically destructure that tuple to send the two things separately.
+
+And there's a thing in the standard library in Python called star map which does map but does exactly that.
+
+It destructs it.
+
+And so L has that as well.
+
+So L tries to have all the kinds of useful bits with the standard library in it as well.
+
+So we've sent, we've found 10 parts here.
+
+Well not quite.
+
+What if we found, we've found not 10 parts.
+
+We've found here's a list for the first row.
+
+Here's a list for the second row.
+
+Here's a list for the third row.
+
+So we need to concatenate all those lists together.
+
+Yeah.
+
+So this is quite often when you do this more functional approach you often find yourself just clicking on the previous one and adding a little bit to it.
+
+And now we seem to have found 10 parts.
+
+So I reckon we should double check that.
+
+We've done some work on that last one as well, Jeremy.
+
+Yes.
+
+No.
+
+Kind of.
+
+Yes.
+
+I think so.
+
+Summing lists.
+
+List of right defaults.
+
+Summing lists should work.
+
+Yeah.
+
+Oh dear.
+
+What are you doing to us, Jakku?
+
+The reason that works is quite nice.
+
+It's because sum just means apply plus and in Python applying plus to lists concatenates them.
+
+But that was awful.
+
+Okay.
+
+One, two, three, four, five, six, seven, eight, nine, ten.
+
+Nice.
+
+And we've found them.
+
+So like I said, like that wasn't fast, right?
+
+But you know, it's not clever.
+
+We didn't have to keep anything in our head because we're just doing a little bit at a time.
+
+And so now that we've got that, we need the same thing for star.
+
+And I'm rather inclined then just to say like, well, okay, this is a part.
+
+And like I like to reuse stuff.
+
+So why don't we create a star?
+
+And that's going to return.
+
+Now stars are always one long so that Christian returned an X.
+
+And it's not an integer anymore.
+
+That should always be a star.
+
+But let's change as little as possible.
+
+And then we then called, so that's our star.
+
+Okay.
+
+And then we called row matches.
+
+We probably should have called that, let's change it now.
+
+You know, when you're like, that's, that was a mistake.
+
+This is a thing that creates parts.
+
+Parts.
+
+Because if you kind of later on realize your notation wasn't ideal and you don't change it, then you'll be like, oh no, now everything's all confused and my brain's messed up, especially if your brain's a bit small and slow like mine is.
+
+All right.
+
+Yeah.
+
+Parts.
+
+That's much better.
+
+Right.
+
+Because now we can say stars.
+
+Find itter.
+
+Now a star does not actually mean a literal star in a regular expression.
+
+Stars a lot like plus.
+
+It's something that says how many of the previous token do you want.
+
+But we say no, we actually want a star.
+
+So remember, backslash is something that you can add to something that would normally be a special character class and make it not special.
+
+But actually we don't just want stars, do we?
+
+We actually want, is that right?
+
+Yeah.
+
+Well, there's a, oh no, there's other things.
+
+Okay.
+
+So we shouldn't call them stars.
+
+We should call them symbols.
+
+Yeah.
+
+Symbols.
+
+And so I think the advent of code question defined them not by what they are, but by what they're not, which is actually great because we've already learnt this for a set.
+
+And so you might remember in math there's something called the complement of a set.
+
+The complement of a set is everything not in that set.
+
+So they would define as being anything that is not a digit and not a full stop.
+
+And so let's use our shorthand.
+
+Instead of writing square brackets 0 to 9, we're like, well, no, we could just do that.
+
+So the complement of a set is carrot.
+
+So this now means everything not in this set.
+
+Writing out everything that's not in the set would be too hard.
+
+So let's just write it as not the complement of the set, not 0 to 9 and not a full stop.
+
+Do you need a backslash on the full stop?
+
+You do not because it's inside square brackets.
+
+Okay.
+
+But absolutely no harm.
+
+So we don't have to know.
+
+Full stop is a special character class, meaning anything at all in a regular expression, which is why Yaku wanted us to be a bit careful of how we dealt with that.
+
+So then we've got to look for all of the sims.
+
+That won't quite work yet because we don't have sim.
+
+That's fine.
+
+We'll just let it be wrong.
+
+We'll go back here, change that to sim.
+
+And then run all below.
+
+And not a great row to be testing on.
+
+So let's do row 8 because it's got two things on it.
+
+Row equals m8.
+
+Never assume you get anything right.
+
+Always write it immediately afterwards.
+
+Otherwise, the one time you don't, it'll be broken.
+
+Okay.
+
+So we found our symbols.
+
+So don't spend time thinking.
+
+Just use what you've done.
+
+So we don't want parts anymore.
+
+We want symbols.
+
+And so we've got our symbols.
+
+That's good.
+
+And so then we just did this.
+
+Okay.
+
+So copy, paste, star map, sims.
+
+Okay.
+
+So now we could say def, parse, m.
+
+Return.
+
+We want to return two things.
+
+Let's do them separately.
+
+This will be a bit lazy about this.
+
+It's always good.
+
+Copy, paste.
+
+So symbols.
+
+Okay.
+
+And parts.
+
+And I always like to line things up so I can see more clearly.
+
+So I've messed something up.
+
+And this is the kind of thing that almost no automatic code formatter will use, which we'll do, which is why I never use an automatic code formatter.
+
+I always like to do things as clearly as possible for a human.
+
+If that means typing an extra space myself manually.
+
+So then let's return the parts and the symbols.
+
+And so now we can say parts, symbols equals parts, our matrix.
+
+Check the parts.
+
+So you know, I'm really slow, right?
+
+I just check everything as I go.
+
+But like if the thing was originally presented to us like this, we'd probably not find it particularly difficult.
+
+Right?
+
+And be like, oh yeah, that makes sense.
+
+It's all in the format that we want at this point.
+
+All right.
+
+So then always nice to just keep reminding yourself what the problem looks like.
+
+Cool.
+
+So we want to know which parts are adjacent to a symbol.
+
+So let's pick a part and a symbol.
+
+Look at them.
+
+Because our brains are pretty good at dealing with single things.
+
+Right?
+
+Is this symbol adjacent to this part?
+
+Y equals zero.
+
+I'm very suspicious about this.
+
+I think our symbols are wrong.
+
+Are they?
+
+Yes, they are.
+
+Always Y equals zero.
+
+Also here, Y equals zero.
+
+So I made the mistake.
+
+I printed things out as I went, but I didn't bother to read them.
+
+Cool.
+
+And you can see Y, right?
+
+Y equals zero.
+
+Let's fix those two things.
+
+So we want parts.
+
+Y equals row.
+
+Y equals Y, rather.
+
+Okay.
+
+Then symbols.
+
+Y equals Y.
+
+And then something I like to do a lot is to say clear and run all.
+
+And that's more like it.
+
+Cool.
+
+All right.
+
+So let's see.
+
+Y equals one is adjacent to Y equals zero.
+
+So that makes it look like they're next to each other there.
+
+This goes from naught to two.
+
+This is three.
+
+So yeah, it looks like it is.
+
+And yeah, it is.
+
+So I could basically say, right, okay.
+
+P. -- this is the kind of thing I'm always like, I don't know.
+
+I can type it, I suppose.
+
+Particularly because I can kind of type it in a nice way.
+
+I basically want to make sure that P.X1 -- let's think about this.
+
+We want to make sure that the symbol X has to be greater than P.X1 or equal to.
+
+And that one there is minus one because it can be diagonal.
+
+So it's got to be less than that.
+
+And then the symbol.X has to be less than or equal to the parts X2 plus one.
+
+And again, this is where it's nice that we kind of fixed up those edges as we went.
+
+So it's more symmetrical.
+
+I don't know if you've seen this before, but maybe this is one of these things that would be a bit easier if we did that.
+
+This is quite a common pattern in Python.
+
+This means that this is between these two numbers.
+
+So we want it to be between those two numbers.
+
+And we also want the parts Y minus one to be within the bounds for the Y.
+
+So like if it's not nice and symmetrical, it's always useful to think about Y.
+
+So this one, this one should be true.
+
+And it is.
+
+Okay.
+
+So that's nice.
+
+So add a copy and we'll say def.
+
+And then it'll say is.
+
+I always like to use is for my notation for things that are kind of like is something true.
+
+So is adjacent.
+
+Is this part adjacent to this symbol?
+
+And because I use the same things in my parameters, I don't have to worry here about changing anything else.
+
+So I won't accidentally have a bug there.
+
+So then I'll say is adjacent.
+
+I mean, look, obviously this should work.
+
+It's the same code, but I still run it just because I'm that.
+
+And all.
+
+Okay.
+
+Cool.
+
+So hopefully you can see why this is quite nice, right?
+
+Because all I need to do is go through to know whether it has a symbol next to it is to go through all the symbols and see if it's adjacent to my part.
+
+Right?
+
+So remember, I've got my symbols.
+
+And there they are.
+
+And so I want to go through all of them and see if they're adjacent to my part.
+
+Now that's interesting because again, we want the more varying thing to come first.
+
+Because it just makes life easier.
+
+Right?
+
+Because now we can just say, oh yeah, let's go through all the symbols.
+
+Okay.
+
+And for each one, we're going to see if it's adjacent to my part.
+
+Let's see.
+
+So gone through all my symbols.
+
+Check if it's adjacent.
+
+So my symbol comes in first.
+
+Rerun.
+
+Got my part.
+
+Oh. symbols.mapp equals p.
+
+My bad.
+
+There we go.
+
+So yeah, the first one's adjacent.
+
+And so we can now say has adjacency.
+
+Right?
+
+Does this part have any adjacency?
+
+Has adjacency for my part?
+
+And I want to check, it has an adjacency if any of these are true, right?
+
+So any.
+
+So this one does have an adjacency.
+
+And so which ones do we want to keep?
+
+We want to keep the ones which do have an adjacency.
+
+They said sum up all of the, I always forget.
+
+Sum up all the part numbers.
+
+And a part is something that is next to a symbol.
+
+Cool.
+
+So let's go through then and we'll see, let's go through all of our parts.
+
+So make sure we know what they look like.
+
+So there's all of our parts.
+
+Okay, filter.
+
+All of those that have an adjacency.
+
+And kind of when you write this out nicely, it should sound a lot like English, right?
+
+Go through the parts, filter out to find the ones that have an adjacency.
+
+Should there be eight of them?
+
+I think there was, right?
+
+Yeah, there's only two that aren't.
+
+Okay, go through all the parts that have an adjacency.
+
+And sum them up.
+
+Okay, getting pretty close.
+
+What did I do wrong there?
+
+All right, we didn't want to sum up their d attributes.
+
+Okay, so to grab all of their d attributes, there's a thing in Python's data library called AttroGetter, which grabs all of something with an attribute.
+
+And so in this thing we have something called AttroGot.
+
+We want to grab all of the d's.
+
+Okay, so there's the d from everyone.
+
+So go through the parts, find out the ones with the adjacency, grab their d attributes, and sum them up.
+
+Okay, getting better.
+
+This one here, we've called symbols, but we didn't actually pass it in.
+
+So let's pass it in.
+
+That's important.
+
+Okay, which means this one we now need to add.
+
+Sins equals sins.
+
+How's that looking, Yucca?
+
+Four, three, six, one.
+
+Four, three, six, one.
+
+Cool.
+
+So we got the right answer.
+
+So that's kind of what you want to see.
+
+It's like, if we have a bug, we don't have to look through 50 lines of code, you know?
+
+We just look at one at a time.
+
+It also helps in, like when we switch to the input, if you have a bug, you know, you can kind of do it in much smaller pieces as well.
+
+And I don't remember.
+
+I think we already grabbed the input, right, in our template.
+
+Yes, we did.
+
+Cool.
+
+So all we need to do now is basically go through and see what we did.
+
+So we went -- okay, we did m equals sample dot split lines.
+
+So copy, paste.
+
+Oh, yeah, we did paths, didn't we?
+
+So then we did paths.
+
+Let's find that, paths.
+
+Cool.
+
+So copy, paste.
+
+And I think that's basically it.
+
+Then we did this one here.
+
+Copy, paste.
+
+And then that becomes imp.
+
+Okay, submit.
+
+All right.
+
+5, 4, 4, 6, 6, 4.
+
+There we go.
+
+5, 4, 4, 6, 6, 4.
+
+So I'm going to wrap it up there.
+
+We've got one more part.
+
+But the reason I want to wrap it up there is the exercise I want you all to go through is to replicate that style.
+
+And then part b of the puzzle, can you do it in the same way?
+
+And it should be like very small, you know, because you've got basically the puzzle already.
+
+The idea of adjacency already.
+
+So you don't have a go at that.
+
+Yeah, cool.
+
+Any thoughts before we wrap up?
+
+Yeah, Carol.
+
+No, I think my only thoughts is even myself being programming for quite a while, being adopting the style a little bit more.
+
+How's it going?
+
+I mean, I mentioned it's a bit of rethinking required, because you're a very experienced programmer.
+
+Yeah, I think there's a bit of rethinking and sometimes it can feel like a bit slower, but it's one of those things.
+
+It's like go slow to go fast.
+
+And I see some of the solutions.
+
+Like the thing I like about it is I'd like to come back to it six months from now.
+
+And I think I'll still be able to read all those little functions easily and see what I'm-- And you can run an experiment with them.
+
+Yeah, exactly.
+
+Yeah.
+
+Which is something that's very often not true of bad code.
+
+Also, like you might have forgotten how fast it'll work.
+
+Sorry, how find it works by then.
+
+I mean, I'm sure you wouldn't because you know it, but people were less experienced with it.
+
+And now it's there.
+
+Because you could be like, oh, why did the one that's one there?
+
+It's like, oh, you can see.
+
+Oh, it's more consistent this way.
+
+Yeah, exactly.
+
+So I think that sort of self-documenting nature is very handy.
+
+And some things work better with loops and an imperative style.
+
+And we'll come across those soon enough.
+
+You know, this is just a case of having more tools in your toolkit.
+
+And you can see also the way we're modifying our tools to work in a way.
+
+So a lot of tools in Python 3, they changed from 2 to 3 to make a lot of-- to make it more focused on speed rather than working well on a REPL.
+
+So for things which is nearly always we don't care about speed, you only care about speed in the inner loop of a thing that is slower than you needed to be.
+
+So it's fine.
+
+You might need to go back and use some of Python 3's approaches.
+
+But we're modifying things to work the way we want them to in this interactive environment because we want to interact with them constantly.
+
+So I think that's something people don't do enough of, I find, is modifying stuff so it works in a way that's convenient.
+
+And I think the other thing that's really nice about this approach is, you know, it's unlike a Java or something where, you know, the thing that you're modifying might be like three classes over.
+
+And so you're constantly having to jump all over the place and you modify something here and that then has a knock-on effect, which on the third file that you weren't really thinking about, now everything here is like in the one context, which I think you can really appreciate.
+
+And, Yaku, I don't think I've talked to you this about-- to this with you before.
+
+So what's your relationship with regular expressions?
+
+Are you in the-- oh, they're useful or reach them that I have to, but they're such a pain?
+
+Or are you in the like, oh, I dream about them or where are you in the regular expression?
+
+Definitely don't dream about them too often.
+
+But I do like them just because, yeah, like, I've used them enough that they kind of relatively get relatively getting easy.
+
+So you will have experienced this thing, though, of a lot of folks.
+
+I bet some of your colleagues actively avoid them or they're like, "Oh, don't use that, Yaku, too confusing."
+
+Yeah, and I think what we often do at work, if it's a particularly-- like, there are many parts to the regular expression as well document, like the first part's doing this, then it's like have a doc string beneath it, even for yourself, like coming back to it a while later.
+
+It can just help.
+
+Yeah, maybe we'll look at that later at some ways of documenting and splitting up regular expressions as some neat approaches for that.
+
+So I think my message for people today is if you're new to them, you recognize that all you need is square brackets plus and star, basically.
+
+And dot, dot means anything.
+
+You can create dot with square brackets, but it's easier just to have dot.
+
+And that's all you need.
+
+We'll learn about parentheses shortly as well, which is a nice little addition.
+
+But with find it, square brackets, including the carrot version.
+
+So a set, the complement of a set, so they're your character classes or anything at all, followed by star, zero or more, or plus one or more.
+
+It gets you a really long way.
+
+And the other nice thing is, as you were saying, people can sometimes be a bit worried about, like, it can be slow because you've done a rejects or whatever.
+
+So in this Jupiter type environment, something I like to do is use like the at time it, or percent time it, so that it can very quickly just test, like, okay, if I have this big input, how fast is going to be, and you can get your ranges on what to expect.
+
+Yeah, and regular expressions are written in C, right?
+
+So actually, most regular expressions are going to be much faster than doing something by hand in Python.
+
+If you try to get too tricky, it's possible to construct regular expressions, which are ridiculously slow.
+
+And I did, we did see this recently with one of the advent of code 2024 things where people were constructing some rather hairy regular expressions, causing Python to take more than two minutes to solve it.
+
+And we're saying, hey, Jeremy, solve it's broken.
+
+That's like, I don't know what the nice way to say is like, no, man, your regular expressions broken.
+
+But yeah, keep them simple.
+
+And if they take a really long time, then yeah, try to split it up and simplify it or ask solve it for help.

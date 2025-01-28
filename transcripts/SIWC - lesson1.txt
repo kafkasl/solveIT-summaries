@@ -1,0 +1,2207 @@
+Before we kind of have our official start, I just wanted to do a couple of quick logistics things, which are important.
+
+The most important one is I wanted to mention for those of you who have been playing around with Solvert or are about to, there will be a 2 gigabyte quota on your disks, on your volumes.
+
+Anybody with more than 2 gigabytes, your data is going to get deleted, like all of it.
+
+So get it down beneath 2 gig, before 2 days from now passes, please.
+
+And then after that, there'll be a quota.
+
+So that won't happen again.
+
+You'll find out.
+
+You don't want to get too close to that 2 gig quota though, because if SQLite tries to write stuff into your volume, and can't God knows what's going to happen.
+
+So don't use lots of disk space.
+
+You won't do it accidentally.
+
+Just don't download huge files or something.
+
+My database is like 500 kilobytes or something.
+
+It's tiny.
+
+And then secondly, the Solvert platform is not some super perfectly engineered thing.
+
+It's a shared resource that we're all using.
+
+So please try not to run something that takes up lots of CPU and stuff like that, because that takes away from other people's ability to use it.
+
+Over time, we'll gradually add more controls to help you from doing this by mistake.
+
+During the course, we'll show you how to stop your instance if you have accidentally got it using lots of CPU.
+
+But yes, in general, please be careful as best as you can.
+
+And then the third thing is we had been using control shift for all of our keyboard shortcuts.
+
+Although today we also added command so people on Mac will probably want to use.
+
+I'll be talking.
+
+I'll be saying use command shift, but most of the time you could also try control shift off your if you're on a Mac.
+
+So, okay, so that's that.
+
+And another quick admin thing that I wanted to mention is I know a lot of folks haven't used discord very much.
+
+So I wanted to give you a quick guided tour of how to use discord effectively.
+
+So I'm going to share my screen.
+
+So, John, are you seeing my screen okay?
+
+Yep.
+
+Okay, so basically the key thing I think to making discord work well is to like mute the stuff you don't want to see.
+
+And then basically you can just go to the very top channel and if you press alt shift down or option shift down, it'll take you to the next.
+
+See there's these little half circles.
+
+That means there's unreads in that.
+
+And then you can just press alt shift down on my case.
+
+I'm on a Mac option shift down.
+
+It takes me to the next unread.
+
+And then I can go again next unread.
+
+And so this is how you can basically scroll through to see all of the stuff that's happened since last time.
+
+And then you'll see sometimes there are threads.
+
+So you can see this this here is a thread.
+
+If you're interested in it, you make sure you click on it and then you'll see it'll appear down here.
+
+And so once you've clicked on a thread that now then becomes part of the stuff that you will be looping through.
+
+When you press alt shift down, it's a really helpful nice thing to do if you're replying to somebody and you know there might be more than one reply.
+
+Don't just reply, but instead click on create thread.
+
+And that way you'll be creating a thread so kind of keeps things nicely organized.
+
+So that's that then another thing that's super useful then is the stuff you don't care about.
+
+So for example, the welcome channel is going to be full of wave to say hi.
+
+So you can see what I've done is I've right clicked notification.
+
+And I've actually what I did was I was clicked on mute channel.
+
+And that way you'll see it's actually great out.
+
+And so I've used the geographies that I'm not in.
+
+So that's a good way to make sure that yeah, you only see the stuff you care about.
+
+And then the other thing I wanted to mention is sometimes you'll come across messages that you would like to make sure you you know remember to look at later.
+
+I show you really cool trick that's actually good.
+
+So as I know, I think this is new functionality and discord.
+
+You can click add server and you can create my own server for me and my friends.
+
+And I created one which I called which I called JPH server.
+
+And you can put my picture on it.
+
+And when you do that, once you've created a server, you can then just right click on anything you're interesting in and say forward and click on that.
+
+And so now it'll get added to your server.
+
+That's a really good way to keep track of stuff and you can always delete them once you've done them.
+
+And then another really important one to know about is to go back to where you were is command or control.
+
+Let's wear bracket and that takes you back to where you were.
+
+I think they're the main things I use to help me with discord.
+
+Do you do I miss anything?
+
+No, I think that's good.
+
+I think that is the non technical side of being courteous to everybody and not tagging everyone and trying to keep it contained.
+
+But I think that covers all the important bits to know and we'll keep the key information and announcements and admin.
+
+So even if you can't keep up with all of the different discussion groups on the different continents or whatever, that'll be the place to check admin.
+
+Exactly right.
+
+So do read or every announcement.
+
+And so one thing that I do recommend is to right click on announcements and notification settings or messages.
+
+And that way you'll get notified of every announcement.
+
+That's a good idea to scroll back and look at the ones that are already there.
+
+And the most recent one you'll see is there's a fact.
+
+Thanks tonight.
+
+So that's kind of in progress as we speak, but we're trying to add things that people are mentioning quite a bit on discord as they pop up.
+
+So do take an eye, keep an eye out on the fact.
+
+In general, let's say though like.
+
+Alright, so I think that's our logistics unless I missed anything.
+
+John, oh, should we start the non logistics part?
+
+Yeah, that sounds good.
+
+I think that's also given people some time to join.
+
+Great.
+
+Okay.
+
+Welcome everybody.
+
+I'm Jeremy from answer AI and this is John.
+
+Fast AI is now part of answer AI.
+
+So we're also from fast AI.
+
+Fast AI doesn't generally have, you know, brands that we directly do things under we have separate things for that like fast HTML and so forth.
+
+So fast AI is our educational brand, if you like.
+
+So, so we're super excited to to have the first lesson of the first course of fast AI is new era, which is going to be super different and super interesting.
+
+I think so.
+
+Yeah, welcome John.
+
+What are you excited about in this course?
+
+Yeah, it's good to have everyone here.
+
+I'm excited to see the direction we go.
+
+I know some of you have a lot of you from the introductions channel have done the past fast AI courses, and especially towards the end of the fast AI series when it was quite a polished product the first half.
+
+Yeah, that might have said some expectations one way.
+
+Whereas if you took part two, the most recent part two, you'll see that was a lot more exploratory in a research way.
+
+And I think this one is going to be a lot more exploratory in a in a different way.
+
+So we excited to meet everyone who's doing this cohort.
+
+I think the group will shape how the course goes forward.
+
+And then also, yeah, to explore what the platform and the mode of teaching looks like as we as we move into a different way of doing this educational thing.
+
+So, yeah, I'm pretty excited about that.
+
+So we've got a really interesting group of people here for this course and do check out the introductions channel on the discord to see who some of your colleagues are.
+
+I just say a couple of things about that, though, which is don't be intimidated.
+
+I think the people most likely to introduce themselves so the people most likely to not be too shy about doing so so you might get the impression it's all AI researchers and professors and whatever but actually a lot of the people in the course are quite new programmers and the more experienced people who have joined, you know, many of them have told me they're doing so specifically because they want to help out newer programmers and also because they're always interested to refresh their learning to help teach others as well.
+
+So, yeah, don't be shy and also say like when it comes to participating in the community on discord, don't worry if you're not quite sure how to say things or how to behave or how to use it or whatever you absolutely don't have to be perfect, you know, people will give you feedback in a kind and gentle way and help you improve and learn.
+
+But if somebody does give you some feedback to help you that's always only there to help you it's never a criticism, you know, our number one goal here is to learn together.
+
+As John I mentioned, this is a, you know, the whole thing is a bit of an experiment.
+
+So we're excited to be part of this experimental project together.
+
+Also to help you with this.
+
+There's a number of things that you'll find on the discord to help.
+
+There are office hours.
+
+So click on the events in the top left of the screen when an event's not currently running.
+
+And you'll see that there's a number of upcoming events.
+
+Quite a few of those office hours.
+
+So office hours is when a member of the answer AI team or somebody that we work closely with is basically saying hey I'm available to help.
+
+And so we have or we'll have a channel for that a voice channel.
+
+So if you scroll down and discord you'll see voice channels.
+
+You're always welcome to jump into any voice channel but if there is an office hours going on then please leave the office hours voice channel for office hours.
+
+And if you jump into the office hours you can just you can just lurk and listen or you can ask questions.
+
+And it can be either about a problem that you're working on through the course or something to do with the Solv-It platform or anything else.
+
+There's also study groups.
+
+Study groups different to office hours in that again they'll be generally speaking in I think we'll go so well create a study groups voice channel.
+
+There won't necessarily be any answer AI folks there.
+
+Everybody is welcome to create a study group and it's just saying hey let's get together with other like-minded people that are perhaps in the same time zone or awake at the same time and help each other work through this course together.
+
+And then finally there are tutors.
+
+So there's a thread in admin called tutors and discord where if you are happy to pay somebody to help you can get one-on-one tutoring.
+
+That's all like nothing to do with us formally we're not taking a cart of any of that or anything like that we're just making that available for folks who are both interested in teaching others and maybe making a bit of extra income on the side and then on the other side for folks who would love a bit of one-on-one help.
+
+With all that in mind, Jono do you want to jump into maybe what the Solv-It platform is and how to use it unless you think there's other stuff we should do first?
+
+No I think that'll be good.
+
+That'll segue back into some obvious questions I think.
+
+Okay so let me share just this entire screen.
+
+So we speaking of experimental course and one other part of it that's very much new and fresh is our platform.
+
+So we've built solv-it.fast.ai if you go to the slash dashboard this is something that's linked and if you've part of the course you'll be able to see this.
+
+So this is where you'll manage your access to the Solv-It lessons and things but also importantly the Solv-It app itself.
+
+So you can always stop the app if it's running but then once you click connect that's going to launch you into this new application web app that we've created to help with working through the course.
+
+And so what I'll do is I'll give you a little tour and you can create dialogues or loading existing ones and we'll show that.
+
+Yeah I'll give you a little tour of the features and then we'll step back and explain why on earth are we doing this in a custom environment.
+
+Okay so hopefully you can see Solv-It demo.
+
+We're faced here with something that looks if you squint a little bit like any of the chat GBT, Claude, etc.
+
+Boxes right I've got a little message box at the bottom but the difference here is that it defaults to code and you can always change the default.
+
+And so if I type in some Python code here and then hit submit or use the keyboard shortcut control enter and on Mac there will be a command.
+
+It's going to run that code right so that's one mode of interacting with this platform.
+
+You also have notes so here this is something that accepts markdown syntax so if I type in Hello World you can do things like bold and italics this is just text that's rendered nicely.
+
+John I want to mention I did just check this for some reason this is streaming at 720p so we're on the side of large text so you might want to zoom in one or two more.
+
+Sure thing.
+
+The recording hopefully won't be at 720p and we'll see.
+
+So apologies for the low resolution focus I'm not quite sure how that happened.
+
+Cool.
+
+Okay so these are two ways of adding you can think of these as messages in a dialogue.
+
+But the final one and the sort of main exciting bit of this is that you can also call out to a specific little bit of AI assistance.
+
+So we have here.
+
+I'll just ask it to introduce itself.
+
+We have here a way to add questions or prompts to the AI and that's going to come back and respond.
+
+And so these three ways of adding messages this is how we'll interact this shortcuts for them so control J K and L to toggle through those or you could just control shift yeah.
+
+Or command shift.
+
+Command shift on Mac.
+
+Yeah so this is the platform.
+
+If any of you have used Jupiter before there'll be some similarities in that when you run code it's not just one off executed and then you see the result and it all goes away.
+
+So for example we'll get more into what is a variable and how we're coding a little bit later but I just want to show you.
+
+If I run some code that defines a variable.
+
+I can access that in other shells.
+
+Sorry another code messages.
+
+I can see that in the variables pane so they'll be a little tool to appear this is the variable a.
+
+I can do these the sort of dynamic order complete that some of you may know from something like I Python shells or Jupiter whereas if I am start typing I have these are our methods or properties that are attached to this object specifically.
+
+If I start coding one of these in I should get the arguments for a function so this is not like a an AI based order complete is instead looking at what are the actual methods or properties or arguments of that object.
+
+And so that's pretty useful to be able to see more about something that's in this shared environment.
+
+And if you mess something up or you're you know you've overwritten something or you're unsure you can always clear which you'll see the time by the little code indicator there went away.
+
+And then if I run that again this is now running that from scratch and you'll notice there's no a that variable hasn't been run yet.
+
+But if I click run all it'll run all of the code pieces including the one that creates that.
+
+So yeah these are the main parts of the interface you'll see us using these in different ways.
+
+And if you which bits have been run because they've got the time after them to show you when they were run.
+
+Yeah yeah good point.
+
+Oh one thing that's important to know you can edit past messages right you can just only add them at the bottom.
+
+So for example I can double click on this one here and then I can change that possibly so the way that the double clicking thing may not last forever the thing that will last forever is that you can click anywhere in the title over message.
+
+I'm not sure about the double clicking thing is it is quite helpful to double click on a word to select it when you try to select a word and then it deletes your code that's quite annoying so.
+
+Yeah.
+
+Yeah so okay keep an eye out for those changes but definitely the moment at least you can edit notes prompts code.
+
+You can also edit the responses from the assistant and you'll see just now that that is indeed just to clarify so you're definitely better edit it either way.
+
+The question is right now you can edit it either by clicking anywhere in the title of the message or by double clicking the content.
+
+Possibly in the future it'll only work by clicking on the title of the message.
+
+Right.
+
+So yeah that's the that's the key solve it interface.
+
+You can export your dialogues as I Python notebooks or as Python files.
+
+You can set up some additional context for the language model assistant behind the scenes.
+
+There's some settings for if you'd like a light theme or dark theme.
+
+And then you're also able to add secrets which we'll use a little later.
+
+Your dialogues are saved as you run them so you don't have to worry about hitting control s or anything like that.
+
+So if you refresh the page you'll get back that same dialogue.
+
+And you can always load previous ones to go and see different examples of something that you're working on.
+
+So if you really want to be sure you can export it to the notebook on GitHub and then that's like a hard copy separate from our system which is still you know as you've seen the last few days we still ironing out the last few bugs.
+
+Okay so yeah that's the interface I guess Jeremy then the next obvious question is why on earth are we using this as opposed to any existing IDEs or platforms what was the the rationale behind creating a custom thing just before the course started.
+
+Yeah so we've been working on this at NCRI for most of the year and this refers to not just the platform but a different approach to working with language models.
+
+So a lot of us and I expect a lot of you have experienced some frustration with the way we ways we currently have to interact with language models.
+
+We often have to try to bully them or needle them or try every way we can to get them to actually do what we want.
+
+And then the process of kind of then working with them combined with code can be quite messy.
+
+If we're using something like Lord or chat GPT there's a lot of copying back and forth and in cursor we often find ourselves kind of like editing huge amounts of files and the AI ends up in control rather than us being in control.
+
+Of the process.
+
+So we've been spending most of this year developing a new approach which we call dialogue engineering and that's what we'll be focusing on teaching this course is learning how to solve problems with dialogue engineering which is a approach where you're going to be in control of the process.
+
+You're going to be doing a lot of the coding yourself, but you'll be interacting with the language model in a kind of much more iterative way.
+
+So certainly, you don't have to use solve it to use dialogue engineering.
+
+Dialogue engineering is not the only thing we'll be teaching in the course, but this is kind of like a key theme is is this new approach to to working with combining code and language models together.
+
+We're going to be doing that via specific examples of problem solving.
+
+And most of the specific examples of problem solving we'll be covering ones from something called advent of code.
+
+So maybe John, you might want to explain what that is and why we're using it.
+
+Sure thing.
+
+So, advent of code has been around a fair while.
+
+And many of you might even be familiar with it.
+
+It's often used by programmers to to practice to keep their, their skills sharp, maybe to try out a new language is how I've used it in the past.
+
+And this is the advent of code website advent of code.com will be using the 2023 puzzles, although the 2024 ones will start being released, I believe on December 1.
+
+So that'll be nice fresh new puzzles for us.
+
+And what these look like are unusually well specified programming problems.
+
+Right, so many programming assignments you might get in the real world could be something like my father and Lord just asked me hey could you create an app for this game I'm designing.
+
+And that's very fun, but it's also very unspecified.
+
+So just to check where we're currently looking at a Google doc on your screen and the YouTube chat.
+
+That's definitely incorrect.
+
+Sorry, I must have shared the wrong screen.
+
+All right, let's let's try that one more time back up and start again.
+
+Shall we.
+
+Right.
+
+All right, now can you see advent of code.
+
+Yeah.
+
+I want to make it bigger maybe get it cool.
+
+Okay, so advent of code is a series of programming challenges that usually come out once a day over December, hence the advent theme.
+
+We'll be using the ones from 2023.
+
+So make sure that you choose those although the 2024 ones will start coming out somewhat soon.
+
+And what these are is very well specified programming challenges.
+
+And unlike many in the wild examples there's not going to be scope creep there's not going to be changing requirements.
+
+There's not going to be you know, multitudes of different inputs and outputs that may or may not still exist.
+
+They're very well specified.
+
+So the one we'll be looking at today.
+
+There's a bit of a narrative around it introducing the problem.
+
+There's some sample data and some examples of what the expected output for that data would be.
+
+And then there's an answer field where you submit usually just a single number.
+
+And then that's validated as to whether it's correct or not.
+
+And if it's correct, you can advance into the next part of the puzzle and there's one every day.
+
+And so these are not the only problems we'll be showing.
+
+I know a lot of people have asked more about like what about real world applications.
+
+We'll definitely be trying to demonstrate as many as possible, you know, additional cases where we've used the same approaches.
+
+But the advent of code are very nice as a grounding block that are definitely challenging, but also something that you can tackle without needing to know, you know, lots of different extensive libraries or any esoteric concepts.
+
+And we'll definitely tackle them with some fairly basic programming knowledge.
+
+And so they're really nice sandboxes for us to play in and demonstrate the techniques.
+
+If you're someone who's done advent of code a lot, or you're very experienced programming in general, you may want to keep an eye on how we're doing them.
+
+But you might also find that, okay, then the first few lessons are somewhat something that you can skip through quite quickly.
+
+If you're completely new to programming, it might be the opposite.
+
+Even the first one might be quite challenging.
+
+But hopefully we'll show as we go that even if you have very little prior programming knowledge, you're still able to work through these and get to the solution.
+
+And there's a couple of kind of themes that John O and I will aim for here, which is you might.
+
+So one of the interesting things that's kind of fun that happens as you finish a challenge is it opens up the advent of code forum for that challenge where you can read other people's solutions.
+
+And as you get to the later ones, you'll see pretty much all the solutions are from people who seem to have a very extensive background and probably a university qualification in computer science.
+
+He'll kind of say like, oh, this is a classic example of the algorithm on page 78 of the Dragon book.
+
+And I use that with this well known linkage structure.
+
+And it's like, it can make you think like, oh, the way to solve these problems is to learn a thousand individual special case things.
+
+But actually we're going to be explaining how to solve all of the things that we cover with nothing other than the Python standard library and a basic understanding which we'll develop during the course of lists and dictionaries.
+
+There's never going to be a case where we're going to say, oh, to solve this, you have to already know this special algorithm.
+
+We're going to be showing how to do things in a really kind of common sense, step by step kind of approach.
+
+And so we hope that at the end of that you'll have a lot of, you know, feel very encouraged that you can take things that maybe at first look beyond you.
+
+And by combining your coding prowess that you'll develop and AI.
+
+And one of the things you'll find with this dialogue engineering approach is that the process of solving a problem with code and AI, you'll become a better coder.
+
+Just kind of the opposite of what a lot of people do with like, oh, Claude artifacts or cursor write the whole thing for me.
+
+And I know a lot of people I've spoken to feel like, oh, I'm becoming a worse coder because I'm just outsourcing everything and things are getting more and more complicated and a mired in technical debt.
+
+So this is really trying to do the opposite of that.
+
+And where, you know, we'll show ways of, you know, of how these basic techniques apply to all kinds of stuff well outside advent of code problems, you know, particularly coming into next year, you know, things like screen scraping, machine learning evaluations, you know, all kinds of interesting projects like that.
+
+But maybe John, I might kind of jump into also talking about the problem solving process, as well as the coding process.
+
+So one of the things you'll see in the announcements thread is I've got a link to a little summary of a book called how to solve it by a mathematician named George Polia.
+
+So George Polia died a few decades ago, but very famous mathematician and you'll have come across if you do much math, a lot of his theorems, but he was particularly famous actually as a teacher.
+
+And so this book how to solve it is not new, but it's still probably the best of its kind.
+
+And interestingly, you know, as we were developing our own understanding and in fact I've been kind of building this approach to solving problems for, I think, over 30 years now I taught my first analytics course over 30 years ago, but then bringing in AI and I started to realize, you know, as I was reading Polia's book like wow there's a lot of overlap here so there's a lot of inspiration from Polia.
+
+And so it's worth at least looking, you know, from time to time at the problem solving framework that's summarized here.
+
+And you can use AI and we'll show you how to use AI to help you with these things each step like understanding the problem.
+
+You know, if sometimes it's hard so you can ask like hey can you help me identify exactly what I'm being asked to do or like can you summarize for me what information do we actually have.
+
+You know, these are all things you can get AI to help with, particularly restating the problem can be super helpful, you know, it's like getting getting help to explain like, oh what's the essence of this problem, you know, and then, you know, what are some other similar problems that somebody in my kind of position might have seen before.
+
+What pieces could we split this up into that if we put them together, we would have ended up with a solution.
+
+And then actually which is one John knows fond of and I think is great is saying like well, okay, what would those point one step before the solution look like.
+
+And it's like oh well okay that would just be this with these numbers and you know, new lines here and here it's like okay, well let's focus on creating that.
+
+And so you can, and then you can kind of actually work from both directions until you find your way to the middle.
+
+So, you know, anyway, I won't go through all of them but we will be over over the course.
+
+And, you know, there are some useful heuristic strategies that Pauli talks about as well and again we'll be we'll be covering these in the course.
+
+Pauli's book is all about math, you know, and it's interesting how none of this is math specific, although if you read the book it kind of feels like wow this is a math book but actually the problem solving approach itself is, is not, you know, a math approach.
+
+So, it's actually useful to remind myself how to stop sharing my screen.
+
+So I guess I click that.
+
+Okay.
+
+Now, okay, you know, when you go through a math book, if you ever did math that any or even if you think about school, you, you do problems, right and you solve lots of problems and it's a and it's really the solving of problems which is exercising your problem solving and in the polyabook, you know, also exercises and problems here at AOC, Advent of Code, our problems.
+
+In fact, quite a few of the first ones you'll find you can literally copy and paste them into chat GPT particularly into 01, their newest, you know, reasoning model, and it'll solve it the first time.
+
+But doing that would be like, you know, having a primary school kid user calculator rather than ever learn to add like the whole point of this is you take, take your time doing things in using the techniques we're showing you in a way where you're in control and you're really solving the puzzles and the problems yourself.
+
+And you will get to a point where 01 can't help you anymore.
+
+And at that point you'll be glad that you didn't jump straight there.
+
+So Advent of Code is the problems we're using to exercise this muscle and, you know, for some of you that are experienced coders jumping through the first few might be very fast but do them, you know, and try to use an approach somewhat like what we're displaying.
+
+But feel free to jump ahead.
+
+In Discord, there is a separate channel for each day of Advent of Code.
+
+So don't put spoilers there.
+
+But if you want to discuss the puzzles and help with solving them, that's a good place to go as well.
+
+And then from a few days time, Advent of Code 2024 will appear.
+
+And so we'll create a separate category for that.
+
+Jono and I won't be going through the 2024 together.
+
+You can certainly bring them to office hours.
+
+But we're hoping that a lot of you will go through 2024 each day as they come out and use these techniques.
+
+So that's what's going to happen.
+
+And this lesson, the rest of the lesson, we're going to do problem 1A from Advent of Code.
+
+And then, yeah, Jono, do you want to talk a bit about what happens after that?
+
+Sure.
+
+So, I mean, today is a lot about getting set up, getting familiar with the process.
+
+So we'll do the first half of the first problem and probably not much beyond that.
+
+Future days, once this becomes a bit more familiar, it's going to be repeating the same kinds of drills, but showing lots of different aspects, obviously.
+
+And so we won't just be doing Advent of Code.
+
+We've got bits of show and tell.
+
+We'll potentially be surfacing examples from the Discord if people have cases where this dialogue approach has worked or questions about how one might apply it.
+
+So that's where you can be very helpful in surfacing those kinds of suggestions.
+
+Otherwise, we've got some pieces that we'd also like to show off as well.
+
+So most other lessons will have the Advent of Code component and then like a demo or a walkthrough or a live like solving some problem with this approach.
+
+But today is going to be focused just on the Advent of Code and getting set up and making sure that we can all, you know, be playing with these problems and starting to do the practice that's so critical.
+
+So I can start showing us how to get set up on the Advent of Code data itself and like.
+
+I just mentioned like before we do, I just want to mention some of the other platforms that will show.
+
+So Solvert, the platform that we're showing here is a kind of a simplified cut down education focused version of an in-house tool we've been developing this year called AI magic.
+
+And so I've been using it for quite a few months, longer than anybody because I started it and I started it for a reason, which is that I was pretty unhappy with the existing approaches a lot of the time.
+
+But that doesn't mean I'm unhappy about them all the time.
+
+I still use cloud projects sometimes.
+
+I still use cursor sometimes.
+
+You know, there will be showing when and how to use these other tools as well.
+
+But I will say for me personally as somebody that's been coding, you know, every day for over 30 years, nowadays I use AI magic, which is very similar to Solvert, for 90 to 95% of my kind of computer work, I guess.
+
+So I've personally found it really helpful, but we have no particular reason to evangelize it.
+
+We'll be showing a range of tools and it'd be interesting for folks to experiment, I think in the discord with cloud projects, for example, cloud projects is generally at AI AI kind of second favorite tool.
+
+We highly recommend it.
+
+So, you know, we could definitely try that, try cursor and see how the experience goes.
+
+Sorry, Jono, to interrupt.
+
+No, that's good.
+
+Maybe also like, so Jeremy is the first one to start trying this.
+
+I'll just say one last thing before we dive into the actual practicalities is that.
+
+So I got to then start this and everyone else that we work with got to then go through this process and often one of the initial feelings is frustration, right, like you're so used to being able to tap, tap, tap big chunks of code.
+
+So used to thinking in a certain way that there's this this overcoming of some inertia before it starts feeling really good.
+
+Anyway, that's just another like note from someone else who's started trying to put these disciplines into practice.
+
+It was quite difficult and this course I think we'll start up feeling like why are we doing this, especially if you a good coder and you can solve the problem straight away.
+
+Yeah, just to say I find it worthwhile and you kind of mentioned to me in the past that the way these things are designed, there's a certain dopamine hit right to like typing the sentence and getting 300 lines of code out and like it's not necessarily healthy and we're definitely not going to give that dopamine hit right.
+
+Yeah, yeah, it's like if you think how the models are trained there like explicitly optimized for human preference right to make someone say I like that response that makes me happy.
+
+But that's kind of the same way that like social media feeds or really addictive games are designed and it doesn't doesn't feel good in a healthy kind of way it feels good in a junk food kind of way.
+
+Yeah, I should mention like a magic is I wish I mentioned is our internal tool.
+
+So there's there isn't the external version of that is solver and so the folks in this course are going to see the very first time, the thing that we've been using in house for quite a while.
+
+And over the coming months, you know, our hope to be honest.
+
+When I wrote so that I wrote it in a really hacky way and like I'm not it's not something I would just want to hand over to somebody when people join answer AI I always have to be very apologetic about how messy it is and so solve it's like the good old gradually we're bringing bits of this into into a tool that's actually fit for public consumption and that is, you know, more targeted.
+
+So this is the education targeted one and we imagine sometime in the coming months, we'll also release a kind of more standard development targeted version as well.
+
+Cool.
+
+Okay, I think that's a lot of a lot of good intro.
+
+Shall we should we get to advent of code.
+
+Alice.
+
+Alright, so I will show you all how to get started one.
+
+We're not going to be using too much fanciness but one convenience built into the solver platform and so on for this course is going to be how do we take the data sets the like the inputs from advent of code and load them up into the environment without having to, you know, save them as a text file or something like that.
+
+So I see like a little example there right which you could just copy and paste but I guess the point is that there's something other than that right.
+
+Right, yeah, so there's a button that you can click to get the puzzle input.
+
+And that's going to give you a big text file which you would then have to save or copy and put somewhere.
+
+So to work around that there's a lovely library called advent of code data.
+
+This is already installed so you don't have to worry about that.
+
+But it does require advent of code is a, it's an account based thing you can see I've logged in with a fresh account.
+
+And so to authenticate for want of a better word to be able to like sign in and get the data.
+
+So what you're going to do, you can either right click and choose inspect or there's a keyboard shortcut control shift C.
+
+And that's going to open up this browser dev tools.
+
+And then within that I'm going to go to the application tab and go find cookies.
+
+And then on the cookies for this page you'll see this one called session.
+
+And this is the key that's in my browser where where I clicked on get input.
+
+This is sent to the server and it's happy to send me the input back.
+
+So I'm going to copy this.
+
+And then if you look at the advent of code data instructions, you'll see it says, make sure you export your session ID.
+
+And then you can also import the syntax for Linux for setting an environmental variable it's called right this is some variable that can be accessed on windows that might be set and and then solve it for convenience you could type, you know, you can also just go to settings and we have this secrets pane here.
+
+And so very carefully copying and pasting a C session in my solvents settings, or C session.
+
+And I'm going to paste in that secret and save.
+
+I would suggest actually pasting in the name as well because just at least right now we don't even have a way to edit those secrets.
+
+So we'll add that in the next couple of days but yeah, for now please copy and paste both parts so it's not wrong.
+
+Good, good point.
+
+Yeah, make sure that those are matched.
+
+Okay, and so then once that's done.
+
+We should be able to add a new code cell.
+
+And try out their example.
+
+Okay, so there we go that's that's run.
+
+We could change this to 2023.
+
+And the day to one.
+
+And then that should give us the data for today's challenge.
+
+And it looks like it is.
+
+Cool.
+
+So that's how you load the advent of code data into the solvents platform.
+
+So that we can start on the actual puzzle.
+
+Do you want to take over staring Jeremy?
+
+Okay, sure, no worries.
+
+So I'll share my screen here.
+
+And there's a in the fact and in the announcements you'll find there's a how to get your key from advent of code instructions which you can follow as well.
+
+And forget it or didn't want to go through the video.
+
+So I might just go back to the start here.
+
+So this is what happens after you log in.
+
+When you click connect to solve it.
+
+What's actually going to happen is you'll see it's kind of cool actually you'll you'll get a URL with a unique sub domain here right inside solve it.
+
+This is your own little computer.
+
+Basically, it's if you care it's running inside a Docker container.
+
+It's not a giant computer.
+
+It's, you know, at the moment it's only got a gigabyte of RAM.
+
+You've got two gigabytes of hard disk got one CPU, but you know, it's a computer.
+
+It saves everything that you save.
+
+It's it's it's not a femur all it'll be there forever.
+
+You can pip install stuff.
+
+And as Johnno said, you can add, you know, environment variables and stuff like that.
+
+And things are structured around dialogue.
+
+So basically a dialogue is a set of messages.
+
+They can be code note or prompt messages and then code and prompt messages can have responses code responses, whatever is the result of evaluating that expression or anything you printed or any graphs you created so forth and a prompt the responses, whatever the AI said.
+
+Because I'm slightly scared.
+
+I'm actually going to run it off my own computer today.
+
+He just in case, you know, there's any issues because we've never had hundreds of people using it at the same time.
+
+So after today, if everybody finds it successful, hopefully next time I will run it on the server like the rest of you all.
+
+So this is a dialogue.
+
+Okay, you can change its name if you wish.
+
+And we're going to go to advent of code.
+
+And basically, the it's called a dialogue for a reason which is we're going to try to create a conversation with the model and with the Python interpreter.
+
+So this is persistent Python interpreter running in the background.
+
+And so what I'm going to do is copy this.
+
+And I'm going to talk to both myself and to the AI.
+
+So this is kind of step one of polio, which is understand the problem to explain exactly what it is that I'm trying to do.
+
+So I'm going to say.
+
+Advent of code day one.
+
+2023.
+
+And then I'm going to paste.
+
+And this is actually marked down.
+
+So if you haven't used markdown before it's worth learning markdown, it's quite handy.
+
+So there's a bit of this is a little bit of code here.
+
+So put this in what's called triple back text to say this is a bit of code.
+
+And this is just a note.
+
+Right.
+
+So if I say submit, it's not sending it to anybody.
+
+Right.
+
+It's just, you know, just a note.
+
+Right.
+
+But that note, I can see the note and the AI can see the note.
+
+And so let's read the problem together.
+
+So after today.
+
+Well, we want you to do the next days.
+
+Advent of code puzzle.
+
+So see how far you get in this case, we'll probably only get through half of this today.
+
+So we'll probably want you to do one be and day two before next time.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+And then we'll probably get through half of this today.
+
+But I kind of picked out the bit that actually contains the puzzle to solve.
+
+On each line, the calibration value can be found by combining the first digit and the last digit in that order to form a two digit number.
+
+Now, this is great.
+
+The AOC is really good at doing something that you must always do yourself, which is they always give you a small example, as well as the full data set.
+
+So the full data set is very, very long.
+
+So we don't start there.
+
+And in this technique we're going to be showing you, it's a very specific technique that I want you to try to use all the time.
+
+There's a very specific way of going about this.
+
+We're not even going to do all four.
+
+The technique is to pick one.
+
+We're going to do one.
+
+So I'm not yet at the point where I need John O to tell me how to do things.
+
+So I'm still driving.
+
+So I need this data.
+
+So I clicked on copy.
+
+And then I can just paste it.
+
+And I need to put that somewhere.
+
+I need to give it a name.
+
+I need to give the input a name, which I'm sure you all know this, but I'm going to go really from scratch, right?
+
+Which is like, you know, what's a variable?
+
+A variable is a name that we give to some data, so we don't have to type the whole damn thing in every time.
+
+So why don't we call this the sample input?
+
+I'll just call sample.
+
+And I need to copy and paste this into sample input.
+
+Okay, so I'm going to intentionally mess it up here.
+
+Okay, and I'm going to change to code, right?
+
+In fact, I'll say default code.
+
+Default code decides whether or not by default you -- the code one is selected.
+
+I actually suggest you always turn that on.
+
+I thought it would be on by default, so that might be a bug.
+
+So I would leave it on because we want to mainly be writing code.
+
+And then I'll click submit.
+
+And I'll say, uh-oh, that didn't work.
+
+So this is where we can talk to the model, and the model can see everything above where you're typing now, right?
+
+And notice you can insert things above or below anywhere in the dialogue, right?
+
+So you're not just sticking stuff at the bottom.
+
+But at the moment we are at the bottom, so I can say, oh, dear.
+
+How do I fix this, right?
+
+So you don't necessarily need to know a lot about syntax and stuff.
+
+That should be stuff that computers can do for you.
+
+So then I can press command enter or click on the submit button.
+
+And Claude Sonnet has a thing about that.
+
+And it tells me, like, oh, when a string, so a bunch of characters, when you've got multiple lines, you actually need triple quotes.
+
+And that makes sense, right?
+
+Because, like, normally in Python, the end of a line is the end of a command, right?
+
+So my command was like, "Samp equals quote 1abc2."
+
+So, like, whoa, that's an unterminated string little.
+
+So you never finished your string.
+
+So that's great.
+
+I want this code.
+
+So let's grab it.
+
+So I just click add message with code.
+
+OK, and you can see I've now got a new message, which I can submit, right?
+
+And if I want to just double check what the result looks like, I can just write "Samp" at the end.
+
+And it will print it.
+
+And there's -- and you can see that Python uses backslash end if you don't print it.
+
+So we've got our sample.
+
+So that's, like, stage one, give it a name.
+
+OK.
+
+And then, Jono, I don't really love that it's in lines.
+
+Do you think there's a better format for this?
+
+Yeah, we could split this out into a list.
+
+But maybe, well, yeah, we can do that.
+
+And then we can think about solving it ourselves and then solving it in code.
+
+But yeah, good idea to split it into a list.
+
+Into a list.
+
+OK.
+
+So, you know, probably a lot of you know what a list is, but just in case you don't, a list is something that, you know, basically contains a few values, right?
+
+So here's a list, right?
+
+And I'm going to edit this now to give it a name, "myList".
+
+And again, we can write it afterwards to print it out.
+
+And lists are nice because once we have this in a list, we'll be able to grab the nth value of it by indexing.
+
+So by typing "myList1", for example.
+
+So we could ask the AI how to turn SEMP into a list, but Jono's pretty good at programming Python.
+
+So Jono, do you know how to turn this into a list?
+
+Yes, I believe Python has a built-in called "split".
+
+So if you typed in "sample" and then "dot" and started typing "split", you'll see there, that's a hopeful hint that you're on the right track.
+
+There's a split lines even.
+
+Let's use that, shall we?
+
+Give it a go, yeah.
+
+Okay.
+
+And so to call the function, you have to do that.
+
+And again, one of the parts of this is to look at your data at every step.
+
+So most of the times you write a code message, it should output something.
+
+This is a huge mistake I find, even from very experienced developers, is that they don't look at their data at every single point.
+
+Jono, are you happy with this list?
+
+Yep, that looks exactly like what we want.
+
+Okay, so I just have one more step that I wanted to do, which is the process, which is now we have to pick one of those that we're going to solve.
+
+So I think the first one's a bit too easy.
+
+Like it's a bit of a special case that the one is at the start and the two at the end.
+
+The last one's a bit weird, there's only one number.
+
+So if it's okay with you, Jono, I'm going to pick index one here.
+
+So I always call it x, right?
+
+And that way you'll see y, but by giving things consistent names, it's going to make life much easier.
+
+So I'm going to pick it and then as soon as I do it, of course, I need to make sure it outputs something.
+
+Okay, so I think Jono, that's as far as I can go without having some navigator assistance, because now we actually need to solve the problem.
+
+I believe that the answer we should be getting for this is three eight.
+
+So I think that's what I want you to help me get.
+
+Right, and so maybe like talk me through how did you get that answer?
+
+What was your like actual internal thoughts or process for getting that?
+
+I mean, I just looked for the numbers, Jono, like I knew we needed the first and the last.
+
+So I just started going through and it's like, okay, got it three.
+
+Got it eight, three eight.
+
+Cool.
+
+Okay, so then at this stage, that's suggesting that there's a few ways we could go.
+
+Probably the best is to first pick out all the numbers, right?
+
+Keep them in order and then do exactly what you did.
+
+Go for the first one, go for the last one.
+
+I mean, I didn't even pick out the numbers.
+
+I just went through left to right until I found a number.
+
+And then I went through right to left until I found a number.
+
+That's what I did, but I'm not the navigator.
+
+So that suggests a path we can follow.
+
+I can see that that's going to get us somewhere useful.
+
+Okay, so let's go through the characters one by one.
+
+So in this case, it's just a string.
+
+It's not a list, but I know that you can go through for character in string, right?
+
+In a for loop.
+
+So let's do that.
+
+And let's start by just printing out the character.
+
+Yeah.
+
+Cool.
+
+And just to notice here that as we add each variable, it appears here and you can click on these.
+
+So if I'm like Sam, where the hell did that come from?
+
+You just click on it and it'll find where it was defined.
+
+Okay.
+
+Let's say, oh, I remember now in lines.
+
+Oh, yeah, yeah, yeah.
+
+Okay.
+
+I got it.
+
+I got it.
+
+And then like what the hell's like?
+
+Okay.
+
+Okay.
+
+Got it.
+
+So all right.
+
+Cool.
+
+Cool.
+
+Okay.
+
+So now we've got when we're in that loop.
+
+I want this one.
+
+Exactly.
+
+So how do we test for that?
+
+I know there should be something.
+
+It seems like that's a common operator.
+
+But maybe we can just ask the eye, how would I check if a character is.
+
+A character is a number.
+
+Okay.
+
+And something I find helps a lot with talking to an AI is to actually talk.
+
+Right.
+
+So I quite, I think that currently the best thing on Mac at least is, is whisper flow.
+
+Right.
+
+And one thing that's really helpful is to connect it up to a keyboard shortcut that's really convenient to access on your keyboard.
+
+So on the external keyboard, I'm using control.
+
+Control alt shift happens to be convenient.
+
+So I just hold it down and I'll talk to the AI.
+
+And that's just a little bit smoother experience for me.
+
+Often than typing, I can get it done faster, a little bit less mental overhead.
+
+So I think just to confirm, John, I want to basically know how to recognize when one of those characters is actually a digit, right?
+
+Right.
+
+Okay.
+
+So I simply think I want to loop through each of these characters and then identify the first digit.
+
+How do I actually tell if a character represents a digit in Python?
+
+And you see it.
+
+Oh, I don't know why it didn't show me the first part, but that's fine.
+
+The question is all I wanted.
+
+So it's all good.
+
+That's a bit of a limitation I found with a lot of these AI voice recognition things is try to clean up what you say to various degrees.
+
+And sometimes they clean it up too much, sometimes too little.
+
+In this case, actually the question is asked is fine.
+
+So I'll just go with it.
+
+It's also going to work because it's not just getting that question, right?
+
+Even the saying in Python, I feel like that's kind of a habit where if you're starting a brand new chat GPT session, you see, how do I tell whether something is a digit?
+
+It doesn't know.
+
+Is this in JavaScript in Python?
+
+By looking at it, whereas here it's in a notebook.
+
+It sees the task definition at the top.
+
+It sees your experiments bit by bit.
+
+I bet you could even say something much more obtuse and it would be probably able to into it.
+
+Oh, you probably want to use something like this.
+
+And in this case, it's given us the is digit method, which is exactly what we want.
+
+And I'm just going to have a quick diversion here because people are asking in the chat how the hell we made this solve a thing.
+
+So, yeah, so we built a, as a lot of you know, a framework called fast HTML earlier this year.
+
+And one of our goals for fast HTML was to make it like, well, we made it so that would be easier for us to build stuff.
+
+And the platform solver was written in fast HTML.
+
+And the data is stored in another thing we built called fast light.
+
+And yeah, it's all written from scratch.
+
+That's not using Jupiter or anything like that.
+
+Obviously the language model is not written from scratch.
+
+That's we're using Claude Sonnet, which we love for that.
+
+And the kind of the system that's going on under the hood is basically one that's a lot of it has developed from me teaching my daughter and my co-founder son math over the last few months using kind of a combination of me plus AI and finding what things work and what things don't.
+
+So we're kind of combining a whole bunch of different answer AI projects together, including the teach Eric and Jeremy's kids math project and the fast light project and the fast HTML project.
+
+And most of or yeah, a lot of solver was written in AI magic, actually, probably most of it.
+
+So yeah, it's fun to see all this come together and actually show people outside our little company for the first time this amalgamation of all these things.
+
+Yeah, and it's important to note like that what's being sent actually, I'm just going to have a quick diversion here because it's really important to have this mental model of what's going on.
+
+What is going on is it's not sending like the state of the Python interpreter to Claude, it's sending the state of like what's on your screen to Claude, right?
+
+So I could say like import random, right?
+
+And again, as John mentioned, like the auto complete is based on what's actually in your Python interpreter.
+
+So I run that and then I say a equals random dot and I can see what's actually in there, right?
+
+So I'll say random.
+
+Okay, and I printed out.
+
+And then we can ask, can you tell me what AI is now?
+
+Okay, cool.
+
+And then there's a nice little button here, which is very similar to one you've already seen, which is I click this on an input to get a copy of a message.
+
+So if I run this again, I'm now going to get actually, I didn't quite want it there.
+
+Let me delete that because I want to put it right at the bottom.
+
+Well, actually, that's fine.
+
+So now if I say here, what is a now so I double click this to rerun that prompt and it should say point eight four eight.
+
+There you go.
+
+Point eight four eight.
+
+But now if I copy this, and I say add above, right, and I ask it here, right, then it's not going to see under anything underneath just sees what's above it.
+
+Okay, so this is like an important part of the mental model of what's going on is, is you know, you're constructing a dialogue, not just by sticking stuff at the bottom, but by thinking about where you put things and you can add headings and notes and so forth.
+
+So you know, it's quite helpful to kind of add things like first random as a note, for example, because in your vase here, it actually also shows headings, right.
+
+So if I'm off the bottom of the screen, I can click there, it jumps to headings as well.
+
+So, yeah, try to keep things nicely organized and take advantage of this understanding of the mental model.
+
+So anyway, we'll go back to lesson one.
+
+And it's important to know that now that we're back in lesson one, our Python interpreter, there's only one Python interpreter for your instance.
+
+So it's all reset.
+
+You'll see there's no number after this.
+
+So to get back to where we were, we'll click around all.
+
+And they will be in run.
+
+Okay, cool.
+
+And so then as a driver, there's this one one point worth calling out here is like, okay, we've got our next step, right, and we want to go through off our string for own character.
+
+And this time we'll print if that is a digital knot.
+
+But rather than going back and having one code block that we're repeatedly editing and building up to, we get the full solution.
+
+What I'm going to ask Jeremy to do is make a copy of that for loop.
+
+And then we'll have our revised version.
+
+So if I said add a copy, it'll be but immediately underneath, but actually want to put it at the bottom.
+
+So just manually paste it.
+
+Okay.
+
+Cool.
+
+So now I guess we could print o.is digits just to check that the AI hasn't hallucinated this function.
+
+And then we can make sure that it actually does do what we want and see what type of thing it returns.
+
+So should I run that?
+
+Yeah.
+
+Okay, command enter.
+
+Nice.
+
+Cool.
+
+So now we've got true where we want.
+
+Okay.
+
+And so then now we'd like to pull out the character.
+
+Well, let's see, we wanted to keep track of the first one and the last one, right?
+
+So the first one is easy.
+
+Because as soon as we come to a place where o.is digit equals true, then we can set the first to be whatever that number happens to be.
+
+Sure.
+
+Do you want to do that now?
+
+So I could say first equals.
+
+So you could call it zero, but zero is a digit.
+
+So there's a kind of a nice special value in Python, which is like zero is the absence of a number, right?
+
+And empty string is the absence of a string.
+
+And the absence of anything at all, even a type, has a special thing called none.
+
+So that's a good thing to start with.
+
+So I will say first equals none.
+
+And then I'll copy and paste it in here.
+
+And I can say first -- oh, I should say if this digit first equals zero.
+
+Am I done?
+
+Do you want to know?
+
+Not quite.
+
+And maybe we should explain to people why.
+
+Okay.
+
+Go ahead.
+
+And so when I am writing code like this, and you'll see Jeremy as well, one of the reasons we don't hit control enter right away is there's this process that goes on in your brain, which is what would happen if this code ran, right?
+
+And then you can see the false false false false true, false false false true.
+
+We can see the previous output there for if it's digital not.
+
+I'm just going to run it.
+
+So if I'm -- Yeah, you can see.
+
+Yeah, like this is again why you always make sure every message, if possible, ends in an output.
+
+Oh, that's actually wrong.
+
+So again, I would print out x here.
+
+It shouldn't be eight.
+
+Right.
+
+Yeah.
+
+And so you could catch this if you were experienced by saying, ah, I'm not stopping once I find the first one.
+
+I'm keeping on going through.
+
+And so every time I find another digit, I'm going to overwrite first.
+
+And so you could catch it that way trying to simulate this code in your head.
+
+Or you could do exactly what Jeremy did is run it, look at the output, compare to what's expected.
+
+And then if you find some disconnect and you can't see it, it's a good chance to go and say, okay, what's gone wrong here?
+
+And then answering that could be exploring the code or it could be asking the AI, which is going to be hopefully quite a helpful teacher.
+
+Hmm.
+
+That's quite nice.
+
+I'm going to run this.
+
+So I'll say add message with code.
+
+And this helps me not have to necessarily do it in my head as much.
+
+But yeah, okay.
+
+So what you're saying, Jono, is what I should have done is to stop because actually it kept going.
+
+No worries.
+
+So I'll copy this.
+
+And what do I do, Jono?
+
+How do I stop once I found it?
+
+There's one thing we could do, which is to write break, which is going to stop the for loop.
+
+But Jeremy, it also occurs to me like one thing we could do, we accidentally got the last character there.
+
+Right.
+
+So this is like a point where, okay, we already have our plan for finding the last character.
+
+So we could potentially ignore this diversion.
+
+But it's also like, oh, I accidentally solved the second part.
+
+So maybe we could have a check that says, oh, if the first is none, then I can set first to whatever the character is.
+
+But if the first already exists, then we could stop.
+
+Or we could say, I like simple.
+
+I'm just going to paste this working one and I changed this to last.
+
+Yeah.
+
+How about that?
+
+Yeah, there we go.
+
+So now we've got the first and the last.
+
+Fantastic.
+
+Okay.
+
+Great.
+
+So now I could just say, great, I think I've solved the problem now.
+
+Can you save me some typing by putting both the first and the last sections into a single function for me?
+
+Okay.
+
+And of course, I wouldn't just run it.
+
+Right.
+
+I would need to always output something.
+
+Nice.
+
+Cool.
+
+All right.
+
+I'm seeing some steps we might still need to do, right?
+
+We've got the three and the eight, but we want the number 38.
+
+Actually, I just think I'm back to that, John, which is like, I often get lost.
+
+So just, I'm just going to say, remind me again.
+
+What the problem told us that we're meant to do with this.
+
+Yeah, I always, you've got it in your head.
+
+But I think it's nice.
+
+Otherwise, we're going to scroll up, of course.
+
+And we have, so this is quite nice to kind of keep track of it, I think.
+
+Yeah, go ahead, John.
+
+Yeah.
+
+So we have to combine them to make a two digit number.
+
+So I wouldn't mind modifying this to create the two digit number.
+
+Is that the same reason?
+
+Well, we should probably experiment a little bit first.
+
+Right.
+
+Yeah.
+
+Okay.
+
+So we could say first, comma, last is equal to get digits.
+
+If you wanted to reuse that piece and then we could combine them.
+
+Yeah, that's great.
+
+Let's do it manually like that.
+
+So there's that.
+
+Okay.
+
+So what John, I just did there is since we got two things back, we can put them into two different variables, right?
+
+First and last.
+
+So just to be clear, that's first.
+
+That's last.
+
+And so, okay.
+
+So now we're manually going to try to turn that into the number of 38.
+
+Right.
+
+And so we first want to add the strings together, right?
+
+We don't want three plus eight, which is 11.
+
+We want the character three and then the character eight.
+
+So F plus L should give us that.
+
+Nice.
+
+And of course, if you did know that already, you can ask the, you know, AI, how do you concatenate strings?
+
+And then we'd ask, or then we'd go, okay, let's go int open brackets F plus L.
+
+I have no idea how to do that, obviously.
+
+How do I convert this string into the actual integer 38?
+
+Nice.
+
+I mean, obviously, John, I told me, but I don't trust him.
+
+Okay.
+
+Right.
+
+Nice.
+
+So what we've done here is instead of editing that function, we've added a line that we've tested, right?
+
+Like this line here int F plus L.
+
+This is a very like specific small example.
+
+And if you're a good programmer, you're like, why do you have to do this?
+
+But this general idea, we're not just adding a bunch of new code and hoping for the best.
+
+It's like, oh, I want to make this change.
+
+Let me test this change in isolation.
+
+And then we can go and put it into our existing function.
+
+Also, John, or artists mentioned something.
+
+I always do.
+
+And like everybody at Answer AI now does this as well, I think, but almost nobody I see out in the rest of the world does this.
+
+Well, soon as AI tells me about any feature of any library or any programming language or anything that I didn't know before, I always check it and learn about it.
+
+It's like, okay, oh, I didn't know about int.
+
+What the hell is that?
+
+So you could say help.
+
+Int, right?
+
+And it's like, oh, that, here we go.
+
+Int of x, convert a number into an integer.
+
+Okay, that's kind of nice.
+
+You can collapse that.
+
+There's a bit more information than we needed.
+
+Or you can just say int question mark, right?
+
+To get a slightly shorter version, which is nice.
+
+Or, of course, my function.
+
+Learn more about it from helped or better still.
+
+I love reading the actual documentation.
+
+Int, okay.
+
+And you can see it's got examples.
+
+And they often show you like kind of surprising ones like, oh, int for a while.
+
+I didn't know that.
+
+It also takes a second thing, which is the base.
+
+So I could do like hexadecimal.
+
+So I often find people ask me like, Jeremy, how do you know so much about Python?
+
+Like, oh, I read the docs.
+
+And people are often incredulous.
+
+Like you actually read the Python docs.
+
+Yes, I have read the docs for every Python function I've ever used and every Python module I've ever used.
+
+I'm incredulous.
+
+How can you not do that?
+
+Okay, so this is a great way for me of like, at the end of this process, I'm going to know more about Python than I did before.
+
+And if I asked you to modify it, and I said, oh, actually these integers are base 64 or something.
+
+If you had just accepted the AI's code and had it write the whole function, you might not know how to modify that, right?
+
+You wouldn't even know that there was different bases supported.
+
+So it's not just like, oh, I'd like to learn this for learning's sake.
+
+It makes you more useful as a coder.
+
+And also it's like, if I was working with Jeremy, often I'll say, oh, it'd be nice if we could do that.
+
+And he'll say, well, we can like, wait, how do you know this is a brand new library or a very weird obscure function?
+
+We've been doing web stuff with which none of us are very familiar with.
+
+And yet it's like, oh, I know there's an HTTP code for that.
+
+Why it's like when Claude wrote this or when whatever the model behind the magic is wrote some piece of code, interrogating it looking at all those pieces until you're satisfied means that you've got this frontier or this patch of knowledge that's going to be useful if you need to modify that code.
+
+Great.
+
+Okay.
+
+So this is so little, I would be inclined personally just to modify our function to add those steps if that's okay with you.
+
+So, yeah, you know, I could edit it here, but you know, I actually kind of prefer to stick everything, you know, more like this.
+
+So just is just int first plus last.
+
+Is that all right?
+
+And let's see if that does what we hope.
+
+Okay.
+
+Cool.
+
+Yeah.
+
+Yeah, we don't need to write everything.
+
+So I don't think I need your help for this.
+
+Do you know I'm just going to loop through and run it.
+
+Is that all you're thinking?
+
+Yeah.
+
+Yeah, sounds good.
+
+Yeah.
+
+So, like, this exploration, like, you don't need to write really long variable names or whatever like for me, I just like to have totally default ways of doing things.
+
+So like whatever I'm currently working on is always called X whatever thing in the loop I'm currently in is always called like I just, I don't have to think, you know, so, you know, this is this is all part of what we call exploratory programming, which is something I've been developing for quite a few years now, anybody who's used to NB dev or be familiar with it.
+
+And we've got quite a few videos that describe this.
+
+So you can kind of see like the stuff that we're teaching you in solver is all like, you know, years of bits of research or coming together right but exploratory tutorial exploratory programming is something you might want to kind of look into some of these videos and then more, he's saying has a really good one as well, which we'll link to somewhere.
+
+Okay, so I'm just going to print.
+
+Get digits.
+
+I've got a treat, which is rare, but fun.
+
+Oh, steak when preparing.
+
+And so that's one of the benefits even if you just got someone watching over your shoulder.
+
+It's not like it's going to take us much time but I could have said hey Jeremy, I think you mean lines instead of X.
+
+So this one I will just edit it.
+
+And John, are you are really good actually at noticing things.
+
+I suspect you kept quiet on that one just to show me up.
+
+I was rubbing my hands in the background.
+
+I'm not comparing the navigator just because they're the navigator they're not typing they're meant to be doing most of the work right so.
+
+Yeah.
+
+I just had these up right.
+
+Yeah, I think the final thing just said the sum of those numbers so.
+
+Okay, how would I do that.
+
+I believe there's a sum function.
+
+Okay, I know your style and it's like how do we cram this onto one line.
+
+Oh, no, not here it's not here I would here I would do it the dumb way to start with that's a result equals zero, particularly because like, we've already halfway there right like, I think for this actually okay you can do it the fancy way in a moment but first of all let's do it the non fancy way.
+
+Because I think we can just say, res plus equals that's just short for res equals res plus.
+
+Okay, does that look right.
+
+Yep and printed out.
+
+Nice.
+
+And part one.
+
+See again, like, you need to make sure when you're doing something that you have a sample input that you have a sample output for each thing and you have some way of checking them all together.
+
+Right so advent of code does this for you.
+
+And this is one of these things where when you jump outside of advent of code you need to have the rigor to do all of those things yourself.
+
+So this is working.
+
+So, you know, again, probably what I would do here is I would just say like okay, had a copy of the message.
+
+Def solve one a.
+
+X.
+
+Sorry, so when a.
+
+What's for all of them isn't it.
+
+So I guess we called it yeah.
+
+My X is.
+
+In fact, let's just call exactly the same thing for lines.
+
+And so it's useful to know that if you select a couple of lines and press command or control right square bracket, it indents them.
+
+Okay.
+
+And then we could return.
+
+Oopsie daisy.
+
+Return.
+
+Reds.
+
+So like because before like, you can see why I never needed a bugger right.
+
+Because nothing's ever mysterious or unknown.
+
+I always know exactly what's going on, you know, and obviously we're working on a extremely simple problem here.
+
+But that's right.
+
+We often work on problems even harder than advent of code one a.
+
+The harder it gets, the more you have to use this dead simple rigorous approach, you know, every single time.
+
+Okay.
+
+So.
+
+John, did you want to do a more fancy way?
+
+I know you're fancy.
+
+No, I think I think this is actually good.
+
+Maybe we could run it on the full input.
+
+Okay, now using the ways now Audrey created that little gist for us.
+
+Which is that in the fact.
+
+Yeah.
+
+Top link.
+
+Not bad.
+
+Okay.
+
+So.
+
+John already showed how to do these steps.
+
+And the step.
+
+And I've done them already.
+
+I think.
+
+Let me just double check.
+
+Yes, I do have an AOC session.
+
+So I should be able to.
+
+Paste this.
+
+That looks good.
+
+Okay, so.
+
+You know what I would be inclined to do at this point John I was to see how I created lines because we need lines right.
+
+And I would copy that.
+
+And then I would go down to solve one a.
+
+And I would paste it here.
+
+And it's now not called Sam.
+
+It's called imp.
+
+It's a very small.
+
+Okay.
+
+We probably don't want all the lines.
+
+So you can index into lines with like us to get a single line like so.
+
+Or you can get a few lines.
+
+By.
+
+So we can get like the first three lines.
+
+And you back to something.
+
+Thanks.
+
+This is why you need a good navigator.
+
+See.
+
+Okay.
+
+What do I do now?
+
+I think we can just call solve one a lines again because lines is now the full thing.
+
+And then we're expecting a much bigger value than 142.
+
+Good to think about that.
+
+Okay.
+
+And I actually already solved this.
+
+So.
+
+Type it in now yours will be different because everybody has their own input right so you can't just type in 5513.
+
+And I suggest.
+
+That, you know, everybody try to go through.
+
+This same process, you know, even if you're a super handy developer.
+
+You don't have to use the AI or whatever but just this practice this like.
+
+Sam.
+
+Samptot split lines.
+
+X equals Sam one.
+
+Do it on X.
+
+Create a function.
+
+And you can see by the time we've got it working on one thing.
+
+Doing it on all the things was basically instant and it basically worked first time perfectly.
+
+And this is my experience of like.
+
+Programming is.
+
+This is how programming normally works for me is that I am normally in a flow state.
+
+I am normally continuously improving.
+
+I'm normally finding them when I apply my function to my input that it works first time.
+
+And it's not because I'm clever.
+
+You know, it's because I.
+
+Check my data at every point.
+
+I'm very hands on.
+
+And it's to me this is a really nice way of programming and.
+
+It works very well with AI.
+
+You know, because.
+
+You know, small little steps and from time to time.
+
+There'll be little insights of like, oh, there's a.
+
+You know, like the other day, for example.
+
+More than the other day.
+
+A little while ago, we were like, our data structure for solver isn't ideal.
+
+We're like, and specifically is because we wanted to add the buttons to create a new message above or below a previous message.
+
+Rather than putting them at the bottom.
+
+So previously we had just a SQL light table with all the messages with an auto incrementing ID.
+
+We just add something that goes to the bottom.
+
+No worries.
+
+I was like, oh, how the hell do you insert something between messages?
+
+You can't insert a key between keys.
+
+And then my brain was like, well, you can, Jeremy, if a key was a float rather than an end.
+
+I say, no, these can't be floats.
+
+I say, well, maybe they can.
+
+And so, you know, in AI magic, I asked like, again, it's got all my context.
+
+So it's like, hey, what if we made this ID a float and I could insert things between them.
+
+And there's quite a few little techniques for teacher along the way.
+
+But one of the things I love to do when I come up with an idea that seems interesting is I asked, like, is this a thing?
+
+I basically I said, is this a thing?
+
+This is a known thing or is this really weird?
+
+And much to my surprise, AI magic said, oh, it's a thing.
+
+It's got it, you know, you know, no problem.
+
+Here's how you do it.
+
+And then I was like, okay, does the thing have a name?
+
+This is a really critical step.
+
+It's like, yes, it has a name.
+
+It's called fractional indexing.
+
+Now, at this point, I stopped talking to Claude.
+
+And I start talking to Google.
+
+And I Googled fractional indexing.
+
+I found a fractional indexing library for Python.
+
+It has a way better approach that actually uses like base 65 encoded digits, you know, characters instead of floats.
+
+And my life was great.
+
+And like, I now I learned about this amazing new algorithm and I had a, you know, a Pi Pi library for it.
+
+And that made me very happy, you know, so, yeah, I think we're done.
+
+And we were going to plan to be 60 to 90 minutes.
+
+So we're pretty much dead on time. 90 on the dots.
+
+Yeah.
+
+What do you think, John?
+
+I don't know anything you wanted to add before we wrap up.
+
+I guess we have to tell people about maybe their homework for this week or for the next three days.
+
+Right.
+
+So what should people be doing before the next lesson?
+
+What are we going to do in the next lesson?
+
+And then maybe it's something to leave for next lesson, but it'd be good to say, like, what do we do with this artifact, this big conversation that we've got if it wasn't just, I only care about that final answer.
+
+But I think that's something we can tackle down the road.
+
+Yeah.
+
+And for now, for people who want to quickly look, you know, click on settings, click on export.
+
+And you can export a Python file with a subset of those and create a module.
+
+But yes, I think if you can, if everybody can try to make sure they've done one B, so the second half, so repeat what you just saw and then do it for the second half.
+
+Try and take advantage of these techniques.
+
+Try and take advantage of the platform.
+
+Try to do it in a way which is different to how you've previously used computers.
+
+This is not cursor.
+
+It's not VS code.
+
+It's not VIM, you know.
+
+Bear with us and give it a try.
+
+Practice.
+
+And, you know, time permitting.
+
+You could try problem number two as well.
+
+But don't feel like there's no, there's no hurry.
+
+You know, if there's no such thing as being behind, you know, if we start describing problems that you haven't got to yet, that's fine.
+
+You're probably a slightly newer coder than some people, in which case your job will be to replicate what you've seen without having to do that.
+
+Having Johnna and I doing it in front of you, and that'll be a good enough challenge.
+
+And then maybe you can try 20, you know, this year's advent of code problem one instead of last year's problem two, for instance.
+
+How does that sound?
+
+Sounds good.
+
+Okay.
+
+Thanks, everybody.
+
+We'll see you in three days time.
+
+No, four days time.
+
+Four days time and lots of activity in the discord in the meantime.
+
+Yes, and we know it's Thanksgiving, so it's fine if you're not around.
+
+It's fine if you miss the next class or the recordings are available as soon as I hit stop.
+
+Thanks to YouTube live.
+
+So, oh good.
+
+Johnna, that was a lot of fun.
+
+I enjoyed it.
+
+Thank you very much.
+
+Bye.

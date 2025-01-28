@@ -1,0 +1,1987 @@
+And we are live.
+
+I believe.
+
+Great.
+
+Hello, Jenna.
+
+Hello.
+
+Sorry, I missed the last lesson.
+
+Oh, I forgive you, I guess.
+
+I guess you had a good time.
+
+I guess maybe we'll start by looking at an interesting example of somebody's solvort experience.
+
+I got a good message on the discord during the week from Vishal who said, "I knew the solvort course would be a force multiplier, but I'm really feeling it.
+
+For the first time ever, I've successfully navigated through a machine learning research paper's code base over 100 files, over 60,000 lines to recreate results.
+
+Using solvort/poliers guidelines to plan my approach and strictly following the solvort philosophy and examining just one to two lines of code at a time, he says in 204 out of his 210 code cells, what I thought would take weeks took days.
+
+I certainly had to do leg work, reading the paper multiple times, pouring through the code base, but I have done those things before and I still felt too intimidated to even try and work with this code.
+
+And then he showed some examples, so let me show those and I will give it a share my screen.
+
+Okay, Johnno.
+
+So this was Vishal's solvort dialogue and I thought it was quite interesting to see his written up his kind of understanding in a note and added the read me for a answer I bent levier library called Ratatouille, which does, it implements this paper amongst others as context.
+
+I mentioned the polier framework and started pasting in bits of code, set up a plan, and this is really important.
+
+It's a minimal data.
+
+So we'll be doing this today.
+
+Johnno is using AI to help us with that kind of thing.
+
+And then what I saw he did is he, I guess, exported that or use that to help him get a Colab notebook going.
+
+Yes, this looks much the same.
+
+And that's really cool.
+
+Got lots of links to bits that he's interested in.
+
+And then, yeah, so here's the little bit of AI powered examples that he's got.
+
+And we can see when things don't work.
+
+That's nice.
+
+You know, I read through this and thought it was a really helpful way to understand this topic myself.
+
+And I've actually taken to doing this as you know, Johnno, to sending around dialogues of me learning about something.
+
+What do you think about this approach, Johnno?
+
+Yeah, I think especially in, like this is a great example of a case where you can look at the paper and it has these You often pseudo code or equations.
+
+Sometimes they don't necessarily match the code base exactly.
+
+And so you can try and do the work in your head of like imagining what's happening at the different stages.
+
+But being able to say, okay, we have some query vectors.
+
+Here they are.
+
+This is what the first one looks like.
+
+This is what they all look like.
+
+Then we feed them through this thing and we get some results.
+
+Here they are.
+
+Each one has a score and the document.
+
+It takes a lot of the guesswork out.
+
+And I know in many cases, catches a lot of bugs as well where you're assuming it's going to look like one thing.
+
+But then the practice is different.
+
+And for communication, it's great.
+
+Like I was trying to learn about this networking library I haven't used before, but it's very popular called ZeroMQ and thinking of migrating Solvert to using that.
+
+And I had a long dialogue about it and learnt a lot in the process.
+
+And then yesterday I showed a couple of people the dialogue, you know, I just took them through it.
+
+And it was a really nice way to explain what I had learnt.
+
+I really enjoyed it.
+
+So what now, Jono?
+
+Okay, well, I guess we should cover the plan.
+
+Welcome everybody.
+
+Good to see you.
+
+This is lesson five and we promised six lessons and then a break and then the remainder.
+
+So not this one, but the one following this on Friday is going to be the last lesson before that break.
+
+And so in that one, we have some plans to look at ways to take the Solvert approach outside of just the Solvert app.
+
+We'll look at some ideas around exporting code for use later and so on.
+
+And then we'll have some homework for you over the break to try things out.
+
+So that's pretty exciting.
+
+But in this one, it's hiding up some loose ends going on a few little side quests.
+
+So we'll do, I think we've got two smaller demos before we get to the advent of code.
+
+And then we'll dive into advent of code.
+
+I think it's day four, the problem that we're tackling.
+
+We'll run through that.
+
+I think right at the end, Jeremy's going to finish up the advent of code day three, twenty, twenty, three one.
+
+There's a part B that I don't think you got to in the lesson that I missed.
+
+Yeah, so we'll be doing our usual pairing and iterating through.
+
+But then we also have a couple of topics that we'll airmark to say, oh, this looks like an interesting thing that hasn't come up yet.
+
+Let's dig into that a little bit.
+
+John, I know during the week, I guess something super interesting that happened or two interesting things happened.
+
+The first was that OpenAI released O1 non preview and also O1 Pro and O1 Pro is at a not particularly convenient price tag of $200.
+
+But thanks to our VC investors, we could afford the $200 to try it out.
+
+O1 is an interesting model.
+
+It's not really a model.
+
+It's a system.
+
+So O1 originally was called, I think in the preview version, it's called 4O with reasoning, which clearly tells you it's not a new model.
+
+It's a wrapper around an existing model.
+
+And using O1 requires a completely different approach to what we do with Solvit.
+
+It's a model that you want to give as much information as possible to and lots of examples to and send it all over at once and have it one shot the answer.
+
+And so I know you took it for a bit of a test drive.
+
+I guess I'm curious to hear particularly about the $200 a month preview, the Pro version.
+
+You posted some results and I'd be interested to hear your thinking about that.
+
+Sure thing.
+
+Yeah, and I guess this comes in a broader suite of releases of, I think Devin has just come out of research as well.
+
+There's a few other like $500 a month.
+
+So people are obviously seeing some value in this idea of being able to say, look, here is the detailed specifications and then have something iterate through.
+
+And I don't say brute force, but use a lot of analysis to work through something like that.
+
+So are we out of a job?
+
+Well, we'll see.
+
+There's always that existential evaluation whenever the state of the art advances.
+
+But this was a puzzle from...
+
+That looks pretty small on my screen.
+
+Oh yeah, let's zoom in and actually maybe I shouldn't even be showing this window.
+
+I should be showing this all the dialogue.
+
+And the image is not rendering.
+
+So let me share a different part of this.
+
+Okay, so this was an Advent of Code one from 2023.
+
+It was day 2021.
+
+Sorry, day 21.
+
+And the problem starts out very Advent of Cody.
+
+You've got some map and starting points.
+
+The elves are doing their thing.
+
+He needs to reach a step goal.
+
+There's rocks and then there's garden plots.
+
+And so part one is like, okay, on this map that you have, you can take steps up with North, South, East, West, et cetera.
+
+How many places can you reach in some number of steps?
+
+And so, you know, you can work through this and figure out the code.
+
+We try to search through.
+
+It's very doable.
+
+And even the non-pro 01, maybe even some of the smaller models, very handily will write you that code to do this thing called a breadth first search.
+
+Go and find out the answer.
+
+Part two, add some wrinkles that says, oh, he actually needs to get, you know, what is this, 26 million steps.
+
+And not only that, but the map repeats infinitely in every direction.
+
+Okay.
+
+And so, okay, here's the sample map in the middle here.
+
+You see this copies of it in all directions.
+
+They have a little sequence here.
+
+And then they ask you to find how many garden plots you could reach.
+
+And this, I mean, we, anyone who's been doing the advent of code has already seen sometimes the computation starts to get long.
+
+This is one where there's just not time to do this simulation.
+
+You'd have to store, you know, well, maybe someone's going to prove me wrong and do it.
+
+This feels like something where instead of just blindly applying part A to part B with a giant, near infinite large map, you've got to instead come up with some sort of conceptual solution.
+
+And John, I can immediately see a problem there, which is large language models love blindly applying a thing A to thing B.
+
+Like if they've seen the solution to thing A in particular, they'll be in that auto regressive mode.
+
+And I imagine it wasn't going to start off in a good direction.
+
+Exactly.
+
+And so, yeah, this is, this is a great demo of a case where this idea slightly falls on, even though it seems like it shouldn't.
+
+So in general, the advent of code problems are extremely well specified and there's sample data that shows exactly what should happen.
+
+And that means they're really well suited to like a model like 01.
+
+It's able to reason through what should happen and figure it out for this one.
+
+I tried variants of what, what am I feeding in?
+
+What specifications am I telling?
+
+And part of it was we've got this sample data and this looks like a mathematical sequence.
+
+And so it would get really hung up on, I'm trying to predict the next thing in the sequence.
+
+There's a ratio you can see there for the sample.
+
+We can count the number of open plots versus things and approximate it with a ratio and it was giving me approximate results for that.
+
+Like actually, I didn't even want for the sample.
+
+I've got some separate data.
+
+And then the key thing is like, okay, so this, not this one, this one, maybe this one, maybe this one.
+
+Oh, nice.
+
+Let's, let's visualize the actual answer.
+
+Sorry, the actual, oh my God.
+
+Look at that.
+
+Okay, so this is 131 by 131.
+
+Exactly.
+
+You can see there's no diamond there Jeremy.
+
+It's just little white dots.
+
+Your eyes can pick out something here that's going on.
+
+And if you squint a little closer, there's actually empty column and empty row converging in the center there as well.
+
+And so it turns out that this problem is very hard to solve in the abstract when you're not sure how many obstacles there are.
+
+It's very hard to solve for most numbers of steps.
+
+But there's a few tricks like noticing this big wide diamond that we can say, hmm, hang on, there's something about that.
+
+Like noticing that the number of steps turns out to be a multiple of 130 plus 65 or 64.
+
+Right.
+
+So, okay, there's some convenient math means you can get exactly to the edge of the map or anywhere along this thing.
+
+And this is pretty sparse.
+
+And so I actually realized he can reach all the points in that diamond.
+
+And then you start to like draw this out geometrically and think, okay, what if I could go 64 plus 130 steps?
+
+I'd have to put five of these next to each other.
+
+You know, so the solution is one of these.
+
+So you figured it out.
+
+You need to look at the data with effort and only with.
+
+But without AI.
+
+Without AI.
+
+Okay.
+
+And you know, one solve it.
+
+Oh, one, I haven't been able to.
+
+And I don't want to say this is the kind of problem that these models can't solve because someone will post a chat dialogue where they can see your dialogue.
+
+Sure.
+
+So I did a number of them.
+
+I think this account is the promo tests.
+
+And so some of them I tried attaching the image.
+
+If you just zoom in a few goes, we can probably see it fine.
+
+Okay.
+
+So thought for.
+
+Can you just zoom in a few bits?
+
+Yeah, there we go.
+
+Great.
+
+Thank you for three minutes.
+
+Okay.
+
+Speaking up, there's an infinite repetition.
+
+I gave it a hint about the number of steps that there's this multiple of 131.
+
+So, you know, it's really trying to figure it out.
+
+It's given Python code for the part a.
+
+But it doesn't result in this the correct answer.
+
+I tried several versions of this through.
+
+Some of the time like this one, it says, oh, 2 million plots.
+
+It's like, wait, it's taking 26 million steps.
+
+How can you reach 2 million plots?
+
+So, I think you have a sense of language models is still not really a thing.
+
+Yes.
+
+Yeah.
+
+Well, I mean, it's funny, right?
+
+Because in so many places, these things are so impressive now.
+
+And yet, yeah, I think you also noticed another one of the series advent of code ones where there's just this like.
+
+Geometric spatial understanding and thinking that we can do as beings in the world that it's not quite captured in the text description somehow.
+
+And that is a, yeah, a failure case where instead looking at it step by step, looking at the outputs is kind of the hack to see the solution.
+
+Yeah, definitely.
+
+Oh, I found it.
+
+I can show you.
+
+Yeah.
+
+So basically this one from this year, they said, okay, look at all of the numbers that are the same to all the zeros.
+
+And then basically add an additional, I think they got it an anti node, like, kind of here, right?
+
+So take the distance between those and like put another one and put an anti node there.
+
+Take the distance between those, put an anti node here and here.
+
+Oh, in fact, there you go.
+
+See an example.
+
+So these two zeros create one here and here.
+
+These two zeros create one here and here.
+
+And did over the A's, you know, so these two A's create one here and here.
+
+And I used a rumors trick.
+
+I do this quite a lot now saying like, okay, just tell me the essence of this.
+
+And then I said, okay, here's my plan of attack.
+
+And it said, no, no, no, that's not correct.
+
+You know, it's like good effort, you know, but you need to think about the mathematical geometric requirement that is described in the puzzle.
+
+And you, here's the geometry and it had all these lines.
+
+And so I kind of say, I don't think I'm wrong.
+
+So I kind of said, look, I can you double check, you know, with the examples provided.
+
+And it's like, yeah, yeah, with this example and this example, if you work through, you'll see it's wrong.
+
+And I said, like, okay, work through.
+
+And it worked through.
+
+It's like, oh, how about that?
+
+It's right.
+
+So I went back and changed his answer.
+
+To say, yes, your approach works.
+
+And I'm not even sure I used AI after that.
+
+I did get it to double check my answer.
+
+So, yeah, it was interesting.
+
+I think, I think John is similar to your case there of visually, it's just very obvious.
+
+It's like, oh, you got one here and you got one here with one here and one here and I can see it.
+
+And it's using a part of the brain that I guess currently language models by definition don't get to exercise very much.
+
+Maybe a multimodal model, if we gave it the images could help.
+
+I don't know.
+
+Yeah.
+
+And so all that to say, yeah, there's definitely still even today places where the really good models fall down.
+
+And I had that same puzzle you were showing.
+
+I think I just used AI like, oh, could you check my work?
+
+And it was very confident.
+
+No, you've got a bug.
+
+No, you too.
+
+Those geometric calculations.
+
+Yeah.
+
+It's like, okay, you know, it's great to be able to offload some things to them, but it's also great that we have techniques to verify.
+
+Now, you know, John, I know, you know, you want to know what you might be able to do if things don't work out for you here at Answer AI.
+
+So I've got an interview question for you so you can practice your interviewing, you know, if you decide you've had enough of Advent of Code and had enough of me, I wouldn't blame you.
+
+The interview question comes from my friend Tom.
+
+Tom's been part of the first AI community for a long time back when we were in San Francisco.
+
+He traveled all the way from Australia to hang out with us for an earlier course.
+
+And he sent me an interview question, which let's see if you're good enough to get in to his company.
+
+All right, so I'm going to share it with you.
+
+Share my screen.
+
+Not that button.
+
+That button.
+
+Okay.
+
+All right, here he is.
+
+Listen carefully.
+
+My name's Tom Mackey.
+
+I'm the CEO and Atticus, which is a B2B legal and RATEG software platform that people use to fact check critical documents before they get released to market.
+
+When we're hiring for engineers, we do a bit of a current challenge as part of the recruitment process.
+
+There's a few different problems in there.
+
+And one of them is this one.
+
+Write me a function that adds up all the integers in the list, but the list can be arbitrarily nested so it can contain lists of lists of lists and also heterogeneous so it can include things that aren't just any kind of object.
+
+But I only want the sum of all the ends anywhere in that vested list.
+
+And yeah, Australians use words like heterogeneous in day to day conversation all the time.
+
+It's totally normal for us.
+
+So are you up for it, Johnno?
+
+You want to give it a go?
+
+Yeah, do you want to do it together?
+
+Okay, sure.
+
+If I'm allowed to bring my Jeremy to my next job.
+
+Okay, sure.
+
+Fine, just let me.
+
+Okay, that's fine.
+
+I can share my screen.
+
+I don't know if Tom lets people use Solvit in his interview.
+
+Tom, interview, fingers crossed.
+
+Right, so the question, I'm just going to use SuperWhisper to transcribe the file.
+
+So if I say transcribe file, where isn't that not working?
+
+SuperWhisper, transcribe.
+
+How rude.
+
+I'm not going to have to write it down myself, am I?
+
+This was totally working before.
+
+SuperWhisper.
+
+Restart it.
+
+That's fascinating.
+
+Something about SuperWhisper doesn't work.
+
+Maybe in multi-screen mode, or maybe when I'm sharing my screen, just stop sharing my screen and press the button again.
+
+In this case, I've also typed it in the Zoom chat.
+
+Okay, I will take it from the Zoom chat.
+
+Never mind.
+
+I actually tried it before and it worked perfectly.
+
+Something about being in multi-screen mode or something causing it to not work, but that did save me some time.
+
+Not this time.
+
+Alright.
+
+Okay.
+
+So one thing that's different to SolvIt.
+
+Different to Advent of Code for sure.
+
+Partly because we have no measure of success handed to us.
+
+There's no, well, maybe they could have a submission box, but there's no list that we're given.
+
+They just want to see the code from this description.
+
+So maybe a good step one would be something like in Vishal's notebook where he said, "Hey, I want some data to test.
+
+Let's create some examples."
+
+Okay.
+
+And we could do this manually or you could just ask the AI assistant to help us out.
+
+Can you create a list of tuples, maybe?
+
+Two tuples.
+
+Containing a possible input to the problem above along with the correct output.
+
+Start with the most basic case and increase complexity slowly.
+
+This is just outsourcing basically us trying to think through what would be some good things to test with.
+
+Okay.
+
+I don't know that I'm going to need too much help for the first few, but maybe did you want me just to have a little test runner or are we just going to do each one separately?
+
+I don't mind the test runner idea.
+
+What do you think, Jono?
+
+I think we're going to do number one.
+
+For a lot of these, you can see all the numbers and we can add them all together.
+
+Okay.
+
+So we'll call y the output and call x the input.
+
+Equals test cases.
+
+Oh, I need to run that first.
+
+Test cases.
+
+Okay.
+
+So it's interesting actually.
+
+I wouldn't mind adding some more later.
+
+We can ask it for some more because we don't have things like empty ones in here.
+
+We don't have kind of sub ones with strings in whatever.
+
+Loads.
+
+Also, we don't have a really basic one of like just one, two, three.
+
+I wouldn't mind doing that as well.
+
+Oh, yeah.
+
+Okay.
+
+So if I want the first one to pass, you know, so I used to do a lot of TDD, Jono, I think as you know, and a lot of people have been asking us on the discord, what's the relationship between this and TDD?
+
+I actually think it's quite similar.
+
+You know, I would tackle it in a kind of similar way, you know, so with TDD, you kind of start out by saying like, you know, just make something pass, you know.
+
+And so we've kind of got a test and we can check, you know, we can check it and what did I do?
+
+Why?
+
+Oh, did I do it the wrong way around?
+
+I did do it the wrong way around.
+
+It's X and then Y.
+
+Benefits of test-driven development, I guess.
+
+Yeah, Jimmy, I think of a lot of what you do as test-driven development, but the test is just manually looking at the answer.
+
+Like every time you print out a list and then you're expecting it to be a one, two, three, and it says it's an empty list, like that's a test failing.
+
+It's just that you haven't written out the test because it's simple enough.
+
+Exactly.
+
+And, you know, people often ask like, well, what test framework should I use?
+
+I really almost always just use one test framework, which is this.
+
+Test-Ec is basically the same as assert, right?
+
+But it -- let's make it fail.
+
+It just gives you a little bit more information if it fails.
+
+Test-Equals is what it stands for.
+
+And it also just kind of works on things like arrays and stuff automatically.
+
+It's just a bit less to think about.
+
+So as you can see, it tells you what the two answers were.
+
+So I often use that.
+
+But as Jono says, the most common thing I do, actually, would just be to type.
+
+So, um, list X.
+
+Okay.
+
+So I guess we'll do the next one.
+
+Okay.
+
+So -- Test-Cases one.
+
+Nice.
+
+All right.
+
+Okay.
+
+So, thinking through Polya, one of the things it's looking for, like, simpler copies, which is, I guess, why you started by asking, like, start me on basic and get more complicated.
+
+Yeah, this feels like very similar to the advent of Kodi things we've been doing, using some or doing a for loop and adding to a total.
+
+Those should all work just about fine.
+
+Okay.
+
+That one worked.
+
+Nice.
+
+Cool.
+
+I feel like I'm going to get the drop, Jono.
+
+Okay.
+
+Cool.
+
+So grab that.
+
+And don't need to change it yet.
+
+Okay.
+
+Great.
+
+Nice.
+
+Let's get the next one.
+
+Oh, it went straight through a weird one.
+
+So let's not do that.
+
+Let's -- This one first.
+
+Oopsie-daisy, wrong button.
+
+Maybe this one first.
+
+That's the same as the previous one, right?
+
+Oh, sorry.
+
+What I was trying to do -- oh, I see.
+
+Okay.
+
+Don't mind me.
+
+I got confused.
+
+Okay.
+
+It happens a lot.
+
+All right.
+
+No worries.
+
+So we should run that.
+
+Okay.
+
+Help.
+
+Cool.
+
+All right.
+
+So now it's looking like we're going to have to add some extra processing here rather than just being able to call some.
+
+And we could start to start by thinking, oh, maybe I'll do like maps and filters and so on.
+
+But I think for this one, it might be nice to instead like just explicitly write a little for loop that says, look, let me go through everything in the list and keep track of a total.
+
+And then that should hopefully be something that we can start to add checks for different things in.
+
+Okay.
+
+Okay.
+
+So -- And he said just integers, right?
+
+So I can easily check for that.
+
+So his instance is how we check if something's an integer.
+
+So the driver's job is to kind of handle syntax.
+
+So you don't know how to check a saying it's an integer.
+
+Just ask and solve it.
+
+Res plus equals -- okay.
+
+And then -- Look, I even remember to return, John.
+
+Are you surprised?
+
+Nice.
+
+I did see one in the video.
+
+So I feel like I'm still useful if I hang around.
+
+So just, you know, I -- just to show the alternative, which is kind of the way I would probably have done it, not that anyone's better than the other.
+
+Something like that.
+
+There you go.
+
+Okay.
+
+Return.
+
+You didn't say how you would do it.
+
+Okay.
+
+Cool.
+
+Anyway, let's take with your one.
+
+So we're ready for the next one.
+
+Yeah, we could test it on one of the previous ones, but to be honest, I'm pretty confident that it'll work.
+
+Okay, so let's jump to the next one.
+
+Okay, test cases four.
+
+And notice we always print out the test case.
+
+You want everything to be as in front of your brain as possible.
+
+So I just need to turn up the air conditioner.
+
+Superhuman today.
+
+Okay.
+
+Shall I run that?
+
+Okay.
+
+Hang on.
+
+I pressed the wrong button.
+
+Also, my mouse is misbehaving.
+
+I wonder why.
+
+Copy.
+
+Paste.
+
+Okay.
+
+So we got an error.
+
+I see why.
+
+Looking at it.
+
+Yeah.
+
+So yeah.
+
+It's a list.
+
+Okay.
+
+So we can look at that function.
+
+If you scroll back up to some list.
+
+So I'm going to go to the next one.
+
+And if it's an integer, we're adding it to total.
+
+Okay.
+
+So that's a one.
+
+Okay.
+
+No worries.
+
+One.
+
+What if it's a list?
+
+Okay.
+
+So it seems like we should do another loop here, right?
+
+We should like, okay, go through this new list and add all of them to the total.
+
+And at this point, you start to feel a little shaking vibration in the force because it's a list in the list, then you're going to have to have another loop.
+
+And that breaks us into quite nicely a topic called recursion, which.
+
+So we, yeah, we have one here, right?
+
+Damn you solve it for making our difficult.
+
+And in the video, I believe he said it could be arbitrarily nested.
+
+There's no way to solve it.
+
+That's who levels of nesting.
+
+And in the video, I believe he said it could be arbitrarily nested.
+
+There's no like, he doesn't promise to only go three levels deep max.
+
+So we have to, we have to sort of acknowledge this idea that we are probably going to have to do something different.
+
+What if your force doesn't vibrate?
+
+How does one kind of say like, hmm, you know, maybe I need to reach for a recursion here.
+
+What's making you think that I think the thing specifically that's making me think that is I'm looking at this sub case that I'm going to handle.
+
+And I'm saying, gee, this looks a lot like the thing that I'm currently working on.
+
+Right.
+
+If I already had the function that I'm busy writing, I could use it on this smaller piece.
+
+And then recursion is a feature in many languages.
+
+This is, well, actually, you were allowed to do that.
+
+You're allowed to use this function inside itself.
+
+But it seems a little weird at first that that's even allowed or that that would work at all.
+
+So I mean, really, like, I can kind of tell here because like looking at this one, for example, sum of O for O and X.
+
+Well, actually, you know, it'd be nice to just write sum of O here as well.
+
+Or like a little conditional saying, oh, if O is a list, then this should be sum of O.
+
+Otherwise, it's just O.
+
+And then, like, well, why say sum?
+
+We don't actually want the sum.
+
+We want the exact behavior that it's currently doing in the outer list.
+
+So it'd be sum list 2 O here.
+
+So that's kind of how I think about it when I see something where I'm like, okay, we basically want to do on each sub thing the exact thing that we're doing on the super thing.
+
+Yeah.
+
+And you know, it's useful often to just like to get to that point by writing it out.
+
+Let me write explicitly what I should do if it's a list within the list.
+
+Let me write out what I should do if there's a list inside that.
+
+You know, as many of those expansions as you need to click, oh, right, this is a pattern that I can do.
+
+I can use this new idea.
+
+I haven't actually tried this with Solve it before, but let's see if it can.
+
+Write out in plain prose a detailed sketch of what the recursive function would need to do in order to solve this.
+
+And you no longer sharing if you wanted that.
+
+Okay.
+
+I knew that.
+
+Okay.
+
+So let's see if this fits what you're thinking of for each item in the list.
+
+If it's an integer added to our total, if it's a list, add the sum of that list to the result.
+
+If it's anything else, ignore it.
+
+Does that feel a bit like how I would probably think of it?
+
+Yeah, exactly.
+
+Do you want to try adding this to yours and then we can look at another example or two and chat more about recursion?
+
+Okay, so we're going to try and implement this one?
+
+I think we can do it.
+
+I don't really need you to navigate here because I've got to navigate.
+
+I'm just going to do this.
+
+You are going to need another job, Johnno.
+
+For each item in the list, if it's an integer, add it to our running total.
+
+Okay, that's fine.
+
+If it's a list, recursively apply our function and add the result.
+
+Okay.
+
+Else if is instance.
+
+Oh, comma list.
+
+Res plus equals.
+
+Personally, when I do recursion, I don't think about it.
+
+I don't try to think like, oh, what happens when it goes down and goes down?
+
+My brain can't.
+
+Some can.
+
+A lot of people learn this in this really mathematical way with base cases and stacks and blah and blah.
+
+I can't.
+
+I just have to be like, oh, in this case, I just want to sum the list.
+
+I don't think about how it works.
+
+I have a function called sum list.
+
+I just call it.
+
+If instance, oh, list, res equals plus equals sum list of that.
+
+Okay, so that's the second one.
+
+If it's anything else, ignore it.
+
+I don't have to do anything to ignore it.
+
+Is that it?
+
+Yep.
+
+I think so.
+
+Wow.
+
+Nice.
+
+And there's a straight line ourselves.
+
+That's exactly what we wanted.
+
+Okay.
+
+Cool.
+
+There is an issue.
+
+I don't know if you want to do it now or later or never, which is, well, maybe it would work.
+
+That's probably enough, actually.
+
+There's just something I want to mention, which is if you ever do things on strings and you're looping through strings, there's just something to be aware of, which is like, oh, in here, print, oh.
+
+Now, that's not surprising.
+
+That's what it prints.
+
+But the important thing to recognize is that each of these on their own are individual strings.
+
+And so if I copy that message, so the result of one of them, for example, will be just that.
+
+And in Python, we call it iterable, which is to say an individual character, you can iterate over it.
+
+So it's a very common bug in algorithms like this, where if you recursively go into strings, lists of strings, lists and strings, you often end up with an infinite recursion error because you actually have to treat strings, treat strings specially.
+
+Does that make sense?
+
+Okay.
+
+Yeah.
+
+So this is one of those ideas that I would say comes up super frequently, but it does come up enough that we thought, okay, we should do a diversion on recursion.
+
+And this example from Tom was nice in that we didn't really -- we logically thought, okay, now I want to do the same thing, but on the smaller list, and then that was it.
+
+We were sort of done.
+
+And there are some cases where you need to think about the possibility that I get stuck just calling the function on something that calls a function on something, they call the function on something without changing that thing.
+
+And so you end up in this -- you'll get an error.
+
+It'll say, look, stack depth exceeded or stack overflow or recursion limit reached.
+
+And so I thought I'd do one more little example of a common task where you do see this kind of recursive approach.
+
+And then we'll also talk about putting in stopping conditions and thinking about -- yeah, there's those technical terms like the base case or something, but instead of doing that, just approaching it like, oh, logically what would I like to happen?
+
+Does that sound good?
+
+Great.
+
+Cool.
+
+Okay.
+
+So let me clear.
+
+So I'm running through -- and again, here's a case where I had AI magic write me some example of a code that I had.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And I'm running through the code.
+
+And the nice thing is, like, I vaguely remember this, but honestly, I just popped a dot.
+
+And then, oh, there we go.
+
+That's the one I wanted.
+
+By the way, if you've got Fastcore imported, you can just say .ls instead of list editor.
+
+Mm-hmm.
+
+Nice.
+
+I don't think I do.
+
+Okay.
+
+But we want to be able to go through.
+
+So this is very much like Tom's thing.
+
+I want to go through everything in this folder.
+
+And if it's a text file, that's what I want.
+
+I want to print it out.
+
+And I can iterate through.
+
+And if we just go through and -- let's actually do this bit by bit like I did when I was exploring -- running through the thing, printing out the name of everything.
+
+And then saying, okay, is there a way to find files?
+
+If p.is, you can see I've got the order complete here.
+
+Then I want to print out the name.
+
+And so then I can say, okay, those are all the files.
+
+What we actually wanted was anything ending in .txt, right?
+
+And if you weren't that familiar with pathlib, my approach would have probably been to say like, you know, p equals topdir.editor0 to grab1.
+
+And then start p.this, p.that, really explore it.
+
+Mm-hmm.
+
+Okay.
+
+So searching in a directory for a file, that's pretty easy.
+
+So far, so golden, no recursion raring its head.
+
+But just like with the list-within list, we can have folders in those folders.
+
+We can have folders.
+
+And so I can delete, let me delete this one from the top level and say, look, find the text files in that folder.
+
+I've deleted the cell instead of actually running it to delete it.
+
+Hang on.
+
+I'm just going to make sure that we don't have this one around.
+
+Okay.
+
+So let's say there's no text files in the top level, but I promise you there are still text files in the top level.
+
+So I'm going to go ahead and do that.
+
+And then I'm going to go ahead and do that.
+
+And then I'm going to go ahead and do that.
+
+And then I'm going to go ahead and do that.
+
+But I promise you there are still text files somewhere in there.
+
+We need to go deeper.
+
+And so here again is where, just like with Jeremy's, we say, okay, if it's a folder rather than a file, well, I want to search that folder for files.
+
+And if it contains folders, then I want to search those folders for files.
+
+And so it's not like I'm starting out by saying, oh, I'm going to do recursion.
+
+It's just that, oh, I very quickly get into this pattern that says, hang on, this thing I'm doing, I also want to do to smaller parts of the thing.
+
+And so we have this trick where we can call the function that we're writing from within it.
+
+I'm running through everything in the folder.
+
+And if I find something with text, that's great, I'm done.
+
+If the thing I'm looking at is itself a folder, I'm going to call the same function on it again.
+
+And so this is great.
+
+We can run this hopefully.
+
+We find deep in our hidden subfolders, we find the text file.
+
+And so we can go ahead and do that.
+
+And then we can go ahead and do that.
+
+And then we can go ahead and do the same thing with the text file.
+
+One thing that can come up though, and if you try running something like this on a modern system with hundreds of gigabytes of files, it can be pretty slow to search through exhaustively some really deep tree.
+
+And in some cases, if you're doing things wrong, like we said, you could actually end up in like a suck in a loop of doing infinite things.
+
+For example, if you had a symbolic link from somewhere deep in your home directory back to your home directory.
+
+Exactly, yeah, you can get stuck.
+
+One very useful pattern is to just like if you've ever written, you know, while true, and then you say, "Oh, I'm not actually confident I'm going to break out of this loop.
+
+I'm going to instead use a counter."
+
+This is like one useful extension to this pattern, is I can set a depth default to zero and we can set a max depth.
+
+So this is me thinking through, okay, I'm imagining the scenario where there's folders within folders within folders and some of them are linking to folders and we're worried that it's just going to get stuck churning away.
+
+And to prevent that, we're going to say, look, the maximum depth we can ever search is three.
+
+And then if I call the function from within this, it's like we're going one level deeper, right?
+
+It's like that movie inception, right?
+
+We're going to dream within a dream.
+
+We can tell it, okay, your depth is now current depth plus one.
+
+And so when we go into a lower folder and then a lower folder and a lower folder.
+
+And then you'll need to also pass on the max depth again.
+
+That's often a common problem I have is forgetting to pass along everything I was given.
+
+Yeah.
+
+So this version is exactly the same as this except that the depth is now one higher and we should add a condition that says, look, if depth is greater than max depth, we abandon our search.
+
+Right?
+
+Something like that.
+
+And so this is us thinking like, what do I want at the bottom of this change or if I've done it too many times fruitlessly?
+
+You could also imagine like, oh, if I find something with only files, that's when I'm done.
+
+Or in this case, if I find a folder and it's got other ones, but I've hit my max depth, I want to stop.
+
+And so this is just like a nice little safety mechanism to say, if you are doing recursion, be aware that it can go, you can end up doing lots and lots of operations and having some way of specifying exactly how much work you want to do.
+
+Like, oh, this one I'm actually content searching a little bit deeper and only when I search really deeply does it find the hidden text.
+
+You'll see this.
+
+And you can easily play with that, right?
+
+Like if you wanted to change it to max files instead of max depth, then you just say max files plus equals one inside your loop.
+
+Yeah.
+
+If you wanted to find at least 10 files of this type, right?
+
+So I keep count of how many I've found.
+
+Yeah.
+
+And this same pattern will crop up in various different ways.
+
+Passing an expression that has sub expressions in brackets or if you're working with lists that have lists inside them possibly, yeah, it's just worth having this tool in the toolbox and seeing that it's not scary, right?
+
+You saw the way Jeremy got to this and the way I got to this wasn't, oh, classic case of recursion for depth searching a tree.
+
+It's like, no, this is just a trick that we can do is to call a function from within itself so that we can apply the same operation to smaller and smaller pieces until we reach a simple case like just a list of ins that we already know how to handle.
+
+Thanks, Jono.
+
+All right.
+
+I think we've got a chance we could land a job in Tom's company, so that's good.
+
+So let's however not give up on our day job and continue on trying to teach how to solve problems in Advent of Code.
+
+I just had a few thoughts about Advent of Code which is after the next lesson we're going to be having a three and a bit week break and not surprisingly, I've seen in the Advent of Code leaderboard people are falling off which maybe that's fine if it's like okay, I've decided to stop doing Advent of Code 2024 because I've got everything out of it they wanted to.
+
+If it's, oh, I'm really disappointed because I failed one or yesterday my daughter had an ear infection, I had to take her to a doctor and I couldn't do it or whatever.
+
+I guess I wanted to say come back to it you know, like for me I haven't done much of this kind of thing, I've never done Leak Code or Competition Programming or whatever and I feel like I've learnt something each day that I've been doing Advent of Code this year and I guess I wanted to hear your thoughts John O. on like what you think people could be doing during the break or how people could think about Advent of Code or we're kind of getting to that point where tenacity is going to be an issue so do you have any tips for I imagine everybody who signed up to this course did it with the plan to complete it what are your thoughts at this stage?
+
+Yeah, a few things one, one of the things I've done is I've been doing one aspect of this is that we're doing this because we have some objective, right?
+
+We want to learn if you're in this course it's because you want to learn to program better and see different ways of using AI and so there's a very wide spectrum of things that will get you part or most of the way there so with Advent of Code I find like some days I really want to skew to the one extreme right?
+
+Do the solvete thing of learning about, find itter and building up some knowledge of some part of regular expressions that I didn't know because I've never needed it in my day to day.
+
+You know, really getting deep and exploring and you end up with these nice long dialogues and some days honestly it's like oh, I don't want to do that for every single step of some problem that's actually, it's like okay, I'm quite happy with this one I was hoping that happened to you the other day right?
+
+Yeah, I was aware of the weekend so I'm like, four problems behind because I Friday, Saturday, Sunday, Monday and so yeah, I did a few of them and they're really fun and I really enjoyed them and I grappled and then there was a couple where I was like oh, I just wrote out this is exactly what I'm planning to do and I can see the way I said AI actually give me the code with this and I'll look at it and okay it made a mistake so I got to fix that so what I'm saying is you can kind of choose your depth, right?
+
+It's not like you can, you're either doing the solvete way completely or nothing you can choose to do most of it but get the AI to write the final function for you and I had fun doing a deep dive on one of them to try to make it fast and we actually ended up creating a little thread on the server of like hey, anybody else want to have fun making this fast and I enjoyed that and it was also a good learning experience for me I've never really done solvete profiling before and I was like, oh my god, this is the best profiling experience I've ever had, you know, so I just that was my little rabbit hole and I quite liked it Right, and that's the goal, right?
+
+Like advent of code problems are problems for you to solve but when you're wanting to say, look I want to actually just be continually learning I want to be improving as a programmer it's kind of more on you to find the rabbit holes and to explore them and so one of the things we're going to be suggesting over the break is to be maybe even breaking out of just the advent of code, looking at some other projects as well but also picking your picking your directions that are like profiling that's nothing in the advent of code our description says your code has to run in milliseconds not seconds, but it's fun, right?
+
+if you enjoy that and that's a really useful tool to show later for a job or to use in your real day to day like being able to speak things up and it's particularly fun if you don't know how to do that and you do it with solvete and you're suddenly like oh, now I do know how to do that that was fun there is a line profiler and line profiler magic, I think it's percent lprof or percent percent lprof or something and solvete's really good at that using it, like you get at this big table it's almost inscrutable and if you just say like solvete why is my code slow if you've got that it's just like oh well, having looked at your table I can see that it's mainly over here and the reason it's over here is probably because of this like oh, that was great actually, I have a little thing I can read which I quite liked on this theme from Aditya Kabra who put a note in the chat who said at first I thought if I have to write all the code myself without using AI it would be impossible to get anything done now I realise the key is to first clearly understand the problem and to find the solution in plain English and then it's perfectly fine what you're saying, use AI to translate that into code then discussing the problem with the AI often leads to deeper insights and better understanding and then he said but when generating the code using AI it's crucial to work in small steps generate code in segments, break it down test each part on small samples thoroughly understand which each line does which I guess is what we saw from Vishal with his Colbert who is an example Aditya says this approach not only makes debugging easier but also helps build a deeper understanding and become a better coder eventually it ensures I'm learning throughout the process rather than just completing tasks mindlessly and then talking about this profiling stuff he said it's also making learning new techniques or tools less fearful as I now have AI as a learning partner but then coming back to specifically AIOC he's got it exactly right the two-part structure of Advent of Code illustrates this importance of understanding the code because one can't solve part B easily without thoroughly understanding A, so solid ground for practicing the above philosophy so thank you Aditya, I thought that was really nicely expressed right so day four okay day four oh this reminds me I've got this open because while you were talking I just popped open this OS.Walk in the standard library, Python standard library if people haven't looked at this before check it out because it's a really nice example where the Python standard library authors have created a recursive function basically that it does all the recursion for you and returns the results and it's kind of nice to look at this because it might give you a sense of how you can kind of wrap up recursive stuff more nicely so OS.Walk is really really great of course in real life for what John O was doing we would have used like grep or RG or OS.Walk or actually I don't know if you folks have seen it but my favorite one is something I wrote called globtastic which is a really sweet way to find absolutely anything globtastic lots and lots of options and by the way as kind of John O was indicating we're going to start to look more and more at things around reusing Solvitt ideas to create you know libraries, artifacts, documentation stuff like that this fastcore library is written in NB Dev and as you can see you get nice you know really nice kind of documentation and it's actually auto generated from the comments so if you look at the source code to globtastic you can see it's got a comment for each parameter and that gets automatically turned into documentation and you can also see it gets things like the source link and stuff like that and you can see when we document stuff we do it just like we do in Solvitt right we have an example of the usage of it immediately after you know we define it sorry that was a slight diversion okay I think diversions are part of the plan for today this is not like how to solve advent of code it's how to solve problems and part of that is packaging up things that you use frequently I notice you had a show method that had been used in several advent of code ones already yes I do so today we'll and here's my template which I've slightly been improving over time so I don't know where I opened the template I should have what I actually wanted to do is duplicate it very glad you added the duplicate button thank you Johnno AOC 2023 day 4 alright this is now day 4 and I've slightly modified this cell now to print out how many lines there are in the input and what the length of the first line is just stuff that's quite useful all obviously okay advent of code 2023 day 4 okay so I kind of like to I'm finding I kind of like to do the note in here and then put in my sample data just here because this way it's kind of all there in a form that I think the AI will be able to see it quite well as well although yeah let's see here we go copy paste and let's use our little trick please explain this problem concisely my computer is pfff (laughs) overheating (no audio) let's see if I can kill something let's see kill this code um (no audio) it's mainly zoom and chrome okay alright so we have scratch cards each card has a list of winning numbers before the pipe and a list of numbers you have after the pipe okay and the scoring works like this you find how many matching numbers you have and each additional match doubles the points okay Johnno I don't know if I've shown you this before but it's a trick I want to show everybody for parsing this so this is usually the step one and you know we're thinking of oak I can split on the colon and splitting the pipe but yeah I saw this and it's definitely looks like a useful one to it's a trick that almost nobody knows about mm-hmm um so I'm going to do my usual thing of grabbing one um and natural thought might be to use regular expressions here um so I create my regular expression okay and I could say um I always do R quote card space okay now we haven't seen parentheses before but have a look what happens here if I go backslash D so remember that's 0 to 9 and that's the previous thing one or more times and if I then go RE.findall okay and that's going to take a pattern and a string so my pattern is the regular expression I just added and my string is X um and so the first thing I wanted to point out oh somebody's asking about 3B 3B we're going to do afterwards um so this is how I create regular expressions is I build them up left to right slowly right and I make sure it works at each point um so then I'm like okay after a card and then like who knows how many spaces there could be so I quite like to say like space plus there could be more than that right then there's a colon right so just going left to right card space one or more digits a colon one or more spaces right and then we've got another digit so I'd say again and so the parentheses say save it for me right so backslash D plus and then again run it so you know when you kind of go left to right like this you can build it up slowly and make sure you understand each point right um but even here if you've read this straight away you might be like I can't read that look at all those symbols but if you build it up yourself slowly it can totally make sense so that's all fine um but what we actually want to do is we don't just want to have one digit right after the digit there could be one or more spaces okay and that's still going to work fine because there is one or more spaces after that strange what just happened weird um okay um and then if you think about it this whole thing here of having a digit space digit space digit space that whole thing happens one or more times in this case it happens once twice three times four times five times so I can put a plus after this to say that entire thing in the parentheses happens one or more times um which is all very well it's still matched right but we only got the last result and this is a sad deficiency of python's regular expression standard library um so I recommend not using it instead using what has been for many years now uh kind of informally picked as being what ought to be the replacement which is a library called regex uh regex is a library which is a superset of basically of the standard libraries re so you can pip install it it's already installed in um um in uh solvert um and you can use it any way you can use re you can instead use regex but it has some important extra features and the most important one is one I'm going to show you today which is um I'm going to copy this instead of re.findall I have imported search from regex as I pretty much always do and so this is our search so I'm going to say okay our um what should we call this we'll call this um I don't know our search results is that and let's take a look at that search results um I thought we imported it I don't know what's going on there um so we now have something called a match object um and the match object um in regex has a particularly interesting thing which is captures and captures tells you what's in the parentheses so the first parentheses contains the number one because it was to remember we wrote we looked for a card some spaces and then some digits the digits was what we captured so there's our one and then the next thing we captured was digit space a bunch of times and there it is digit space a bunch of times does that make sense Johnno have you used this library before regex.captures I have but this is super nice yeah yeah no one said it like you could do this in multiple steps of like oh I'd have to take out that piece and then I'd have to separate that yeah I mean it's not doing anything I couldn't have done otherwise absolutely yeah so now like let's start you know and oh by the way also dot captures if you want to dot captures yeah kind of spell you can have more than one so you know I would kind of do that by then saying oh yeah okay so I've kind of got the card ID and I've got what's it called the wins so that's kind of nice so then let's delete that one so we can see everything on our screen delete that okay so we've got now we've got a a pipe sign now you might know that a pipe sign has a special meaning in regular expressions and it means this or that so if you want to use something special to be not special I literally want the pipe sign you put it back slash before it and every time I add something to my regex I immediately rerun it it's very hard to mess it up this way okay and now the rest of it is exactly what we had before but rather than being digits space it's space digits so again I can just go back and grab all that copy it paste it but now it's spaces digits and we need to grab captures 3 as well because we've got a third set of parentheses there and this is I don't know this is like what is it, his carts I don't know what they call them is it a little odd that it has it starts from 1 sr.captures great question so this is quite a common thing in regular expression libraries including stuff like groups in the standard library is that generally 0 represents the whole thing that was matched so it is a bit odd but there is a reason for it so then the other thing I like to do is I like to make sure that something surprising didn't happen and so in this case this ought to be the whole line so to say the start of the line you do a carrot and then the end of the line is a dollar and there might be some spaces before the end of the line and so I just like to make sure that there isn't a line that's surprising by doing that, so that one didn't match so that's good to know not space plus there could be spaces at the end and if there are I don't care about it thank you and your reasoning for adding there could be some spaces here I guess in advent of code things are generally very well formatted but you know in the real world if someone says look every line has this but they've done it in Excel you might as well say look if there's a space after the number you just want to catch it and also you never know which advent of code is going to be the one where they do sometimes do cheeky things so I don't want to be caught so yeah it's also a bit of habit I guess so yeah we could have just split this on colon and then we could have split this on pipe and then I split it on space but for me when I write something like this I can just write the whole thing left to right and it normally works first time again reading this without spending time thinking about it carefully it's going to make you go cross-eyed but again if you just go left to right the letter C, the letter A, the letter R, the letter D one or more spaces capture one or more digits and then you just look at the thing you're matching against you can totally read regular expressions so yeah I guess that was all I wanted to say about that John I'm just going to pop this into a function I don't know what's one of these it's a card basically isn't it oh I shouldn't have called it cards then this is a card and we pass it on line so we should why doesn't that actually just yet because we would just return that and then we call this how do we call them numbers they're the numbers that the elf had and another thing I quite like to do is to write the letter C and then we can write the letter D and another thing I quite like to do is like I kind of I've destructured this I've pulled out it's separate components but if you ever do want the whole card you can give it two names so this is saying create a variable card which contains all three bits and variables called CID cardID wins nums which has each bit separately and so for example if I just want to print the whole card I can just type card and you can see the three bits and it's not called line it's called X so before I pass over to you John there's just yeah go on I think we use X inside the function but it's line in the argument thank you and I did tell people never to do that I did tell people to use the same variable name in both places so that is why we do that and I guess actually you know the other thing we could do is just to make life a bit easier is to say return dot map int I don't know if we want these to be ints maybe it's a good idea if they're going to ask us to sum them later or something like that I suppose and also the fact that they've got spaces around them they could have varying numbers of spaces and then how wins dot map oh and this one here is a list containing one thing in it because even though I only had one thing that's the nature of captures which makes it slightly confusing if there's only one capture it's still going to give you a list but it's nice you know we did it straight away so we immediately saw the issue so the last thing I'm going to do before I hand over John I was just to mention about this kind of question of notation which has come up quite a lot which is quite reasonably a lot of people in the discord are saying like well you know these things like rx x and sr I don't know what they mean so I you know I would like to use different or longer names to which my answer is like basically is go for it right the best names are the ones you made yourself if you're looking at somebody else's notation and you're kind of working with their code if you don't know why something has a particular name you don't need to go and ask them you can just make up a name right so if you're like oh I wonder if sr is search result it's just like what is called that like if you are using short notation the names need to be there for a reason and they need to be consistent which is exactly how math works that's why math can get away with having short names single character names for things is that within a domain things ideally always have the same symbol to represent them and people get used to that and so you basically need to make sure that yeah if you do want to use any shorter names that you have good mnemonics that you understand rather than having to just remember them better still give them names that that you chose it would be easier to remember cool okay so we've passed the input and then the problem is asking us we want to see basically the overlap right of the the numbers that the elf has how many of them are in the list of winning numbers and this kind of operation like oh I want to check which of these which of the things in this list is in some other list or which of the ones aren't in both lists that feels like a common enough operation that there should be potentially something to handle that for you so we would be looking to say like okay do we have 41 no do we have 48 yes so we're looking for all the matches right so we could totally do that ourselves but there's some built-in functionality which you'll be familiar with if you did this in maths or in code which is this idea of sets right so set contains a bunch of unique elements and you can do things like compare two sets say which things are in both which things are in either before we do that then that sounds like a big topic maybe we'll have a five minute break and do sets does that sound reasonable yeah that sounds fine okay we will see you all back in five minutes okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay okay I can't remember when our five minutes started.
+
+We could gently resume, give people a chance.
+
+My microphone changed.
+
+Can you hear me now?
+
+I've attached a fan to the base of my poor old MacBook.
+
+MacBook airs, it turns out, and not the best choice.
+
+We're trying to do a bunch of things at the same time because they've got no heat dissipation, so we just get hotter and hotter.
+
+At least in Australia, it seems like the advantage.
+
+There was a question, Jeremy, about how you find out about that Regex library.
+
+I read a lot of people's code, and I find certain people who write code I find interesting, and then I like to learn how they write code.
+
+Many years ago, I was looking at the source code for a library called Spacey, which is a natural language processing library.
+
+I noticed they used this library called Regex, which I thought was curious and strange.
+
+Matt Honable, who writes it, is a really good coder.
+
+If Matt finds it useful, there must be a reason why, and I looked into what he was using it for.
+
+That's where I discovered this magic.
+
+It turns out there's been this long-running conversation in the Python community about maybe replacing RE with Regex.
+
+I don't quite understand why it hasn't happened.
+
+It really does seem like quite a big improvement.
+
+I'm thinking we're going to have to hold over 3B till next time because these things always take longer than I expected.
+
+One option for that is I can show...
+
+I basically started from yours, and it took literally a minute just because you had all the pieces in place.
+
+Rather than live coding it, I can show that and explain the sort of thought processing and the reason why.
+
+We're taking a break from 4.
+
+Let's do that after 4.
+
+Otherwise we have to contact Switch.
+
+That makes sense.
+
+We can maybe just do 4A and leave 4B for the next lesson.
+
+Sorry.
+
+I'm struggling with my poor computer.
+
+It's interesting.
+
+My keyboard's decided to stop working.
+
+I'll keep things interesting.
+
+If needs be I can pick up in while except it.
+
+I think what I can do...let me just try something.
+
+I'm going to try plugging it into a different port.
+
+Yeah, we can skip 4B for today at least.
+
+4B doesn't have any tricks to it at all.
+
+You just write a for loop and it just works.
+
+At least that's how I did it.
+
+Okay.
+
+Oh, it's fixed.
+
+My mouse is working and my keyboard is...
+
+My computer's not too hot.
+
+I'm going to try to get the cards.
+
+To recap where we were, we passed the cards.
+
+We said we got the card ID and the winning numbers.
+
+We wanted to look for overlap.
+
+I'd like to iterate something we said earlier.
+
+We're going down all the rabbit holes because they're useful and fun.
+
+If you were trying to solve the code and you're tired, you'd probably not dive deep into sets.
+
+We want to know a little bit more deeply what these things are using.
+
+I'm hoping Jeremy will give roughly the same summary he gave to me earlier.
+
+How useful these pieces of the standard library are.
+
+I don't remember what I told you earlier.
+
+I'll try if I don't.
+
+Let's say...
+
+Jono and I wanted to explore a little bit about the places we visited.
+
+Jono has visited the countries A, B and C.
+
+I have visited the countries B, C and D.
+
+We wanted to find out a little bit about them.
+
+What's interesting here is...
+
+That's given different names.
+
+That's the countries Jono has visited.
+
+That's the countries Jeremy has visited.
+
+You can see I often change my notation as I go.
+
+If I find something that's going to be hard to remember, I'll change it.
+
+If Jono goes and visits country A again, then what happens to the list of countries that he's visited?
+
+The answer is, of course, nothing at all.
+
+He's already visited country A.
+
+This is what we mathematically call a set.
+
+If you remember back to school, a set has a bunch of objects in it that could be of any type.
+
+Back at school it seemed a bit abstract, because in math everything was always numbers.
+
+Nowadays it makes much more sense.
+
+It could contain almost any type.
+
+They're unique.
+
+If you have three A's in a set, you can actually use the set just as one A in it.
+
+This is an example of places I visited.
+
+In this case, this is a set of numbers that are winning numbers.
+
+This is a set of numbers that you have.
+
+Even if a number appeared more than once a year, you would just have one win.
+
+So there are things that...
+
+Instead of using a set, you could use a dictionary.
+
+In fact, you can see that it looks a lot like a dictionary.
+
+You can create a set by writing set followed by something that's iterable, like a list or a string.
+
+Something you can do a for loop through, and it creates a set of each one of those things.
+
+Or you can literally just use curly brackets just like a dictionary, but if you don't put colons in it, like you would with a dictionary, you end up with a set.
+
+They behave a lot like a dictionary.
+
+In a dictionary you can use in, for example, so I can check.
+
+Has Johnno visited country A?
+
+You can just do that.
+
+The answer is, yep, Johnno has.
+
+Has Johnno visited country D?
+
+No, he hasn't.
+
+You can do that with a list, you can do it with a tuple.
+
+With a set or a dictionary it's going to be particularly fast.
+
+What are the places that...
+
+There's a few operators we can do.
+
+So let's, for example, do this one.
+
+What are the countries that either Johnno or Jeremy have visited?
+
+You might remember from math that's called a union.
+
+This is called the union operator for sets in Python.
+
+So here are all the cities that either of us have visited.
+
+It's quite intuitive because this often means or in computer science.
+
+So it's places that Johnno or Jeremy have visited.
+
+What about places that Johnno and Jeremy have visited?
+
+This in sets is called the intersection.
+
+B and C are in both of them.
+
+So Johnno and I have both visited B and C.
+
+What about places that Johnno have visited but I haven't?
+
+Again, pretty intuitive, right?
+
+Subtract.
+
+So I've visited B and C, so Johnno has visited A, B and C.
+
+So Johnno has visited A, B and C.
+
+So I've visited A and I haven't visited A.
+
+So that's stuff that Johnno has visited minus those that I visited.
+
+So in this case, we want all of the numbers that are in the winning list.
+
+So that would be wins and nums.
+
+So it has to be in both wins and nums.
+
+And currently they are not sets.
+
+But you can convert anything iterable into a set.
+
+And you get back a set of the numbers 17, 48, 83, 86.
+
+How did I do Johnno today?
+
+Yeah, I guess we could talk about hashable types and that sort of thing.
+
+But maybe this is enough for now to show the operation.
+
+Well, actually there was something I did particularly want to do about that though.
+
+What's this?
+
+Computer still playing up here.
+
+Let's try closing that.
+
+Opening it.
+
+Yeah, no, actually there is something I do want to mention about that.
+
+I'm glad you mentioned it.
+
+Jw.add a list.
+
+Jw.add a list.
+
+Oh, I know.
+
+Uh oh, what does that mean?
+
+Why can't I add the list 1, 2 to the place Johnno has visited?
+
+And the answer is that there is something very important about a list.
+
+Which is what we call mutable.
+
+You can mutate it.
+
+You can change it.
+
+I'll keep writing that wrong.
+
+So I can create this list.
+
+Oh, that's not my list.
+
+Actually this is the first element of the list.
+
+Now imagine if I was allowed to put that into a set.
+
+So I could put a into a set and then I could put something else into a set.
+
+And then I could change a.
+
+So it's now the same as the thing that's already in the set.
+
+Causing the set to be broken.
+
+The set's not allowed to have two things that are the same.
+
+And this is basically the kind of mathematical reason that you're not allowed to add things that can be changed to a set.
+
+It's not strictly speaking correct.
+
+What actually matters is whether they're what's called hashable.
+
+Which is something we won't worry about right now.
+
+But in short, there's basically a, the first thing to know is that there is a immutable equivalent to a list which has got a tuple.
+
+And you get it just by changing your square brackets to round brackets.
+
+And I can now perfectly happy.
+
+Say jw.add that.
+
+No problem.
+
+Because it's immutable.
+
+That can't be changed.
+
+And so behind the scenes there is a function called hash which basically gives a unique value for, oh I didn't mean to do that.
+
+I meant to do a for any object that you pass it.
+
+And that's actually behind the scenes what's going to be used in the set.
+
+And so basically lists don't have one of those.
+
+And that's what unhashable means.
+
+So if you see this when you're trying to use a set or indeed dictionaries, keys that basically just like sets.
+
+Then just remember oh you're probably giving it a list.
+
+And you probably should just change it to a tuple.
+
+And it will start working.
+
+Nice.
+
+And it's there to avoid you hitting problems later.
+
+Cool.
+
+Okay so they want the intersection of those two and then for the scoring I think they said it's two and then doubled for every extra card in that intersection.
+
+So all you care about it sounds like is how many you're in there.
+
+Okay so like most things in Python I can give you that easily enough.
+
+So and was it that we had to add them together so is it one plus two plus four plus eight?
+
+Or is it just maybe let's check the thing.
+
+I think it might just be eight.
+
+Yeah.
+
+Yeah.
+
+Cool.
+
+So that's just two to the power of two.
+
+So it should be so this should be one, two, four.
+
+This should be eight right?
+
+Two to the power of okay.
+
+I can put that in a function easily enough.
+
+Is it two to the power of that or is that minus one?
+
+Because it's one and then it doubles and doubles and doubles.
+
+Yeah.
+
+Yeah I'm glad we checked beforehand.
+
+So remember we did have that discussion earlier before you run a line of code.
+
+Say what it's going to return.
+
+Otherwise you'll convince yourself it was right.
+
+Nice.
+
+Yeah.
+
+There we go.
+
+Okay.
+
+So Def score.
+
+We could do a score for yeah we could do a score for a card or for an X.
+
+I kind of don't mind doing it like for a line.
+
+You know.
+
+Because then you can say you know a little bit less to do later.
+
+Oops.
+
+Oops.
+
+Yeah.
+
+So we've got our cards.
+
+You've got lines.
+
+And I always actually nowadays prefer to do this.
+
+Because then it's really simple to just go my own score.
+
+And then we should double check them all right.
+
+Well that's definitely not right.
+
+So those were the ones presumably that didn't have any matches.
+
+I guess.
+
+Cool.
+
+So easily fixed.
+
+Then set.
+
+So we could call that matches.
+
+Matches.
+
+Calls.
+
+So that if there are matches.
+
+And if there's not then I guess it's just zero right.
+
+Oopsie dancing.
+
+And if you're unfamiliar with this notation this is the same as saying you know if matches return to power of matches minus one else returns are it's just condensing it out to one line rather than one line.
+
+Yeah.
+
+It's quite handy.
+
+I mean you never need it.
+
+But it's an expression rather than a statement.
+
+You can kind of put it inside functions.
+
+Yeah.
+
+I quite like using it.
+
+It's got a ternary operator.
+
+If you've ever done C it's the equivalent of the question mark colon thing.
+
+How does that look to me?
+
+Also here I didn't say if it equals something or is greater than something whatever I just said if matches this just means if it's what we call truthy.
+
+And so in Python something that is a string with more than zero characters or a list with more than zero items or dictionary as set with more than zero items or the value true or an integer that's not zero.
+
+They're all things that are truthy.
+
+So in this case we want an integer that's not zero.
+
+That's all we want.
+
+And the you know the idea of like adding a line at a time and checking it this is a case where there's like an obvious extra case we need to handle right we need to handle when there's no matches.
+
+We're going to run this next line that says lines that map we can see straight away okay it is putting zeros there where I hoped and so it's not like you know we could have done that breaking them back out and picking the line that gave trouble and running it but it was also just a single check like oh okay we'll check the matches otherwise we'll return zero.
+
+It's a case of experience right?
+
+Like this is a language I'm experienced with and you know using operators I'm comfortable with and so for me in this case it made sense to put it straight there quickly because I had a test straight away if it was a environment I was less familiar with I probably would have done it more step by step personally.
+
+Cool.
+
+So they want the total of those so just that's fine.
+
+Okay no worries I always like to keep the map version so I can see it particularly because you know when you come to be often there's like you know things to check so 13 is the right answer?
+
+13 that's the correct answer.
+
+Cool.
+
+So now all we need to do I guess is lines actually we've already got something called eye lines here so if I just put an L there I should use that in the future in my template so it should just be eye lines two one two one three two one two one three.
+
+Nice.
+
+Great.
+
+So part B we will skip for now at least and we might skip it full stop you should do it yeah again like do it as homework but come on.
+
+Would you like me to do like I could show this was one that I would go straight to paper and I can show the on paper and then leave it as an exercise for the reader then we don't have to come back to it.
+
+Okay.
+
+And then we can also go 3B as well.
+
+Yeah.
+
+Cool.
+
+Okay.
+
+So for part two of this problem we told that there's no concept of points scratch cards give us more scratch cards.
+
+Right.
+
+So we have six six cards two three four five six and for card one they tell us there's four matching numbers right we did the intersection of the two sets there was four so we went one copy each of the next four matches I've got a wins column here and then I'm saying I get one copy each of the next four cards.
+
+Right.
+
+So I'm okay cool that sort of makes sense then they say okay card two I'll read from the thing your original card two has two matching numbers right two winning numbers so you win one copy each of three and four like okay so I get a copy each of three and four for my original card two my copy of card two also wins two right so for that one over there two I get one each of three and four then I come to card three so okay card three has two matching numbers right so I'll get one of these but then there's three more so I'll get another three of those and another three of those and so it's like okay I'm just doing this out on paper I think the next one has one matching number right so there's going to be another what is that seven or eight added on to this I'll just write a little eight there and then thankfully there's no there's no winnings for the last two or something like that right and so it's like I'm writing this out I'm doing it manually I'm following through their instructions and straight away you kind of see like oh okay I sort of get it for each card I want to keep account of how many of that card I have just going to go for instance maybe with yeah exactly so I could say card one I have one card two I have one card three I have one and then as I process this like oh I've got four matches the next four in here I'm going to add one so that first dictionary with the card IDs and the number one I would use a dictionary comprehension for that if you're going to try that yeah and so yeah that's a case of like you're doing the same steps like okay let's do I think at a time let's look at it but instead of doing it in code it's just doing it on paper and then translating it back so that often helps me for these is to either do that explicitly on a piece of paper or at the very least to do it you know like in a mental scratch pad somehow like oh I've got these cards but you know six cards and adding up just easier to write it on a paper okay so that was that's puppy that's for homework so for day three gear ratios I wanted to show one of the like side benefits of the solvered approach that we've talked about it a bit which is the communication so I think I have done this problem if so it was like a year ago so part one we've got this engine diagram we're looking for symbols that are next to numbers and so what happened was John O sent me a message this morning saying like oh you're going to do all of 3B right and I was like no I thought you were going to do 3B and that was like so yes so one of us had to do a quick reminder yeah but fortunately I had Jeremy's part A so I can run through this okay I've got my sample I'm splitting it up and you'll have to excuse me I think I didn't copy in anything but the essentials there's a nice little making our own custom find itter using a regular expression run all above cells is a quick way to kind of do all the cells above some point if you want to right like but this is what I'm doing is like running through these peeking at some outputs and like okay I see what we're doing getting the bits here we're finding all the symbols we're finding all the parts so that's like the one big chunk of this and then you have this nice is adjacent function to tell whether a symbol is adjacent to a part number and some people are like I can't remember what S and P are which is fine like I named them S for symbol and P for part which worked for me but yeah because I'm using them all the time and M for matrix right unfortunately I speak Jeremy so I could sort of guess from you know that's like different people have their different categories okay so that was part one we finding the symbols finding the parts checking if a symbol and a part are adjacent checking if any of the parts have adjacent symbols and then running through like okay cool just reading through his code especially his version had the questions and a lot more outputs I'm kind of loaded up on part one and then part two says we need to come back out there's the change in specifications we're looking for gears the gear is any star symbol that is adjacent to exactly two part numbers and the gear ratio is multiplying those two together okay cool part two well I should grab my parts and my symbols and because we did all that work or Jeremy did all that work in part one they're already there I can look at it I've got six symbols right but I probably only want the stars so I can filter those I have a bunch of parts and so I can go through the parts and say look I only want the parts that have symbols next to them or that are next to this specific symbol so it's like I had all the pieces I had all the symbols already I could filter them out and then I could pick one symbol and look at it okay check that this is this one in the diagram and it is next to two part numbers so I'm expecting to call this a gear but I want to check let's see let's go through all the parts and only pick the ones that are next to it oh I get two part numbers oh that's great and so I mean I actually I'll be honest I just wrote this before I even did some of this explanation because I can go and say grab all the adjacent parts and if there's two of them I found a gear and I multiply the two together and I get my answer and I could check them and make sure that I wasn't missing anything obvious but it just felt like I'd been handed the solution on the platter and we've mentioned this with Advent of Code before if you take your time in part one you've got these reusable pieces it's clear what things are I can look at and just type sims and I see it's a list of symbols they have an x they have a y they have a d yeah it just felt like you were right it's like a here's 10 minutes before the lesson like make sure you're happy doing part 3b like well I am because yeah that like initial it you know people say it feels slow and it does to go one by one and to look at all the outputs sometimes but that slow early meant that part 2 would have been a pretty decent score on the delta leaderboard I think because I had all the extra vocab and it's like notation you call it right I can say okay if a symbol is adjacent to this similar but like even mine was totally brainless I just copied and I really took advantage of the solver ui which is the way you can just go through and copy things I just copied sims and replaced the thing defined with a little star nice that was it so now I've got stars parts and sims and then I can just filter adjacent's best equal star nice add a got gives you the v attribute for each one which is this the value and then I'll apply them together so then I could just basically like you so filter out the parts that are adjacent to a star you can kind of say this in English often with functional styles you can say like I want all the parts but I want to filter them by whether they're adjacent to a star and if they have two or more attached to them and I want to grab their v attributes and take their product so then I could just map the gear ratio and sum it nice yeah so sorry for the lightning went through but I think the point of that is that yeah if you've set up your notation and you've got the pieces then often that does mean that the hard part or the second part kind of falls out of that somewhat naturally and I think it's very nice to have you back John I've got to say and also I will say talking of delightful people Alexis will be doing office hours right now if anybody wants to join there and so people's homework this week John O will be doing to do 4B based on the techniques we saw in 4A if you have not tried 2004 solve it yeah try day 1 I've been learning so much what did I say something done 2024 yeah I've learned a lot from doing them and some of them I found really hard and took me some hours and I got stuck that's happened to a lot of other people in the discord as well and there's been a lot of like oh my god I'm so excited I'm so happy after two days I finally got it and there's also been plenty of like I'm so disappointed I'm giving up but that's fine to give up don't compare yourself against anybody else if you came in here thinking like I don't think I could ever do a single AOC problem and you managed to do an AOC problem then you have surpassed your expectations and you should be very proud alright see you in three days

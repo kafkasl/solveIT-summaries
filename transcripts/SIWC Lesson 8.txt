@@ -1,0 +1,1749 @@
+Okay, we're live.
+
+Hi, Johnno.
+
+Nice to see you again.
+
+Hello, everyone.
+
+And hello, Eric.
+
+Thank you for joining us.
+
+My pleasure.
+
+How's it going?
+
+It's going great.
+
+I am super excited to have you here.
+
+I imagine everybody knows Eric, at least by reputation, but just by way of a quick background.
+
+Eric is my co-founder at Ansarai, and is most known as the author of and developer of the Lean Startup approach.
+
+And of course, the creator of the long-term stock exchange, which is a really fascinating idea.
+
+And I guess the startup where many of the ideas from Lean Startup were founded, the company.
+
+Is it InView, IMView, or IMView?
+
+I never actually figured out how to say it right.
+
+We never corrected anybody, and it never had an official word.
+
+It's just the non-acronym, acronym IMView.
+
+Where does it come from?
+
+I actually never worked around.
+
+We agreed to try out a new name every week until one stuck, and we would use it all the way.
+
+In variable names, we would pretend that that was the name of the company 100% for a whole week to see how we liked it.
+
+And one week, we just never got around to changing it again.
+
+And we wanted to do something with instant messaging.
+
+This is before social networks.
+
+So we wanted to bring virtual reality and virtual worlds, avatars.
+
+That was the idea, too, instant messaging.
+
+So we spent a lot of time looking for four-letter domain names that started with IM.
+
+And that was one that we could get our hands on.
+
+And we tried it out for a week, and we said, "Oh, we like this."
+
+We just didn't change it again after that.
+
+Okay, that's very...
+
+It has no official expansion, because it was just a four-letter word.
+
+But the first time we were sued, I remember the lawyers felt the need to explain that it was an acronym.
+
+And they actually expanded the acronym to give the company a more formal sounding name so that we could be sued properly.
+
+That's the only ever time it's been expanded.
+
+So, Eric, I know you've watched lesson seven, which was the first lesson Jono and I did where we tried to bring Solvert to a bit of a real-world problem.
+
+Yeah, tell me, what were your reactions to what you saw?
+
+Oh, I'm really excited.
+
+I've been looking forward to this, to lesson seven in particular for a while.
+
+And of course, I've been on the Solvert journey with you since before it was even called Solvert.
+
+And we've been talking about seeing it come to reality for a long time.
+
+So it was super cool to see it.
+
+And I was just just chatting with Jono too right before this, that just to see the little affordances and the improvements in the UI and just the way it's turning into a real thing has been real exciting.
+
+So that's very cool.
+
+But I also, you know, I love the idea of getting to be part of something early.
+
+And so my main, like my more like my emotional reaction to watching lesson seven, especially, which I didn't have to the same degree with the earlier lessons, but with this one, I just thought, man, what a privilege to get to be part of the early community for this, because this is going to be something, this is going to be something really big.
+
+And I just felt like we're going to be giving the people who have access to this just these incredible superpowers.
+
+And I'm excited to see what they do with it.
+
+What was it like, I know a lot of this will be like intuition or feel or whatever, but what if you were a reverse engineer that feeling you had?
+
+Why, what's making you think those things?
+
+You know, it reminded me a lot of like the first time I was on the internet, or first time I encountered the World Wide Web, or even the first time I learned programming like for the first time.
+
+Or like I could go through a whole list of things that had this feeling to them where it's like, it's so easy to feel like you're too late.
+
+You know, everyone's already had all the good ideas.
+
+I mean, I was, I got involved with the web when it was still competing with Gopher as the like secondary protocol kind of displays Gopher on to man lined terminals.
+
+So it was obviously not too late.
+
+But even then I was like, oh, people have already figured out all the cool stuff with this.
+
+So I have a bit of that feeling of being left out.
+
+And so I'm just, I'm very tuned in when a new thing comes on the scene and the thing I feel emotionally attached to intuitively, if you look at something you say, okay, this has tremendous, is tremendously useful for a lot of things.
+
+But if someone to pin you down and say, well, what's it good for?
+
+I can't tell you how many times I had to defend the internet, you know, in the early days, like what's it good for?
+
+I'm like, I don't know.
+
+It's like everything else, but worse.
+
+But, but, you know, but better actually because it's just like very confusing, like why should I send an email when I could just send a letter, I can send a letter to anybody on the planet.
+
+I can only email these 25,000 people.
+
+Why is email better than a letter?
+
+So there's certain things that just like can't really be explained until you know how it's going to turn out.
+
+But I think the through line to all these different new technologies is like when you start to see something that can create new capabilities where you do something and then the next thing you do builds on that and builds on it builds on it like the step by step assembling of cool things out of smaller bricks.
+
+Like that has the potential to take all kinds of problems that we currently view as impossible or too difficult to be economically viable to pursue.
+
+And just if you can actually break it down and work on the little parts like then you can actually accomplish things that that are not currently deemed possible.
+
+So that was kind of like that was the feeling I had about it.
+
+Okay, I mean, that's really interesting because like what you're describing sounds like a reaction to AI, but you've seen AI before but obviously you think there's something in this solvered approach which, you know, is grabbing you, I guess, as Sure.
+
+Yeah, look, I've been I've been very I'm following a high very closely, you know, because you're my friend so you can have kept me up to date for long before it was very popular, but not nearly as long as you.
+
+And you know and look I can remember sitting in my college dorm room not that long ago wondering you know will an AI ever you know beat the top humans that go like seemed impossible you know would it would it we ever be able to do you know, pass the Turing test or like so many things that we now take completely for granted as not just capabilities that exist but that you can rent them for like a fraction of a cent per token likes unbelievable.
+
+The value that it so it's so it's an enormously exciting it's been great obviously there's all these big issues and social issues to grapple with and it's been this big big big thing last couple years.
+
+But if I'm being really honest, it's also been a bit of a disappointment.
+
+Not because it's not capable and not because it's awesome.
+
+It is awesome.
+
+But what have we actually practically accomplished with it so far.
+
+And there just aren't that many actually deployed actually useful AI applications, certainly not compared to the billions of dollars that we have invested in it so far and look that's natural and the new new stage or something you know it takes a while before we really figure out what it's good for.
+
+But I've just been around a lot of AI startups a lot of AI research labs a lot of people who are kind of like, sort of can kind of get it to do something some of the time they can create really cool demos.
+
+But we haven't seen the kind of like general purpose tool for translating this capability into practically useful things that are like at an unreliable repeatable way not just you know like there's certain tools you know like co pilot and cursor and there are these various tools out there that certain people have been able to do really extraordinary things with so I don't mean to take anything away from those tools they've been great, but I haven't seen the one where I'm like yeah that has that feeling like this the dawn of the spreadsheet or just the first time I was ever dropped into like a basic terminal and be like make whatever you want out of this.
+
+It really is like the reliable thing in lesson seven wasn't the AI.
+
+It was Johnno, you know John you know that's the interesting thing which is kind of different and I just thinking as you're saying that like okay.
+
+If Johnno was doing that same exercise in cursor.
+
+I don't know what do you think Johnno it would have looked very different and probably not be nearly such a smooth thing because you were like interacting with the machinery.
+
+Hardly although like I kind of do feel like there's been this gradient of getting closer to there for a while right so like maybe maybe not necessarily coding the common way in cursor but there's been there's been Google collab or having very helpful back and forth with a chat model and one tab while you do something else in the other like those pieces of all felt like they're starting to get there.
+
+So I think it was really nice to have that go well, but that feels like we're just continuing a trend that started when chat GPT started replacing Stack Overflow right it's like oh this starts to give you useful tab completions occasionally or the starts to give you like a bit of assistance.
+
+Yeah, that's right.
+
+It's missing stuff but it, you know, it all kind of like blurs together into this continuum of like okay we starting to figure out better how to take advantage of that.
+
+And it still feels like there's ways to go for like what it ought to do.
+
+But yeah it does still feel like we're climbing that hill and like, okay this is feeling a lot nicer than what I would have coded a year ago doing that for example.
+
+Yeah, and you know in the theory of disruptive innovation or like in the, you know, in the startup world and the people who study technology progress.
+
+And we have a term for we call the whole product, which is like out of the soup of like the homebrew computer club.
+
+Some time like there tends to be these moments where like a distillation takes place of like the Apple one computer or especially the Apple two computer that take something that was like still possible before but now like makes it available like to reduce the activation energy makes it available to a large number of people and human beings consistently underestimate how important those inflection points are because like when you're around it, people will be like, it's not really that the capability is not really that different from before it's just a change in degree not a change in kind but sometimes a change in degree is a change in kind, because it allows a community to form because it greatly increases the number of people that can be brought to it.
+
+And I think what I'm excited about in particular was solve it is because the reliability of it as a tool is so much higher than what came before so I feel like we're on or doing these step changes not to say that like nobody else in AI is doing anything good.
+
+Just said this is something that I think is particularly exciting and has the potential for a lot a lot of growth so I was just I was very excited on behalf of everybody who's gotten a chance to play with this so far.
+
+I mean I've consistently.
+
+You know, like, I think we're very prone to that right like we're the well I could just do Docker with a file share on a remote server right but the kind of programary hackery people tend to say like oh it's not that different from the iPod.
+
+Yeah, it's just like this software and this hardware edition or the iPhone or we've had all of those things for 10 years or yeah dropbox.
+
+So just asking kind of cron job and yeah, which I guess is partly why Eric when you're telling me about when we were chatting early individually about your reactions to lesson seven is an interesting word which is you just you said to me it felt mundane and you had to remind yourself to pay attention is that kind of part of what's like what's going on here with like this.
+
+Sense of you actually have to pay attention what what did you mean by that.
+
+Yeah, it was.
+
+It's a bit like an ASMR video.
+
+It's a little bit hypnotic.
+
+I don't know if the other attendees feel this way but like it's a little bit hypnotic to watch you guys just every step just logically flows from the previous step and like next thing you know, what started as like very basic questions about like how can I parse you know HTML and I'm like you know a lot of questions are questions I know the answer to like I know how to use a beautiful soup library so like my brain's not fully engaged like it's not really paying too much attention but what's exciting about it to me what I had to keep reminding myself is that first of all, although this is a contrived example because you guys do have the prior knowledge of how to do this and could have done it without the AI.
+
+There's you didn't use that prior knowledge for this so so this is like a general purpose thing it could have been used to use any library to accomplish almost anything to ask.
+
+And also the fact that it's so mundane is actually what's exciting about it because when we're building something useful in the world, you know, the project gets reduced to, you know, a big of something you want to accomplish something big in the world you have to break it down into dozens or hundreds or thousands of steps and each sub step is a chance, both for something to go wrong to cause a delay, or a chance for something to go better than you expected and actually get you earlier feedback that's a big we can get into this like batch size and queuing theory and power of iteration all that stuff, like anything that moves the date of feedback closer to the people making the thing is extraordinarily valuable.
+
+So, when I just look at this.
+
+Yes, it's mundane, because you're like okay every step in the process let's say it's like 90% faster and more reliable.
+
+We had a metric for like speed reliability is like combining those two attributes into one.
+
+It's hard when you're looking at it you're like okay this went from a 60 second task to a six second task.
+
+So I say 54 seconds it's actually not that impressive in your brain, it's like well, I may as well just done it myself I had this there was like a couple days ago I was just you know, I was I was writing a shell script for something and I was like, I can just do this myself.
+
+The time is going to save from doing it the all I'm not worth it, I'll just do it myself.
+
+And after like fuzzing with it for, I don't know five 10 minutes, where I got like a okay result, I was like this is stupid.
+
+I should have just done it properly in the first place, you know, I brought Claude sonnet into the mix and like two minutes later I had a beautiful perfect result you know I had an okay result myself using my like half remembered skill you know it's like oh yeah to go look up this thing and that thing and, and the difference between even at that time I was like oh that was nice, but I got okay so what the difference between 10 minutes and two minutes and strike me at the time is really big and actually reminding myself no.
+
+If that's consistent to 80% those time savings will add up and and some people like oh you're going to get the project done 90% faster that sounds pretty good but it's actually way better than that.
+
+Because projects are not linear.
+
+It's not like there's 100 tasks and you do them in order and then the project is finished most tasks are not like that most tasks go through cycles and loops, and the faster you go through the loop, the fewer iterations you have to go so it can actually even if you know if you have a constant improvement in every sub task, the total time can be dramatically different.
+
+That's that's what I had to keep reminding myself that this is the fact that it's mundane is what makes it exciting so I'm trying to we should talk more about that loop maybe next week actually because that's kind of a big part of why we started answer AI that would be interesting to dig into which is this premise of like, maybe you could create a whole different kind of company based on.
+
+I wonder if people are curious about that happy to have you to share.
+
+Yeah, yeah.
+
+Yeah, John, I and I were having a bit of a chat before about what we wanted to learn from you and something John mentioned was like when there's a lot of things you could pay attention to so when you say like hey pay attention like well like you in particular I know you get a thousand you know cold pictures a day you know the lane start up guy like how how do you decide what to pay attention to you know how do you decide what to work on you know particularly in this field.
+
+There's so much going on should we all drop what we're doing and study the agentic systems because that's what everybody else is doing or like.
+
+What you know.
+
+Yeah, yeah, yeah, I mean to be honest, I feel bad this is not the most useful answer but just I'll give you my honest answer which is that I have the privilege of having a broad network of people, you know who are genuine experts in the things that they know about.
+
+And I've tried to curate you know, relationship with people who have different expertise than mine so I very often don't have to actually make those decisions a very smart person who I know I've already have a built a pre existing relationship with tells me look you got to pay attention to this is pretty important that gives me I get these like clues to know that something is going to be big.
+
+So like, I didn't know anything about generative AI I never even heard of it.
+
+When one of the investors who was helping the founders of anthropic spin out of open AI, called me out of the blue and just said look would you do me a favor and would you help these guys set up their governance properly for this new AI start up that they're doing.
+
+And I was like, sure, you know, didn't.
+
+I didn't know it was an earth shaking, you know, monumental new thing it was just so and I just hope they we met as I will tell me what this is you know help me understand what it is so we can set it up properly.
+
+And you know by the end of the meeting I'm like oh my god this is going to be incredible.
+
+And of course, and of course we got to do this properly or the world is in grave danger so.
+
+So I feel like I have the luxury of getting like very interesting things come to me.
+
+What I will say that one of the things I found really difficult earlier in my life is in order to create the mental space to pursue those things when they come in.
+
+I can't be out there chasing the latest fad.
+
+The latest thing people are excited about so I try really hard not to get into or excited about anything just because other people are excited about it and try to really be disciplined about like why is this something that I'm excited about why is it interesting to me.
+
+Yeah, it's kind of asked like that that group of people you kind of curated that you listen to.
+
+I'm imagining based on what you're describing about how that's the things you're getting are different to the stuff that just happened to be super popular is is that those people you listen to are not necessarily the people who have the biggest mouthpieces on social media.
+
+Yes, or whatever.
+
+I do know some of those people.
+
+But you know even those people what they say in private is so different than what they say in public that it's interesting.
+
+Yeah, I don't I don't view their public pronouncements is very is very useful.
+
+Yeah, it's kind of it's kind of hard to explain like I, I think having a sense of personal purpose helps a lot with this.
+
+And this like I can remember going all the way back to the like the proto proto days of lean start up before it even weren't even coined the term or even knew the vocabulary to how to describe it I remember going into a board meeting once.
+
+And there was a big debate in the company about whether we should don't get into something that was like I was the CTO I'm in charge of the technology and like we need to decide.
+
+You know, pursue this direction or do it this direction.
+
+And I had this really strong conviction that was very counterintuitive that we should do things in this more lean start up the way rapid iteration MVPs customer feedback you know it was very very controversial at the time.
+
+And it wasn't like wasn't working very well company was in trouble.
+
+And I was I didn't think it was because we were doing things different that we were in trouble.
+
+We were, I would have said that fact that we're doing things differently is helping us discover that the business plan has his fatal flaw and it needs to be fixed.
+
+But another interpretation of that would have been like well, we agreed to do things in this weird way.
+
+Now we're in trouble therefore doing it in the weird way is causing the trouble that's a lot of people in business think that way.
+
+And so I'm going to the board meeting I'm like prepping for the board meeting early that morning I can't couldn't sleep the night before I was very stressed.
+
+And I was like I think there's a chance that I'm going to be fired at this meeting.
+
+Because what I'm asking the leap of faith I'm asking people to take here you know this is a mix of my friends and my co founders but also you know professional investors and this is a complicated situation.
+
+And like they might not agree with me and they might say you know what we've had enough of this guy I wasn't that I was very young I'm ever the youngest person on the team at that point.
+
+Here I am advocating we do this unproven untested new thing.
+
+And so I was pretty stressed about that I've never been fired before.
+
+You know, I really do not like to fail I'm very competitive I like to win I like to be good at my job you know especially in those days I was very focused on being good at what I do.
+
+And at this moment of realization that in order to be true to my own values in my sense of integrity I was going to have to risk being fired.
+
+And so I asked myself, what are the upsides of being fired, like what I know it's by no why it's bad it'll be humiliating and bad but what could be good about it and I thought to myself you know what, I'm in this room with all these powerful people that are going to go on to do many projects in the future.
+
+And if I just go along with what they think I'm a nobody they won't remember me I'm speaking yet another guy who folded in the face of what they want.
+
+But if I advocate for what I truly believe, even if they fire me they're going to remember this interaction and one day in the future they may come a time when they're like you know what we need.
+
+We need a guy who's irrationally obsessed with going fast and engineer productivity and rapid feedback like though I'll have like an issue profile they'll remember me as the person who cares about that stuff and like maybe that will ultimately.
+
+Be helpful.
+
+Now in this story has a happy ending because I wasn't fired, but that effect that I like realized that I needed to have other people's like I need to be clear about what I stand for and what I'm trying to accomplish in my life.
+
+And I need to communicate that to other people so that they know when to reach out to me.
+
+So that like that's actually what creates this beneficial virtual relationship is people know Oh, Eric's the guy to talk to about these topics, but also he has a great interest if you have you're working on this kind of thing he'll help you, you know, call him up.
+
+So it's it's not random but it requires like a consistent investment in standing for something.
+
+That I mean that's yeah I really feel that and maybe before we just dig into that just let's just step back a moment and can you give the potted summary of like what is this thing you're standing for what is the what is the lean start up what is this you know you mentioned fast you mentioned iteration.
+
+What's the potted summary of that for those that haven't read your book.
+
+Yeah, sure.
+
+So I'm a you know I'm a programmer by training.
+
+If you have an image in your mind some of you may relate to this of like the kid in their parents basement, spending too much time on the computer, you know not spending enough time with the other kids outside that I was I fit that stereotype to a T my, my, my poor parents found it very stressful.
+
+But like from the first day, my dad brought home a beige IBM PC, you know, the original IBM PC in that beige case you know he brought it home for work he didn't know what exactly what it was going to be good for and I found out you could program and I was just a little kid.
+
+And I it's all I could imagine wanting to do.
+
+You know I was just I was obsessed with it from from that moment.
+
+I thought I'd be a computer programmer my whole life.
+
+I, the one of the happiest days of my childhood when I found out you could get paid for computer programming.
+
+I couldn't believe it was a job you could do for money that struck me is too good to be true like as you know it's like to me it's like being paid to play video game so I was really keen for a life of computer programming and I got into entrepreneurship kind of by accident wasn't really my plan, but I had done the like I was in college I done the big company intern thing.
+
+I was preparing myself to go work in tech which meant to me go work at a big company, and I was in college during the dot com bubble so that's dating myself here a bit but like that come bubble swept through and like my friends and I we didn't have any idea what a start up was or why anyone was doing it but it was all the rage everyone was doing it and I was like I'm not going to do it too.
+
+It was a, you know, it was a total disaster I'll spare you the whole story.
+
+But it was the start of several times when I and the smartest people I knew, built really amazing technology, and then nothing happened.
+
+And then you build a technology as you build a product is going to change the world and the reality most of the time is you build something that nobody wants.
+
+And you did it really efficiently, you know, you're really proud of how tech, how great architecture it was and like you know I remember working on our product we're like this.
+
+We've spent so many years developing this incredible new scaling technology so this technology will scale to million the millions of users that will presumably have one day and then nobody uses it then that was always so it's so like a lot of technology building is a total waste of people's time and I found that I always found that outrageous like it's not it's actually morally wrong to waste people's time like that you should treat human time.
+
+I hired a guy out of Ericsson to fast mail who had been there at at all six years.
+
+And after three weeks, we had released his first fast mail feature, and he said, none of my work at Ericsson was ever released.
+
+Yeah.
+
+Oh my God.
+
+We used to at IMV we used to make people deploy to production on their first day as an engineer.
+
+It was a requirement by end of day can't leave unless you do it.
+
+We had we pick something real small, but we had something we called the cluster immune system, which was like an auto deployment integrated testing framework such that if you broke the site it would auto refer your change.
+
+And we were really confident in our ability to detect problems through automated testing.
+
+So we weren't worried about it and we were hired kids to you know we are young people to do this.
+
+And we were like, well, you know, they like sure why my first day sounds great.
+
+But when we hired someone who'd been in a big company their whole career, we have people that have like basically like a nervous breakdown being like you want me to do what, and they couldn't bring themselves to push the button.
+
+It just like built up years and years of the fear and I remember them saying like look what if I what if I take the site down on my first day.
+
+I give this answer so many times right look honestly, if you take the site down, then shame on us for making it so easy to take the site down will be like oh congratulations we learned something really valuable will make sure that never happens again and you'll be in charge of making sure that whatever whatever particular bug you introduce is never never happens again.
+
+And people found it super stressful and I of course the people when I would tell them the story they would want me to say and they'd be like well, has anyone ever taken the site down is you know, it's a catastrophic problem that was caused by someone on their first day.
+
+And I'm supposed to say no don't worry that never happens you don't do worry about it but it has happened it did happen sometimes like yeah, you know, you never like the curse of software engineering is spooky action at a distance you change this one little thing over here.
+
+And this other system collapses as it happens sometimes.
+
+But anyway, so I just like I've always really had that intuitive sense that was really important.
+
+And in the course of building IMV this is in certainly the company in 2004 to give you some of the timeline.
+
+I was just adamant that we were going to follow this procedure of getting things out there faster getting customer feedback more quickly.
+
+Why working.
+
+It's just like the sense you had you just like that.
+
+I had done it.
+
+I had seen the exact opposite way fail so badly that I was like a bit of an extremist being like well whatever just do the opposite of I remember talking to my co founders we had the previous company we were five of us were refugees of a previous company that had spent like five years and $50 million to launch its first version of its product.
+
+And so we were like for God's sake let's just make some new mistakes and do it the opposite now what I didn't appreciate at the time was.
+
+I hadn't you know I hadn't been working in industry that long but doesn't take very long if you are someone who naturally thinks things should be done faster more scientifically more customer centric if you have any of these beliefs in your work portfolio.
+
+What you don't realize is you unconsciously build this framework where you're in opposition to a dominant culture that doesn't agree with that.
+
+So let's say you want to remember when we used to release software so infrequently that we would put the name of the literally the year it came out into the name of the product right so like.
+
+So in that world let's say you want to release monthly or twice a year you want to go faster than the dominant culture.
+
+If you say I want to release twice a year and they release every two years you know they might compromise with you and release once a year.
+
+So you get trained to be as much of an extremist as you can.
+
+So so I would like I wanted to release once I remember trying to get people to do the agile manifesto extreme programming thing of releasing once a month this is back when releasing once a month was seen as really fast.
+
+You don't advocate for releasing once a month I'd be like I want to release once a week.
+
+I want to release every day.
+
+And so when I was in larger companies I was just I was always the person pushing on that constraint and the organization would push back against me and we come up with a compromise it would be reasonable.
+
+The first time I was in charge of my own team with these ideas.
+
+I fell over I was like pushing I was trying to push it's getting something that wasn't there and I fell right over.
+
+And it actually like was very uncomfortable to me because people I would say I want to release as fast as possible and my team would say well how fast is that.
+
+And I'd be like I don't know every day and they'd like literally do you mean every day.
+
+And I was like do I mean every day like I don't know I never had to actually think about it before I never really justify it so.
+
+By being the person in charge.
+
+It forced me to actually start to think from first principles what am I actually doing here like I had this intuitive sense this was necessary but why is it work what is it you know I.
+
+I really studied hard to try to figure out why it works because I could see the evidence with my own eyes and this I think goes back to your thing about mundane utility.
+
+We did it intuitively at first.
+
+And we were super naturally productive.
+
+Because it's just it's a way better way of working.
+
+So much so that like investors started to believe that I had the magic touch that I could like I had like magic fairy dust and I could sprinkle on engineers and make them work harder.
+
+It became a big part of my life in the foreshadowing things that would come to pass.
+
+But anyway but I was really determined to find out the reason why but first my own intellectual curiosity about it but also because as we hired more and more people who had more and more diverse work experiences.
+
+It was hard to get them to try it.
+
+You know it's not like green eggs and ham just try it and you'll like it.
+
+People want to be like but why does this work it's actually very uncomfortable for people to see something working that is contrary to the best practices they've been taught.
+
+And.
+
+Here you described it as like more scientific.
+
+More iterative.
+
+Faster.
+
+Yeah.
+
+Like what is that.
+
+Can you like make that super concrete.
+
+What is that.
+
+Let me just have it read the book.
+
+Let me just do lean start up in a nutshell like the theory of it just I'll do it very briefly.
+
+The idea is that when you have a business plan to make something we tend to think of that as a prediction about the future.
+
+You know if you have a made a business plan you have like the hockey stick shape graph in appendix B that says on this date and this year this number of units will be sold this thing will happen.
+
+The plan is written as if you know what's going to happen in the future but actually in real life if you go around telling people that you know what's going to happen in the future you can be committed.
+
+That doesn't actually make sense.
+
+We don't know what's going to happen in the future.
+
+So lean start up is just the acknowledgement of the extreme uncertainty of entrepreneurship.
+
+We're doing something new that hasn't been done before.
+
+Then we can't extrapolate from our past experiences to know what's going to happen in the future.
+
+So therefore we should treat all of the assumptions we call them the leap of faith assumptions that go into the plan as hypotheses in the scientific sense.
+
+And so for each hypothesis we want to figure out what is the least expensive fastest way to discover the truth of this hypothesis so that if necessary we can pivot pivot is our most famous bit of jargon in lean start up is a change in strategy without a change in vision.
+
+And if you study entrepreneurship for any length of time you will see that all of the great companies went through this very strange process where they ran into difficulties and they didn't just give up wholesale.
+
+But they kept one foot rooted in what was working and they had the humility to change the other foot to try something different and sometimes they had to do that multiple times.
+
+And so the inside of lean start up is that for any project it's not actually really start up specific if you're building a product inside of a big company or anything that's new.
+
+Big company small company nonprofit for profit makes no difference if it's new such that you don't know what's supposed to happen and when.
+
+The right way to think about runway or how much time do you have left to make this thing happen is simply how many opportunities to pivot do you have left.
+
+And so anything that brings you to the moment of realization of the need to pivot sooner.
+
+Effectively increases your resources increases your odds of success because it's like getting more shots on goal.
+
+You know imagine a game of chess you versus a grandmaster but you get two moves for their every one move.
+
+You'll never lose and can you also do it in a like like as well as the big pivot thing is there also a smaller loop within the loop where it's like OK you kind of.
+
+Like for example you're not quite sure what the company is meant to be called so you free week you change it and change it exactly.
+
+Yeah we call that the build measure learn feedback loop.
+
+And this you know this is not our topic for today so people want to have time for Q&A people are happy to have happy to answer questions about this but I studied lean manufacturing to a production system and that whole.
+
+I think of still very underrated revolution cognitive resolution in the 20th century that changed how physical products are built how supply chains operate and was like.
+
+An intellectual breakthrough that most people have never studied and do not have an appreciation for how it keeps them closed and alive you know every day so we're one out for all the general managers out there who run this unbelievable system it's a work of art.
+
+But anyway one of the things that you learn in the manufacturing is the most important thing about a factory is what's called the fundamental cycle time how quickly between when an order comes in.
+
+And we deliver a high quality product that meets the customers needs you know in response to that and collapsing that time has all these counterintuitive benefits.
+
+And my realization that became lean startup was simply that in anything we're doing.
+
+We take an idea.
+
+We build it into a product or into code.
+
+We show that to customers generating data and from that data we learn influencing our next idea that's our fundamental feedback loop and so between the time we have an idea.
+
+How much calendar time elapses on the stopwatch when we have the idea and when you get the feedback about.
+
+Whether that's a good idea or not.
+
+That is the fundamental thing we're trying to optimize for and so yes.
+
+In the macro we have these big cycles of trying to figure out how to get to the moment of doing the pivot to make these fundamental changes.
+
+But then it's epicycles all the way down you break it down you break it down you break it down you take the leap of faith assumptions you break it down you build what are called minimum viable products.
+
+And we train people in the startup to think as small as possible.
+
+And I think this is something that humans find very counterintuitive.
+
+And I think that is that when we have a linear process of any kind the smaller the batch size of work the better.
+
+So by delivering in small batches you have the opportunity to get feedback sooner and make a correction.
+
+And one of my favorite teaching tools which is no longer on the internet now someone needs to rerecord this video.
+
+I know I've been doing this for a couple of years ago but I use this is my go to demonstration of this principle for many many years.
+
+There's this guy who because it's so counterintuitive.
+
+So here's the here's the scenario it's kind of contrived but like if I tell you look I need you to send out physical invitations to an event to 100 people.
+
+What's the most efficient way to do that.
+
+Everyone knows the most efficient way to do that I print out 100 copies of the invitation.
+
+I stuff them into 100 envelopes I lick 100 envelopes and seal them.
+
+I stamp 100 envelopes and I write the address 100 envelopes and I put the batch of 100 into a mailbox.
+
+And even though everyone knows this to be true empirically speaking it is actually not the most efficient way to do the task.
+
+It is much more efficient to take one piece of paper fold it stick at the envelopes seal it put the stamp on address it and then put it in the mailbox and then do the next one.
+
+And even right now some people who are listening to us are like that's the craziest thing I ever heard what is he talking about that's definitely not true right everyone has the human mind has very strong intuitions about this.
+
+Especially the American mind the hyper specialized American mind Americans are obsessed with this problem absolutely.
+
+So there was this guy who actually made a video it's one of my favorite videos ever I wish I could find it now it's taken down like I said I've seen it.
+
+I remember it is great.
+
+Yeah.
+
+They both ways with the stopwatch and it's the craziest thing because they do it once and it takes you know I can't remember now what it is you know five minutes and they do it again and only takes three and a half minutes.
+
+And it's like and then of course the video is about where did the time go and anyway I won't get into queuing theory that's not for today but anyway it's all counter it's very counter to you spend a lot of time that you don't realize moving these giant things.
+
+Moving these giant batches of work in progress inventory around anyway that's batch size and that one doesn't even have the whole like this is an extremely complex process and by going through it each time.
+
+Exactly and that's a key thing so now imagine.
+
+And this is what I used to teach people in the early days of lean start up I would have to teach this to entrepreneurs all the time.
+
+Imagine in my my story it's faster even if nothing goes wrong.
+
+Everything's correct but now let's imagine you get to the post office and you try to mail the letter and your post you have forty two cents of postage on the envelope and they're like oh sorry.
+
+It's forty five cents to mail a letter now.
+
+Sorry your letter can't be mailed.
+
+When do you want to find this out or like what if the piece of paper is not the right size for the envelope anyone ever had this experience.
+
+You want to find that out after you fold it a hundred letters or after you fold it only one if you try to mail one.
+
+It's of course the more uncertainty there is the more things that could go wrong the exponentially more beneficial it is to do work in small batches.
+
+Now some people listening are going to be perfectionists about this and be like hold on isn't there such a thing as optimal batch size.
+
+Yes.
+
+Yes there's a whole theory to this of course if you have to walk from your house to the post office three blocks away that you don't want to pay the transport cost of the batch every time.
+
+Oh yes there is an optimal batch size and that's not important for our purposes because for most people their intuitive sense of batch size is just way too large.
+
+And it's the same same in programming like the more you attempt in one fell swoop the more you're going to run into these issues versus if you're willing to break the problem down into the smallest units of progress that you can the more likely you are to succeed.
+
+So I'm just leaving aside the question of whether there'll be an error or a problem that will force you to rethink your approach.
+
+I can see why you two are friends.
+
+I'm sorry.
+
+I can see why you two are friends it's a very familiar.
+
+Well I was going to say that let me ask about this I've got a bit of a crazy direction to go here.
+
+Eric so bear with me for a moment.
+
+I've seen three places I've seen in my life two of which I did and one of which I've seen which seem to be other examples of trying to create fast iterations trying to get prompt feedback so forth.
+
+The first is when I competed in Kaggle you know or I do any machine learning problem and all the teaching I've done from that I always say to people number one most important thing is submit every day.
+
+No matter what you know submit something.
+
+And it's so different to what like what I've done Kaggle hackathon so when I used to work there I would we would have hackathons and I would see people over a weekend.
+
+And they would just work work work work work and at the end of 48 hours they would put in their amazing solution.
+
+And it would have a submission error and they would get zero you know and I just be there like.
+
+Okay within three minutes I've submitted the sample CSV they provided and then after five minutes I've replaced you know all the ones with 0.5 and then after that I change it for my all versus female averages and yeah yeah yeah.
+
+Okay number one.
+
+Number two.
+
+Let's share my screen here.
+
+You really need to read it but it's kind of nice to have something to look at.
+
+So George Polia how to how to do math problems how to solve math problems so it's like identify what you're being asked to do gather the info restate the problem create visual representations look for patterns draw on similar problems you've solved break it down execute it verify it document it evaluate it verify it consider alternative approaches consider both potential improvements next time.
+
+Go back around do it again.
+
+John O last lesson doing solvert for screen scraping and like everything was saying it's all like right one to two lines of code.
+
+See an actual result come back operate on that result you come back or fix it right another one or two lines of code.
+
+So.
+
+Audrey is asked in the chat.
+
+If you were to Eric if you were to iterate upon the lean startup methodology by incorporating anything from the solvent methodology.
+
+What would you try but I actually want to ask you are we all actually doing the same thing.
+
+You me Polia.
+
+Yeah yeah yeah and not just us if you read read Tai Chi Ono's work one of the godfathers of total practice system or even Shigeo shingu.
+
+That stuff all been translated into English now.
+
+If you want something more fun is this guy named Colonel John Boyd who was an American Air Force Colonel who developed something called the OODA loop and there's a wonderful biography of his life which is definitely the best introduction to the concept because you get just he lived a crazy crazy life and he fought in the Korean war.
+
+This is like fighter pilot theory right.
+
+It was it was a fighter pilot life and death became the theory of maneuver warfare which is how all modern wars are conducted although I guess with drones is about to get real weird and different anyway.
+
+These ideas recur all the time and I think it's better to see each of them as an instance of a class that of the one thing that we're all doing rather than different things so like it's a little tricky to talk about it.
+
+If you recognize the universality of it because so like we were talking earlier about this and we were talking about you know the use of solve it by a computer programmer to make a new product or the use of lean startup by an entrepreneur to make a new company.
+
+And I was like I don't think anybody involved would like it nobody in either side of that divide will be happy to hear that my view is that those are not two different things but the same thing.
+
+And we are so caught up in our cultural identities like no no no I'm not I'm not the same as that goes people.
+
+We tend to want to divide but I really feel like if we're doing we're building something under conditions of uncertainty we are doing the same process.
+
+Whatever you call it.
+
+So I'm like I I felt like I think it's important to have jargon I'm actually a big believer in conceptual vocabulary and I think you know knowing lean startup terminology is super helpful.
+
+But it's helpful because you understand the underlying concept using the words is not magical incantation and knowing the theory is not helpful.
+
+Like knowing the words of the theory or not what's not what helpful it's knowing how to do the underlying thing that is helpful.
+
+So yeah I think there's like one meta discipline which does not have a real proper name to my knowledge that is like this this understanding of, you know, of speed iteration.
+
+You know I think it has a certain set of values that it's like a constellation of values and then a set of heuristics or counteracting the bugs in human psychology that make this difficult.
+
+That's why you know.
+
+Yeah, let's talk about that because I've accidentally been doing this for some decades now in various forms before Solvert.
+
+It was NB Dev before NB Dev.
+
+It was a somewhat extreme approach to test different development.
+
+And before that I was in consulting and it was like doing everything in data analysis.
+
+Yeah.
+
+And my startups, you know, I've never had a plan or whatever.
+
+Almost everybody I've worked with has hated everything about this.
+
+I mean part of the problem is I didn't really know what I was doing and I was doing it.
+
+I didn't really explain it.
+
+But like it was really uncomfortable to be like, like, it's like, you know what it's like sometimes when potential investors reach out to us and they're like, oh, wow, AIR and D we love AIR and D.
+
+Can you talk to us?
+
+We talk to them and they're like, okay, what's your plan?
+
+What's your customer value proposition?
+
+How do you know when you got we're like, we don't know any of these things.
+
+We're just figuring stuff out as we go.
+
+You're actually fundamentally unserious, aren't you?
+
+You don't know what you're doing.
+
+You have no idea what, you know, beyond one or two steps from where you are now.
+
+This is terrifying.
+
+Hey, people don't love this, right?
+
+I mean, if you experienced this, well, Oh, okay, I'll tell you a funny story, actually.
+
+For those of you who've been an adventure back company, you will know this is not as common anymore, but 20 years ago, it would have been to rigor absolutely required that in order for a VC to make an investment, in a technology based company, they would need their gray hair technical expert to come in and do what was called technology due diligence on the team.
+
+And there was a very certain type of person who be like a tech technology job in their life, but they're like business adjacent their buddies with these VCs, they play golf together, you know, like, just a kind of, you can imagine the kind of person who would get that kind of job.
+
+And I'll never forget that I am VU, we used to fail tech due diligence.
+
+Now, I cannot, if you've never been around the system, you can't understand how rare it is for a startup to fail tech due diligence.
+
+It's actually like a indication of founder incompetence.
+
+Because like, you guys would have been way ahead like you were some of the first internet.
+
+We were way ahead.
+
+But the problem was, I was, I was young and stupid.
+
+So this guy would show up and he'd be like, now kid, this isn't really how things are done.
+
+You need to do product and technical requirements documents and make sure you have a roadmap and you need to do to do to do to do to do to do to do to do.
+
+And I was too stupid and arrogant to realize that if I just said, yes, sir, we're about to get right on that.
+
+We would pass the technical due diligence, no problem.
+
+But I didn't understand that I'd be like, Oh, no, no, no, sir, with all respect, we've discovered this better way of working.
+
+That's better than the thing you spent your whole career mastering and are an avowed expert in.
+
+And would you like to come over here and see the evidence that we've made a discovery that's better than what you had?
+
+You want to guess how many times someone asked to see the evidence?
+
+Yeah, not one time.
+
+So yeah, I have a lot of experience with that phenomenon.
+
+And it is uncomfortable for all of us.
+
+Like I remember, hope you don't mind me sharing, but for me, this is like to your great credit when I shared with you our plan to not use AWS or GCP, but to create a thing on a bare metal server using fast HTML that's never been used before using HTML max, which is kind of crazy without any kind of like, you know, development plan or whatever.
+
+And you're like, how do you know it's going to work?
+
+That's like, well, we don't, we thought would give it a try.
+
+And if there are mistakes, we're trying to fix them.
+
+And I was like, and you're like, yes, yes, that is the right tool.
+
+It's totally uncomfortable.
+
+Best practices are that way for a reason.
+
+And you're like, whenever someone wants to deviate, I mean, you have to think, I mean, listen, cultivating the skill of thinking for yourself is actually really difficult.
+
+And most people don't do it.
+
+It's actually what most people, I think, have in common with LLMs.
+
+Like most people are just unconscious stochastic parents most of the time.
+
+So like, I mean, that's why LLMs have all the weird behaviors that they do because they were trained on a bunch of people like us who don't, they're not actually consciously aware of what they're doing a lot of the time.
+
+So that's, that's what we have to, so I would say like my advice to anyone who asks would be like, you have to cultivate that discipline of conscious awareness so that you can learn to think for yourself.
+
+It's actually quite difficult.
+
+And first step to admitting, to master that skill is to admit that you're not doing it a lot of the time.
+
+But that still doesn't solve the problem of like, but what do I do if I'm in a cultural situation where I want to get people to change to this way of thinking?
+
+And I have a lot of experience with that.
+
+And happy to, you know, happy to share.
+
+Yeah, I mean, before I'd be interested to hear your thoughts, because I want to come back to Jono's earlier question of like, how do you decide what to work on to say like how, how we're dealing with that at answer AI, which is for this year at least on the whole, we, we've kind of skipped that question by saying to people, look, you know, before you join, here are things we believe, you know, we believe that cheap GPUs are underappreciated.
+
+We think fine tunings underappreciated.
+
+We think we should focus on building applications rather than your foundation models.
+
+You know, here are some thesis or whatever, like, how does that sound?
+
+Like, oh, yeah, I believe those things.
+
+And then it's like, okay, what do I work on now that I'm here, Jeremy?
+
+Well, what do you think?
+
+What are we fun?
+
+Go and work on the fun thing.
+
+And so we, we, we've, we hire what we describe as tinkerers, you know, so like, Jono, I think if I asked you how do you decide what to work on, think to a fair degree, your answer would be like, work on things that seem cool and fun, slightly underappreciated.
+
+And we see how it goes, you know, like, which is a slightly lean startup, you kind of approach.
+
+It's kind of like, instead of coming up with a different company name every week, it's like, build a different little thing each week.
+
+And instead of putting stuff out to customers, we've particularly focused on building stuff that we can use ourselves.
+
+And then see if we like it.
+
+Oh, which reminds me, this is actually something you've never seen before, Eric.
+
+And most of the, almost all of the audience haven't seen before either.
+
+Can I show you something new and get your thoughts about it?
+
+Uh-oh.
+
+Is Eric crashed?
+
+That is sitting very, very still.
+
+And very silent.
+
+Oh no.
+
+But all right.
+
+What are your, what are your thoughts, Jono, about what you've heard so far?
+
+Yeah, I like that description of, and someone in the chat put it, Someone in the chat put it well, like, in places having this like specific plan, you have this like theme philosophy, this North Star or this idea.
+
+And so you're describing like the, yeah, the vibe, the answer I working, it's not that I pick from the total set of tasks that might be interesting or fun, right?
+
+And we've had hires, so I really like to play with, you know, this all sorts of fun technology all the time, right?
+
+So there is this decision that's like, okay, does this kind of align with that core belief?
+
+And so for Eric, you can see his core beliefs like long-term value, doing entrepreneurship better, like, so he can have that decision function in his head when he sees something, should I work on this?
+
+And for us, at answer, we've got some ideas as well of like, okay, I can think to myself, is this an answer AI-ish kind of thing?
+
+And there's been projects that sounded interesting to me, but that I've dropped because they weren't.
+
+And so we've got that like shared vision, which you have to build up so that everyone knows what that means.
+
+And that's trickier, you know, I've seen people talking about like larger organizations having that communication is harder, there's bureaucracy and stuff.
+
+But I think it is quite a nice hack to be able to say, in lieu of a plan that I can consult, I can just ask myself, is this an answer AI-ish?
+
+Does this align with our vision, with our plan, not our plan with our vibe?
+
+And that's a good way to direct the day-to-day decisioning.
+
+No, exactly.
+
+It's interesting because, oh, we nearly got Eric back.
+
+Yesterday, we were all chatting within our company about our kind of one-year anniversary and reflecting on how I think, yeah, we all know what that vibe is or what that thesis is.
+
+But we've also quite consciously never written anything down because it's something that should evolve from a group, you know, rather than be demanded from on high.
+
+But yeah, it's never been a problem.
+
+I never felt like people don't, at M3, I don't know what we're doing or don't know what we're trying to achieve.
+
+Yeah.
+
+Yeah, I'm trying to think, are there open questions that I have from the discussion?
+
+I feel like for code execution that feedback is often quite visible.
+
+Like, oh, I can see my models training.
+
+I can see my, oh, Eric's back so I can ask him.
+
+Back, can you hear me?
+
+Yeah, yes.
+
+We were just talking about how answer AI, this is coming from the chat.
+
+It's the idea of having like a North Star or a vibe or an understanding of a kind of a role direction and how we definitely have that.
+
+Sorry, John, I go ahead.
+
+Well, I was then going to ask, like, you know, if I'm executing then on a technical problem within that, right?
+
+Like, I have some project that I've decided aligns with the answer idea and I'm writing the code towards that.
+
+It's very clear to me when the code is working.
+
+I can see the execution results like this is what I was intending, right?
+
+The website is up and it shows what I wanted to show.
+
+So there's like that component of the feedback that I'm very comfortable with.
+
+There's the like slightly higher component of like, okay, we kind of like as a team think that this is proceeding in the right direction.
+
+Like, it aligns somehow with what our goal is.
+
+One thing I have much less experience with and I'd be interested to hear your thoughts on generally is like, what is that signal look like when it's now it's out there in the world and it's a larger startup or larger project and it's interacting with people outside because I code.
+
+Okay, my code ran and gave me the correct result.
+
+Like that's very direct feedback versus like, I released something.
+
+Yeah, what's the feedback?
+
+What's the signal there that tells me what to do next?
+
+Are you asking me?
+
+Yes.
+
+Yeah, okay.
+
+Yeah, sure.
+
+That's something that we can think about.
+
+Yeah, so actually, so I want to push back on one of the premise of your question in this way, because it's actually the same thing.
+
+It just seems different.
+
+And the reason is because you're used to thinking of what you're doing when you're programming or releasing something as you are building it and then you see what happens, right?
+
+That's natural.
+
+And the problem with the framing of let's do it and see what happens is that you actually cannot fail.
+
+It's impossible to fail because whatever happens, you will see what happens and then you've succeeded at seeing what happened.
+
+You did what you set out to do.
+
+You saw what happened.
+
+But when you are programming actually, although you say I'm going to see what happened, you have a very specific idea of what is supposed to happen.
+
+And it's very easy to demonstrate that this is true if you've never had a non-deterministic or super weird computer bug you've been chasing where just like the computer doesn't know.
+
+There's like a kernel bug I spent a lot of my life on was like a very, very weird and Linux kernel bug that caused it to behave, put the CPU into the wrong floating point mode under very, very weird circumstances.
+
+So your computation would come out slightly wrong.
+
+You know, anyway, nobody says that nobody in the world could care about and like the answer to the correct answer is just round your numbers off and don't worry about it.
+
+But like it shouldn't do that.
+
+If you have the mental model of what is supposed to happen and you're the right kind of person that it drives you crazy and you eventually go figure out what's going on.
+
+And the times of my life I've learned the most is when I pulled on the thread of the sweater.
+
+The issue is that when many of us move from the technical domain into the product domain and the business domain, we cease to hold ourselves to that same standard.
+
+We don't articulate what is supposed to happen and therefore we cannot fail.
+
+You cannot fail.
+
+You cannot learn.
+
+I think that has a lot to do with the really poor business culture we have like, you know, business people are not scientifically rigorous.
+
+A lot of people, you know, a lot of business thinking is pure, pure magical thinking.
+
+So I get it like, and in fact, in a lot of business context, it's seen as negative to write your hypotheses down and speak them out loud because you're actually like demotivating and reducing morale.
+
+Anyone ever been in that situation where it's like, there's this belief that if you push teams hold them to unattainable standards, that will cause them to work as hard as possible.
+
+They'll basically die trying to achieve the impossible.
+
+That's better than if they satisfy themselves by achieving just the mundane thing.
+
+So like that's a common business idea as malevolent and wrong as it is.
+
+So it's actually like a radical act to say, yeah, we're going to put this out there and then I want to define what's going to happen.
+
+Now, as soon as I say that to people, they're like, oh, okay, I got it.
+
+I'm going to put it out there and I'm going to get a million customers.
+
+It's like, oh, are you?
+
+And so then like it actually required some skill to learn how to set appropriate targets here.
+
+So it's like, okay, in order to, and the questions are easy to coach someone through this is actually very easy because you say, okay, great, if you launch this and next week it has 799,000 users.
+
+Is that a failure because it didn't have a million years and they're like, are you kidding me?
+
+We got 700,000 users, right?
+
+And you all just have to imagine yourself at the board meeting afterwards retroactively trying to justify whatever you did.
+
+It's a success.
+
+Anyone ever been in this situation, right?
+
+You're like, right?
+
+You thought you have a million users, but you actually got a thousand users.
+
+And you're like, but man, a thousand is still really good.
+
+But if that's really good, then why wasn't that the goal?
+
+Right?
+
+So eventually we learned that making our goals in terms of masses of numbers of people is almost always a mistake because it's like predicting crowd behavior is actually super complicated.
+
+And unless you're Harry Seldin, like you're not going to know what's going to happen in the future, much better to define our goals in terms of per customer metrics.
+
+We always in least sort of we have the saying that metrics are people too.
+
+And so the best metrics are ones that are defined by ratios or sums of whole numbers of persons.
+
+And ideally the, you know, cohort by cohort relationship of like how many people who did one thing went on to do the next thing.
+
+Those become metrics that can be durable over time.
+
+And then you be surprised how often technical people have implicit assumptions about what humans are going to do that they have not articulated even to themselves that turn out to be hilariously painfully wrong.
+
+And that's how many projects go go wrong.
+
+I'll just give you one example, one of my favorites.
+
+We once were working on a download page, sign up, sign up flow, three or four page download sign up flow.
+
+So step one, customize your avatar step two, pick the client.
+
+Remember what the steps were anymore.
+
+It's been a long time.
+
+Last step, download the software to use your avatar.
+
+We've done a lot of A/B testing, split testing for those that don't know, basically a scientific A/B test.
+
+Some people see one version of it and other people see another version.
+
+We compare scientifically who's doing better or worse.
+
+And you know, should you choose your username first?
+
+Should you choose your clothes for like what should you first or should you download first?
+
+So you play around with those variables.
+
+We got, we hired a new designer to come in and redo the design because this whole thing was like very web 1.0 like Craigslist style, like crappy looking thing.
+
+And everyone was like, look, if you had better design, you'd have better conversion.
+
+And I was like, I'm sure you're right.
+
+I'm just an engineer.
+
+I don't know anything about this, but we're going to have an A/B test for the new design against the old design.
+
+And everyone was so outraged because they were like, no, we need to get this new design out there as soon as possible and you're slowing it down.
+
+We need the most number of people to see this new design.
+
+It's like harming the brand and this and that.
+
+And how can it not improve?
+
+You know, it's just like, it's so illogical to have this new design.
+
+I was like, sorry, I don't mean to be the A-hole, but we are going to do it this way or I won't deploy the code.
+
+Like I'm just, this is my engineer's veto over the situation.
+
+We will A/B test.
+
+So you will not be shocked to learn that when we A/B testing it, fewer people signed up with the new design.
+
+We had a similar thing actually.
+
+I think at Fast Mail, as far as I know, we were the first people ever to A/B test a homepage.
+
+Because it was a similar thing.
+
+My homepage was very 1.0.
+
+And a lot of folks were like, it's got to be more beautiful, more jazzy, you know, flattable.
+
+And so, you know, we said to our customers like, hey, submit designs, you know, send them in.
+
+We got 10.
+
+And then I kind of came up with this crazy idea of like, yeah, let's put all 10 there and add a cookie so that people would see the same web homepage for the next month.
+
+And we'll track how many of them sign up.
+
+Yeah, they've been done before as far as I know.
+
+But sign up rates were identical for all 10.
+
+Right.
+
+So then why not just leave the 1.0 one alone?
+
+Yeah.
+
+So in this case, in this case, what was really funny about it was so we eventually, so then it was a three step process or whatever it was.
+
+I said, look, the reason I bring this up, Jono, to answer your question is that I kid you not when I presented the data that showed that the new design was worse.
+
+Most people's reaction was to ship it anyway.
+
+Yeah, that's okay.
+
+Because it's more beautiful.
+
+And so first of all, like we had this fundamental disagreement about like, what does good design mean?
+
+I would say good design is the design that causes the customer to do the desired behavior most most efficaciously, hopefully to their benefit and ours.
+
+But most people had a different idea about what good design is.
+
+So anyway, so that was my first requirement was that no, we won't we won't ship it till it's better.
+
+And then I was like, why don't we A/B test each of the individual three pages to see where the problem is.
+
+And people were even more outraged at that idea because now we're going to have an incoherent design.
+
+Some people are going to get beautiful new page one ugly page two beautiful page three or God knows what else, but it didn't bother me.
+
+So we did that.
+
+Anyway, it turned out the problem was actually on the last page.
+
+The easiest of the pages, the one that causes you to download the software, we had a big drop off there and we couldn't figure out what the problem was.
+
+And so I said, look, let's get you bring some people into the office for usability testing and we'll just watch them use the new versus the old thing and we'll just see if the problem can be deduced and everyone was like, it can't be that simple, but we try it.
+
+And I'll never forget on the web 1.0 download page was just a like plain text.
+
+Thank you for registering.
+
+Here's click the download ugly gray, you know, button element.
+
+Click this button.
+
+The new one was like a fully rendered beautiful graphical thing made up in Photoshop with a gigantic green curved rectangle 3D drop shadow button on it says download.
+
+We bring people in for the usability test and we would sit them down and they will watch them go through this process.
+
+It was most painful thing that I ever experienced in my life to sit there and watch.
+
+And they would get to this last page and they would just stare at the screen.
+
+And they would as far as I could tell they would sit there and do nothing for as long as we were willing to wait.
+
+They would just be looking around.
+
+And finally, eventually one of the engineers in the room would break and be like, for God's sake, what are you doing?
+
+They're like, I'm looking for the download button.
+
+And we're like three quarters of the screen is this giant button is like, we're so we try to be polite.
+
+Well, what about this giant green?
+
+Like, yeah, there's this beautiful green billboard telling me to download.
+
+I feel like an idiot that I can't follow its instruction.
+
+And then we were like, but have you ever thought about, you know, clicking on that to see what it would do?
+
+They're like, oh, no, you can't do that.
+
+You know, you know how computers are if you click and don't understand what's going on, then you know, you could destroy your whole computer and then the IT person says it's your own fault because you clicked on something you don't understand.
+
+I only ever click if I know exactly what's going to happen at a time.
+
+So now I tell you the story.
+
+I'm sure a lot of people hearing the story like what idiots.
+
+I'm one of the dumbest people.
+
+If I had been there, I wouldn't have made such a dumb mistake.
+
+I know you're right.
+
+You're a lot smarter than we were.
+
+But I tell the story to illustrate that if I had sat people down and said enumerate for me all of your leap of faith assumptions about this project, I don't think anyone would have said out loud if I show somebody a download button, they will click it.
+
+But actually, that should not be a really important thing.
+
+We had a very clear expectation, but we weren't actually actually measuring to see if that was true.
+
+So that like if you can just get yourself into a situation where you have a clear expectation about what's supposed to happen and you as quickly as possible determine whether that thing is happening or not, that will take you a long way towards being able to iterate quickly.
+
+And that's that's why Solvid is such a big deal for this because the more man hours are required to accomplish a task, just the more difficult it is to get to that state and to get through that whole loop.
+
+And I think about all the people that have to agree and to get if you can take a project that used to take five people and get it down to be able to be done by one person.
+
+If you can take a project that took three days and get it down to one day every time we collapse the effort necessary to do one of these experiments, we just greatly increase the amount of learning that can take place because learning happens between the ears of an individual person.
+
+That's the only place it can take place.
+
+And remember like, of course, like I don't think anybody else in the corner than us knows this but Solvid was never meant to be something we released at all.
+
+It was something we built only for this purpose, you know, which was we need a way to really rapidly try things to see like, hey, can you use AI for screen scraping, podcast transcription, meeting notes, summarizing books.
+
+Building web pages, whatever.
+
+Well, if first you have to like spend three months building a new application for the one thing and then at the end you're like, well, I guess not.
+
+You can't use AI for that.
+
+You know, so we're like, okay, let's try and just build a kind of a canvas on which we can try using AI for no reason.
+
+And, you know, partly the reason I mentioned this is it's like, as an R&D lab, we don't get to do this.
+
+We don't get to say like, okay, we've got our product, we've got our MVP, we ship it to customers, we need to make sure they can see the download button.
+
+We're like, what the hell are we doing?
+
+So our approach is like, we have to ship things internally that we all want to use.
+
+So our goal, you know, for Solvert is everybody in the company has to choose to use it over other tools for most of the things they do in their day to day work.
+
+And that's when we know it's successful.
+
+And so at the moment, Not by mandate, but because it's actually, Exactly.
+
+And when at the moment people are like, well, Solvert's going well.
+
+And I'm like, it's going quite well, but so far it's failed.
+
+You know, and sometimes my team like, what do you mean it's failed?
+
+I mean, I think this is nice.
+
+And this is nice.
+
+And this is nice.
+
+And I'll be like, okay, when you did that, how did you do it?
+
+Like, I opened up cursor, I opened up a notebook or I opened up Photoshop.
+
+Like, okay, you didn't use Solvert.
+
+No, I didn't, you know, it wouldn't have been as good for this for these reasons.
+
+It's like, that's okay, you don't have to use Solvert, but you chose not to because it wasn't as good.
+
+We have work to do still.
+
+We have failed so far.
+
+And, you know, maybe we can talk about this next week.
+
+It'd be interesting to talk a bit about Virgil, our law firm, where we've taken this thing to the extreme where it's like, okay, we can't build a tool for lawyers unless the lawyers literally work in our company.
+
+So we're like, okay, if we want to create really good legal tools, we will first create a law firm, which is possibly the most insane statement that anybody's ever made.
+
+I thought it was perfectly logical.
+
+When I first mentioned it to you, you were like, yes, that's such a good idea.
+
+And I was like, nobody else in the world could do it that way.
+
+Of course we had to do it that way.
+
+Exactly.
+
+What could be more obvious?
+
+Well, while we're name dropping old thinkers, this is also an instance.
+
+We were talking about John Boyd, we also should have mentioned Doug Engelbart.
+
+Oh yeah.
+
+You know, from the mother of all demos fame.
+
+He had this concept we called co-evolution, which was about the like hyper speed that can be achieved when a software development team in particular is building a new tool.
+
+And so it's just like, yeah, because the, the, the advantage of that situation is you are your own customer.
+
+And so you, you skip a step.
+
+You don't have to go outside of the organization to do what you still do.
+
+In the chat, Apple famously very much does this.
+
+It's like, okay, we want to build things that we're proud of that we want people to use.
+
+I mean, like, you know, if we had said to people, hey, what would you like to better build code two months ago?
+
+Nobody would have said, oh, I want this weird hybrid between chat GPT and Jupiter notebook with a ridiculously small text box at the bottom.
+
+Of course, that trickly trying to psychologically cause you to type less code at a time please.
+
+No, in fact, we know exactly what they would have wanted because that's what a bunch of the other companies that are working in the space have done and built the thing that's most obvious.
+
+But that's not, I have a thing to show you by the way, Eric.
+
+Oh yeah.
+
+Yeah, I want to see which a couple of other people have seen, but most people have.
+
+And because I wanted to get your kind of unvarnished take on this because we've built another new thing.
+
+And so, you know, increasingly, I think, you know, most of the new things we're building and trying to build it in solvert or with solvert or something.
+
+So let me show you this new thing.
+
+You're vaguely aware of it.
+
+You just haven't, I mean, you are aware you haven't seen it yet.
+
+And I'm wondering how you'll react to it when you see it.
+
+So just by way of background here.
+
+So folks on the core folks watching are welcome to try this out.
+
+It's very early.
+
+It's all running on our own infrastructure.
+
+So apologies if it all falls over.
+
+But if you add a secret called use underscore ghost or capital letters, I know what this is.
+
+Yeah, this is going to be fun with any value.
+
+And then you turn off learning mode.
+
+You'll get this new feature to new features actually.
+
+So here's me implementing something somebody on Twitter a couple of weeks ago was like all of my employee, you know, anybody who works at my company has to be able to turn a structure like this into an output like this.
+
+So I thought I'd give it a try.
+
+Get solvert to help me.
+
+All these people online had these like multi page things.
+
+And I was like, it's just zip dot map dot concat.
+
+Anyway, so there it is.
+
+That's a breadth first search.
+
+So the thing we've added is called ghost text ghost text or inline completion super common.
+
+You get them in Gmail.
+
+You think you get them in Google Docs nowadays.
+
+You get them in co-pilot.
+
+It's like like ratex that appears.
+
+But we've done something super weird with our ghost text and true to kind of solve it style.
+
+Some of them are constraints and restrictions and some of them are the exact opposite.
+
+So let's try documenting what this does.
+
+So we could say, I'll use my voice here.
+
+Let's now describe what this function does colon.
+
+Very good colon.
+
+And you see what's happened?
+
+It's added one line of gray text.
+
+So I press right arrow to accept it.
+
+And it's added one more line of gray text.
+
+And I'll press one to accept it.
+
+One more.
+
+This is how we used to have to prompt GPT two and three back in the day.
+
+And like notice here now I'm going to backspace and say, because I don't know what the star is.
+
+Oh, that was amazing.
+
+It actually guessed.
+
+This is known as.
+
+Okay, so.
+
+Would ever stop.
+
+Yep.
+
+Absolutely.
+
+It'll stop when it's done.
+
+I think we're done now, right?
+
+I thought they were going to do the coding specific model.
+
+What model is this?
+
+So this is using a quite high parameter quen model.
+
+But what we've done is we've taken our year of research on like quantization and FSDP and Q Dora and all that kind of stuff.
+
+And got like a custom kernel, a custom caching system, all this stuff, which actually allows us for the first time in the world to have a very high powered.
+
+Coding model, which is also very good at writing pros about code and writing pros in general.
+
+So for example, let's switch over to code.
+
+Let's do a depth first search instead.
+
+Okay, it didn't do the whole thing there, right?
+
+Like the rest of the line.
+
+Yep.
+
+So it's the same thing that Ronnie ever does the rest of the line.
+
+And like, you know, we actually have an I'm feeling lucky button.
+
+The I'm feeling lucky button is going to take a bit longer.
+
+That's actually going to send it to deep seeks new massive, where many 400 500 parameter, billion parameter model.
+
+And it's going to try to do the whole thing.
+
+And so to do that, I hit alt shift, right.
+
+Done.
+
+Oh, my God.
+
+Oh, you're going to do rental.
+
+And then, you know, again, you can say like, these two functions are demonstrating.
+
+Okay, I'll shift right.
+
+Yeah, not bad.
+
+So it's like he's ever giving anybody homework over again.
+
+It's still interactive and it's still iterative and we're still in control, you know, and we can this is crazy.
+
+We can even use it for prompting.
+
+Maybe I don't want to know.
+
+I don't know how to go further.
+
+Like what would be an interesting thing to learn about now.
+
+So how can we now go further and instead try to do the same thing?
+
+And instead try.
+
+So we're in a prompt.
+
+So we're getting the AI to create the prompt for us.
+
+Oh, my God.
+
+So like to me, this is kind of interesting that we've taken a common idea goes text in inline completion.
+
+And we kind of asked the question like, a what if that was way, way, way, way better.
+
+Like what if we used a model that was vastly better than anybody else can use for this.
+
+It's like, okay, we wanted to do that.
+
+We would have to spend a year building a new training system, building a new way to quantify these, etc.
+
+And it also was like a year ago, none of the models were using work.
+
+It was like assuming that this trajectory continues, we would expect to see a 32 billion model that could probably do these kind of things.
+
+And if so, and we wanted to read it on a 4090, then we would need to blah, blah, blah.
+
+So, you know, we did all that.
+
+And it was also then like, okay, but we believe you should write a line at a time.
+
+We believe the human should be in control.
+
+We believe the human should be constantly editing things as they see things.
+
+And so we've ended up with this weird new thing.
+
+And there's a lot of little details there.
+
+Like you might have noticed, for example, that if it's just kind of going to the end of the line, it just completes the end of the line.
+
+But if it's got an opinion about like what indentation level we're going to go to next, it'll actually go to the next line and just do the indent.
+
+You know, like it's all these little details to get it just so.
+
+I'm not going to say it's perfect.
+
+No, but the affordances are cool.
+
+Pretty good, you know, and we've been using it internally and Tommy built up some telemetry, you know, and again, this is like, so we're not asking the customer.
+
+We're asking like Tommy went through some advent of code problems and saying like, okay, he's figured out that something like 80% of the tokens that he's generated have actually been gray text accepted suggestions rather than him typing.
+
+So yeah, I guess I'm interested to hear your reaction here given after your reaction to kind of, you know, lesson seven was his.
+
+This approach being used to do real work and it's now I'm saying like, okay, here's the result of our last years.
+
+To kind of part of it is to build this feature, you know, what do you think.
+
+Okay, I'm looking at the clock.
+
+We're going to have to queue up this.
+
+These will be queue up topics for next week because great.
+
+We haven't talked with this crowd about the substrate yet, but I think it would be very interesting.
+
+Yeah, next week is going to be the answer I talk about answer.
+
+Yeah, yeah, because this this is the culmination of a meeting we had.
+
+I guess just about 14 months ago, you're just over a year ago with a lessio.
+
+Yeah, lessio.
+
+You know, I can remember it very clearly laying out how all of these pieces would come together in order to allow us to build these applications and at superhuman productivity.
+
+And people I think we will find that story really interesting but the little bit of it is we've been talking about building anything start up project shell script, change the world, you know, anything.
+
+And I think these are very general purpose tools useful for a lot of things but I also have a fair bit of experience building really, really hard things, you know, and with a stock exchange.
+
+Like a stock exchange.
+
+Yeah, yeah, yeah.
+
+And your kind of stock exchange.
+
+Yeah, yeah, exactly.
+
+It's you know, just first time it's been done in 50 years.
+
+And I say that and I've helped a lot of other people build these very elaborate very complicated mission driven companies.
+
+Because of my work with those kinds of companies that I got to work with a bunch of the foundation labs.
+
+There is a special thing that happens when you get it right.
+
+We're like you've got the two dimensions of this we call coherence and integrity it's like the equivalent of being in a flow state as an individual person, like the organizational equivalent, where you actually are every organization has a north star and you know what the north star is and you consciously design around it.
+
+It's a huge advantage.
+
+And you know there's this old very cliche idea in business jargon that you should skate to where the puck will be, but you build your plan based on the state of the world right now but how the state of the world will be and you so this is kind of like flow you get into where you are in alignment with your own team, your other stakeholders, your investors, your corporate structure is all aligned and also your in flow with the state of the broader world where like, you know, you're not going to be a part of the world.
+
+Where like, you're doing something that's at the forefront of an actual wave that's actually doing something useful it's not just some like crypto hyped up thing but like a real something real is happening.
+
+And it's somewhat predictable and you can kind of surf that way.
+
+When you set it up properly.
+
+A you can you can accomplish extraordinary things that people normally consider to be impossible.
+
+But this little example of the ghost text this is where my mind went.
+
+You start to get these unbelievable serendipities where just in the moment where you need a certain thing.
+
+It turns out you already have that thing because of something else that you did so here.
+
+If we didn't have we hadn't already done the research on Q Dora and FSTP and all that stuff.
+
+Then we wouldn't have this we would have done okay like there's substitutes but like what but you know we built this thing that had this perfectly shaped puzzle piece for the very first time.
+
+We plugged it in and people look at that say well you just designed it to have that puzzle piece but it's hard to explain the extent to which that's not what's going on.
+
+It's just it's what happens when you're in flow the pieces start to come together in a way that is actually beyond the human mind's ability to anticipate.
+
+And so it's why I bristle at the idea of people say you don't have a plan.
+
+It's like a derogatory thing.
+
+It's like no having a plan in the sense of being adamant that you are going to be in control of what happens and when is a kind of arrogance that suppresses the natural ability of serendipity to work in your favor.
+
+So it's much better to think of it like an ecosystem designer or a gardener we are cultivating the circumstances.
+
+I think Paul Graham called it black swan farming.
+
+We are trying to naturally curate the circumstances that will allow these serendipities to work in our favor.
+
+We try to control.
+
+Say again.
+
+You can just go to Western Australia.
+
+They have lots of black swans.
+
+What you're saying one of our foundational business metaphors is a bunch of bunkham.
+
+Yeah.
+
+Sorry.
+
+I'm shocked to hear that.
+
+Yeah.
+
+OK.
+
+Well I mean it is 90 minutes so it is a good time to stop.
+
+So the other thing I think we'll do Eric is I'm going to we've got a lot of questions on the chat.
+
+Yeah.
+
+I'm going to copy into a Google doc and I'll send you both and we because most of them we didn't get to and we might try and slow them to solve it and do magic autocomplete.
+
+Eric Reese would answer this question like.
+
+Yeah.
+
+Exactly.
+
+So you're not going to say anybody ever said he ever again we're just going to give you an autocomplete.
+
+But you're right.
+
+It is like GPT three isn't it like this idea of like you start the sentence and let it finish it.
+
+No I should let it finish it.
+
+It's actually quite nice.
+
+And I started playing with five four yesterday to see whether the new five four model does well at this and it actually does well or so.
+
+So yeah.
+
+We'll have to do a model router to pick the right model for the way we've got one.
+
+It's actually it's only four lines of Python.
+
+Well you should try to make it more complicated so it's more impressive.
+
+That's true.
+
+So we can demand more money for more investors.
+
+Yeah.
+
+Happy happy to answer questions either next week or we can do it on Discord or whatever.
+
+I'm excited to see what people have been asking.
+
+That's great.
+
+That's great fun.
+
+Thanks Eric.
+
+Thanks John.
+
+Always always my pleasure.
+
+This has been just an incredibly fun project to work on.
+
+So I'm delighted to do it and you know congratulations everybody to getting to be part of this initial cohort.
+
+I really I can't express how excited I am for you to be next week also talk about that.
+
+Leve you know what can we do with this cohort with this group of people.
+
+Yeah.
+
+Okay.
+
+That sounds like a great great great rain check.
+
+Hopefully my power won't fail next time.

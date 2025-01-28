@@ -1,0 +1,2541 @@
+You're live.
+
+We're live.
+
+I don't know.
+
+Hello everyone.
+
+Nice to see you.
+
+Our clothing suggests we are in different hemispheres.
+
+Is it cool there important today?
+
+I will say my laptop is not struggling with overheating.
+
+Let me put it that way.
+
+So last lesson before our break, which I think is going to be about three and a half weeks.
+
+So that's going to leave us all plenty of stuff to do other than eating and such things.
+
+Jana and I have built something new this week, which maybe we'll start with that.
+
+Jana, should I do that?
+
+Okay, cool.
+
+So I will share my screen.
+
+And you'll see why this is all important during this lesson.
+
+But let me first of all show you the thing.
+
+So the thing is that you can now treat basically treat dialogues as if they were modules.
+
+So I've got a dialogue here called Utils.
+
+And it's got some imports that I want to use quite often.
+
+I really like it when my numpy arrays print out nice and wide.
+
+I want to have higher resolution plots.
+
+I want to have a quick way to tell Solv-It kind of a bit of a custom system message.
+
+When I get the input for AOC, I tend to like to kind of print out some information about the first line and how many lines and stuff.
+
+And also, instead of using an MP.array, I quite like something that if it's already array, it doesn't do anything.
+
+But if it's like a generator or something, it listifies it.
+
+So I create a little thing called array.
+
+Anyway, there's various little things I want.
+
+So people have often said, like, oh, you know, fast core seems a bit like Jeremy's Utils.py.
+
+How do I create my own fast core?
+
+Well, here is actually Jeremy's Utils.py for Solv-It, which includes importing a bunch of things from fast core.
+
+And also including the entirety of fast core under the namespace FC.
+
+So everything's always there for me.
+
+So basically, with something like this, you know, you don't necessarily always want to export all of it.
+
+So for example, it probably would have been good practice if I showed an example of array being used.
+
+So I'd have a note like, you know, array is used to, oops, is used like, and p.array.
+
+But also handles generators and stuff.
+
+Okay, so then I might say array.
+
+So really dumb example, but O times two, four O in range five.
+
+Okay, so I wouldn't want to export that to be something I import elsewhere, but I do want to export the other things.
+
+So this little red thing shows that these are being exported.
+
+So you just click on it to turn it off and on.
+
+So because they're color coded, you can kind of quite quickly see.
+
+And so they're all going to be part of a module called Utils.
+
+You don't have to do anything to create that module.
+
+It's just automatic.
+
+And it's kept up to date all the time.
+
+So if I now have a look at day five, you can see I can now say from Utils import star and I wrote that little intro thing.
+
+There it is.
+
+That's it.
+
+And you know, it's not doing anything clever behind the scenes.
+
+Literally all we're doing is we're literally creating a file with the same name as the dialogue with a dot pi on the end containing the exported things.
+
+So if you're curious, you can always take a look at it.
+
+So my dialogue was called Utils.
+
+So therefore the thing created is called Utils dot pi.
+
+And so there it is.
+
+That's all that was created.
+
+And so that's, yeah, that's all, but that's automatically continuously generated for you in the background, which is nice.
+
+Obviously some things don't work as import module names like day space five wouldn't work.
+
+And so in that case, we will replace spaces with underscores and stuff like that to try and create a nicely sanitized name.
+
+If you're not sure what the names are, you can always just ls star dot pi to see what you've got exported.
+
+If you don't have any exported messages, it won't create a module.
+
+So I've only got one dialogue with exported messages.
+
+So this is obviously really useful for our advent of code stuff and really useful for Solvert.
+
+But the bigger picture here is that, you know, as you solve problems, you're doing it for a reason, you know, and maybe the reason is just, oh, I had to figure this out.
+
+And fine.
+
+I don't know.
+
+The number is 14.
+
+42.
+
+That goes until somebody.
+
+Okay.
+
+The answer is 42.
+
+But very often what you want is some code that you can run somewhere else or some code you can give somebody else to run or other facts.
+
+We call them could be documentation.
+
+It could be a blog post, you know, could be a data analysis deck.
+
+So we're going to start talking more and more about creating artifacts from the problem solving process and trying to connect it up so that the artifact remains as closely connected with the process as possible so it's easy for others to understand and regenerate and so forth.
+
+So here this is step one, which is an artifact for you.
+
+It's just for you.
+
+It's your Solvert dialogue.
+
+Okay.
+
+And so you can now reuse that in your other Solvert dialogues.
+
+And here's our, yeah, you know, here's our first example of creating.
+
+Well, kind of second, I guess the other reusable artifact we've been creating is exporting a dialogue as a notebook to a gist for the purpose of communicating to somebody how you solve the problems.
+
+That's also a very useful dialogue.
+
+So John, I know we've been talking about this idea of connecting artifacts up to the processes which created them for all kinds of reasons for many, many years now.
+
+Over to you.
+
+All right.
+
+Well, would you like to look at how we added the export to solve it first?
+
+Or should we look at an example of this kind of problem in action in a different tool that we've been thinking about for a little longer?
+
+What if you like, they both sound good.
+
+Let's do both.
+
+Okay.
+
+So let's let's start with an example of a new tool that we wanted to exist.
+
+And so specifically, we wanted a way to do backups for Solvert.
+
+And in chatting, we said, look, you know, the machine, we can back that up every day or something like that.
+
+But ideally, we'd actually like some very recent backups.
+
+And maybe a backup that's a day or two old, and a backup that's a week or two old, and a backup that's a month or two old.
+
+Just a step back a moment like here.
+
+This is like a really interesting point about why we, what are we doing and why?
+
+And a really common mistake with backups is for people to think like, oh, I use RAID.
+
+Therefore, I'm backed up.
+
+You know, I've got a second copy of my disk or I have a full disk image backup running nightly, you know, so I have that or I'm replicating my database.
+
+So I have that.
+
+They don't really count as backups in every sense.
+
+You'd want them because for example, if you're doing real time database replication, and you say, drop database production, that's going to get replicated.
+
+You know.
+
+So the idea here is we wanted your, our users, your dialogues backed up in such a way that if I came along and screwed something up, but we didn't realize for three days that I had accidentally committed the thing that added a poop emoji to the end of every dialogue message, then it'd be like, oh, we've, we've written our backups with poop emojis.
+
+So everybody is cut.
+
+It's been really nice.
+
+Actually, everybody has their own SQLite database.
+
+And so we wanted everybody to have a full set of these backups that Jono described of like every, I can't remember hour for a few hours every day for a few days, then a week ago, and then a month ago, something like that.
+
+Yeah.
+
+Yeah, exactly.
+
+So this was a piece of functionality that we wanted.
+
+You could just back up every 15 minutes and call it good, but you end up storing a hang of a lot of data.
+
+And so if we were to pose this problem, we were joking before this.
+
+If I said the elves need to efficiently store their present backups, you know, or something like that.
+
+That's a few of Santa's.
+
+Yes, quite.
+
+Exactly.
+
+It would feel very much like an advent of code problem.
+
+But it was also a funny one because it seemed like something obvious that should exist.
+
+And when we looked around, I mean, it's not like we did deep extensive research, but I couldn't see anything that would give us that kind of staggered different time intervals easily.
+
+I'd also say like, that's almost like not our way anymore, you know, like for me, like, yeah, if something's like got exactly what you want, and it's pretty quickly available, and it's cheap or free, and it's from somebody you trust, then oh yeah, use it.
+
+But now that we can build stuff so much easier, we rely on services very little, I would have to say, your pre packaged software a lot less.
+
+Yeah.
+
+So let's look at how that was built.
+
+And then also how like what happened to that piece of infrastructure.
+
+And so I'll share my entire screen.
+
+And I'll start out on the homepage of this tool, right.
+
+And so it's, wow, we have a website, auto backup, it has some example usage, you can go and see the source code and the tests around it.
+
+Okay, so how did this start?
+
+Well, this started as a solver dialogue.
+
+I wrote down the specifications.
+
+It's not advent of code, so I couldn't copy paste them, but I just put it in plain language.
+
+I want to create backups of everything in a folder.
+
+I chatted with the solver AI a little bit thinking through what would be a good way to copy files across to a different destination.
+
+Unfortunately I deleted that solver dialogue, but I exported it as a notebook.
+
+And this artifact here that I'm showing you now is exactly that notebook, right.
+
+So this has some pieces of the original brainstorming, right.
+
+This is the original specifications.
+
+Keep the last five and one every day, week and month.
+
+And then you'll see that the process of building it looks just like advent of code.
+
+So I make some demo data, right, make a folder for the source and the destination, put some content and some files, start creating a plan, right.
+
+So Polya thinking through what are going to be the pieces.
+
+I started doing some diagramming just on paper, like, okay, I keep adding more dialogue, like, how do I decide which ones should be deleted, starting to figure out the solution that way.
+
+But then also just going through the smaller steps, how do I find all the files.
+
+So this is using something from fast call, globtastic, to go and find files with optional, like, patterns that we can match, for example.
+
+And then this is the final result that obviously these pieces were tested.
+
+Can I copy from the source to the destination, add the timestamp as like the top level folder and then straight away, okay, we've added some code, let's test it, right.
+
+So create a backup and then look in the destination directory.
+
+We have a folder with the right name.
+
+Check inside it's copied the files.
+
+Fantastic.
+
+Okay, what if we, oh, I added a dry run feature later to say, let's just say what we're going to do to make testing easier.
+
+Check that a few times.
+
+So it's very incremental.
+
+It's very hard to, it's actually not copying, right.
+
+You know, it would be a real struggle to deploy this and then find that you're not creating your backups because at every stage you're saying, okay, did I create the things that I expected to create based on my tests.
+
+The second part was like, okay, how do I decide which backups to delete.
+
+And so again, not doing everything in a chunk, but first, can I get all the dates that are above some time, you know, everything older than a certain date might be deleted.
+
+Can I get the most recent five?
+
+Can I go through and keep the youngest one that's older than some specified date for each of those dates and the last five and creating a bunch of test dates, right, across a whole range of time and then running it through my function and checking, oh, that's the output I expected.
+
+I've got five very recent ones and then one a day or two old and one a week or two old and one a month or two old.
+
+Like, is this matching my expectation?
+
+Is this doing what I expect?
+
+I think there's, you know, all of that stages there slightly cleaned because this is now like the final artifact, but still enough that you can see, okay, that's doing what I'd expected to do where I'd expected to do it.
+
+And to be honest, I didn't trust myself to have done a great job of explaining to Jono, you know, the specifications here of what I wanted.
+
+And so for me, when Jono took me through the notebook, I was like, oh, yeah, Jono's right.
+
+He does speak Jeremy.
+
+This is perfect and I can see it's exactly what I want.
+
+And I can also see he's absolutely since we've implemented it correctly.
+
+So it was really nice for me to see this.
+
+And we could go and manually say like, okay, let's let's let's imagine in my heads, a backup happening every hour or whatever, let's print out what it would do.
+
+Oh, okay, we create one, we create a second one, they're both still there.
+
+We create a third one is all three.
+
+Once we get to the fifth one, you know, the sixth one sticks around as well.
+
+Okay, because I guess that's the less than two days old one.
+
+When I create a seventh one, we delete one, you know, and we could and you've commented that out, I assume because it generates a lot of output and you didn't want that in the final artifact, but you can run it if you want to.
+
+Is that the idea?
+
+Exactly.
+
+Yeah.
+
+Yeah.
+
+Before you just got a wall of outputs.
+
+Okay.
+
+So so far we've like we've solved the puzzle in the advent of Cody, solve it environment, right?
+
+This is all in a dialogue.
+
+The next stage is like, how do I create a shareable thing from this?
+
+And one way to just take a function and turn it into something that you can call as a script is fast core has a call pass fast core dot script has a call pass decorator, which just turns a function with arguments into a script that takes those as the command line arguments.
+
+I just say I, on the right become help.
+
+So if you ran run dot slash run backup, whatever it print out help telling you what each thing is.
+
+Exactly.
+
+Yeah.
+
+So I didn't write, you know, a lot of this was the same as before.
+
+I said, okay, you know, help me wrap this into a script with call pass.
+
+And then I can check that that function still works.
+
+So again, creating some demo data, running the backup, checking that it's doing what's expected.
+
+So this is like, okay, cool.
+
+If I could only put this into a Python file, then that would be a script I could give to someone and run.
+
+But then Jeremy very rightly said, look, why have it as a random dot py file floating around?
+
+Let's, let's make a project out of this.
+
+Right.
+
+And so I don't know about you, but it feels like there's a big gap between I have a script that sort of runs on my machine.
+
+So like I have something that anyone can use and it has a website and it has documentation and so on.
+
+And so I guess now's a good time to talk about NB Dev.
+
+And before I show the process for this, maybe Jeremy, do you want to give a little bit of the philosophy?
+
+Sure.
+
+It's just, but just to kind of come back, I guess, to what ended up happening here.
+
+So you're somebody who I don't think has written kind of backup scripts before.
+
+And I don't think you would really used NB Dev much if at all before or built kind of py py modules and stuff.
+
+I'd use it all, but maybe like two years ago or building a lot on existing NB Dev project.
+
+So it was long enough ago that I didn't have any of the commands in memory, for example.
+
+So yes, how much work was this for you end to end from starting with a spec to ending up with a deployed module?
+
+You have a sense?
+
+Yeah.
+
+I mean, I'd say the initial like I have the algorithm to get out and working less than an hour.
+
+The I've shown Jeremy that and that looks good.
+
+You know, minutes or tens of minutes.
+
+The I went through the NB Dev walkthrough step by step and I had a package on py py, probably not more than an hour and maybe a couple.
+
+Yeah.
+
+So and it's all it.
+
+So I think it's it's useful just to keep that in mind.
+
+Like if somebody's like, oh my God, you're going to create a whole new backup system from scratch.
+
+So, well, somebody who's a very good coder, but who hasn't used any of those things before much, you know, or done something similar is in under three hours.
+
+And this is a recurring theme, right?
+
+Like every time it feels like, oh, this is going to be so much work to make it a proper NB Dev project or install the property.
+
+All the things that Jeremy says I should do.
+
+It's never like I always do it.
+
+And it's like, oh, that wasn't that hard after all.
+
+And it's going to save me so much time for so much of the future.
+
+Like I should have done that.
+
+I should have been using NB Dev a lot more.
+
+Yeah.
+
+So, yeah, so, yeah, so coming back to your question, John, I like I'm just a huge fan of literate programming.
+
+The idea of going back to Knuth of a program is an artifact that should be designed as much for a human as a computer.
+
+And I was a big fan of Mathematica notebooks, you know, 30 something years ago, where back when I was in consulting, the idea I could have like my full description of what I'm doing and then do it and show intermediate results was such a delight.
+
+And then also Brett Victor, you know, one of the most important or maybe the most important HCI human computer interaction guys over the last 40 years, his contention is that everything we do should be manipulating directly the kind of the thing that we're doing that we're building and this kind of idea of exploratory programming comes from that.
+
+So I was like, okay, I don't want to create code in an environment anymore, which doesn't have these features.
+
+It should be literate.
+
+It should be explorable.
+
+It should allow me to communicate the totality of my code, but also build it all in one place.
+
+So everything to do with this thing is together the tests, the documentation, the pictures, the exploration, the implementation.
+
+So yeah, that's why I started working on NB Dev.
+
+And I guess this course, John, is a lot about teaching the underlying abstract ideas, which NB Dev then tries to make easy to implement.
+
+So I think next year, the next five weeks, we should definitely delve into, you can't say delve anymore, can you?
+
+Makes me sound like a language model.
+
+Dig into NB Dev a bit more to see because a lot of, you know, Solvert is, I guess, a lot of it's about two things.
+
+One is an AI deeply enmeshed in the context in which you're working.
+
+And the second is the kind of the NB Dev piece.
+
+And so we can absolutely do a lot of Solvert type things without AI at all.
+
+And indeed we used to.
+
+So yeah, is that the kind of background you are looking for?
+
+Yeah, yeah, exactly.
+
+Thanks, Jeremy.
+
+So I guess I can finish up showing this example.
+
+So what I did was I took my dialogue, I exported it to a notebook, and then I put that in a Jupyter notebook.
+
+So I can run through, I can check the things are where I want them to be.
+
+I can run this.
+
+And I did this setup first, which was following this end to end tutorial.
+
+And so at some point in the tutorial, you get to this point where you start adding functions to the base template that's been put there.
+
+So that's where I put everything from my Solvert dialogue now goes into this notebook.
+
+And then you can also add some extra documentation.
+
+So the like index notebook just has, this is how you install it.
+
+This is how you use it.
+
+This is how you set it up to run hourly.
+
+But you can add examples here, right?
+
+So I could, I could show auto backup dash H if you wanted to say like, look, you use this on the command line, or I could import it if it was a library and it had some functions I could use.
+
+So these two notebooks, the code one and the index, these, plus some details that you put in a settings file, these get turned into a full website.
+
+And it's hosted with GitHub pages, it's all free.
+
+And you can read through this, it looks nice, it's rendered with something called Quarto, but it's the same stuff.
+
+It's, this is what I wanted to do.
+
+This is the code showing it in use.
+
+You can always go and look at the actual source code if you click on the little link.
+
+And so this is like exactly what Jeremy is saying, this idea of literate programming, you can see what it's doing, what it's expected to do, examples of it in use.
+
+And so I could give this to someone and say, hey, like, go use this and putting it on PyPy so anyone can pip install somewhere advanced functionality is upload to PyPy.
+
+And it's installing an extra library and then typing nbdev.py.
+
+Yeah, so it was a surprisingly seamless process.
+
+There's definitely like some learning you have to do.
+
+But it's very satisfying to end up with an artifact that feels very slick and usable and gets tested and deployed as opposed to just, oh, I sold this puzzle.
+
+So that's that example.
+
+Thank you.
+
+I was thinking about a couple of things I could probably show that might be of interest to folks.
+
+So we could mention like we use nbdev a lot, right?
+
+A lot of Ansarii projects are nbdev projects.
+
+Solvit is written in nbdev.
+
+I think you were maybe going to demo some of that.
+
+Yeah, I just cut a couple of other things I want to show first.
+
+The first is what I did after we put it in production because there's a difference between what you hope is going to happen in production and what actually happens.
+
+And in a sense, we don't actually know if it's going to do the monthly back up until after a month has passed.
+
+So just a little trick I want to show you is this website I don't know you've come across called followupthen.com.
+
+And so after we deployed it, I sent John O and myself an email and CCed one month at followupthen.com.
+
+Well, I actually also did a one for a one week and followed it to no comment.
+
+Basically, all it does is it emails you the exact email that you sent it.
+
+Super simple, right?
+
+You can actually just see fut.io faster.
+
+And then after a month, I wanted to check, you know, after a week, I wanted to check.
+
+And then the way I checked because I don't trust myself to do math, I just rerun it while John O was talking, I went into our backups directory and then this is also asking to remote server.
+
+I did an LS and you can see here year, month, day, hour, minute, seconds, all the different backups.
+
+But I didn't trust myself to kind of recognize whether they look right.
+
+So I just asked Shell Sage what dates do you see?
+
+And it said, okay, December the 13th today.
+
+It's like, okay, every hour.
+
+And then one from a few hours ago, and one from a couple of days ago, and then one from a couple of weeks ago, we haven't, it hasn't been a month yet.
+
+But yeah, again, this is like trying to make it really easy to not mess this up.
+
+So it certainly seems to be working so far, which is nice.
+
+And I also did things like just double checked the total size of each backup folder to make sure that they seem to be reasonably similar or maybe growing a bit, make sure none of them are empty.
+
+The other thing you might find interesting is how I wrote NB Dev.
+
+So I started writing NB Dev when NB Dev didn't exist.
+
+So this was the first folder.
+
+This was the first notebook I started writing.
+
+And the first thing for me to find out was like, what's a notebook?
+
+Like physically, you know, I like read one.
+
+And I looked at it, and I printed it.
+
+And as you can see, as I was learning what a notebook is, I'm also telling me in a year's time, or in this case, me in like 10 years time, or anybody I'm working with what a notebook is.
+
+It's like, okay, let's start to make it a bit easier.
+
+So as I started building things up, I started turning me into functions.
+
+So I can then say, okay, well, let's turn a dictionary into a notebook.
+
+So my minimal text was me reading a notebook.
+
+And then I was like, okay, well, that's now turned that into a dictionary.
+
+That's now take that dictionary, turn that back into a notebook.
+
+And then let's see if we can then write that notebook and read it back again.
+
+And so I'm like literally, you know, here I am writing a notebook.
+
+And so then the, yeah, basically, I started building NB Dev in what became NB Dev, you know, so the very first, so this is the NB Dev documentation.
+
+So, you know, needed a settings file.
+
+So I started writing out how to read a settings file.
+
+And then I needed to be able to export this.
+
+So I created like just enough code, just basically very similar to the code that John and I wrote actually for exporting that utils.py, you know, just enough code to like read a notebook, go through each cell.
+
+And you can see here I'm using L map them to a notebook cell, filter out, you know, find those that are functions and classes, grab their names, and then write out each of those functions.
+
+And so that's like, here is like NB Dev in 280 lines, you know, the most minimal version.
+
+Yeah, so you can see how it's kind of like this is pretty old, but it's using this kind of solvert approach quite a while ago.
+
+So then perhaps let's have a look then at a few other things.
+
+One would be solve it.
+
+So solve it is written in NB Dev.
+
+And so for example, in, let's take a look.
+
+Day five.
+
+Day five.
+
+Day five.
+
+So we've got these areas buttons.
+
+And which buttons appear depends on what kind of message it is, whether it's the output or the input part of a message and so forth.
+
+So here's the code that does that.
+
+Okay.
+
+And it's more lines than normal, but you know, they're all pretty simple.
+
+And you can see again, very solvert style as soon as I've written it, we've got the use each one.
+
+And so this is quite hard to test in other ways and really just want to be able to see that like, okay, this one's exported.
+
+Okay, good.
+
+So it's got a red one.
+
+This one's runnable.
+
+So it's got a run one.
+
+This one is not the input, it's the output.
+
+So it's got a different set of things.
+
+So that's an example of kind of building up visual interfaces.
+
+And then you can see this is then exported.
+
+So it'll end up in our app.
+
+Or another good example was Nate recently added.
+
+So you can see I use this navigation menu quite a bit.
+
+Nate added something that would ensure that that output is truncated.
+
+If it gets too long by truncating in the middle, you've probably seen that in your if you've ever accidentally had a recursion error or printed out the entire input or something, it doesn't overwhelm everything because it gets truncated in the middle.
+
+You can still see the top and the bottom.
+
+So surprisingly challenging thing to get just right.
+
+But again, for me to understand Nate's implementation, he's just written it out for me.
+
+What's the problem I'm solving?
+
+Why would you have to solve this problem?
+
+What's the basic things?
+
+How does it look like?
+
+So what, for example, I have a trace back that I want to be able to truncate.
+
+Okay, well, let's go through the steps.
+
+You know, the first step is we have to find out where we want to truncate.
+
+We immediately run it.
+
+We check what that looks like.
+
+You know, then we actually start to do the truncation, do it on a small example.
+
+Hello world comes hurt.
+
+What if it's a stream?
+
+Okay, we need to be able to handle both execution results and streams and then put it together and then check it.
+
+This is probably what you've seen.
+
+So yeah, you can kind of see here how Nate was building up again the solution to the thing which I tried to explain to him what I was looking for.
+
+And I never feel like I did a very good job of that.
+
+But for me to see this result, I felt like, oh yeah, Nate's totally nailed it there.
+
+Then the other thing which I think was Tommy that might have started pioneering doing this, but I've been really enjoying is the other thing that we tend to do nowadays is include a little video sometimes with like loom or something like that in our pull requests saying like, here's me using it, which is also super nice.
+
+So yeah, I think you know, these are some of the tricks just to how like we wrote Solvert this version of Solvert, you know, in like a month, like four people, most of whom weren't doing it full time, you know, so we can build up stuff pretty quickly.
+
+And it's not perfect, but it's to have something good enough to be to test it with a thousand people hammering it.
+
+I think that turned out pretty well, terrifying as it was.
+
+I can guarantee you over the Christmas break, Jeremy won't be able to resist rewriting it once or twice.
+
+Break.
+
+So I guess Johnno, the thing when we're maybe we're looking at thinking about looking at is like something you've been doing a few times, which I thought was interesting is I think I'd describe it as like kicking off the process in not in Solvert or NB Dev, but in in 01.
+
+In 01 is a different class of tool, right?
+
+01 is in this class of tool of like provide a big model with expensive spends lots of time, give it lots of information, a detailed request, and in one shot ish have a builder thing.
+
+And it's been interesting for me to watch you and some of our colleagues use this.
+
+I've even started using it myself a little bit to see how you've integrated it instead of replaced the Solvert process, which if I understand correctly, it's like it's your launch pad, you know, or it's your starting point or something.
+
+But yeah, it'd be interested to show show off how you've been using 01.
+
+And I guess these kind of ideas maybe would be relevant to using something like either or Dev or whatever.
+
+Yeah, I think, you know, going outside of the Solvert or our magic, the big thing is that the context is so useful in specifying the task.
+
+And so if you just ask for something, you might get a bunch of code that looks good, but then you've got all this code you have to deal with.
+
+So this is a pattern that I found myself using a couple of times, especially useful for projects that I'm not so up to speed on.
+
+In this case, it was a test that I could probably have done myself, but it was still the same pattern.
+
+So this is the opening message.
+
+I explain what I want.
+
+This was a request from one of the users.
+
+Oh, no, this was us planning our MB Dev style exporting.
+
+I said, we have this interface, we can mark certain messages as exported, but that means they'll be in the dot I when we click the export tab, we actually also want to create a file on disk.
+
+And so please give me detailed steps to add this, noting that this is developed in notebooks incrementally.
+
+So any new piece of code should be small and have a way to check that it works as intended.
+
+See other examples in the code.
+
+So between that prompt, as it were, and the many, many examples by copying and pasting the entire notebook is marked on.
+
+It gets across the idea that look, I don't want you to write the full solution for me in a separate file.
+
+I want incremental pieces of code that can be added just like all the other incremental pieces of code that have been added.
+
+So then I dumped in, yeah, like I said, the entire notebook.
+
+And this is really helpful because it came back thought for a little while to one of the tricks, oh, one does.
+
+And then it said, cool, here's the steps we're going to do.
+
+We're going to add a helper function to save out the file.
+
+We'll call that function whenever this the exports state changes.
+
+So it was doing it on toggle export.
+
+And then we'll do some tests.
+
+Fantastic.
+
+So it gave some code a few things we didn't like about it.
+
+So before I even copied and pasted its code in, it's like, okay, this looks good.
+
+This tells me importantly, like what Jeremy is saying about ramping up, this gives me like an entry point to say in this large notebook, these are the places you probably want to edit, right?
+
+You probably want to write your utility function.
+
+And then you want to tweak the toggle export.
+
+That is what happens whenever you click that exported button to add the saving function.
+
+Great.
+
+That's very helpful as a start.
+
+We can start to refine the code.
+
+So then I said, okay, this is feedback directly from Jeremy when I showed him the first prototype.
+
+It was use pathlet and providing small example.
+
+Cool.
+
+Users pathlet and provides a small example.
+
+Importantly, like it still had bugs, right?
+
+Like it sanitized the inputs with some incorrect logic and it was only doing it when you toggled but not when you edited.
+
+But it was enough that then we could come in and say, yeah, perfect.
+
+I have my starting point.
+
+I know where in the giant file I'm editing.
+
+We could then break it on further.
+
+So let's sanitize the name as a separate thing rather than in the main function.
+
+Let's check that that works.
+
+Then we can do our condensed like this is actually saving the Python file.
+
+And it was smart enough to use the existing functionality we had.
+
+Okay, we can test this.
+
+We can make a new dialogue, check that it doesn't exist until we said something exported, then check it does exist and then toggle the export again and check it doesn't exist again.
+
+So we could do this kind of iterative testing.
+
+And the useful part wasn't like the code that it wrote necessarily.
+
+Like I said, I think if we hadn't used a one, the process would have taken about the same time, especially within testing and checking that it works and then putting it in production and checking that it still works.
+
+But the useful part for me was like, oh, I haven't touched the solvied code base in a few days or a week, whatever.
+
+Just getting me up to speed to read in this giant file that I don't have time to read fully and to say, hey, here are the points you should look at.
+
+And from everything I've seen, this is a general theme when you're looking at these large models.
+
+If you can give them an entire code base or a lot of context and say, where should I start?
+
+If this is unfamiliar, what should I look at?
+
+And then be very explicit that I only want to do a piece at a time and I want to be able to test that.
+
+You can get a lot of value and it still feels very solvety because you can then get into the interactive problem solving.
+
+Yeah.
+
+And it's like, even if it doesn't always save time, it saves mental effort and energy.
+
+Like this is something I've certainly found a theme with AI in general is like, you're certainly experiencing this using Adventive Code Pro and sometimes it's just not filling up for it.
+
+But AI can help me get on task and stay on task and particularly what we're talking about here is this kind of launch pad.
+
+It's the activation energy.
+
+Like, where do I start?
+
+It's like, okay, we'll just compile everything and throw it over here and help me start.
+
+I think you could easily get into a bad pattern of staying there, of being like, okay, the AI is now doing my work for me.
+
+So maybe it requires a certain level of, you know, recognizing you do have to move away and be a human shortly after that.
+
+But yeah, definitely, I think it's been interesting for me.
+
+And next year, we'll be exploring these tools more, you know, and also looking more generally, not just at like, how do you use them as a launch pad pre-solvert, but also how do you use a solvert style approach entirely inside other tools?
+
+Because, you know, to be frank, Solvert is not yet a complete development platform.
+
+We're not currently building Solvert in Solvert.
+
+We're building Solvert in NB Dev, which tells you that we haven't chosen yet, that we want to use it for most of our development, but we want to get there.
+
+But in the meantime, yeah, how do we make, you know, get as many of the benefits as we can, both in terms of in-context AI and in terms of ex-borrowable literate programming, I guess.
+
+Great.
+
+Shall we switch to AOC now?
+
+Sounds good.
+
+Yeah, I think this is a nice, like, review of the themes that are coming up for people to be thinking about.
+
+But yeah, I think it'll be fun to go back and go back to practicing our Solvert itself rather than talking about the tooling around the problem solving.
+
+I guess I should mention a few comments from the chat.
+
+Got some nice ones here from Jeremy Demlo.
+
+"CorePars ran all of my machine learning pipelines at my last job.
+
+NB Dev is literally a lifesaver.
+
+He said, "If you love Solvert, NB Dev is its best friend."
+
+How I'm seeing it so far, literate programming, saving people at my former job because it's all documented.
+
+So if you want to piss off the people at your former job after you leave, don't use NB Dev.
+
+That's nice.
+
+Okay.
+
+I'm not going to do day five.
+
+I will look a little bit of day five, but I actually want to look at day 12, 2024, because Johnno and I, I can't speak for Johnno, they kicked me in the ass.
+
+I put it that way.
+
+I did say to Johnno, Johnno kicked me in the ass.
+
+Johnno was like, "Yeah, I haven't finished it.
+
+I have to go for a walk."
+
+I want to show a bit about how I solved it in the end, but recognize this was at the end of God knows three or four hours of pissing around.
+
+So I don't want people to think like, "Oh, wow, Jeremy just went straight there.
+
+He's so clever because that's definitely not what happened," as you can clearly see on the leaderboard.
+
+So one of the reasons I want to do day 12 is 2024, in particular part B, is that it's extremely easy to describe the problem we have to solve, or at least a part of it.
+
+I will show all of it.
+
+So click Vars, go to part two.
+
+So basically what's happening is the, actually I just jumped back up here, the elves, I can't quite remember the detail, but basically they're planting some regions of plants.
+
+So for example, there's a region of V plants, and you can see it here, is there a region of V plants.
+
+So this is like the region of V plants.
+
+A region of J plants.
+
+And so regions are basically letters of the same letter that touch each other.
+
+It's considered one region.
+
+So importantly, you could have a region like this one.
+
+Just do this so you can see it a bit better.
+
+Of O and X plants.
+
+And this and this are different regions.
+
+Even though they're both X, they're not touching.
+
+So yeah, I haven't really seen anything quite like this before.
+
+So Solvitt helped me learn that this kind of thing is called a connected components problem.
+
+And it taught me that there is a thing called scipy.ndimage.label, which I have learned a bit about this before.
+
+There's something called a flood fill algorithm, which is basically like, okay, if I want to find all the zeros that are connected, you start with one.
+
+I think you basically find all the ones that touch that.
+
+And for each to touch that, find all the ones that touch that.
+
+And you just do it like you can do it recursively.
+
+You can store the results in a set.
+
+You don't revisit them.
+
+Is that your understanding, Jono?
+
+Something like that?
+
+Is it flood fill?
+
+Yes.
+
+I'm doubt if I can be bothered implementing that myself.
+
+So when Solvitt said that exists, I was just like, sure, I'll use the thing that exists.
+
+I had to fiddle around it slightly to end up with the thing I wanted.
+
+But you can see here now every region has its own unique number.
+
+So there's five regions in that X and O thing.
+
+But like it's interesting, I when I spoke to you, Jono, the other day about, I don't know if this or something similar, I think you told me like you were, you did it the even simpler way, which is just to say like, hey, Solvitt, write me a flood fill algorithm, which is also fine.
+
+Yeah.
+
+I knew it was common enough that, you know, every intro class has people write it.
+
+Like, could you just like give me a flood fill that I can use rather than me bothering?
+
+Yeah.
+
+Yeah.
+
+If you don't want to practice writing a flood fill algorithm, then there's no shame in using SyPyS or having it written for you or whatever.
+
+You still have to go to the trouble of making sure it's right, running, you know, helping, having it help you find tests and run them and all that.
+
+Anyway, so after all that, I ended up with something with like, okay, here's my plot, there's my nines.
+
+So they've turned into numbers now because each plot is unique.
+
+So for part two, what they actually ask you to do is to find how many edges does a plot have.
+
+And so something that's just like, think about polio, right?
+
+Diagrams, right?
+
+Like, or some kind of intermediate outputs that are going to help visualize this.
+
+So luckily we have map plot lib.
+
+And so I just said like, okay, I've got a 12 by 12 grid.
+
+Each grid point I want to contain a color in my output and the color should depend on the value in that coordinate and label.
+
+So you're like, oh yeah, that's what IAM show does.
+
+And to be honest, actually, very much know that because I've used it a thousand times because you use it all the time in computer vision.
+
+But I'm used to using it with RGB values.
+
+I kind of forgot, oh yeah, of course you can use a color map.
+
+Anyway, so that's fine.
+
+So here's my plot.
+
+So I find that much easier to read and I can now be like, okay, I can see here's a really clear plot.
+
+So it's going to be one, two, three, four sides, just like pink one.
+
+Well, this one's going to be really hard.
+
+I'm not even going to count the number of sides for this one.
+
+Here's a tiny one that's going to be four sides.
+
+This one's going to have one, two, three, four, five, six, seven, eight sides.
+
+And then like, okay, the nice thing about doing this is now that I've got it, I can do it on the whole input data set.
+
+Just like, whoa, it's nice.
+
+So although by the way, you don't even need this a really good trick, which hardly anybody seems to know about is the power of zooming out.
+
+And I do this in Excel all the time.
+
+Excel's really nice.
+
+Is it day 12?
+
+There.
+
+You know, nearly it's good.
+
+And Excel's particularly good at zooming out, but you know, even the browser's pretty good at zooming out.
+
+So that's a very quick way of getting an overview of things that are too big to put ahead very clearly.
+
+Okay.
+
+So, you know, also, this is something which I don't know if anybody else does this, but Solvert can see your pictures.
+
+So I wanted to know what it thought.
+
+Hey, do you see this plant?
+
+What do you think?
+
+I find this so useful.
+
+Like if you're trying to create a really high quality production plot, try using Solvert and say like, hey, you know, you could even paste into context, like, here are the recommendations from Tufti or here are the recommendations from you know, your favorite Viz person, please help me apply those to this plot, you know, step by step, how would I go about it?
+
+And so here it's saying, interesting.
+
+And you know, this might be the trick, Jono.
+
+If you, that one where you're like, oh, oh, one's not smart enough to do this.
+
+So I wonder what would happen in Solvert if we drew the plot and then said like, let's talk about it, you know, be interesting to know if it was able to do it then.
+
+So I wanted to, anyway, I like to create super simple plots.
+
+So I just went through and I just created an S for show that just goes through each line and prints out all of the ones that are equal to some particular value.
+
+So here's label equals four, right?
+
+So here's the plot of four.
+
+And I'm like, okay, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve.
+
+So how would I go about finding an algorithm that calculates a number of sides?
+
+And I showed this to my nine year old daughter.
+
+And she was just like, well, that's easy.
+
+Like, yeah, but is it?
+
+Like, I was like, I thought that too, it's easy.
+
+But I try it.
+
+It's weirdly difficult.
+
+Really, really difficult.
+
+So I spent a bit of time thinking about it.
+
+And I was like, I don't know.
+
+And it's like, okay, go back to our recommendations.
+
+I have to do this all the time.
+
+I'm always like, what would Jeremy say?
+
+Okay, Jeremy would say, you know, pick a small example, do it by hand, you know.
+
+So something I want to spend a bit of time on next year teaching you all about is being really good at Excel.
+
+Excel is great for solving things with code.
+
+I'm going to show you an example here.
+
+Excel's a grid.
+
+We're doing stuff with grids.
+
+So I just created a little CSV function that just prints my X's joined with commas.
+
+So if I can just copy that, right, or just copy it from here.
+
+I think I've already got Excel open.
+
+Yeah, I do.
+
+Okay.
+
+Here's Excel, right, paste.
+
+And I'll show you why I'm going to do it in Excel.
+
+So the first thing you notice is in Excel, it doesn't paste it very nicely.
+
+Can't use the grid here.
+
+So it's really important.
+
+Everybody knows about this data.
+
+Text to columns.
+
+This is one of the most important things in Excel.
+
+Okay.
+
+Teal limited by comma.
+
+Okay, there's step one, right?
+
+We've got it there.
+
+That's nice.
+
+And then make sure it looks in a way that your brain is going to find it easy to understand.
+
+Right?
+
+So I would, for example, make these bigger, older, centered vertically, centered horizontally, smaller columns, taller rows, like trying to make it look right, you know.
+
+Okay, this is good.
+
+So how many edges does this have?
+
+Okay, draw it and draw with trackpad.
+
+Okay.
+
+Oops.
+
+Let's try that again.
+
+Oh, turn off that.
+
+Or just use a tablet if you've got one or if you've got a surface or whatever, that's fine too.
+
+That's great.
+
+So let's start drawing here.
+
+So one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve.
+
+Okay.
+
+So what just happened?
+
+Well, every time I turned that was a new edge.
+
+So that's actually what I wanted to do.
+
+Is I really want to just pick, you know, that was what I thought like, okay, let's do it that way.
+
+Let's count the number of times we turn if we draw around the edge.
+
+But then my problem is, I mentioned during this, you know, sorry, Jeremy, just to interject, like, that wasn't something that you knew before you started the diagram, right?
+
+Like that wasn't a thought.
+
+Oh, no, no, no, I had no idea.
+
+I just, it's only by fiddling around like I did this in a notebook that you can have that kind of like, oh, okay, I see that the same number of times here.
+
+Yeah, no, I had no idea.
+
+Yeah, absolutely no idea.
+
+So yeah, I've never done anything like this before.
+
+I was like, okay, but I don't have a line drawing thing, you know, I have, and I think I had a NumPy array.
+
+So it's like, okay, do the same thing.
+
+Okay, go forwards, go turn, go forwards, turn, go forwards, turn.
+
+And as I kind of got to here, so I go forwards, turn, go forwards, say, oh, there's not room to go around here.
+
+I've only got one grid location, right?
+
+And the other thing, by the way, is notice how I do have at least a column in a row here and here.
+
+This is a really good trick actually that I use like all the time.
+
+Which is this, anybody who's done any computer vision will have done this a million times as well, pad.
+
+So I printed out zeros as dots to make this easier to read, right?
+
+But this is a row of zeros, a column of zeros, a row of zeros, column zeros, because when you're solving a problem, you want to make it as simple as possible.
+
+And if you need special cases for I'm at the edge of the grid, it's now less simple.
+
+So make the grid bigger, and then you're never at the edge of the grid, right?
+
+Much better.
+
+So this is like all of my things always said NP.pad.
+
+And so my Excel version also has pad.
+
+And so again, like, okay, let's keep making it easier.
+
+There isn't room for me to like draw my in and out separately because there's only one cell here.
+
+So I thought, okay, make it bigger.
+
+Again, make it simpler.
+
+I don't know how to do that.
+
+So I asked, how do I make this shape bigger?
+
+And I said, oh, you can use NP.chron.
+
+Now, I've actually heard of this.
+
+This is a chronicle product, which I've always been terrified of because in the scariest deep learning papers, they throw in chronicle products just to terrify you.
+
+And I never really understood them.
+
+But then I'm like, oh, this turns each cell into a two by two block of a particular value.
+
+And there's a value two by two block of ones.
+
+Oh my God, that's what all this time a chronicle product is.
+
+I say, oh, that's nice.
+
+But even now I'm going in and coming out.
+
+They're kind of next to each other.
+
+That's confusing.
+
+Okay, let's just like, let's make it three.
+
+Right?
+
+I say, ah, now I've got room to go all the way around this grid.
+
+You know, and never like touch my, you know, in my previous one, never not have room.
+
+So okay, I'm going to use this.
+
+Okay, so then my next question was, how do I get the outside of it?
+
+Right?
+
+Because I actually want to follow around the outside.
+
+And again, like, I'm sure there's better ways to do this.
+
+Right?
+
+But my little, how I'm interested to see what John O's idea was, I'm sure he's got better ideas than me.
+
+But just make a bit more room here.
+
+I've got one more dot.
+
+How do I create something around the outside?
+
+And what I kind of thought was like, all right, let's like, so I'm kind of doing this as I thinking as I go here, let's see how we go.
+
+This is our original.
+
+Give it some borders.
+
+Alright, there's our original.
+
+And I kind of imagined like, imagine that was a stamp.
+
+You know, so I kind of telling this to my daughter as well.
+
+So clear.
+
+I imagine that's a stamp.
+
+I can stamp it.
+
+I would actually do it because I just had this idea that felt like it would work.
+
+But I wasn't sure if it would work.
+
+So let's go.
+
+Okay, to stamp.
+
+Next, I will just copy.
+
+And then paste.
+
+And in particular, there's a paste special values, which won't include the yellow and stuff because I kind of wanted to keep that.
+
+And I thought like, okay, what if I paste it like, up into the left and then straight up and then up until the right and then kind of do that and then straight left.
+
+And then to the right and then down and left down down to the right.
+
+So just show you.
+
+So like paste it there.
+
+And then one across.
+
+So that's just do it again.
+
+Might be a shortcut key.
+
+I'm not very good with the Macintosh keys.
+
+No, my would be command shift fee does these without me.
+
+Maybe I lost it somehow.
+
+So let's see.
+
+Command shift fee.
+
+No, how annoying.
+
+Edit, paste special.
+
+Oh, there is actually a control command V just close.
+
+Although I still have to type.
+
+So much of this stuff is faster on Windows.
+
+It's really shame that it's not everything's efficient on every platform.
+
+Values, paste.
+
+And then one across.
+
+Anyway, so if you kind of keep doing that again and again, I can do I wrote that in Python.
+
+I also tried I did it like just in a paint program, pasting it with a transparent background.
+
+So to move to move something up and to the left, I actually vaguely remember this, but I did ask as I deleted it, I asked how to do it and P dot roll is what does that.
+
+So it moves an array one up and one to the left.
+
+And so you can see here that used to have three above and three to the right.
+
+Now it's got two above and four to the right.
+
+So it's moved it up and left.
+
+So basically, I wanted to do this for each of these directions up, middle down, left, middle, right.
+
+So across each of those, I want to roll it in each place.
+
+And then the equivalent of like stamping over the top is using or, right?
+
+So that means I want it to be true if it was true before or if the stamp makes it true now.
+
+And you can see after I do that, it's exactly the same that I started with.
+
+But with extra border around the edge.
+
+And so when I was playing around with this, I realized like, oh, cool.
+
+So that I almost end up with the right thing.
+
+But then I need to delete the original yellow bit.
+
+And that's easy.
+
+That's just a tract.
+
+That's like, oh, there it is.
+
+You know, so I know all this stuff.
+
+There's official formal ways you do it all.
+
+But I guess the whole point of this course is to say like, okay, either Solvert can teach you the formal ways and show you how to use it.
+
+But really, to say like you don't really need them, you can just use a bit of common sense pretty much all the time and drawing pictures.
+
+And so I've ended up with something that shows the path.
+
+And so I created this function then just by copying everything from the previous messages that creates the outside with some expansion level using my, I'm going to sound so fancy now.
+
+Oh, yes, I solved advent of code 2024 day 12 by using the classic Chronicle product method.
+
+Didn't you?
+
+So then it's like, okay, how many lines are there?
+
+And I wrote by hand something that went to the top left and just looped across and turned around.
+
+And it worked perfectly well on all of my sample samples from from here.
+
+But it didn't work on the final one.
+
+And I said, eventually, I was like, John, oh, what did I do wrong?
+
+And John said, did you remember to try it on this one?
+
+I was like, no, I didn't bother trying it on all the test cases.
+
+So you'll see what I have done, though, at least to make life easier for myself is it's like, this is the nice thing about this is I can very easily go back and uncomment this, right?
+
+And comment out this.
+
+And now I can repeat everything.
+
+Right.
+
+This is a nice thing about this exploratory approach.
+
+You don't have to set up fancy scripts.
+
+You know, I can just run.
+
+There's this one.
+
+Right.
+
+Cool.
+
+So in this case, I want all of the ones.
+
+And you'll see why I screwed up now is if you trace around, go to the top left and trace around the outside.
+
+And this works, this works, good, good.
+
+That works.
+
+That works.
+
+It's like, okay, it's all looking pretty good.
+
+But then here, trace around the outside.
+
+Oh, I missed all of these.
+
+But yeah, this is where like as soon as I looked at it, it's like, okay, now I see why I broke it.
+
+But as soon as I looked at it, it's like, oh, again, visually, how do I quickly see all the sites?
+
+That's like, well, just scan down each row and look for a side.
+
+There's a side.
+
+There's a side.
+
+There's a side.
+
+There's a side.
+
+There's a side.
+
+There's a side.
+
+Right.
+
+And I noticed as I was doing this that the ones that were one thick could never be a side.
+
+Right.
+
+So everything that's more than one thick is a side.
+
+And I know how to find all the things that have at least two Xs.
+
+We've learned it already.
+
+It's called a regular expression.
+
+Okay, I don't know if I'm the only person ever to have solved it this way.
+
+But it's like Polyo again, you know how to solve something from previous things, use the previous thing.
+
+So I was like, cool.
+
+So all I do is I map everything to a string, join it all together and create a regular expression that finds more than two ones.
+
+So find a one, and then find one or more ones in addition to the one.
+
+So here it is.
+
+So I guess I should try it here.
+
+Right.
+
+One, one, one.
+
+Okay, cool.
+
+There's two.
+
+And the other nice thing about that is if you've got the horizontal lines going, you can just turn the whole thing around.
+
+It's called transposing.
+
+And do it again.
+
+So it's like, okay, let's get the outside.
+
+Cool.
+
+And then let's find all of the one, one pluses in the join together string and get the length of that.
+
+Sum all that up.
+
+And we're good to go.
+
+Oh, I need to rerun all above to make that correct.
+
+Oh, no, that's correct.
+
+It is 10 for this one.
+
+Yeah.
+
+And then do that and then do it for the transposed version.
+
+This is a transposed T.
+
+And there it is.
+
+And then, okay, run it on all of them.
+
+And we're done.
+
+So, you know, the other thing I'll say here is like, people sometimes yell at me for lines like this, right, which would normally be fair enough, right?
+
+If that was on its own in the middle of nowhere, like, what the hell?
+
+But you've seen every single part of that separately.
+
+So I think it's fine, you know, to be like, okay, you can see every single plate, it's all there.
+
+Okay, now we put it together.
+
+So I think that's about it for mine.
+
+Jono, did you have, I know you're going to embarrass me, also be much better.
+
+But anyway, that's fine.
+
+I'll definitely show mine.
+
+But like, it's worth looking at what with the techniques there, like the diagramming one for this problem was super helpful, right, having a diagram.
+
+There's another one which is like, make sure you have examples that you can check.
+
+And that was the bit that maybe you can check them.
+
+I had them.
+
+I did give them a sample there.
+
+But sometimes you have to, you know, come up with extra tests and think, oh, what if my file name happens to start with a digit, which is not allowed as a Python module.
+
+You sometimes have to do a bit more thinking for that.
+
+But yeah, I was doing that.
+
+And then hugely underrated problem solving technique, like talking to someone else, talking to a buddy or talking to, so like having that discussion to say, this is what I'm doing.
+
+And I think it should work, you know, getting some external input.
+
+Anyway, so yeah, that definitely lots of techniques there.
+
+I will agree with you, Jeremy, your assessment was right.
+
+I also struggled on this one.
+
+And till I took a break and came back and did the things, right, I started, I can write a solution.
+
+And I had this clever idea, I'll share my screen, had this clever idea that I could draw the outlines in a certain way, and then have each side be its own region.
+
+Because I really had code for finding different regions of the same number.
+
+So if the outlines are all ones, and I skipped the corners, then a line of ones that was connected was one side.
+
+And that was definitely not the right approach.
+
+Maybe if I, if I'd scaled it up like you did, that would have worked.
+
+Yeah, so I can show how I did it.
+
+But also actually, the way I did it was, I'll screwed it up, I did something like this in my notebook first, and was drawing out the edges and then thinking if I had it in this grid, and I was going through what would constitute an edge, and then I clicked it, oh, I could count the corners.
+
+And so yeah, this this diagramming was invaluable to say if I'm considering this right here.
+
+You have a tablet or a surface or something that you're able to draw on directly.
+
+Is that how you're doing?
+
+I do, but no, how I do it is in a Molskin notebook.
+
+For the lesson, yeah, I have a graphics tablet.
+
+That's quite nice.
+
+That's just gonna say you can buy a graphics tablet for a few tens of dollars.
+
+And like, I do think it's something everybody should have.
+
+Because for me, like, pasting the grid into one note or something and then drawing on top of it is super nice.
+
+Or you can print it out, I guess.
+
+Or you can print it out.
+
+Yeah, so in my case, I was thinking through, yeah, I realized that if I counted the corners, right, then I'd be counting the edges.
+
+And so then I thought, well, I can tell if something's a corner, if I can consider just the three by three grid around this point, like this point is not quite in a corner.
+
+But so I drew out some of these, this is not a corner, right?
+
+This is somewhere in the middle of an edge.
+
+But over here, well, it's by this corner, it's like the outer corner here.
+
+So that would count.
+
+Okay, what about this one here?
+
+This is like an inner corner.
+
+So that would count.
+
+But then oh, I remembered, like, thankfully, I looked at the one with the E.
+
+What if I had something like this is like, there's a corner, and there's a corner.
+
+And so after, I probably spent like 3040 minutes, the first time trying my other approach.
+
+And this was one of those like the diagram showed me how to solve it.
+
+And I convinced myself on paper that it would work for all the cases.
+
+And that was like, actually solved at that stage, it's like the ugliest code you've ever seen in some ways.
+
+But I could just go and say, look, these are all the cases I thought of, right, if there's one just above it, and one just below it, right, then it's in this kind of corner.
+
+If there's one below it and one to the right of it, then it's another corner.
+
+And so I'll just check these conditionals, I'll count how many of them are true.
+
+And if any of these are true, that's it's a corner.
+
+And sure enough, it worked.
+
+So after like, thinking of different ways to do it, thinking about zooming in or trying to find regions or trying to use my passcode.
+
+In this case, the diagram, I felt my diagrams in my notebook were clear enough that I could say, okay, it's a bit of painful indexing, like you could do this.
+
+In fact, I did it straight away after submitting the solution.
+
+It's like, oh, you know, you can have like an array of deltas, right, x plus one y plus you can you can minify this a little bit.
+
+But if it works, it works.
+
+So that was mine.
+
+I also wanted to show shout out to goodness.
+
+Try to remember the name here, probably.
+
+Apologies, I know he's going to watch this later.
+
+This was a great notebook as well.
+
+If someone going through and doing the solvett part really nicely, like leveraging the AI slightly more than I did, and I regretted it.
+
+So for example, like, you know, I was doing some things very manually, saying the site by having method for that for finding the regions.
+
+So in my code, I was, yeah, using the flood fill algorithm that I got, but then also like, very manually picking out there's one region, let's get my regions, there's the next region.
+
+Yeah, instead thinking, oh, I have vague memories of something.
+
+Great, that's perfect.
+
+Yeah, sci fi has this label function.
+
+Then he writes out his plan and he starts working on it.
+
+How do I find the unique object?
+
+So this is exactly where it's good to lean on the AI, right?
+
+Not the like, please solve the problem for me, but the, okay, this, this one component that I suspect has a function, but I can't remember if that function exists, rather than having to go and Google, yeah, very quickly, like pulling out the data structure that he wanted, then putting it in a function.
+
+So very much like step by step looking at things trying the label function, label, then putting in function, you know, fantastic.
+
+And way gentler than having some possibly buggy, possibly slow flood fill that you made.
+
+So I was like, okay, I should have done this for sure.
+
+How do I add a border of zeros?
+
+NumPy.pad, our friend, constant value of zero is the default, but you know, And most of the zero to the default.
+
+Yeah, so you get away with saying this, but look, it's exactly what you want.
+
+And then going through.
+
+So anyway, congrats, Pierre.
+
+I think this was a case of using Solvit, possibly even better than either Jeremy or I as examples for this particular problem.
+
+But again, the same steps, right?
+
+Breaking it down, making a plan, doing the bits that you know, thinking it through, asking, bouncing off ideas, looking at everything, making diagrams, these are all like the steps that we want to just get so ingrained as the process.
+
+And when you do that, surprise, surprise, you know, it's a lot easier than when you try and just rush for some immediate solution.
+
+Yeah, actually, Marius shared a really nice one, which was for a different, for a different one of the days, I don't even remember what day it was, but I just want to quickly share it.
+
+It was basically saying how like setting up basically a way of like following along a path and saying, did it ever end up in an infinite loop?
+
+Or does it leave, you know?
+
+And it's kind of great example of stuff that you probably wouldn't bother doing without AI.
+
+But with AI, it was actually he, sorry, it's so low res, I just copied it out of Discord.
+
+But you can basically see you've got a little thing and it follows until it hits a wall and spins around right every time it hits a wall.
+
+And in this case, it leaves.
+
+It's not an infinite loop.
+
+And yeah, I just really like that that like, you know, he's saying like, yeah, he even got, I think, Solver.
+
+No, I think it's actually a self-saged to tell him how to create a, you know, exportable video that he could show of this.
+
+And so, yeah, I think we can really lift our expectations now about our ability to prepare visualizations, which are helpful.
+
+I think I'm ready to talk about day five, if that's in series, more general, which I'll just do somewhat quickly.
+
+Sure.
+
+Day five, I'm actually not going to solve it because, so in fact, in fact, I'll come back to Jono.
+
+Jono and I went through all the way to day 14 during the week.
+
+And there are almost no new techniques, Python techniques necessary to go to day 14, which is exciting because it's like, okay, with the stuff we've learned so far, you can get to day 14 with no new math, no new data structures, no new algorithms.
+
+And so, day five is certainly one of these cases.
+
+There's nothing much new to learn.
+
+So I'm going to get, I'm just going to do the parsing today because I want to show you a new technique that comes up all the time.
+
+But yeah, when Jono and I kind of looked at this, we're like, well, this is actually great because, you know, everybody on the Discord is saying like, okay, the more I practice this, the better I get.
+
+So we'll keep doing more.
+
+We'll keep practicing, but we're also going to look at some other stuff, right, Jono?
+
+Yeah, exactly.
+
+And even today, spending some time on MB Dev and things, we'll keep that balance because hopefully you're able to, yeah, we're not trying to introduce recursion.
+
+We're like, okay, we've got the basic pieces we can now talk about making web apps with fast HTML or scraping data or calling LLMs, you know, any, like these other application areas where it is useful to see some examples, and then it's going to be the same steps, right, just with different syntax and different problems.
+
+So let's be specific.
+
+So the stuff, Jono, and I talked about building with you all next year is a production web application with fast HTML, a PyPy module that's pip installable, a blog post, some documentation, interview notes, a web scraper, do some sysadmin, do some frontend.
+
+Yeah, which are all problems to solve.
+
+So anyway, let's dive into day five and a little bit of new stuff to show.
+
+So hopefully you've all looked at day five.
+
+If you haven't, then maybe come back and watch the rest of the video after you have.
+
+But I'm not going to solve it for you.
+
+If you get stuck, please ask on the discord.
+
+So the first thing is I imported my utils.
+
+And I have this little intro function that does nothing but just print out something to tell Solvitt about how I like to code.
+
+So I looked at this sample and I saw, you know, we've got these seeds, and then we've got a bunch of maps.
+
+And I noticed in the sample it goes seed to soil to fertilizer to water to light to temperature to humidity to location.
+
+Now, I could have been like, Oh, well, I better create a really general purpose one in case there's different maps or they're in a different order or whatever.
+
+But like, you actually don't have to do that because you can look, which is what I did.
+
+Right.
+
+So like a really common problem for a lot of coders, particularly more junior coders is they try to solve the more abstract version of a problem from the start.
+
+And there's a classic phrase in software engineering, Yagney, you ain't going to need it.
+
+Don't solve something you don't need now.
+
+Right.
+
+And so people often spend put a lot of effort up front systems design and scaling this and blah, blah, that.
+
+And like my co founder, Eric, a Reese would fruff at the mouth if I told him somebody at N3A was doing that.
+
+It's like, lean startup MVP iterate.
+
+It's like, yes, exactly that.
+
+You ain't going to need it.
+
+It's not just for coding.
+
+It's for a life.
+
+Right.
+
+And like, look here, seed to soil to fertilizer to water to light to temperature to humidity, to location.
+
+It's the same.
+
+I don't need a general thing.
+
+Right.
+
+So the order always takes you exactly through the order you need.
+
+So let's not build the general purpose solution because no, what do you want to make Eric reset?
+
+Okay.
+
+So with that, I now all I need to do is create this list of category maps.
+
+Okay.
+
+So, spread out everything by two backslash ends.
+
+And that's going to give me my first four my seed stir.
+
+Right.
+
+And then I want everything else to be dumped into a single list.
+
+And so star is the way you do that.
+
+So very handy.
+
+Right.
+
+So that says first thing goes in here, everything else goes in there.
+
+So that's really nice.
+
+And so now we immediately print it out.
+
+And we immediately print the other thing out.
+
+And that all looks good.
+
+Okay.
+
+Now we need to do our first map stir.
+
+So again, our notation is consistent.
+
+The stir version gets a stir when there's more than one of them.
+
+It's a plural.
+
+Now we get one of them.
+
+Give it a name, read it out.
+
+Okay, it's all just turn your brain off, just do it.
+
+Okay.
+
+And you can probably guess this regular expression.
+
+I built it up by first of all, just doing that bit.
+
+And then I added that bit.
+
+And I added that bit, you know, I just do a little bit at a time.
+
+Right.
+
+So parentheses captures something.
+
+This is something I want to keep.
+
+Right.
+
+So backslash w, that's exactly the same as saying capital A to capital Z and capital n small a to small z, not exactly the same and zero to nine, I should say.
+
+So this is basically word characters.
+
+So you can do it with square brackets notation.
+
+But once you, you know, you do use it a lot.
+
+So backslash w, any, anything that appears in words, so digits, lower case letters, uppercase letters, one or more of them.
+
+So one or more of them.
+
+Stop.
+
+Okay.
+
+So that's going to get seed.
+
+And here it is.
+
+Seed.
+
+Okay.
+
+And then literally a hyphen, literally the word to literally a hyphen.
+
+So just like you got to do it, right, don't skip.
+
+Okay, cool.
+
+Got to there.
+
+All right.
+
+And then capture another bunch of letters and numbers.
+
+Okay.
+
+Okay, done.
+
+So you have to be a regex.
+
+This is what a regex does, right?
+
+It's follow through.
+
+Then a space, then the the word map colon and then zero or more spaces.
+
+Space, map colon, zero or more spaces, okay.
+
+Then we're going to capture one or more of a new line followed by some digits.
+
+Some spaces.
+
+Some digits.
+
+Some spaces.
+
+Some digits.
+
+A new line followed by some digits.
+
+Some spaces.
+
+Some digits.
+
+And some spaces, some digits.
+
+Another new line followed by some digits.
+
+Spaces.
+
+Digits.
+
+Spaces.
+
+Digits.
+
+Okay.
+
+So that's my regular expression.
+
+So then I can use, remember I do from redjacks import search, make sure it matches and it did, right?
+
+Cool.
+
+Let's grab all the captures at once to see and here they all are.
+
+So remember we always first of all get the entire thing we captured and then each piece in parentheses seed, soil and then this whole bit here.
+
+And then all the bits inside.
+
+So all the first digits or the middle digits or the second digits.
+
+Actually, you know, for seed and soil, we can use groups instead of captures groups.
+
+Groups just returns one thing, right, rather than looking inside to get the zeroth element.
+
+So this is quite handy.
+
+Cs, that's my capture object or my match object.
+
+I bet you could call it match.
+
+Grab all the groups, okay, which is here.
+
+And I just want these two.
+
+So map from comma, map to, so that's going to get the zero thing in the first thing, comma, everything else stick it into a variable called underscore.
+
+Why underscore?
+
+Because I don't care about it.
+
+I don't care about any of this.
+
+And so underscore is a pretty common, it's just, you don't have to.
+
+This is a pretty common thing to use.
+
+So my throw it away, I don't care about a variable.
+
+Okay, so it's got that bit.
+
+And then I want these bits.
+
+So that's the captures for five and six.
+
+So let's go through each of those, right?
+
+And for each one of those, make an L out of it and map them to ints.
+
+So here they are, 50, 52, 98, 50, 248, right?
+
+50, 52, 98, 50, 248.
+
+Does that make sense so far, Jono?
+
+Okay, cool.
+
+So I'll give those names.
+
+So those were the starts of the destinations, the starts of the sources, and the range lengths.
+
+So it's quite nice.
+
+If I wanted to treat all of this as one thing, I can also do this, parsed.
+
+So I'm going to give this whole thing two names.
+
+I'm going to call the whole thing parsed.
+
+But I'll also separate them out into three bits.
+
+So it's just a bit of a convenience to me.
+
+So you can see here, I've printed out the three bits, or I can just say, look, Len parsed has all three bits.
+
+Par zero has the zero of the bit.
+
+Now, what we actually need, though, is like 50, 98, 52, 52, 40, right?
+
+So we kind of need to like transpose it, if you like.
+
+And this is where the most important thing I wanted to show you, which is zip.
+
+So zip goes through each of these things, the starts, d starts, s starts, ln, okay, here they are, d starts, s starts, ln, and first grabs the zero thing from each, 50, 98, 2.
+
+Here it is, 50, 98, 2.
+
+And then grabs the one thing from each, 52, 50, 48, 52, 50, 48.
+
+And it creates a generator, or something that you can't print, so then stick a list around it to be able to see it.
+
+So this is really handy.
+
+Jono, do you ever use this zip?
+
+Yeah, all the time.
+
+Like often you'll have a list of x positions and a list of y positions, and you just want to do something for the first item in each list, and the second and the third.
+
+And so zip, I literally like imagine the physical zip it's running through.
+
+Yeah, so very often I want to do something like that.
+
+Also, occasionally you'll get things that return like a tuple of two lists, and exactly the same.
+
+I want the first item in each list, and then second, and then third.
+
+So the zip and then the star of something that you're showing in the next one there.
+
+Let's do the star.
+
+Yeah.
+
+So, and you know, this is something a lot of people use without understanding it, right?
+
+But it's actually really simple.
+
+Look, this three tuple is set of three things.
+
+It's the same as this.
+
+This is a three tuple.
+
+These are the three things.
+
+Like they're the same.
+
+They're literally equal.
+
+We're used equals.
+
+So if we pass, if we can pass these three things to zip, we can pass this too.
+
+But this is an L containing the three things.
+
+We don't want to pass the list to zip an L containing the three things.
+
+We want to pass the three things.
+
+So we want to pull the mountain, send each one over as a separate argument.
+
+That's what star does.
+
+So that is identical to that.
+
+And therefore, that gives us the same answer.
+
+Right?
+
+So a lot of people in Python are familiar with zip star, but I feel like they don't really know what it is.
+
+They just kind of use it mindlessly.
+
+So like fiddle around with it a bit.
+
+Right?
+
+And it's so useful that you won't be surprised to hear that capital L has it.
+
+Right?
+
+So .zip does capital L zip star.
+
+Okay.
+
+So these are our category maps.
+
+Right?
+
+Now, we can now put all that together.
+
+And again, you'd be annoyed if this code appeared in the middle of .py file on its own.
+
+Because there's too much going on.
+
+But every single piece of this, we've just run by hand.
+
+So now this is the entire part of this notebook in a single line.
+
+It's like, cool.
+
+We may as well keep it nice and concise.
+
+And now that we have put it into a function, we can immediately map it.
+
+So people often are saying, like, oh, what do we need to lambdas?
+
+You know, how do I map things the way Jeremy does?
+
+And so we just check it in a function.
+
+Once you've checked in a function, you can map each string over something that takes a string.
+
+Right?
+
+And here they all are.
+
+Right?
+
+And just quickly, I wanted to show, like, I'm not saying you necessarily have to do it this way, but we haven't talked about classes.
+
+So I did want to briefly talk about classes.
+
+I'm not going to do an introduction to object-oriented programming.
+
+But classes are useful to stick stuff into and have it hanging out there together with all the stuff you need.
+
+And so in this case, why don't we create a category map class?
+
+Right?
+
+And I wanted to show you a couple of little tricks for that.
+
+Right?
+
+The first is that, you know, normally to create a category map class, you know, you would do something like, I mean, people tend to write this stuff extremely unconcise-ly, and I can't bring myself to do it because it makes me feel sick.
+
+But I'll at least do it the slightly non-concise way.
+
+Self.
+
+So you could do self.d start, self.s start, self.rlan equals.
+
+So you basically grab all the pieces you need and store them away inside self.
+
+Okay?
+
+So it's like people are like, oh, it's so much more enterprise to do things the really verbose way.
+
+But like, no, if you have more code, there's more opportunities for it to go wrong.
+
+And you're asking more on the part of the reader to understand all that code.
+
+So why don't you just use fast cause, store atrofunk, that does all that.
+
+So all that does is it grabs all the parameters and dumps them inside.
+
+Okay?
+
+And then, all right, we also want to be able to print it nicely.
+
+Well, if you just inherit from basic repra, it automatically prints it nicely.
+
+So this is a class which we can pass stuff to, run all above.
+
+And as you see, it, that's a sense.
+
+So we can pass in star CMAPS zero.
+
+So here's our CMAPS, here's CMAPS zero.
+
+So we want to pass in 50, 98 and two.
+
+All right.
+
+So.
+
+And Jeremy, if I can just zoom back, like the problem solving technique that you're doing here at the moment is effectively thinking about notation, right?
+
+Yes.
+
+You're thinking like, how do I represent things?
+
+Like, oh, everything has a destination start and a link.
+
+This, like a class in this case is being used just as a nice code notation for this category map.
+
+I'm also using it for state.
+
+And you'll see why in a moment, like something I've found, I've been so far, I've been avoiding classes in this course to try and keep things a little simpler.
+
+But you've probably noticed I've often had to pass the same four things to every function.
+
+And I've seen in the discord, a lot of people saying like, oh, this one went wrong.
+
+So I forgot to pass it in and it used the global variable or whatever.
+
+So classes can help you encapsulate the state you need to solve a problem.
+
+So that's the other thing.
+
+So it's notation and state.
+
+So because what I can do now is I can say, okay, well, let's think about the logic here is like, what I want to do in a category map is I want to know, oh, is, you know, is actually map it, right?
+
+So if your input's 99, right, then this particular category map would turn it into 51, right?
+
+It would be like, oh, it is between 98 and 98 plus 2.
+
+And therefore it goes into the destination starting at 50.
+
+But we're kind of one into it.
+
+So yeah, if the, if x is between the start and the start plus the length, then we actually want the destination start plus the offset, right?
+
+So again, I've done it all manually, you know, so I pulled this thing out into its component parts.
+
+And so now I can turn that into a function.
+
+But I don't just want it to be a function.
+
+I want it to be a a function that uses our state.
+
+So what I can do here is I can say, okay, I want to pass in x and then I want my state copy, paste, paste.
+
+So I've got exactly what I had in my previous cell, but I've now just added self between each one.
+
+Now, how do I make this so it is a method inside category map?
+
+There's a thing in Fastcore called patch that's super handy for this solvort style approach and for notebooks and so forth.
+
+And it basically says, okay, take this function and patch the class to add it, which class?
+
+Whatever you write here.
+
+So this is going to add a cat map dot c map method, which I can now call.
+
+So I already had my cat map, cm.
+
+I don't have to recreate it.
+
+I don't have to do anything because this is Python.
+
+Python's dynamic.
+
+Python is perfect for this kind of exploratory programming style.
+
+We just inserted it, not just into cat map, but into every object of cat map that already exists automatically.
+
+And we can call it.
+
+Okay, this category map version of 99 is 51.
+
+And then it's like, cool.
+
+Well, it'd be nice to have a cat map for all of these.
+
+It's like, well, that's cool because we know that you just have to pass it in with a star.
+
+Right?
+
+And we know from last time, you might have forgotten, that star map does that.
+
+It calls map, passing it in with a star.
+
+So cmaps dot star map.
+
+We now have a cat map for every one of those maps.
+
+Right?
+
+And so this is kind of where I'm going to leave it, but like you can see where you can take it from here, you can now create a cat maps, again, which has a basic representation.
+
+You can pass all those cat maps to it.
+
+Right?
+
+And then you can create a cat maps object and take a look at it.
+
+And again, it prints out nicely.
+
+There it is.
+
+Right?
+
+And then you could create a cat maps dot cmap.
+
+And that would go through all of the maps and find the right one and so forth.
+
+And so, again, you can see that OO programming solvents style is the same.
+
+Right?
+
+But you kind of need patch.
+
+Otherwise, it doesn't work.
+
+But a lot of people use like data classes, for example, which is fine.
+
+Right?
+
+But if you use like basic repra and store atria, you're not using some weird R special kind of object that like if you look inside the standard library implementation of data classes, it's horrible.
+
+It's so complicated.
+
+We just have a normal object, a normal class, and we put methods in it.
+
+There's nothing special.
+
+So this is really about getting as much as possible out of the simplicity of Python at its heart.
+
+I don't know.
+
+What do you think, Jono?
+
+Yeah.
+
+I think that's great.
+
+Yeah, maybe to contextualize these tricks.
+
+We want to show you all the weapons we have at our disposal for solving problems.
+
+I'd say you don't need them.
+
+But it's like, hey, we think these are really useful, especially like I like.
+
+Yeah, you'll find they help on some of the later problems.
+
+But yeah, we just want to show you all this stuff.
+
+Okay, so if there's new things there, then you've got rabbit holes to go down.
+
+Right?
+
+You've got the upcoming problems that you can try.
+
+You've got, hey, I could learn about patch in Fastcore, or I could practice zips, help get Solvit to help you understand them, try it out on a problem that you've already done, think, oh, it was like going, keeping two lists and going item in each one, like, oh, maybe Zip would help.
+
+So, you know, all these little avenues, if you want to explore, what other like beyond that, so that's maybe like fiddling around tonight, the next three weeks, Jeremy, what would you like people doing as well as tinkering with these ideas?
+
+So I mean, the most, yeah, so, okay, so Solvit Advent of Code stuff, like practice, if you're behind, first of all, realize there's no such thing as behind, right?
+
+The goal of this is not to finish Advent of Code.
+
+I mean, I would like to, but I don't mind in the end, if I don't, you know, depends where you're at.
+
+If you came in thinking, I'll never be able to solve an Advent of Code problem, then if you can solve one, then you've surpassed your expectations.
+
+And that's fantastic.
+
+You know, I know a lot of folks in the group are, you know, physicians or chemists or whatever, you know, like, I spend most of my day every day coding, just different.
+
+So I would, I know there's some brain surgeons in the group, I would probably struggle with brain surgery, you know.
+
+So practice, but just practice, because everybody, you know, practice using the Polio approach, practice using the Solvit way, you know, everybody I'm seeing on the Discord saying like, I've actually been practicing that it's getting easier, I'm getting better, I can now do stuff I couldn't before.
+
+Then I say, yeah, particularly if you're starting to feel good about it, can you bring it to, you know, some of your hobby work, can you bring it to some of your occupation, can you bring it to things that aren't coding, can you try to capture some of these ideas of, you know, bringing AI into your tools, into your process, ensuring it's got all the context that you have, can you do things in a way that's highly visual, highly exploratory, that you end up with an artifact that you could like, share with your daughter and have them be like, oh, I see that's interesting.
+
+You know, that's been fun for me, like when Claire sees me playing with Solvit, she knows she can come and watch, you know, and I can show her and say, look, this is the thing I've built and this is where it's got to.
+
+So I'd say, yeah, you know, if you're a coder, can you explore with Zed or with cursor or with IDA or whatever and like, share, I think, you know, over the next few weeks, if you can share in the Discord, you know, what's working for you, particularly what didn't work for you would be very interesting.
+
+I think those are the kind of things I would like to see happening so that then as a community, like we're only three weeks into eight weeks, you know, we've, we're not even halfway through and we've done a lot.
+
+So I think we get into the point where, you know, remember like a lot of people, anything like this, people drop off, right?
+
+So if you're here, you're in that group of people who's sticking with it, and that's exciting for me that we want you to be part of this journey.
+
+And if you've been working in the Discord so far, that's fine, but maybe come and surface and share a bit about what you're working on, what you're trying to do, what struggles you've had and so forth.
+
+What do you think?
+
+Yeah, sounds fantastic.
+
+All right, I'm going to miss the lessons, but we'll be active on the Discord.
+
+I guess, thank you so much everybody for joining us so far.
+
+And we'll see you on the Discord and then in three weeks for the next one.
+
+Bye.

@@ -1,0 +1,2633 @@
+Okay, I believe we're live.
+
+Hello, Johnno.
+
+Hello, Jeremy.
+
+Hello, everyone.
+
+You again.
+
+The last lesson was interesting, huh?
+
+I actually looked at the viewing statistics afterwards and I have to admit, Eric held attention even higher than our usual lessons.
+
+I think we had zero attrition for the whole thing.
+
+What did you take away from it, Johnno?
+
+I thoroughly enjoyed it.
+
+It was really nice.
+
+It's not often that you sit back and verbalise all of the thinking around what you or your organisation are doing and I feel like Eric is really good about verbalising that for himself.
+
+His personal mission from way back when and also for anything that he's involved in, he's really good at extracting the like, "Okay, what are we actually doing here?"
+
+I really enjoyed that.
+
+It challenged me to think more methodically about what exactly am I measuring?
+
+What is my feedback loop?
+
+I'm very diligent when I'm training a model.
+
+What is my iteration cycle like?
+
+But applying that much more broadly to other areas of life and business and so on was like, "Oh, okay.
+
+I guess I could be the same kind of methodical much more broadly."
+
+So that's cool.
+
+We're going to be chatting to him again the lesson after this one.
+
+Are there any particular kind of follow-up thoughts or new directions that you wanted to push him in?
+
+I'm excited.
+
+There was a number of things that you guys kept saying, "Oh, we should explore that a little bit more."
+
+So I think I don't have any extras to add, but I feel like we could keep that conversation going for 10 more hours and there'll be all sorts of interesting things coming up.
+
+So I just want to keep pulling that thread.
+
+Yeah.
+
+Eric would do it too.
+
+He's happy to chat.
+
+He's great.
+
+I always enjoy talking to him.
+
+I just realized I didn't check my mic volume before we started, so I'm just going to have a quick peek at that.
+
+Oh, it's looking pretty good already.
+
+Cool.
+
+So back into coding this week.
+
+And yeah, we're going to kind of take advantage of this idea I started talking about a week ago, which is that I realized as I started working with Solv-It more that it actually changed what I wanted us to do with this course, which is suddenly realizing we don't have to limit the scope of the number of things we teach at all.
+
+It's kind of the opposite now.
+
+I'm actually thinking, "No, I actually want to show people how you can just do anything."
+
+And so today we're, you know, I guess the last coding lesson we did, we looked at a bit of kind of scraping, with screen scraping stuff, but it didn't cover a lot of territory.
+
+It covered one fairly small, fairly important thing.
+
+Today I think we're going to try and cover a lot of territory, particularly because we're going to be looking at external APIs, and particularly external AI APIs, because, you know, I think a lot of people assume to do anything novel and interesting with AI.
+
+You have to, like, run your own GPUs and stuff like that.
+
+But the truth of it is, other than the inline completion stuff, even all the stuff we're doing in Solv-It, we're sending it off to Claude to do the work, the work of the generation.
+
+But Solv-It's obviously a very novel service, product nonetheless, you know, by kind of gluing together APIs, of which there are many covering lots of things, you can create an infinity of possible things.
+
+I feel like, John, oh, this is something you're particularly good at.
+
+I've noticed when you come across a new API within a day or two, you've been like, "Hey, I've played with this."
+
+Do you feel like Solv-It is something that folks will help folks find their inner Jono a little bit?
+
+I hope so, yeah.
+
+I think just like, you know, when you were talking about using external libraries, right, it doesn't feel like I need to learn all of beautiful soup.
+
+I should probably buy a book about beautiful soup.
+
+Instead, you have this idea of like, "Oh, I have something I want to achieve," and then I can use Solv-It to explore just the little narrow part of that external functionality that I want.
+
+I feel like that's going to be something that we're coming back to today as well as like, "Oh, I have some objective in mind and something that potentially fills that gap," and maybe a hundred other gaps that I don't care about.
+
+Hopefully we can get into this loop of like, "This thing about seeing if it does answer that question and not feeling like I have to invest 20 hours upfront reading all of the API spec."
+
+Right?
+
+I can just instead like, look at some examples, put it into Solv-It, try it out, and then say, "Is this what I want or do I need to keep looking?"
+
+And even more so, we're going to have to take advantage of context and putting things into context because the AI APIs change rapidly, new ones appear, old ones disappear.
+
+In fact, I realize, you know, we did of course have a brief look at one external API already, which is we did start to look at Claude and Claudette last week for the purpose of doing some structured data extraction, which I think went pretty well.
+
+Yeah, and we'll build on that.
+
+I mean, to maybe like, "Shall I share and show just some of the breadth of the library that we're talking about, the library of existing things?"
+
+And then we can look at one specific example and dig in.
+
+And we'll be kind of bouncing back and forth between these two views.
+
+Okay.
+
+So let me share here.
+
+And so we mentioned, yeah, we were sending some text to the Anthropoc API and getting back a classification.
+
+We were looking at advent of code problems and asking, "Is this relevant to graph problems?"
+
+So I'm on Together.ai, which is one of 50 or 100 inference providers, but they're one that I quite like, who make available different language models and other models.
+
+And specifically I've just got to do-- It's by my friend who was inspired by Fast.ai to do so.
+
+So another good reason to pick together AI, but they are a good platform.
+
+Good platform, generally pretty efficient and fast to implement new things.
+
+But I'm just going to like scroll for a little bit.
+
+And they've got image generation models as well.
+
+They've got code specific models.
+
+They've got embedding models and moderation models.
+
+These are something we might look at today.
+
+In fact, we will look at next.
+
+And then another marketplace of models, replicate.
+
+It's kind of fun just to scroll through whatever's happening.
+
+And here are the list of tasks.
+
+I'm going to say fun to scroll through.
+
+You're thinking like maybe just looking at some of these tools will inspire a thought of like, "I wonder if I could use that for this purpose."
+
+Exactly.
+
+Yeah.
+
+If you've got some application in mind, looking for something that does that specific thing.
+
+But yeah, exactly.
+
+Because I browsed through this, it's like, "Oh, it'd be nice to be able to load a document in a get-tick."
+
+Because I could imagine wanting to use that.
+
+And yeah, it's not a short list of tasks.
+
+Why doesn't there say control?
+
+Just scroll up a little bit.
+
+One or two up.
+
+It said something like control or search for control, maybe.
+
+Yeah, control.
+
+That sounded interesting.
+
+Like using edge detection, depth, maths and sketches.
+
+Like that's something I feel like currently a lot of things are not great at.
+
+Is people just dump in a prompt, get back a rather cheesy, very AI looking thing.
+
+Or else, yeah, being able to control it would sound interesting to me.
+
+I'll tell you, I used this model last like two days ago.
+
+Because my family have all learned how to use AI.
+
+And they just, what's happening?
+
+And they send me a picture and they say, "Johnno, I want this, but I want it made of daisies."
+
+Or similar requests.
+
+So I fire up whatever model I find that seems to suit that.
+
+I can see why they're in your family with Chris.
+
+Yeah, so the point is there's lots of building blocks out there.
+
+And a lot of them are open source models.
+
+These are things that people have released that you can use.
+
+And you could theoretically run yourself.
+
+But the nice thing is there's also a whole ecosystem of providers who are happy to spend the time setting up the infrastructure and managing the queuing and so on.
+
+And then they make those available.
+
+So we'll try out a few of these as many as we can just to get that feel.
+
+But I thought we should start by following on from our last week's example.
+
+Okay, so does that sound like a good place to start, Jeremy?
+
+I don't know.
+
+You tell me, how are we going to follow on from last week's example?
+
+So the sort of vague hand-wavy plan when we were doing things last week is we said, "Look, we've developed this web scraping idea and then we've scraped some code problems.
+
+And now we can use sending off a request to a language model and getting back a classification to maybe pull the ones that were relevant to one topic."
+
+But something that starts to come up when you're thinking about applying this for the future is like, "Oh, wouldn't it be nice to be able to more quickly search for, which is the best one for some given query to be able to pull in?"
+
+We also talked about the context that we give the language model, wouldn't it be fun to find examples automatically that were relevant?
+
+How I see.
+
+So instead of manually each time running a new structured query extraction to grab the graph ones, we could say, we could just literally type in a query like problems that could utilize NumPy or problems that expose some kind of interesting computer science foundation.
+
+Right.
+
+Or even if you try to remember a specific one, like, "Oh, there was one that involved like navigating around a maze."
+
+Right?
+
+I just want to be able to quickly pull that up.
+
+There were so many last year that one maze.
+
+I actually enjoyed some of them.
+
+Right.
+
+And so that.
+
+Okay.
+
+So that's going to involve, that's going to involve embeddings, right?
+
+We're going to be doing basically something like, people talk a lot about RAG, retrieval augmented generation, which is where you find things that are ground things that are relevant to your prompt, add them to the prompt and then do better.
+
+But the retrieval part is useful of its own.
+
+So we're going to be doing the retrieval bit of RAG effectively, right?
+
+Exactly.
+
+And there's a few reasons we're doing this one.
+
+This seems like a particularly useful building block, just like being able to ask questions of a language model is a particularly useful building block, like the short example we did last week.
+
+Two, it's a good example of like some fairly complex high surface area topic.
+
+And so we'll try and show you some hints on how to explore this and solve it yourself.
+
+But then I'll probably also switch on the teacher mode and explain some of the pieces as well.
+
+Yeah.
+
+In my hacker's guide to large language models, which we can provide a link to, I have a section about embeddings and retrieval because it's, it is a critically important foundational piece of knowledge I think people need to have.
+
+It's also like a bit magic, like we can create our own Google, but better than Google, you know, where we can search our company's documents or our own GitHub repos or whatever, you know, our family's, you know, collection of letters or whatever.
+
+Or they Google photos.
+
+Yeah.
+
+Oh, well, yeah, that too.
+
+You know, with arbitrary questions, which, yeah, it feels like an amazing superpower that a couple of years ago would have been, you know, what's the best we could do would be some kind of substring matches or redjects or something.
+
+So yeah, I think that's an important, super important skill to teach people.
+
+Cool.
+
+Okay.
+
+Well, did you want me to like fire up and, you know, a solver thing?
+
+And are we going to start with like kind of a trivial example to kind of show how it works and then?
+
+Yeah, well, let's, let's start by asking Solvett, you know, what a good learning half might look like, what the sort of minimal getting started might look like.
+
+And then as we explore it, I'm going to be, so I'll be navigating, you'll be driving.
+
+But I suspect that there'll be quite a few steps that are pieces that we've done before.
+
+And so I'm also going to try and keep an eye on the chat if people have questions for Jeremy.
+
+And I'm going to try and ask some sort of like meta questions of like, okay, how might we choose between these options or what might be a good reason to go with option A or B?
+
+I'll try and keep that like kind of like higher level view, especially if there's people in the chat with questions.
+
+But yeah, let's get started.
+
+Let's fire up Solvett and then maybe start by specifying what we want.
+
+We want to learn about embeddings.
+
+We're on a fairly resource limited system in Solvett.
+
+We want to explore the concepts.
+
+Can it suggest some, some places for us to start?
+
+Great.
+
+Okay.
+
+Let me just, just find a template here.
+
+Cool.
+
+And share my screen.
+
+I've got a keyboard shortcut.
+
+Let's see if it actually works.
+
+Share.
+
+It looks like it's going to.
+
+Okay.
+
+You see my screen.
+
+All right.
+
+Yes.
+
+Okay.
+
+So I created this template because previously I'd been using that kind of utils.py thing to bring in stuff.
+
+And one problem with that is that Solvett couldn't see what I had like imported and stuff.
+
+So I've copied those imports to the template and then I added this prompt, you know, and actually the answer from the prompt looked pretty fine, but I also edited the answer slightly.
+
+So I'm going to click duplicate.
+
+And I guess we'll do like lesson nine.
+
+Retrieval.
+
+Okay.
+
+All right.
+
+So basically I'm going to be asking you basically, I got to say I want to learn about retrieval and embeddings and, you know, using external services because I don't have GPUs, that kind of thing.
+
+Is that the idea?
+
+That's the idea.
+
+Yeah.
+
+And like we've noticed asking for options if you're still in this exploratory phase helps kick it out of the like, here's some code immediately.
+
+Yeah.
+
+Okay.
+
+Great.
+
+So that kind of thing.
+
+Yeah.
+
+I'm interested in learning about retrieval and embeddings today.
+
+I don't have any GPUs on this system.
+
+So that'll be to be based on external services.
+
+Can you tell me some options for the kind of directions we could take this and maybe some of the key ideas I might need to know about?
+
+To generate?
+
+Yeah.
+
+Sounds good.
+
+And while it's thinking, I just noticed I know that I've switched from whisper flow to Mac whisper.
+
+So that's why that looks slightly different.
+
+I'm quite enjoying it.
+
+I've set my right option button to be the one I hold down, which is kind of nice select because one nice thing about that is the function button which whisper flow uses is not available on external keyboards.
+
+So you're having that option.
+
+I don't use right option for anything else.
+
+Okay.
+
+This is pretty out of date by the way, which is interesting, but you know, it's good that they kind of mentioned some companies we could look at because these are all companies that provide good embeddings still.
+
+Yeah.
+
+So I mean, it's nice that it suggests it's a similarity, search, chunking, hybrid search.
+
+Okay.
+
+Yeah.
+
+Cool.
+
+Those are all some like things we could go down in time.
+
+And so here, yeah, you mentioned these are out of date.
+
+This is a fast moving area.
+
+And so unlike, you know, asking which library and getting an answer numpy for scientific computing, that's probably going to remain the correct answer for a long time.
+
+But the specific like version of which cohere model, which open AI model to use, that's something that might change.
+
+And so there's a few options we could try and look at some sort of up to date ranking and listing.
+
+Or we could just rely on like maybe going and searching for those companies and seeing their offerings.
+
+As it happens to speed things along, I happen to know that Google has a text embedding model with a generous free tier.
+
+And Google gem and I text embedding model.
+
+Text embedding model.
+
+Okay.
+
+So we'll do a little search.
+
+Shall we?
+
+I assume some person wrong button.
+
+Text embedding model.
+
+Okay.
+
+It's nice.
+
+And then we'll look up for things that say quick starts and you know, here's a quick start notebook, which is great.
+
+Something I've noticed, I don't know if you've seen this as well.
+
+And then there's API.
+
+Cool.
+
+It might just open a few of these.
+
+Is that most people I know are too much towards doing everything with AI or nothing with AI.
+
+You know, so a lot of people I know will just start asking AI, you know, how to do something straight away when there's like literally a quick start that's actually a bit more streamlined and up to date.
+
+Some people don't use it at all.
+
+But when I see quick start, okay, I mean, that's pretty short.
+
+Would you be happy if we started here?
+
+Yeah, I think that's good.
+
+And then if this works, we have working useful code and we have a document that we can come back to and maybe put into Solvit as well as context.
+
+This gives us a starting point that's useful.
+
+And you'll see as we look at various different APIs, like this, everyone's trying to be a good useful like they want you as a customer obviously.
+
+So pretty much every page will be like, hey, yes, so you get started.
+
+Here's what you install.
+
+Here's some code you can copy and paste right away.
+
+And so that's generally a quick step.
+
+This pricing is insane, you know, like for free.
+
+This is Flash, which is really good.
+
+Million tokens per minute.
+
+And beddings, 1500 requests per minute.
+
+Like literally everything's free.
+
+So wow, that's so cool.
+
+And the quick start.
+
+Yeah, click this button.
+
+So you know, because I knew Jono was going to be doing this stuff today, I already created the API keys.
+
+You don't have to watch me do that.
+
+And then I pasted them using the names that they had in their quick starts.
+
+So we've got Replicate one and OpenAI one, a GROC one and Gemini one.
+
+So that's that's skip that step I've already done, Jono.
+
+So in theory, I can copy and paste, right?
+
+Okay.
+
+Also, I kind of interested to play around with ghost text a bit.
+
+So let's turn learning mode off as well.
+
+And so the model knows what's going on.
+
+I'll just add a comment here.
+
+Next we will just paste in the example from the Gemini quick start.
+
+Okay.
+
+Okay.
+
+And what I might actually do then, yeah, so let's submit that.
+
+And let's take a look at it.
+
+So yeah, tell us about what happened here, Jono.
+
+Cool.
+
+So switching from Claude as a teacher mode to Jono as a teacher mode, we have here a collection of numbers.
+
+And if you look at the length of it, we'll see.
+
+Oh, well, that could be done more easily by doing this.
+
+Nice.
+
+Make it an L that brings up like a little wrapper.
+
+I like it.
+
+Yeah.
+
+So we have a list of 768 numbers.
+
+And that's been the result of asking what is the meaning of life?
+
+Now, this does not tell us what the meaning of life is, right?
+
+Right.
+
+So this isn't a chat model that's going to respond back in text.
+
+Instead it's going to map any input you give it into the same format, which is 768 numbers that can be positive or negative, mostly between, let's say minus one and one, say, right?
+
+So some small numbers that somehow capture some essence of this text.
+
+And so to get a better feel for what we mean by like capture that essence or like what use it is to turn a string of text into some kind of a vector representation is what we might call this, right?
+
+So you've heard of vector databases and so on.
+
+This embedding, this set of numbers that captures the essence of that text, maybe we should try dumping in a few different texts and see what their vector versions look like.
+
+I might just also grab this.
+
+All right.
+
+So I'm just going to go that above.
+
+So actually I'm realizing instead of doing an L, we should have made a NumPy array because we're going to be doing math on this thing.
+
+So when you're going to do math on something, it probably makes sense to make it an array.
+
+So this is going to make it a NumPy array.
+
+There we go.
+
+A bit more than we needed.
+
+So when I'm working with NumPy arrays, I like to just look at the shape, like just what is the rough look at this.
+
+Yeah, exactly.
+
+And maybe we'll just grab the first bit of it as well.
+
+Nice.
+
+All right.
+
+Cool.
+
+Okay.
+
+So I might just come step back a bit, Jono, then, and just talk a bit about the basic idea of these numbers.
+
+Some folks might remember years ago, there was stuff like Word2Vec and Love and stuff like that, where basically you would get some numbers that represent a word.
+
+And if you plotted those on a graph, you would see a high dimensional graph.
+
+You would see that the words for king and queen would be kind of near each other, but also king and male would be kind of near each other.
+
+And so broadly speaking, this is a set of numbers that represents a whole question where other questions like this will be near each other.
+
+But also in a good embedding model, and sometimes this takes a little bit of fiddling around and knowing about the embedding model, but the idea is that in a good embedding model, use correctly the answers to this question would have numbers that were close as well.
+
+I guess that would be my understanding, is that sound about right?
+
+That does sound about right, yeah.
+
+And so the broader plan here, we're talking about search, our hope is that we should be able to embed all of the documents that we're interested in searching.
+
+And I see you've put some in the chat for me.
+
+Also embed our query.
+
+So I'm just going to post them here.
+
+Yep.
+
+And this was written by Solvitt, of course, not by me laboriously writing out whole sentences.
+
+Yes, we're going to be able to put all of our possible matches in and then also embed our query and then see which one is the closest match.
+
+So here we have a little mini example.
+
+It's always like, what's the smallest thing I can use to experiment?
+
+We have three sentences and you'll notice one's about a cat, one's about planets and one's about cake and the query is about space exploration.
+
+So our hope is that I'd somehow be able to find a way to say which of these sentences is the best match for my topic of interest to my query.
+
+So I think rather than, you know, writing all this out by scratch, let's pop that into a function that we could then call.
+
+Does that sound reasonable?
+
+Sounds good.
+
+Can you put my embedding code into a small function, which I'll then be able to call on each of these sentences?
+
+I'm kind of like a bit back and forth as to how often I do that versus copy and paste it myself.
+
+Have you found yourself in any particular mode, Jono, as to how much you write your own functions versus have them written for you?
+
+That's good to me.
+
+If it's pieces that I've just done and I've got them all readily copied and pasted, I'm very happy to hand assemble them.
+
+But when there's all this extra fluff of like, I know exactly what else needs to go in here, it's just going to be some laborious typing that I'm very happy to say that the model looked just righted for me and you should also, you know, catch exceptions and, you know, return it nicely and add a doctrine.
+
+Like I'm very happy to outsource that kind of piece because once you've done all the bits individually, it doesn't feel like rewriting them is going to add much to my understanding.
+
+And this is great.
+
+Look at our gray text.
+
+Nice.
+
+Ghost text.
+
+So I'll just hit right arrow.
+
+Okay, so we're taking all of our sentences and returning them into an embedding one for each and returning our query and we're getting an embedding one for each.
+
+Cool.
+
+And that obviously should give us, yeah, that looks fine.
+
+So it's figured out that we like seeing the shape of things.
+
+Nice.
+
+Okay, so we've got one 768 dimensional vector, right, one embedding for the query.
+
+We've got one for each of the sentences that we're interested in.
+
+So the key question then is like, what is the measure of closeness that we use, right?
+
+Is it just somehow averaging the numbers and looking at the distances between them?
+
+But maybe we can ask Solvitt to tell us what that is and to show us in code how we can get out.
+
+I'm going to, I'm going to, I'm going to have a bit more fun.
+
+I want to say, I kind of like doing things, using my own intuition first.
+
+And so I just want to know how far away is that list of numbers from each of these lists of numbers.
+
+So we're going to go through and we're going to say, okay, the first number is minus 0.01.
+
+How far is it from the, that's for, not this one.
+
+So for the query, how far is the first number from the first number of the first sentence?
+
+Then the second number and the third number.
+
+To me, how far away is very easy.
+
+I can take the difference between the two, but I can't average them.
+
+I'd have to take the absolute value first, right?
+
+So I'm going to experiment a bit myself first.
+
+I think what I'll do is simply find the average absolute difference between the query and the sentence.
+
+Does NumPy have some absolute difference average already that I can use?
+
+That is not how one spells NumPy.
+
+Do you think it calls it numPy or something?
+
+Some people say numPy with the language being bethan, I guess.
+
+So it's the bet.
+
+Okay, great.
+
+So we're going to take the absolute value of a minus b and take the main, okay, so it says yes, but actually that's really a no.
+
+That's, you have to do it by hand.
+
+So def, call this the, no, look at that.
+
+You say it's nice, right?
+
+Because the great text sees the whole conversation.
+
+I wasn't really looking forward to writing that even though it's extremely easy.
+
+I just, that's nice.
+
+I'm very curious to see what happens if I have pressed alt shift right at this point.
+
+Oh, absolutely nothing happened.
+
+That's interesting.
+
+Maybe it doesn't work until you've got something there.
+
+I have to ask Tom about that.
+
+Oi, what's going on?
+
+Let's apply this to our query and sentences.
+
+So we're going to go through each mapping, each one, and we're going to find, I guess the problem is a lot of people don't realize that FASCOR has this very nice feature where we can say, well, L1 dist has an a and a b.
+
+So the b will be the query embedding.
+
+That's quite sweet.
+
+Does that make sense, Jono?
+
+It does.
+
+Yeah.
+
+Yeah.
+
+I guess the lambda one is nice if you don't know that piece of terminology.
+
+This is one less thing you have to learn about.
+
+I don't know.
+
+Lambda's can be a bit confusing.
+
+Okay.
+
+So I'm looking at the values and it seems like we've got, well, something three, five, open O31 and open O35.
+
+I guess.
+
+They're not, they're fine.
+
+This is the closest, which is good.
+
+It's not a huge, yeah, I don't know.
+
+I was hoping it would be more obviously different, but I guess it passes the test.
+
+It passes the test.
+
+I feel better maybe if we had like, I don't know, maybe I should just add one more.
+
+Maybe that was just a bit of luck.
+
+Oh, wow.
+
+That's nice.
+
+Okay.
+
+Okay.
+
+So that's a nice way of generating data actually.
+
+I like that.
+
+So we should have the first one and the second last one should be closest.
+
+Let's make that an array as well because I think it might at least format it a little easier.
+
+A bit over enthusiastic for decimal places.
+
+Here we go.
+
+So that one is close and, oh, and that one's close as well.
+
+Okay.
+
+Nice.
+
+We didn't just get lucky.
+
+Cool.
+
+But it still might be worth seeing like how the matching what the model was framed with that and so on.
+
+So we could ask Solvitt now, what's the proper way to do this?
+
+That was my guess at a good way to do this, but what would the more officially correct way be?
+
+Okay.
+
+Cosine similarity.
+
+So cosine similarity basically refers to this idea of like, okay, you've got two different points, you know, in many dimensional space, but just imagine it being in three dimensional space and you could like draw a line from the origin to each of your two points and you can find the angle between those two lines.
+
+There's a very simple approach to visualizing higher dimensional spaces.
+
+In this case, we have a 768 dimensional space and I learned how to remember I watched Jeffrey Hinton's Coursera video back in 2012, I think it was.
+
+And his tip was visual, you know, to, I think he's doing like a 14 dimensional space.
+
+You said visualize it in three dimensions and say the word 14 lots of times.
+
+And that's fine.
+
+So that's what I do.
+
+So that that that that angle between the two, if it's close, if it's a smaller angle, the two are closer together.
+
+But, but one might be much further away, but they're, they're directionally the same.
+
+So imagine then taking that those, those two points and shifting them both.
+
+So they're like on the edge of a unit sphere, right, making them so they're both the same distance away.
+
+Then the angle between them and the distance between them would represent the same thing.
+
+And it turns out it's actually true cosine similarity.
+
+You can calculate it either by actually calculating the cosine of the angle, or you can simply find the distance away like in kind of Euclidean space or whatever.
+
+And then divide by their, you know, divide by their total length, if you like, this is called the norm.
+
+The details don't matter, but this is basically normalizing it.
+
+So it sits on the unit circle.
+
+So it's a nice thing when you see cosine similarity, which you do a lot.
+
+It's actually much less confusing than it sounds.
+
+It's just the normalized distance between the two, which makes sense, right?
+
+If one of them is kind of in millions and one of them is in .01s, you know, you, the fact that there are millions is not what matters.
+
+It's where they're located.
+
+I don't know if I put that description, John.
+
+That makes sense.
+
+Yeah.
+
+So we're, so we're finding a good distance measure for these kind of high dimensional things and, and how correlated or similar or in the same direction they are, as opposed to just the absolute distance.
+
+And, you know, by the way, it called this L1 distance.
+
+And again, again, that thing, which is kind of my intuitive version, it is actually officially called the L1 distance.
+
+And if instead this a squared minus b squared and this said square root, that would be the L2 distance.
+
+All these jargon words have reasonably simple meanings that I can now just click on this ad copy of message and replace L1 distance.
+
+I wish it had called it cosine distance actually, but that's okay.
+
+Cosine similarity.
+
+By the way, if you hit tab, when that thing pops up, which is not the gray text, but the kind of like the simple, look it up on the simple table, tab is the thing that, that selects it.
+
+Okay.
+
+Does that look right?
+
+Is it called b still?
+
+Yeah, it does.
+
+Yeah.
+
+So, okay.
+
+As the example in context, I guess.
+
+First, okay.
+
+So, this time, this one is going to be a larger number because it's a measure of similarity rather than distance.
+
+Yeah.
+
+So, it goes, I think, one to minus one.
+
+Nice.
+
+Cool.
+
+Okay.
+
+So, this seems to be working.
+
+There's a couple of questions in the chat.
+
+And I think so, we're about to step up to maybe like doing a larger example to search over some real documents.
+
+But I wanted to ask you a few ones that came up.
+
+One, there's a question of someone saying, wait, why is Google making it free to make a better Google?
+
+You know, what's the deal with this?
+
+And so, maybe we should talk some of the caveats of even using this API, even though it's free.
+
+And then, relatedly, someone asks, what about modern bird?
+
+Where does that fit in this picture?
+
+You know, what's the deal with these small encoders?
+
+So, I don't know if you have thoughts on either of those.
+
+I mean, I don't feel like I want to say caveats.
+
+Do you know what I mean?
+
+Like, I think, like Google, it's kind of life or death for them as to whether they successfully pivot to being a modern AI company, which means they need lots of people using their stuff.
+
+They've kind of been in this place before with Google Cloud.
+
+You know, they were the last of the big guys, you know, after Azure and AWS.
+
+AWS were the first.
+
+So, you know, they're actually on the cutting edge at this point.
+
+They're at least as good as open AI, maybe not quite up to Anthropik yet, but not too far away.
+
+So, they want us to use it.
+
+So, it's lots of stuff for free, which is great.
+
+Actually, Logan, who's one of our investors at NCAI, is kind of their key evangelist product manager guy, and I think he's helping push this out there.
+
+So, I'd say, yeah, go for it.
+
+I don't think they're likely to suddenly do a rug pull.
+
+Unless they somehow got to a point where they were so much better than everybody else, they had a monopoly.
+
+I think we're actually in a position right now of taking advantage of massive amounts of investment coming from venture capitalists and big startups and take full advantage of it.
+
+I don't think many people are, to be honest.
+
+Sorry, what was the second question?
+
+Oh, modern bird.
+
+Well, this is, yeah, so there's modern bird and like, when would you look at those local models versus like, I know there's a 1500 requests a minute rate limit.
+
+So I was just wondering if you had thoughts on like, yeah, what's your decision for?
+
+For embeddings specifically, Google's embeddings are not going to do everything you want.
+
+As you said, the rate limit of 1500 per minute means if you want to do a million, it's going to take a while.
+
+And actually, so the model that answer AI created along with light on another folks called modern bird, lets you create, I don't know, we haven't compared them directly to Gemini, but they're really, really good embeddings.
+
+I wouldn't be surprised if they turn out to be better than Gemini.
+
+Kind of for free if you've already got a GPU and it's not doing something else and it's super fast.
+
+And yeah, so the other nice thing about something like modern bird is you can fine tune it, which means you can create embeddings that are going to be better than anybody else's for your particular task.
+
+And yeah, these are all things that probably aren't going to live in a solver course, but maybe in some future fast AI language modeling course might be fun to dig into that.
+
+Did you agree with those assessments?
+
+I do.
+
+Yeah.
+
+You know, there's one other thing I wanted to add is like, if you're doing something that's fairly generic with a language model, like we showed the together list of open models, right?
+
+If one goes away or one provider goes like a together vanishes, there's still any scale and open router and fireworks and literally 50 others.
+
+So it's quite easy to swap with an embedding model.
+
+There is this nuance where like, okay, say I'm embedding every email that comes in.
+
+Okay.
+
+I'm bad example because there's not that many emails even in a company, but some large number of users and I'm embedding every piece of content that comes up every day.
+
+If I want to change my embedding model, I now need to re-embed all of that past content, so that one off switching cost might be a little bit higher, which is why I think some people once they get stuck with, they chose open AI, Ada 002 from three years ago and they've just still been using that model because it works fine and they don't want to re-index all of their data.
+
+And so that's like one slight caveat with embedding models specifically, but it's worth doing the math, right?
+
+To say, look, all my company's emails, that's 5000 emails, right?
+
+In other words, five minutes, three minutes of using this new model to re-embed them all.
+
+I mean, anytime we have, you know, three questions an hour from people in our company, it's going to be fine with whatever API you choose, it's probably going to be effectively free versus like, oh, I need to index all of Wikipedia and I need to keep it up to date and I want to search, you know, 100 times a second, you maybe need something else.
+
+So yeah, I just wanted to like say that these are always interesting design spaces and for us, surprisingly often, the fact that you can get going with an API with no worries, no infrastructure woes, no renting a GPU, you know, we could just copy paste the getting started code and be doing what we wanted.
+
+That's very, very valuable and often more at ways the benefits of setting everything up manually.
+
+Okay, cool.
+
+Okay, so do you want to go back to carrying on with this embedding example, maybe try to embed some actual documents, then we'll take a break and come back and try some other APIs.
+
+Cool.
+
+Yeah.
+
+So John OU and I, gosh, quite a while ago, competed in a Kaggle competition for, you know, answering science questions based on Wikipedia articles.
+
+So that was actually quite a lot of work back then and I feel even now a year later, I would be interested in revisiting it.
+
+Will that be an option?
+
+So we don't necessarily have to embed all of Wikipedia right now, but like we could grab 50 random documents.
+
+That sounds good.
+
+Yeah.
+
+So this random Wikipedia page, there is somewhere like an API for that, right?
+
+Special random, okay, special random.
+
+And does that just return it?
+
+Apparently it does.
+
+George and poet.
+
+I'm not that familiar with that, George and poet.
+
+All right, I will let you figure this out if that's okay.
+
+It should be pretty straightforward and we can maybe do it reasonably quickly because we've done something super similar before.
+
+I'll just tell it what we're going to do here.
+
+Let's grab 50 random Wikipedia pages in order to have a larger document set to test with.
+
+All right.
+
+So I'm grinning a little bit smugly because I happen to know that there's an actual API that you can call to get random Wikipedia articles.
+
+But you know, you just clicked on the link and you saw the page and given that last week was all about web scraping or page scraping, it feels like we've kind of got a cheat code to make anything an API.
+
+Oh, you're doing this one?
+
+Made here a Wikipedia random API?
+
+Yeah.
+
+Okay.
+
+So that's an option, but we could also use our beautiful soup skill that I think I'm happy with whichever you want.
+
+Get request to view a list of random pages.
+
+This looks promising.
+
+Okay.
+
+Sample code.
+
+Sample code.
+
+Oh, all right.
+
+I mean, they've literally written it.
+
+So.
+
+So actually then.
+
+Yes, Wikipedia sample code.
+
+Can you please convert this into a function that uses HTTPX and is much more concise than their approach?
+
+Wait, what's the N?
+
+R and, oh wait, is it doing more than one?
+
+Seriously?
+
+R and limit.
+
+Oh, I guess maybe this is going to give us just the titles and the links of the pages.
+
+But we could also just do it and look at the.
+
+Let's try it.
+
+Look at the JSON.
+
+You can turn two random pages.
+
+That's kind of boring.
+
+Yeah, I'm not actually sure this is a win.
+
+Because, you know.
+
+Yeah.
+
+Actually.
+
+So we could totally do that.
+
+But I think this one's actually fine.
+
+Cool.
+
+Okay.
+
+Copy or scraping.
+
+Nice to do both.
+
+All right.
+
+So let's convert this back to code.
+
+It's good to practice anyway.
+
+U R L equals.
+
+Great.
+
+Please create a small concise function that uses HTTPX to return the text of a random Wikipedia page using this URL.
+
+You should use a Pi Pi library to convert it to markdown.
+
+I think it's called html to text.
+
+But.
+
+Pi Pi.
+
+Markdown.
+
+It'd be nice if there was a Mac whisper model that was like fine tuned on more code and all.
+
+NumPi and Jupyter and so on.
+
+Yeah.
+
+Pi Pi, HTTPX, markdown.
+
+Look at that.
+
+It's even done the follow redirects.
+
+That's very smart.
+
+That sounds fine.
+
+Let's try it, shall we?
+
+I like getting from that.
+
+How did that happen?
+
+I thought I'd selected Wikipedia.
+
+I guess I didn't.
+
+Okay.
+
+Do you think it matters that it's got a lot of extra stuff?
+
+I feel like it kind of does, right?
+
+Yeah.
+
+It might be nice to filter out all of the bits.
+
+Again, we can kind of practice stuff we've learned.
+
+I would right click this.
+
+I would choose inspect.
+
+I'll keep pressing left.
+
+Actually, I'll press down until I get to -- here we are, this area.
+
+This bit seems to be the bit I want.
+
+Yeah, we don't really want that bit on the right.
+
+Let's see.
+
+We don't need that.
+
+We don't need that.
+
+That looks pretty good.
+
+Cool.
+
+All right.
+
+Actually, let's modify it to get just the content which lives in the following ID.
+
+So you're leaning a lot on the AI here to write the code.
+
+And part of that is this is code that we wrote last week in that very exploratory learning about it kind of way.
+
+So now it's like, okay, cool.
+
+We can see using beautiful soup to find specifying the ID.
+
+We don't need to go through that all again laboriously because it's pieces that we've got fresh on memory and we can test it straight away.
+
+And so it's kind of like a choice that you can make at any time how deep into the learning mode you're going to go versus the relaxed -- let the AI do the boring.
+
+What we actually want here is to practice the embedding mode rather than the -- Yeah.
+
+I think it's also like just nice to see like this is how I actually would code it.
+
+Do you know what I mean?
+
+This is about the amount of AI I would use.
+
+Yeah.
+
+So that all looks pretty good.
+
+And one thing we did last time, we ran out of time to do it properly.
+
+So we skipped it was making parallel work.
+
+So for this, I'm just going to teach you all the key thing to know.
+
+There's lots of ways of doing parallel, but since we're using fast core, you may as well use it.
+
+It's the easiest I know.
+
+It's just literally one function.
+
+It calls some function for some bunch of items for a list.
+
+It's going to call it this function passing in each item from the list.
+
+And it will also just like map, it will pass in any keyword arguments to that function.
+
+The thing I wanted to point out is that this won't work in any kind of environment like Solver or like Jupyter or whatever where you're kind of like -- you don't have a separate script unless you set this to true, which is going to use threads instead of processes.
+
+So I just wanted to mention that.
+
+So this is as simple as going from fast core dot parallel import parallel.
+
+So that gives us that.
+
+And then what are we going to call it on?
+
+If we want to run it 50 times, we can just call it on range 50.
+
+And that's going to pass in 0 and then 1 and then 2 and then 3 into our function, which actually won't work because it's not receiving anything.
+
+So it's kind of weird, but I would just put an arbitrary, unneeded thing there so it doesn't complain.
+
+And normally, you'd be getting the contents for pages 1 through 50 or for the first 20 URLs in your data frame.
+
+Yeah, absolutely.
+
+And if we're done at the API, we'd have the URLs and we'd dump them in here.
+
+But it's not that unusual to call a function that involves random data 50 times.
+
+So now we can get like texts equals.
+
+Okay.
+
+Great.
+
+Okay.
+
+GetWiki.
+
+Working workers.
+
+So how many separate threads are we going to run this in?
+
+So we'd say 25.
+
+And the key thing we need to add that I mentioned is thread pool equals true.
+
+So it's going to use threads rather than processes.
+
+And remember, we're going to need two things, the function and the items.
+
+So the items we're going to use are just the numbers from 0 to 50.
+
+And that should do it.
+
+And it's kind of nice because it doesn't use much CPU just to call something over a network.
+
+And Wikipedia is a big company.
+
+We're only doing it 50 times.
+
+I don't think we need to be rate limiting or anything.
+
+This is not going to take down Wikipedia.
+
+So I think that should be fine.
+
+And Jeremy, we mentioned that Solvitt you only have one CPU core per little container.
+
+So is it able to run 25 things in parallel or is there a limit?
+
+Yeah, it is.
+
+Modern operating systems are very clever that they are able, even though you only have one core, they are able to send a network request, okay, waiting for that, send another one, wait for that.
+
+And they kind of use queues and stuff internally.
+
+It's all super smart.
+
+People from the JavaScript world would be more used to using async, which you can certainly do in Python as well.
+
+But it's nice that we don't really need to on the whole.
+
+It's nice to just dump.
+
+So you can see we've got 50 things super fast.
+
+So that's pretty cool.
+
+No, can't get 50, Jeremy.
+
+Goes to 49.
+
+Okay, great.
+
+So let's just make sure they're not all the same.
+
+So we've got New York Infantry Regiment and we've got, okay, houses on the north side of Canny Hill.
+
+Okay, that's good.
+
+So I would be inclined to, you know, what should we look for?
+
+Maybe sports things or, well, there's a military one there.
+
+Should we get things related to military?
+
+See if that turns up.
+
+Yeah, sure.
+
+That's a good idea.
+
+That's five.
+
+So we need to embed our query.
+
+And all of our documents.
+
+And all of our documents.
+
+Great.
+
+So we've done that before.
+
+So should we just go add copy of message?
+
+Cool.
+
+So here we're going to map texts.
+
+It's probably not an L yet.
+
+Okay.
+
+And then our query will be military.
+
+I think it's an I military and I.
+
+But a good embedding model will handle it.
+
+M-I-L-I.
+
+Okay.
+
+M-I-L-I-T-A-R-Y.
+
+History.
+
+Whatever.
+
+Is that all?
+
+I think so.
+
+Okay.
+
+And then we do the cosine similarity.
+
+Okay.
+
+And so, um...
+
+Hang on.
+
+What is this?
+
+Oh, somehow I...
+
+I thought I said...
+
+Oh, it does immediately below.
+
+Ah!
+
+Well, yes, of course it does.
+
+My bad.
+
+Copy.
+
+Delete.
+
+I'm still not quite sure it didn't work though.
+
+But I guess we'll find out.
+
+Maybe one of the texts is extremely long.
+
+Mm.
+
+Yep.
+
+One of the texts, I guess, is extremely long.
+
+So that's fine.
+
+So I would probably just change get embedding here.
+
+To not embed too much.
+
+Maybe the first 500 characters.
+
+Let's do the first thousand at least.
+
+Because I feel like the first 500 characters are something that I was like...
+
+The model agrees with you.
+
+All right.
+
+And probably the people who know about retrieval are like screaming silently to themselves at the moment.
+
+There are strategies for dealing with long documents, like chunking it up into parts and so on.
+
+But this is good enough for our purposes.
+
+And hopefully the introduction of any Wikipedia article should be enough to get the vague gist of what's going on, right?
+
+Oh, God.
+
+And the Indians in the chat are wanting to ask about cricket.
+
+We're definitely not asking about cricket.
+
+We've had enough Indians playing cricket in Australia recently.
+
+I detect a note of pain there that I'm not even going to dig into.
+
+Okay.
+
+Yeah.
+
+And then we did this one, right?
+
+Yeah.
+
+We want the cosine.
+
+Okay.
+
+So this time I won't mess it up.
+
+I just remembered that you press copy, paste.
+
+Oh, and it's no longer automatically selecting this.
+
+That's a little bit of an issue.
+
+Okay.
+
+So this is going to be...
+
+Okay.
+
+Still called embeddings.
+
+Still called queries.
+
+So that should all work, right?
+
+And we're hoping the index five might be reasonably high.
+
+Zero, one, two, three, four, five.
+
+It is.
+
+And the next one is as well, which is interesting.
+
+So maybe we look at the highest?
+
+Yes.
+
+Which is np.agmax, which obviously you could...
+
+Yeah, it's definitely a bug here.
+
+Just three.
+
+So the highest is the 30th one, which is...
+
+I wonder if it'll guess.
+
+It does guess.
+
+I like that.
+
+It's not a lot of typing that it fixed, but anyway.
+
+0.47, that is pretty high.
+
+And they were called texts.
+
+Again, I wonder who's going to guess what I want.
+
+Yep, definitely.
+
+Cool.
+
+Okay.
+
+So...
+
+Actually, rather than stopping sharing, it might just be worth revisiting.
+
+It's kind of nice that what we just did there was we did kind of revisit everything by doing it a second time, right?
+
+So what we did is we...
+
+It's kind of remarkable how...
+
+It's not just how quickly we typed it or put it, created it.
+
+We didn't type everything ourselves, but how quickly it ran.
+
+Getting the 50 pages, we could have made this 500.
+
+It's about while we're chatting.
+
+This is still going to be fast.
+
+And then, yeah, we got all the embeddings.
+
+And we get 2,500 requests per minute.
+
+So we can do all 250 embeddings if we wanted to do that for free.
+
+No worries.
+
+Okay.
+
+So we then called our getembedding function on each one of them.
+
+And then we compared the embedding of the query to each of those texts.
+
+And I guess actually it would make a lot of sense to call this in parallel as well.
+
+Now I think about it.
+
+Because, again, it's a network request.
+
+It's not our computer doing anything.
+
+And definitely Gemini is not going to...
+
+Like it's an API.
+
+You don't really have to...
+
+Like it tells you what the limits are.
+
+So we're going to be less than the limit.
+
+Yeah.
+
+Okay.
+
+Cool.
+
+So I guess this basically has to do... 20, 250 divided by 25.
+
+So each process is going to be doing 10.
+
+So yeah, we don't have to sit there waiting for it.
+
+But when it comes back, you can track it out if we wish to.
+
+Yeah.
+
+What are your thoughts about that process?
+
+Do I know?
+
+Was that how you expected it to look roughly speaking?
+
+I think so.
+
+Yeah.
+
+I like that at any point there's...
+
+It feels like there's various routes we could go now, right?
+
+Like, oh, I wanted to do this.
+
+Well, I could look at the API docs and see what Solvint knows and maybe put some more documentation context.
+
+Or I could just scrape the page data, right?
+
+I could explore around trying my own ideas of similarity measures.
+
+And then I can ask and get an implementation of cosine similarity.
+
+Yeah.
+
+It feels like we didn't take the golden path there is what I guess what I'm trying to say.
+
+Like it wasn't like a carefully doctored approach.
+
+You could have redone this, but use the open AI data embedding model and used, you know, gotten it to write some other parallel implementation using a separate script that downloaded in the background.
+
+You know, you could attack all of these problem faces and it just feels like, okay, as long as you're happy to inspect things and experiment around.
+
+Yeah.
+
+Hopefully now you have this new capability, right?
+
+Which is, you know, how to embed pieces of text and spoiler alert.
+
+There's embedding models that handle images and video and audio and so on too.
+
+And so for video, for images, we won't do that right now.
+
+But maybe that's an exercise for the reader.
+
+But yeah, you would just, you would have a variable containing an image and you would call, what is that?
+
+There's like a, there's like replicate or something would have an image embedding model.
+
+I don't think Gemini has one, does it?
+
+I don't think Gemini is one is multimodal for now.
+
+I know some of the other API writers have embeddings that can handle that.
+
+But you could also look, so clip is the keyword CLIP is the name of actually a whole family of models and their descendants that map images and text to the same space.
+
+And I know that that's, there's various clip models available on replicate and a number of other providers.
+
+So they all, you probably pass in like an image or an image URL, and then you get back 768 numbers in some sort of JSON structure.
+
+Or you pass in some text and you get back a bunch of numbers.
+
+And so then you can do the same thing we just did, comparing those vectors to each other and then seeing all of my images, which one is the closest to my query, that kind of, that kind of thing.
+
+Okay, so I just had a look and very shortly after I stopped screen sharing, the thing had finished downloading.
+
+And so while you were chatting, I just modified this instead of saying L, sorry, not this one, this one, instead of saying L texts dot map get M, I just changed it to parallel get M, texts.
+
+And actually, as soon as I typed parallel get M, the ghost text filled in the rest correctly.
+
+And this case, because we're talking to Gemini rather than Wikipedia, I bumped it up to 50.
+
+So this is going to do 250 document embeddings of Wikipedia articles that are up to 1000 characters long.
+
+So, you know, we'll have a little bit of a wait when I click submit.
+
+Here we go.
+
+Not much in a wait, actually.
+
+Not bad.
+
+You know, actually insanely fast.
+
+And we're not running on this little small single CPU thing because it doesn't have to do much.
+
+Yeah, so then now our array is longer.
+
+It's got all 250 things.
+
+And the maximum is now number 84.
+
+It's the distances not surprisingly, I shouldn't have said distances.
+
+I should have said similarities.
+
+The distances similarities higher.
+
+And there you go.
+
+A list of words that have been used by the German military.
+
+How about we then like do a just a fast like just to get a sense of like how fast we can throw some things together like make an image, make some audio, anything else.
+
+Cool.
+
+Okay.
+
+So why don't we do why don't we imagine a workflow, right?
+
+Let's imagine our silly app.
+
+I give you a short prompt and I want you to generate a longer prompt, right?
+
+So get a language model to generate a longer prompt and then generate an image from that prompt and then have a voice read out a poem about the image or something like that.
+
+Right.
+
+Okay.
+
+So I feel like that'll flex some of our muscles.
+
+Okay.
+
+So this is we can do the individual ones and then.
+
+Okay.
+
+No worries.
+
+I realized I wasn't showing my screen.
+
+I just started to just duplicated our thingy again.
+
+So this is.
+
+Oh, nine.
+
+What did you say flex?
+
+Sure.
+
+Okay.
+
+So I guess replicates the place to like that seemed to be the one you showed that had like every damn thing.
+
+So I showed it because it has, yeah, it has lots of image models.
+
+So when we want to do the image generation part, that's that's been one I've used historically and to be honest, partly because I just have a lot of credits there.
+
+But like, like I was saying earlier, I do want to stress.
+
+You're giving me your, your key.
+
+I appreciate that.
+
+Yeah.
+
+Yeah.
+
+You feel the show that stream as well.
+
+Like that'll be great.
+
+Okay.
+
+And you were to generate an image.
+
+Yeah.
+
+Okay.
+
+So I think like everybody talks about, I guess explore everybody talks about flux as being the, I mean, you tell us what, what do we need to know about generating images because this is right in this field.
+
+So stable diffusion kickoff open source image modeling and there's now a stable diffusion two and three.
+
+But more recently, some of the people who created that initial model have created black flash labs, their own company and they have their own API, but they also shared the model so you can get them on together and file and replicate flux pro is I'd say one of the it's my go to model at the moment.
+
+Like pro pro ultra pro ultra in fact even better the high resolution, all the bells and whistles.
+
+This is going to cost like millions of dollars of your credit.
+
+This is six whole cents per image.
+
+Six.
+
+So this is probably 10 or 50 times more expensive than some of the faster and smaller models.
+
+Okay.
+
+But the results are highly impressive.
+
+Okay.
+
+So yeah, that's a good, that's a good one to start with.
+
+Okay.
+
+No worries.
+
+Okay.
+
+And you're going straight to the code examples just like we did before.
+
+Yeah, exactly.
+
+I just kind of the quick start idea.
+
+Yeah.
+
+Yeah.
+
+I don't see the point of like asking.
+
+Solve it for this because it just literally says do these things.
+
+Let's do those things and see if you can get a majestic snow capped mountain peak blah, blah, blah.
+
+Okay.
+
+So I guess that's the starting point is we're wasting six cents.
+
+So, let's see.
+
+I can describe what Jenna said.
+
+We are going to create a process which given a prompt uses a language model to improve that prompt.
+
+We'll use that to generate an image and then we will generate a poem about that image and have it read out to us.
+
+Is that correct?
+
+Okay.
+
+Okay.
+
+So you do listen to you.
+
+All right.
+
+To start with, let's just play with the APIs we'll use to check that we know how to use them.
+
+Okay.
+
+Jono, you create interesting images, more interesting images than most people.
+
+Can you suggest a prompt that we could use that will create something that doesn't look as much like standard AI slot as everything else does?
+
+Oh, I was just about to describe some amazing standard AI slot.
+
+Okay.
+
+Can we do one of the ones I like from yours is stuff involving, what do you call it, that painting style where you kind of use that metal tool and you kind of spray the paint away?
+
+Like a palette knife?
+
+Yeah.
+
+Yeah.
+
+Okay.
+
+Yeah.
+
+You could do like a palette knife painting of, I don't know, city at night.
+
+Yeah.
+
+How about, I'm trying to think of something Queensland.
+
+All right.
+
+A palette knife painting of the glass house mountains in Queensland at sunset.
+
+Anybody who hasn't been here, you should definitely come and check it out because they're really cool and they're just half an hour away from my house.
+
+So I guess while that's happening, we can have a look at what they roughly ought to look like.
+
+Yeah.
+
+That's the kind of view.
+
+They're crazy looking things.
+
+There's some kind of strange volcanic thing.
+
+Great.
+
+And if you don't mind, I definitely feel like I want to have that.
+
+Have AI tell us how to do that.
+
+How do I view this image?
+
+No.
+
+Actually, no, we should really be using ipython.display.
+
+Nice.
+
+Well, I don't know.
+
+Why is it so disfined to that?
+
+I want to do it the shortcut way.
+
+If you use ipython.display before.
+
+Oh, yeah, exactly.
+
+Oh, that's easy.
+
+Just pass a URL.
+
+Yeah, it's happy with the URL.
+
+Okay, I'm glad I asked it.
+
+It doesn't work with a URL.
+
+I'm sure I've seen it work with a URL before.
+
+Maybe I think you can specify URL equals and it's assuming that it's data.
+
+Yeah, URL equals.
+
+There you go.
+
+It's always nice to -- again, this is something where we could have asked the AI to help us, but I think it saved us a lot of trouble just to look up the documentation that's sitting right there.
+
+Expected string.
+
+Ah, interesting.
+
+So actually, something that's very helpful is to do this.
+
+Again, solve it will definitely fix this for you, for sure.
+
+But actually, let me show you how I'm going to help solve it, fix it for us.
+
+I would type this to output.
+
+If I have no idea what this is, and actually I don't, then -- and this is how I would normally do it manually.
+
+It's find out all the things it can do, but why do it manually when it can do it for us?
+
+So now that that's in the context, it doesn't matter if it knows the replicate API, because this is now -- you know, I can now say just -- how do I fix this?
+
+It should have the information it needs, because it now knows all of the methods.
+
+That's what DAIR does.
+
+It tells all of the methods that output will have -- I actually spy it at the bottom.
+
+It had a .url, so I'm pretty sure I know exactly what it's going to do.
+
+Yeah, exactly.
+
+And DAIR, it's not an obscure thing.
+
+I use that on probably a weekly basis, right?
+
+You've got some random object, and you want to see what attributes it has.
+
+You know, that doesn't look like slot to me.
+
+I don't know how well it's coming through on that soon, whatever.
+
+It depends what you're doing with it, Jeremy.
+
+I think Simon's definition of slot, Simon Willison is.
+
+AI output that is like unsolicited or unreviewed, right?
+
+So if you put your Jeremy stamp of approval and you say, you know, I like this, then you -- It doesn't quite look like the class has mountains, but it looks, you know, it looks interesting to me, you know?
+
+It doesn't look -- yeah.
+
+Cool.
+
+Okay, so we know how to generate images now, and if replicate goes down, we know that together and Black Forest Lab and FELL and eight others also host flux, so we've got our backup plans there.
+
+Should we do the prompt upscaling, you know, coming up with a fancier description from our initial description?
+
+Yeah, definitely.
+
+And I saw someone asking in the chat -- And I don't need this to be in the context, because that, you know, having images in the context, that takes up quite a lot of tokens.
+
+So, okay.
+
+Great.
+
+So someone in the chat had asked about openrouter versus grok, and since we're talking about speed and going fast, I thought grok might be a fun provider to show, just because we, you know, there's lots of LLM available, places that give you an LLM, right?
+
+But grok is fun for a reason that you'll see very soon.
+
+Okay.
+
+Next, we are going to work on the prompt approval stage.
+
+Okay.
+
+This is as much for me as for the language model.
+
+Okay.
+
+So this is grok with a Q.
+
+And they are -- it's one of those things that, like, you don't appreciate how mind-blowing it is until you see it.
+
+Look, quick start.
+
+We love it.
+
+Okay.
+
+This is something I happen to know.
+
+You can install their library, but don't, because we already have the openai library installed, and it's nice to just use the same library all the time, and they are openai compatible.
+
+So I actually think we should do this.
+
+So that's just one of those things.
+
+I mean, it's fine.
+
+You can use the library if you want to, but -- And, like, a lot of APIs actually happen with JSON being sent in an HTTP request and some coming back, right?
+
+So with a lot of models -- That you can see it.
+
+Yeah, there you go.
+
+The library is just some nice cities around that.
+
+Like, replicates one has a file output object.
+
+But you can often just drill down to, like, what's the equivalent code command, and then do that yourself with HTTPX or requests or whatever.
+
+Yeah, or just describing, like, hey, just send a request with this body.
+
+Yeah.
+
+Yeah.
+
+Okay.
+
+So that's given us the client.
+
+Okay.
+
+Copy.
+
+Now, also, another thing I happen to know is that openai copied/stole/was inspired by our beautiful repra for chat completions that we developed for Claudette.
+
+And so we can just type that and it will look good.
+
+And I also happen to know that if we spend an extra 20 cents per million tokens, which I think we can afford, they have something called a "spectic" one, which is even faster.
+
+Okay.
+
+So ready to click submit to explain the importance of fast language models.
+
+Go.
+
+Oh, service unavailable.
+
+Did we run the previous message with the openai client?
+
+We did.
+
+Yeah.
+
+That suggests they're down.
+
+Yeah.
+
+Internal server error.
+
+Okay.
+
+I wonder if there are other model, reversal tile models working.
+
+Oh, that was still fast.
+
+Not bad.
+
+Did I type it wrong or something?
+
+Okay.
+
+So, I'm going to go back to the first one.
+
+I'm going to type in the first one.
+
+Okay.
+
+So, I'm going to type in the first one.
+
+Okay.
+
+So, I'm going to type in the first one.
+
+Okay.
+
+So, I'm going to type in the first one.
+
+Okay.
+
+Okay.
+
+Spec, deck.
+
+Supported models.
+
+Versatile.
+
+Spec, deck.
+
+Oh, yeah.
+
+It is considered preview.
+
+So, maybe they're not careful about making sure it's always up and running or something.
+
+Or that it's like the little test key we made for the lesson is not the same as our normal grock key.
+
+All right.
+
+Okay.
+
+Oh, well, it's even faster.
+
+You'll have to trust us.
+
+But yeah, but still, you can see how much versatile you can see how much output it creates with a click submit.
+
+This is a 70B model.
+
+Bang.
+
+This is pretty amazing.
+
+All right.
+
+Okay.
+
+Let's just again do a little thing.
+
+Can you create a small concise function which allows us to pass in a prompt to this model?
+
+Nice.
+
+And it's doing everything to actually pull out the content of the response.
+
+Great.
+
+All right.
+
+I don't really want that in my thing.
+
+Okay.
+
+So, presumably all we need now is a prompt to do the up sampling.
+
+I have no idea what kind of prompt that should be.
+
+I think just for demo, we could say something like expand the following user prompt into a more thorough and artful description and then pasting the actual user prompt.
+
+Sorry.
+
+So, to get expand the following image, just image prompts into a full description full or more thorough and artful description or something like that.
+
+So, the following image prompt into a more thorough and artful complete image description.
+
+Something like that.
+
+Okay.
+
+And then we probably want to put in the whatever the original prompt is.
+
+And then we can prompt.
+
+Sorry.
+
+So, the idea is we're taking some like base prompt like so you could say.
+
+Yeah, exactly.
+
+So, I was just going to kind of stick this in something.
+
+And then we're going to create a function which pre-pens that to the description.
+
+I can just ask the AI to do that, right?
+
+Create a concise function which takes an image prompt, expands it using the prompt prefix above and the language model and then passes it to the image model used earlier to finally get an image.
+
+Something like that.
+
+Oh, cool.
+
+Yeah.
+
+Just do it all in one go.
+
+I like it.
+
+And trying to like remember to keep while you while you're testing this to keep stepping back.
+
+I guess the theme of this whole lesson today is that how to solve it with code can sometimes involve using building blocks that others have made and especially in the AI field, a lot of amazing building blocks are available and plugging them together, especially in the real world.
+
+So, I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that's a great idea.
+
+I think that skills is always applied to like building successful applications and Eric's discussion on Thursday will hopefully be good for that.
+
+But for me, at least just things like making fun, silly demos that I share with five people, it's really enjoyable.
+
+And it feels like a pretty powerful generic template that you can apply to all sorts of things using the tech available.
+
+Okay, let me try this.
+
+A high quality photo looking image of an otter using Wi-Fi on a plane with a slightly blurry background.
+
+That's a kind of Ethan Mullick standard thing.
+
+And I just added a print here so we can actually see what the expansion looks like.
+
+I guess the thing that's taking a while is the Flexploat Ultra.
+
+They also have...
+
+Oh, I forgot to put that in something.
+
+Oops, sorry.
+
+That is a very impressive...
+
+Wow.
+
+That prompt.
+
+Serious.
+
+I wasn't expecting quite.
+
+It's actually too impressive.
+
+Do you think that's...
+
+Is it like to image models like that level of detail or not?
+
+A lot of ones are trained on fairly high length synthetic captions, but probably more in the order of one paragraph rather than five.
+
+But let's see what the image that we get is.
+
+Okay.
+
+Image.
+
+URL equals image.url.
+
+Okay.
+
+It's pretty artful.
+
+I see the Wi-Fi logo that the text was talking about.
+
+It's got headphones.
+
+Wi-Fi headphones.
+
+Wi-Fi headphones, no less.
+
+Okay, and then you wanted to...
+
+We were going to read something aloud.
+
+Yeah.
+
+Okay, so maybe we could just read the description aloud if we wanted to be a little quicker.
+
+Oh, we've got all the pieces here at this point.
+
+So...
+
+Our URL equals...
+
+Hey, you know what?
+
+Okay, this is kind of cheating.
+
+But...
+
+Please compose for us a beautiful haiku about the image that you can see we just generated.
+
+Nice.
+
+The easiest way to call a language model API from Solvus is to just put it in the prompt box.
+
+Okay, and then we'll copy that.
+
+And we'll say poem equals...
+
+I think at this point everybody fully understands how we could have done that.
+
+And now we need to read it out.
+
+Oh, rep, mckate.com.
+
+While you're looking around, Jimmy, can you also go to the OpenAI?
+
+Like, could you...
+
+Like OpenAI docs?
+
+Yeah, I think it's a good idea to show something...
+
+Again, just to like hammer home something about the space in general.
+
+You see the little capabilities list on the left there.
+
+We have text generation, vision, image generation, audio generation, text to speech, speech to text, embeddings, moderation, reasoning, structured outputs.
+
+Is there audio generation any good?
+
+Their voice is probably one of the best.
+
+What kind of use is it?
+
+It's interesting they've got...
+
+Oh, I see, I can do it here.
+
+Yeah, so you probably want this text to speech rather than...
+
+I think the audio generation might be the real-time audio.
+
+Generate spoken audio.
+
+Cool.
+
+Speech file.
+
+Just create.
+
+Okay.
+
+Cool.
+
+And the point I was going to make is it's just that like that list there, you can also do all of those things through some of Google's offerings, right?
+
+And you can do a subset of those through Anthropics offerings.
+
+They can...
+
+I don't think they can output speech, but then there's also like dedicated companies that only do text to speech, like Eleven Labs or Cartesia or Play.ai.
+
+There's some companies that only do one thing really well.
+
+So it really does feel like as the API consumer, we spoiled for choice.
+
+And everyone's competing to get the cheapest, fastest, the best.
+
+TTS1 is good.
+
+Yes, they might have one called TTS HD, TTS1 HD.
+
+Best in the world, why not?
+
+Okay.
+
+What the hell?
+
+This is what our investors give us in venture capital for, surely?
+
+Okay.
+
+Great.
+
+Okay.
+
+How do I listen to this audio now?
+
+I bet there's a way to do it with the bytes, but never mind.
+
+Put it this way.
+
+Since we picked long time.
+
+Okay.
+
+We still see the audio there.
+
+Do you think that's the whole thing?
+
+I think so.
+
+Oh, you guys might not hear it.
+
+I try.
+
+Not coming through, I'm afraid.
+
+No worries.
+
+Let me, I think there was an option when I shared, share, share sound.
+
+Oh, for heaven's sake.
+
+Someone said just used Kokoro to read.
+
+So Kokoro, I'm guessing was the top model recommended on replicate as like an open source text to speech.
+
+And that's fun because I think it's only like 82 million parameters.
+
+And given that the quality is pretty incredible.
+
+That's what we're planning to show.
+
+So, when you can see it in the display, you can right click and save.
+
+Same with the audio.
+
+I think there's a little three dots that you can use to download more generally.
+
+Like there's not official flow for like downloading arbitrary files.
+
+But if you can display them in the HTML or you can use ask, solve it if you can make a data URL for something.
+
+And then you can generally download at least small files.
+
+Otter types away through clouds with wireless streams flow business in the sky.
+
+Nice.
+
+Have we achieved the goal you set us to know?
+
+I think so.
+
+If only there was a nice like a way to make it a web app or something like a little app that I could share.
+
+That's like, I can't think of any.
+
+So that's the one chop in a previous lesson in a future lesson.
+
+Okay.
+
+Good.
+
+Well, that was fun.
+
+I guess, you know, the homework.
+
+Well, actually, before we do, I just wanted to mention one other thing, which is, I strongly recommend people.
+
+Yes.
+
+And some time browsing through this fantastic site created by some other Australians that are not me.
+
+You know, so, for example, if you're interested in that mama 3.3 instruct 70 B model that we were just using.
+
+Then, you know, they've just got these really nice like, okay, here we've got output speed versus price.
+
+Right.
+
+And you can see here the grok speculative decoding is off the charts.
+
+One thing that makes it difficult is cerebrus.
+
+They always show, but cerebrus.
+
+It seems to be basically impossible to buy.
+
+It's one of those things where they don't even have.
+
+I don't know any sign of a way to buy other than contact our sales team and your enterprise can blah, blah, blah.
+
+So grok's the actually the one you can actually access.
+
+I think they've got quite a good free option as well, if I'm correctly.
+
+Yeah.
+
+And you can see tokens per second versus how long till the first token or Amazon.
+
+Again, rock way out there.
+
+Also, cerebrus pretty, you know, not as long context window, the speculative decoding also has less good window.
+
+Then normal ones got the full window, got the prices here.
+
+And it was kind of nice also then.
+
+So that's comparing a particular model.
+
+But then you can also look at, you know, just comparing models full start to the right of that.
+
+There's also the drop down for if you wanted to look at like image models, right?
+
+So right at the top where it says, sorry, where it says speech, image and video models, you can choose to just look at speech to text or text to image, right?
+
+You can pick some sort of subset and then you'll get the relevant metrics for that.
+
+And this is the fastest models.
+
+This is the best models.
+
+This is the nice trade off region.
+
+Yeah.
+
+And yeah, you can see, you know, pricing and things do change a lot.
+
+So I want preview a little bit on the expensive side.
+
+So expensive that it's hard to read the rest.
+
+So you can always just take that off to make it a bit easier to read.
+
+Yeah, the Amazon over models are very interesting.
+
+It's super cheap, which is nice and amazingly good.
+
+So anyway, artificial analysis today.
+
+Good site to check out.
+
+Thanks, John.
+
+Cool.
+
+All right.
+
+Thanks everyone.
+
+And next time post questions for Eric, we'll be going back to that discussion picking up a little bit where we left off.
+
+And then the time after that we'll go back into maybe deciding to look at some of the tricks we can do with all these building blocks that we know are accumulating.
+
+See you.
+
+Jizzle.

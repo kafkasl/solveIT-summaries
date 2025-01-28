@@ -1,0 +1,2177 @@
+Okay, we're on.
+
+Hello, Johnno.
+
+And hello again, Eric.
+
+Hello, hello.
+
+I was going to say special guest, Eric, but you've been here once before.
+
+So I'm not sure you can't a special.
+
+Well, maybe regular gas three times as regular.
+
+Yeah, still special to me, though.
+
+Well, that's, that's what it would be to say.
+
+It's okay.
+
+I can handle it.
+
+Yeah, what if you have you had any?
+
+I mean, I know.
+
+Well, let me first ask the last lesson.
+
+Johnno and I were looking at using solver with external APIs, which was actually, I thought really fun and interesting because it feels like there's a couple of things coming together there, which is with these ridiculously powerful external APIs now you can do so much with so little, but they're all a bit different and you can't possibly remember all the details of all of them, but with solver.
+
+Suddenly, you just say like, oh, I have pasted in the URL to the docs for them and please run that where you're like, let's create a picture.
+
+Let's create a poem.
+
+Let's whatever.
+
+Yeah, I don't know that felt pretty, pretty fun to me.
+
+What, what do you think about this coming together of capabilities?
+
+Well, you know, we've modular architecture of, you know, code reuse is like the dream, dream of computer science going back to its origins and we've only ever sort of gotten it.
+
+You know, I feel like there's been like brief stable periods where like a platform stays stable enough that people actually start to do proper code reuse.
+
+And I thought that the internet itself would dramatically increase the amount of code reuse and of course it has to some degree think about like, you know, npm or PIP or at least code repositories, that's obviously a huge, huge step in the right direction.
+
+But the like, the kind of Achilles heel of that whole system has always been that once the second you agree to depend on some external resource, you are now on the hook for the entire life of your program to keep up with changes to the interface to that thing.
+
+And like, there's a shocking number of situations where honestly for being real and we don't say this out loud very often because you're not supposed to say this but like honestly, the overhead of having to do that dwarfs the benefit of the code reuse, compared to if you just written the darn thing yourself think about like, how many libraries you could have just written yourself if you wanted to now.
+
+It can't possibly be true all the time, surely there must be sometimes when it pays off but anyway, it's a very big deal to lower the cost of the low, lower the overhead of being able to use one of these things, and keep up with its changes and kind of automatically adjust, you know, revision by revision, especially with a live service that we even a static library it's bad enough but for a live service you're being auto upgraded against your will to the new version whether you want to be or not so you have these breaking changes.
+
+And I think that's going to be a very big deal both because it just make life a lot easier, but also because there'll be a lot more situations where you might actually really go through with code reuse and actually do it in a way that you wouldn't otherwise.
+
+And with these new services, since they're so intelligent.
+
+There's just so many small situations.
+
+I mean ghost text we were talking about last time was such a perfect example of like, almost too small to be worth doing.
+
+It's like, all right, it's like a very small quality of life improvement but you know the operational overhead of doing that is too high but if we lower that operational overhead we can start to apply this to lots and lots and lots of situations we might otherwise have been willing to do.
+
+And of course, we will discover as we talked about last time because of the fundamental uncertainty of all this.
+
+Sometimes what you think is just some tiny little quality of life feature actually turns out to be like a whole company in itself, you know, I don't know if ghost text is going to be the next Facebook but like one of these days one of these little things will turn into a massive opportunity that you wouldn't have otherwise even been willing to explore.
+
+Yeah, I'm pretty excited about it.
+
+Yeah, yeah, I mean there's so there's a there's, there's a couple of interesting examples which we're going to drill into in detail in the coming weeks.
+
+I mean one of them is actually the best example is something that just happened yesterday, which is, as you might have seen, and answer AI post from Hamill was on number one or number two on Hacker News, and it was about Devin.
+
+And that article was written in Solvert, or an internal version of Solvert.
+
+And so the kind of the story of that's quite interesting because the first version of it wasn't that inspiring and we were literally thinking maybe there's nothing here.
+
+And then we're like, well, let's go back and use our new process, which we'll be talking about but it's like, you know, we record an interview with each other, we talk about what's why we're excited about this or what's interesting about this or why we disappointed about this and we chat and then we kind of get AI in a very non-agent, you know, step by step incremental approach to help us write about it.
+
+And to, yeah, see that post we were literally thinking, this is so dull as to probably not even be worth posting to us both.
+
+Well, this is a good post.
+
+I think people like it.
+
+And then up on the top of Hacker News is, yeah, really interesting to see how this approach outside of just coding is, you know, giving us big opportunities.
+
+Do you see that as well like kind of writing stuff like that?
+
+Yeah, yeah.
+
+And what I love about that story is people have heard that LLMs are good at certain things and not good at other things.
+
+So like they're good at summarizing, condensing, you know, translating, reformulating.
+
+Excellent.
+
+You know, as soon as you want them to be your agent, then the problems of hallucinations, you know, in, yeah, many times you've tried to build one of these ancient things where you're like, okay, go, go do the thing and it's like, great, here's my plan to do the thing.
+
+You're like, no, please do the thing.
+
+It's like, okay, my step one of the plan, delegate to another agent to do the things.
+
+No, no, you're actually the agent being delegated to.
+
+So like the human ability to dodge accountability and to never, never take responsibility for anything is like baked right into these LLMs.
+
+So, so therefore, like people are kind of like stuck.
+
+They're like, well, I want to, I've been told that AI is supposed to do the human things for me, but it's not actually good at that.
+
+And I think this approach, you know, the dialogue and sharing approach, even in any kind of creative, we may have any time you're creating a deliverable, whether it's pros or code or, you know, I'm sure this would be true in, you know, in multimedia also, by taking human ideas and creativity in an inconvenient form, and then asking the LLM to summarize it to help you condense it to help you formulate like then you're actually really playing to its strengths and your strengths and the final deliverable is much more likely to be, you know, Yeah, yeah, yeah, it does not have agency.
+
+What it is, it's much more like a cybernetic augmentation, you know, Steve Jobs, so call us the bicycle of the mind that was what he was talking about all those years ago.
+
+You know, did we really ever truly live up to that vision in all that we've accomplished with computers till now, like, sometimes yes but a lot of times no we've introduced more cognitive overhead.
+
+At the same time is simplified but here I think we have a chance you can really take an idea in your head and render it into a deliverable, in a reliable way, and that's I think that's a very big deal.
+
+It's actually interesting how far back that cybernetic side here goes.
+
+I was actually looking up the etymology of the word cyber, because my mom and I were complaining the other day that cyber was the word all word of the day and I was like, cyber is not a word it's a prefix and I looked it up and it's like, oh no, now it's like 1990 it became a word and not a prefix and I was like, and my mom was like, not even sure cyber is an anything so I went back and it turns out cybernetics in the 1950s was the original source of the so-called word, says the New York Times, cyber.
+
+Another example which we're going to talk about quite a lot in future lessons is that we talked about a bit before is the CIS admin stuff and you know actually I don't think I've not even mentioned this to you yet Eric but as you know probably the folks listening don't we're planning on creating a fast HTML hosting service to make that super easy.
+
+And one of the fun ideas we had was that every time you push a project to your fast HTML hosting service we will install a copy of Solvert in it for you.
+
+And so you'll get like not just bash buddy but sorry shell sage but you'll have Solvert there turning you into a SQLite expert and a web app debugging expert and you know system administration expert which yeah I thought it's kind of interesting so I don't know sorry to throw it at you without any prep but what do you think about this idea?
+
+Well I'm very excited.
+
+I'll tell you why I'm excited about it and it's going to sound kind of silly but you know we've talked we might have touched on this last week that like when you first pitched this idea of using this for CIS admin I just thought you were totally crazy.
+
+And I was like I can't possibly write I had like I've all this I've built up all this intuition and skill and knowledge about the cloud and deployments and whatever over the whole SAS era so you're like I'm going to just throw all that out and go back to the old bare metal hosting thing and just my my immediate reaction was that can't possibly be right but then I was like well but Nonetheless explain to me what you're thinking about and of course this is like just the ultimate you know MVP thinking is like if you actually work from first principle sometimes you discover that you can just do 80% or 100% less work than you were previously thinking and it unlocks all this amazing thing so it's one of the you know great examples of thinking from first principles but what really reminded me of is there was this time when I first became a computer programmer and started doing client server work you know in the 90s early 2000s.
+
+Where every time we would try to solve a problem with a database or you know a proper proper heavyweight system that would always be some engineer on the team, who would be like, this is so wasteful, I can solve this problem with the flat file.
+
+I feel like it was like a huge part of my job was just like, whenever that would come up be like I know I'm sure you could, but then like you have some random file and some proprietary format that nobody can read, it wouldn't be properly replicated and it wouldn't be secure and what about this and have you even thought about how to escape the characters and you know just like, it's like that's so good at be like no so I know that is true it would be dramatically more efficient if we could do that.
+
+But you know somebody like we could just use a mem file we don't need to write it to ramp.
+
+I know I know that's true.
+
+But like what happens when that computer crashes it's like you know just like this is massive backlog of stuff that you're not not thinking about.
+
+But the thing that always bothered me all these years of doing that was like they are kind of right about one thing, which is that in order to solve this massive number of admin problems, we are accepting an awful lot of overhead, both computer overhead like we're now.
+
+Taking a you know, one millisecond operation and turning it into like a five second operation that's like, that's pretty painful.
+
+We're also taking something that could have been done on one server and forcing it to run across 100 servers.
+
+And we're having all the attendant staffing costs related to keeping all those servers right all of the stuff and of course with cloud we outsource that to somebody else but that's, that's just an economic arrangement where we're just we're now paying more for the computation that we could have basically gotten for free port.
+
+Yeah, advertising the cost all that stuff.
+
+And the thing that like really blew my mind about this example now look this is just one little example I was like, Oh, is it possible that with solve it, you could actually answer all those objections.
+
+Instead of using them as a rhetorical weapon to prevent you from doing the thing which is how I used to use it.
+
+Like, could we actually solve all those problems and like I don't have any ideological attachment to the cloud or to doing it as a data I don't need us to use this database or that there this tool that to I was like, Oh, this could be incredible and like now, several times as we had that conversation someone has pitched me on a startup or something that revolves infrastructure.
+
+And I had this voice in my back of my mind it's like, if they took the solve it class.
+
+Could we just do it for free.
+
+Like, could we take that we have to go rates $100 million I'm like, could be, could be but could you also do it more or less for free.
+
+And like, I don't know like I think it's really really interesting open question about just like again forcing us to really question our assumptions about what things cost and therefore what things are worth pursuing.
+
+I think it's a very exciting, like tantalizing possibility.
+
+I shouldn't say that we've like solved DevOps forever, you know, a lot of work to do.
+
+But these early examples I think are very promising of a category of problem that we used to just accept as very heavyweight very expensive.
+
+So we promised last time we chatted to Eric that today we would kind of do two things one is zoom in a bit more to answer AI and the answer the other is to answer folks questions from last time.
+
+So we're going to do it in that order, particularly because I got a bit of a segue here which is in thinking about all these things that we can now do.
+
+None of which I particularly remember us ever saying a year ago, these are the things we're planning to build and do.
+
+I think it would be fair to say like, as a company.
+
+We're all about like kind of having long term vision goals values some some underlying theses about how we'll be different but we we've never had a planning process and in fact we've never really even had written plans.
+
+I guess I quite a few folks have been asking about this is like, what are your thoughts about kind of setting values or having a North star, both at an organizational level at a department level but perhaps also particularly interestingly at a, at a personal level was this something you do that you recommend people do that you have suggestions for it all how to help because I feel like I feel like we do it pretty well, but I'm not sure why.
+
+So I would have trouble helping teach people how to do that better.
+
+Oh, sure.
+
+Yeah, I think I think it's very clear why so that's easy.
+
+Yeah, so so this is definitely the most common misunderstanding about lead startup bar none, since I first wrote the book.
+
+And it's one that has really driven me nuts because I didn't I didn't I used to feel really bad about it until I realized that they used to have this problem with lean manufacturing like going back to the 1950s that people have been having the same confusion and problem and their understanding, which is there's no doubt about going faster or I don't want to speculate what the psychology of it is but anyway, people think, and I was like this to when I first discovered these tools I was like great, I've I can take all the creativity and the vision stuff out of entrepreneurship and turn it into a crank that you turn and you just get an automatic result.
+
+I get so many people have got fallen into that trap they hear about MVPs they hear about split testing they hear about some aspect of this like great perfect now I can take the human judgment part out of it and make it more mechanistic and I wish that was true that would be really great.
+
+But as it turns out I have a lot of experience with this if you if you just a B test everything and just do whatever makes the metrics go up into the right you will be selling pornography or a psychic hotline like in no time.
+
+And of course the things that have the best most immediate gratification are the things are the most fraudulent.
+
+And so just, you know, if that's what you want to do.
+
+I would say but yeah the most people that's not what they want to I've seen a lot of people fall into that trap I found that trap early in my career.
+
+I know just what that feels like.
+
+Well they're just the most high P or the most grifty or like I don't think it's grift but certainly high P like everybody's jumping into agents now because it kind of seems like.
+
+Whatever you have to do.
+
+It's like you're no longer really thinking you're just you're just reacting to what you know what's in the moment or what yeah like any people who have customers will sometimes just be like whatever makes the numbers go up that's what we do.
+
+And you know Corey doctor has this very colorful word he calls it in shitification of what's been happening to all of our consumer products and platforms.
+
+But like this is a big part of the reason why it's like a large just like a large segment of these companies are just dedicated to just like whatever it takes growth that any car like just.
+
+And the problem with that took me a long time to understand this is you can always always always make your OKRs go up by sacrificing the company's trustworthiness.
+
+OK because that is really what's that OKS.
+
+Oh sorry objectives and key results is like a fancy management trend for for not just having analytics views for products but having that like the analytics goals of the company be subdivided subdivided until every individual person has a metrics target that tells you whether they.
+
+Are they performing their job or not like Peter Teal was very famous about assigning every person in the company only one one and only one metric that's your job to just make this number go up.
+
+And there's some real advantages to being that analytically focused but one of the downsides is what I'm saying that you can.
+
+There are these intangible resources you can trade against to make your numbers go up and like I was talking to a company just the other day.
+
+That the CEO had kind of stepped away and he was coming back the founder coming back to like clean up the mess.
+
+And one of the things he found was that the company was sending on average.
+
+I can't remember the number now I think he said they're sending 12 emails a day promotional emails a day to every customer.
+
+So they're just like burning all this goodwill customers are just like getting so tired of hearing from them and he's like how did this happen.
+
+We all know exactly how it happened.
+
+Every individual email you add like makes the numbers go up a little bit in the short term and no one's paying attention to or measure in the long term cost.
+
+So I tried to address this really carefully in the book to lean startup.
+
+In fact, part one of the book is called vision.
+
+So literally the name of part one of the book the whole section is about vision.
+
+And in fact, a common criticism only started up is that lean startup is like anti vision or doesn't have doesn't have you know there's no definite plan and all this stuff.
+
+And it's just like I remember once being in an interview or someone was a cost to me with this and I like had a copy last like I pulled out my copy lean start.
+
+I was like, let me just check what page this is first addressed in this manuscript just in case because I was like maybe I only put it in page 200 and so no one read that far but it's like on page five in the introduction like very clearly says it right up front.
+
+So, you know, I've tried really hard to make it clear the scientific method does not work if you do not have a hypothesis.
+
+So you go into your chemistry lab and start throwing around chemicals just like see what happens you are not doing chemistry.
+
+Something cool may happen and you may you may yet make a discovery who am I to say but that's not the scientific method.
+
+And vision is kind of like that critical ingredient that the more specific you can be about what you think is supposed to happen, the easier all this other stuff gets.
+
+So, you know, people like oh if some metrics is good more metrics is better if some MVPs is good more is better if an MVP should be small and smaller is better but no none of that is true.
+
+What matters is are we learning the most critical thing that we have to know in order to figure out if we're on the right track.
+
+So from a values north star perspective, the stronger the founders vision is the easier this gets, because then we don't have to like figure out a bunch of stuff we actually see blank one of my mentors had this great phrase he said the job of he called the customer development.
+
+The job is to at first the first job is to find a customer for the product as currently specified.
+
+So it's not like figure out what the product should be it presupposes this is in the old days of startups is how it always was you wouldn't start a startup unless somebody had this crazy crazy idea that they wanted to make a thing.
+
+So that's the first thing is to really understand that that having some very clear idea of what you're supposed to happen is really essential.
+
+Where we get into trouble and the reason we need lean startup is people who are so are good at convincing people that their idea is good.
+
+Create what people used to call the reality distortion field phrase it was coined for Steve Jobs that he when he when you were talking to him he could make you believe any they're up as down left is right green is blue like whatever he just had that persuasive ability which is a wonderful very helpful ability for the founder superpowers on this planet to get people to believe that some impossible thing that does not exist is going to exist.
+
+Like every startup financing is actually a miracle if you really think about it because you're asking people to pay you money for a slice of ownership of a thing which does not exist like wow very cool.
+
+So that's all good when you're trying to get resources when you're trying to get people excited when you're trying to keep people busy founders are so good at keeping people busy.
+
+The problem comes into what if they're wrong.
+
+At what point do you step outside the reality distortion field nice to tell people can we just double check just real quick double check that we're on the right track.
+
+So that's what we're trying to do is find that balance of vision and testing and of course that's actually where the concept of the pivot originally comes from a pivot is a change in strategy without a change in vision.
+
+Notice that if you don't have a vision you can't pivot by definition and if you change the vision all the time you're not pivoting I don't know what you're doing just running around in circles.
+
+Just coming back to that Steve blank idea like people in the class might recognize a taste of that that when they signed up.
+
+The first thing they saw was a screen that said in the largest letters do not join this course if and then a big list of reasons not to join the course which because.
+
+I guess that's basically what we were trying to do is bring in people who want what we're selling you know yes it's so counterintuitive.
+
+And you know for those who know the theory of early adopters if you don't know if you only heard the phrase early adopter but you don't know where that phrase comes from you can read books like crossing the chasm or.
+
+Actually was called they were called lead users or lead customers before.
+
+They were called early adopters in any way the idea is simply that you have to be able to find people who have such an urgent need for what you're offering that they're willing to buy it from you.
+
+You know like I could like you could buy it from Microsoft so why would you buy it for me you know no name person right and there has to be a reason now all of you are here.
+
+Because at some level there was something about the solvents experience that was you were willing to take a leap of faith on it even though you never heard about it like a friend told you oh man solve it as the coolest thing ever.
+
+It's not like you read a review it wasn't in the newspaper you didn't see it on TV a celebrity did like think of all the reasons that normally persuade ordinary people to do a thing.
+
+In it with an early doctor we have to find a reason for them to do it in the absence of all of that validation.
+
+And the reason we start startups with early adopters is a it's actually not almost impossible to start with anybody else so you may as well just accept that reality but the second reason this is the more subtle reason is.
+
+By finding the person who has the most urgent need for what you're offering and trying to give it to them first.
+
+If they refuse you learn the most.
+
+Because if you are going at if you're going after any other psychographic segment you can always convince yourself that like well maybe I'm not talking to the right customer.
+
+But if I like this person has like I imagine you're selling a new med a cure to a disease like a terminal illness and you go to someone you're like hi I can cure your terminal illness and I like no thanks.
+
+Something has gone terribly terribly wrong in your thesis and of course that what's wrong is probably they don't have a terminal illness or your thing doesn't cure it or they don't believe I can think of a lot of things that could go wrong or like.
+
+My example I used to use all the time is teleportation.
+
+Most entrepreneurs think that their product is as good as teleportation.
+
+So like therefore there's no need to market it or sell it because it's just it's that good like who would want to have to transit from point A to point B when you could tell for right second credible.
+
+And so we use until like part of the problem is that people with products aren't as good as teleportation but the other reason I love that example is I'm like okay.
+
+Let's imagine you actually invented teleportation.
+
+Okay.
+
+Hi.
+
+Walk walk up to a random person on the street.
+
+Hi.
+
+Hi.
+
+I invented teleportation and would you like to be the very first person to have their body physically dematerialized and rematerialized across the street.
+
+You know it's like it's actually one of the way if you could invent it would be one of the hardest products to sell ever like precisely because earth will be the earlier adopter for that thing and like if you wouldn't buy if you and I have plenty of entrepreneurs are like oh I would never be the first person to use teleportation like okay but teleportation has this almost infinite value.
+
+And you won't even try it.
+
+Now how the how valuable is your thing relative to teleportation like well but I make your data base like 45% more efficient.
+
+I'm like I know but it's not teleportation and you can see the downside so like so that's kind of like that way of thinking just like to structurally understand who's the customer.
+
+What do they want all that stuff is just is incredibly important.
+
+This is some we call it the anti sale what what Jeremy did with the do not take this course if this is it by the way.
+
+Yeah.
+
+Do not take this course.
+
+And so it's interesting because Eric in the chat said the stuff you're talking about is similar and I can see this to be J foggs behavior design focus on those that can do what you want and are motivated to do it.
+
+So like yeah don't take this if you think AI can replace programmers.
+
+Don't do this if you're only interested in building things by writing prompts.
+
+Yeah and that seemed to work quite well because for what is it really quirky strange new kind of tool.
+
+There requires a certain amount of patience and is being built around them as as we do it.
+
+People have.
+
+Have to make sure they got great they they think it's an opportunity it's it's awesome to get to be the first to try something it's awesome that you get to get your feedback is heard by the development team so it actually like it's a very logical thing.
+
+But you have to find it.
+
+And so anyway to go back to the answer I story what I've always thought was compelling about this company is that Jeremy has such a compelling vision.
+
+For what is going to happen with AI and what is likely to work.
+
+So I can tell you how many founders have approached me and be like what can I do how can I make a company with AI.
+
+I'm like well how much do you know about AI like well I know I know agents are the next big thing or I know.
+
+You know I heard that a GI is around the corner or some other vague statement about it.
+
+And I was like well it's going to be very difficult to come up with a vision that is likely to be true if you don't know what you're talking about about the underlying technology.
+
+And you know something that doesn't mean it won't work like a lot of newbies come into a new field and they get up to speed and they figured out or sometimes ignorance is bliss.
+
+So you know something to be somewhat distinctive to rex if it's the same thing everybody else is.
+
+Yeah if you know the same thing everybody's doing like what is the point of that and the VC world they call it being non consensus and right.
+
+But in in Jeremy's case for answer I thought it was very straightforward.
+
+Both the logic of the thesis of what we were doing just made sense to me and you know it helps that he and I've been talking about it for ages so it wasn't like.
+
+I discovered it one day but like we've been talking about talking about talking about it like there were historical analogies to draw on there were.
+
+You know parallels with other things that have worked in the past and other historical eras and it was also like we have a very shared understanding both of where the market is going and also.
+
+A shared set of values about what we're trying to accomplish and the need to do it in a long term way in a you know in a way that promotes human flourishing in a way that.
+
+You know resist these gravitational forces that we've seen dragged out other companies like we've just we've been around long enough so like to that those.
+
+But anyway the reason I bring this up now when you're asking me about this thing start up stuff is my experience has been whenever someone is getting confused with some step of the process of doing entrepreneurship doing testing doing validation doing a testing testing or something like that the error in thinking is always upstream.
+
+So like you know in my do this in corporate settings we actually like teach people a formal process with like documentation and charts and two by two matrices and the kind of stuff that you need to convince your boss and a four to five hundred company to do a thing like I.
+
+You can I've read a whole book about that you can read all about it and there it's like we actually formally identify what we call the leap of faith assumptions and we write them down and we actually have a prioritization scheme because like in in.
+
+You know with twenty two year old entrepreneurs they would really be facing the assumption sometimes you'd be lucky if you get three.
+
+In the enterprise where the faith assumptions you'll I've gotten a spreadsheet back with eight hundred.
+
+Things that must be true for this to work so we have a prioritization system okay what's the one of the most risky one of the most bad we look at the business plan we do a sensitivity analysis we call the innovation account this is all the thing anyway.
+
+What are the leap of faith assumptions and we would pick one assumption and like what are the metrics we might be able to use to brainstorm to.
+
+Measure this assumption is true and then pick a metric and now let's brainstorm what are the MVPs we have an MVP scoring system that scores the which MVPs are more or less likely to.
+
+And anyway I don't mean to make fun of that process it's just you know if there's any enterprise people around you they're probably like oh where do I sign up for that yeah it's really very effective in enterprise context.
+
+But the reason it's necessary.
+
+Is that.
+
+People are used to working in this very formal way and we have to get to get them to unlearn a lot of formal infrastructure to get them to the to the realization.
+
+And so if they having trouble like a very common team I'm gonna team and I'll say like we're trying to we can't we can't come up with an MVP it's impossible.
+
+And you're like what's the current plan our current plan has been five years and a hundred and twenty five million dollars to build this awesome product after which we'll build a massive you know sales and distribution system to then sell it to lots of people in the eighth year of the plan.
+
+And you're like you can't think of any possible way to shorten the timeline.
+
+You know lower than five years are you sure no can't think of anything.
+
+And you know I used to think oh man that's your.
+
+You know.
+
+Something wrong with these people but like it's almost very easy once you like okay let's back up what which leap of faith assumption you're trying to test like all of them well okay no wonder because you're trying to test everything.
+
+Of course it's it's very difficult or like what metrics are the most important here is all the metrics that have to be important.
+
+And so anyway when we back up back up back up back up you know I tell the story in the book to start up what I did this in enterprise context where we took a product that was going to take five years and got it down to six months.
+
+And.
+
+What was fascinating about it was the executives in the room who watched me perform this magic trick were actually not very happy about it.
+
+Hmm.
+
+Because they were like wait a minute a minute ago we were going to make like billions of dollars and now you're going to sell one unit.
+
+And how much money are we going to make it I remember the one of the engineers in the room was like oh no sorry sir we're going to lose money on the first unit.
+
+And he's like looking at me like.
+
+See you know this is so stupid and so so anyway so it's like by identifying the error in thinking upstream everything gets easier downstream and so in the case we have a founder whose vision is exceptionally clear.
+
+And who has a commitment to the truth is not just ideologically attached to their vision or view or as defensive about kind of you know insisting that they must be correct.
+
+This is actually very very easy to do so to me the the main start of application and answer has been very easy so much so that we don't really need a lot of the formal methods of the startup we don't use a lot of the jargon internally we don't waste a lot of time on you know.
+
+Decision analysis whatever because it's not difficult to do but again that's not because we don't do it it's because it's like deeply embedded into the structure of the organization such that it doesn't need doesn't need the training wheels anymore.
+
+That's interesting I mean the the the non consensus part which we talked about a little bit about last week is so difficult you know and you've personally put up with an experienced all of my doubts Eric and one of the things.
+
+You know I did early on in fact the very second post on our site is I found the one guy in the world who was a historian of industrial R&D labs and he's great he's so you know he's passionate about it really doing it because he he just joined.
+
+I think it's like Eric Schmidt you know new thing feature house that's right and he spent a few weeks studying.
+
+What we're trying to do and linking it up to.
+
+You know the great industrial R&D labs of the past.
+
+And I felt like that was necessary for me because you know as a founder I always feel like I'm worried about my own reality distortion field and like the idea that this thing that everybody knew in the late 19th century was.
+
+The way to push forward a new broadly applicable technology being electricity like.
+
+Surely if that was a good idea to do for a I everybody would be doing it and the fact that I think it's a good idea and nobody else does I assumed meant that.
+
+I was missing something you know so.
+
+To kind of bring in a third party like that at least for me was very.
+
+Encouraging to hear him say like no I've been thinking for years that everybody's doing this wrong and they should do it exactly the same way that Thomas Edison.
+
+Did you know.
+
+So do you want to describe that structure if I feel like for people listening we said oh.
+
+Enterprise we have to do it this one complicated way but we have a different way and then we say oh yeah look at that way things it's good like what what is that structure that's so suited to the lean startup that's so suited to the R&D.
+
+Well the fact that the fact that we are an R&D company is itself almost unheard of and like Eric and I have had a few big investors reach out and say like apparently answering I said new shit right you know how do I give you money and.
+
+We talk to them and like they're like okay we know what's your MVP and what's your customer forecast and we're like.
+
+We don't know what we're doing we're trying a bunch of stuff to try and figure things out you know and we're hoping over time that.
+
+Things will kind of turn up and they're like I'm sorry what can you send us your forecasts please.
+
+So yeah we're an R&D company which you know means we try to create this loop.
+
+Where we build a thing you know we try to build a thing that we think might be helpful you know and then we're like well.
+
+Can we do that really fast and then see if that thing actually is helpful and it's like well not as helpful as it could be because these things aren't solved and they kind of do the research to those things.
+
+You know in our case we started even earlier which is like surely AI is useful it seems like it should be useful doesn't seem to be useful for many things yet can we.
+
+What's a way to figure out if it's useful like well we should hire a bunch of like really open minded tinkerers like.
+
+John or to try and build things.
+
+See if they can build something useful and see if they can build something to make it easier to build something useful.
+
+And then as Eric said one of the key parts in that process also was to try to do this in a way that.
+
+Like it seemed almost certain in a normal company structure.
+
+That we would not be able to keep going with that even with the enthusiasm of early investors.
+
+At some point it's going to be like look none of my other companies look like this you know I'm not comfortable with a company looking like this so.
+
+You're going to have to.
+
+Pick a product come on you know time to grow up.
+
+So you know Eric showed me a lot of stuff about how to.
+
+Make sure this vision and values.
+
+Persist you know and so one of the things I actually wanted to hear from you about Eric is like really simple you know like.
+
+The PVC right so you encouraged me to make this a public.
+
+Benefit corporation and since that time a lot of people have asked me.
+
+About that you know founders of us and I've always said to them oh my god I can't believe not everybody is.
+
+Running PVC like it seems better for everybody for everything all the time you know could you like.
+
+Talk a bit about why you encouraged me to make answer.
+
+Yeah this is where we're deviating from one stream.
+
+Of knowledge and now entering into a new one and I warn everybody as you get into this space there's something very strange going on here.
+
+Which is like it is an open secret.
+
+That there are just these practices out there that are just.
+
+Better than what everyone else is doing.
+
+And it's like not like it's a secret everyone everyone who studies these things and who practice like people who really are in the know all know that this is better.
+
+And yet there is a huge amount of energy invested in convincing people that the conventional way we tell people to do things is the only and best way to do it.
+
+Which I always find so funny because it's already a contradiction since it was the only way there's no need to justify it as the best and vice versa.
+
+So you can ask yourself as we talk about this why is it.
+
+An open secret I think it's a really interesting question but to get to the basics.
+
+I always ask every founder to go through this hypothetical exercise I did with Jeremy I've done a gazillion trillion times.
+
+Who do you think is the most evil company in the world.
+
+You can as you're as you're thinking along with me you can fill in whatever company you want it's funny the companies that people say when I asked this question there's not that many choices usually one of a handful.
+
+For me it's always Philip Morris I always I always think like tobacco is the most evil product that's ever been made in history but you could you could pick your own thing my father was a pulmonologist so I grew up with the idea that cigarettes are evil so it's easy for me to think of cigarettes as a totally evil product but you could pick a different company.
+
+Let's say that that company calls you up one day and says we would like to buy your company from you right now cash on delivery for one dollar more per share than it's currently worth.
+
+Would you like to sell it.
+
+I think the founders are already like no answers no more commonly founders like what do they want to use it for.
+
+Okay I'll do the hypothetical sure like what's it for I think I had to sell cigarettes to children.
+
+That's that's their explicit plan they sell you right up straight up that's what they want to do what's your answer now every founder I've never found who's like sure I'll sell I don't care.
+
+It's like of course not of course we're not selling excellent good.
+
+Now let's go pull your charter from Delaware.
+
+It's a public document let's go read what it says here oh look here.
+
+Did you know that according to the charter that has your signature on it that you yourself signed most corporate governance experts in the world would say that you have what's called a fiduciary duty not just to consider this offer but to take it.
+
+And if you don't you could be sued by your investors or breach of the duty.
+
+And every founder of like that first reaction is like that can't possibly be right.
+
+You must be mistaken sounds so incredibly incredibly stupid it can't possibly be right.
+
+And I've had to do this with many people where I say look call your lawyer.
+
+Ask him this question straight up and then call me back.
+
+And they call me back like he betrayed me.
+
+How could my guy my guy my buddy my lawyer signed me up for this horrible thing how can I'm like look.
+
+He thinks he's doing you a favor he thinks he set you up for success.
+
+But on the other hand you didn't tell him this is what you wanted did you know I never even heard of it.
+
+So anyway so people get so alarmed like oh my God this seems like an intractable problem how will I ever fix it and they're like well actually thanks to the some wonderful activism.
+
+That was done in the Delaware Chance Recourt you know this is not like 20 years ago.
+
+You can make a two page legal filing in Delaware to just say that you're not going to do this.
+
+It's not like some complicated.
+
+It was insane we added like yeah we added like one paragraph to our chart.
+
+It's literally you I mean it is one of the easiest legal filings you will ever make and it obliges you once every two years to make a special report to your investors to let them know that you're still doing it.
+
+I mean it's like couldn't be the easier process to do is called becoming a public benefit corporate PPC because this is a common point of confusion.
+
+This is not the little B with a circle around it that you sometimes will see at the farmers market that's called being a B Corp which is a related but different thing and that has a whole different process for getting it that's more of a trademark thing.
+
+All public benefit Corp does is allows you to say legally to your investors the purpose of this corporation is to make money by doing this.
+
+So instead of saying we'll do anything to make money we're just saying we make money by doing this in answer as case we are trying to discover beneficial uses of AI you know for the benefit of all humanity I don't exactly remember the exact phrasing but like something like that.
+
+Society beneficial uses of AI.
+
+Yeah society beneficial use of AI I should probably memorize it.
+
+But like the funny thing is these things doesn't come up that often because we've internalized that into the mission of the company we don't have to like consult the legal agreement but it makes it clear.
+
+Now sometimes people think oh well I guess there's the one weird trick to be a good company from now on I'll just go do the filing but remember the filing only changes the basis by which an investor could or couldn't sue you.
+
+It doesn't solve this problem in any kind of comprehensive way it's just like a complete no brainer of a thing.
+
+I just want to mention by the way that that that sentence so just for people not familiar with this public benefit corporation part of that one paragraph is to say what is what is the benefit what is you know what in your charter.
+
+You have to write down in a sentence.
+
+That's what this sentence is and.
+
+Although as Eric says we don't talk about it all the time it does come up like because I quite like to go back to first principles as you know and so quite often in our regular company chats will have a conversation like.
+
+Remember come back to this in a moment.
+
+Okay so that seems good real or be able to use that to do a better job of making products that we can sell to people.
+
+Tell me again why would we provide this to anybody else you know and teach them to use it.
+
+And a starting point for the answer for me is like okay well let's think what's what's our stated public benefit.
+
+To you know help create more and better societally beneficial usages of AI would really sing solver to the community help us to do that.
+
+Oh we think it probably would so.
+
+Okay cool you know it's not bad it's kind of nice to have a bit of a.
+
+You know single sentence guy I think it's enormously helpful it's like John Oaken confirmed that it's been enormously helpful in recruiting.
+
+Because the best people want to join a company that stands for something and that's actually trying to accomplish something good.
+
+And people who are the kind of caliber of people we want to in kind of AI research that we are talking about can.
+
+Work basically wherever they want so.
+
+I didn't really didn't reach out to John O because he had told me he would never let any company hire him.
+
+And I said yeah exactly so that's a shame because I would like to hire you and it was like oh no no I mean the company other than answer AI.
+
+Yeah there's an asterisk there but it was a very fun I had to like unpublish the blog post that published the day before like why I'm not going to take a full time job.
+
+For an AI company and like okay fine.
+
+Yeah and not to I don't mean to embarrass John O but but as a founder that's what you those are the people you really want to hire you want people to hire people that are completely unhirable.
+
+Not because they can't get a job because they can do whatever they want.
+
+And now you're like look I want you hireable that's so rude.
+
+I'm really serious about it it's actually like really really really important and most startups struggle with this because they're like well why should someone like that work for me.
+
+I can't give them more money than Google or open I can give them I can't give them more this and that I don't have as much prestige I don't have this and I say but so what do you have.
+
+And a lot of startups forfeit their most valuable resource which is like their moral authority to do something incredible like to be trying to do something incredible.
+
+And to take that seriously like you know when you're hiring someone just out of college maybe you kind of fudge it a little bit and be like yeah yeah we use the rhetoric of changing the world for the better but there's no substance to it.
+
+But when you're dealing with someone who actually knows what they're talking about and it's like a little more sophisticated.
+
+You have to be able to back that up with real changes structural changes so we call that institutionalizing your intentions.
+
+So it's not just like oh I intend to be a good person well good hooray like think about everything about like a friend came to me like I intend to go on a diet and become a bodybuilder it's like great I'm so glad to hear that but like what what's your plan like why eat a really healthy meal this morning it's like well do you have any more anything else to tell me about that right so most companies are like that they say all kinds of good stuff but they don't really care and again the thought exercise I like to have people do is think about the last time someone who worked for a company apologize to you.
+
+You know you were on the whole your call customer service because some bad thing happened to you and the person's like I'm so sorry Mr so and so like I will be sure to take it like.
+
+Do you actually believe that the company is sorry.
+
+That this happened.
+
+Most of the time you don't even think the person talking to you is sorry let alone the end slide what would it mean for a company to have an emotion.
+
+The emotion is we actually do care about something the thing that we're doing most companies are basically sociopathic they don't really care about anything but enriching themselves.
+
+And so you can tell you can tell us our customer let on as their employee and it's a really powerful thing when you can.
+
+Put together a company with such integrity that it actually genuinely cares about stuff and ideally it cares about the people who make the things to not just the thing itself so like we've tried to build an answer at a company that has actual genuine feelings.
+
+For its employees for the customers that it touches and for the wider world like we are genuinely concerned with the broader implications of the things that we make and that feeling is not different.
+
+The customer is always right and we do anything for them and whatever do not mean like we yeah another very intentional thing that the group watching now will have seen is that for three weeks.
+
+On the homepage after you logged in the largest button you could see was the one marked.
+
+Cancel because.
+
+We were not trying to make something for everybody we wanted everybody to have a chance to see whether the thing that we made might be for them and if it wasn't we.
+
+We're not going to change us to be the thing that person wants we just like okay you tried it now.
+
+You can go by analogy to like what makes a good parent what what makes a good analogy.
+
+What makes a healthy relationship like it's not about just being blindly obedient to what the other person says it's about well I've hope people who are listening have had enough experience with this in their life to know what it's about well so there's no reason why.
+
+Companies can't have those same attributes and again this is one of these open secrets where most people when they hear this for the first time are like no that's not true.
+
+Companies have to be this way they have to be bad we all know that I've been told that so many times.
+
+Oh so many times I've been all the time but like but a there are these count there are these weird counter examples where there are these companies that like aren't bad you're like well.
+
+If it can't be done how come they can do it and then people have these all kinds of weird just so stories about why they can do it and you can't but like the other thing is that if you go to the people who study these matters professionally.
+
+They're all like oh yeah obviously everyone knows that it's like well though not everyone knows that in fact only people in your narrow specialty know it but like just you know when we can get into there's a lot of research backing this up.
+
+That basically trustworthiness is a strategic asset and source of competitive advantage for companies.
+
+And so by by trying to do something extraordinarily difficult by really committing yourself in a values way to do it for real by having a long term.
+
+A commitment to that thing and by doing these other kinds of structural practices like being a PPC like that that actually makes the company more strong not less strong.
+
+And therefore you like people are not kind of like modern idea that like ruthlessness in capitalism means like I squeeze and exploit to the maximum and if I don't do that someone else will do that more than me and displace me out of business has it exactly backwards.
+
+We're like racing to the bottom to destroy ourselves and the evidence is all around us I don't think I have to decide it but if anyone is interested I'm happy to answer questions about what that evidence looks like it's very strong in the chat bit cloud to set that refund button freaked me out.
+
+I think people are worried about accidentally pressing it.
+
+Don't worry if you had it would have offered you a confirmation.
+
+I was like I said to my team is like okay no matter what we do we will have people saying I'm sorry I accidentally press the button and even though like after you pressed it it popped up big big screen saying like okay if you press this second button.
+
+This is what's going to happen.
+
+You'll be out.
+
+You can't take the cost anymore.
+
+You can't use this anymore.
+
+We can't restore anything.
+
+It's like we're going to delete you.
+
+It's like are you sure you still want to press a button.
+
+We got like quite a few people say like oh I accidentally press the refund.
+
+Welcome to humanity.
+
+We tried.
+
+Happens every time.
+
+Hey I did want to talk more about Solwood actually because like.
+
+This it is an interesting question because when I rang you Eric and I said like you know.
+
+I want to teach a course you know how to solve it with code course.
+
+Do you think it's going to be in a month.
+
+Do you think we should build from scratch.
+
+A new platform and use it for the course and paste on our you know kind of internal prototypes we had created.
+
+You know you didn't.
+
+You said what a great idea Jeremy and particularly because this would be a great opportunity to create a you know the founding community around this this thesis this idea of how to work with code and how to work with a I.
+
+So like could you give your perspective here and like what's the point of Solford for answer AI what's the point of Solford for these people who are now using it and what's the point of this you know community which will help us as well think about like in a you know whatever a month's time as we unfortunately wrap this up.
+
+How do we know what next what next make sure we can do that.
+
+I mean I'm kind of in my mind quite quite a bit.
+
+Well you know it's I'm glad that we're talking about this in the context of the founding of answer I story because to me this is a very straightforward application of the first principles.
+
+So we've talked already about the public benefit of bringing this idea to a lot of new people so that that's like good in and of itself.
+
+There's a strategic value to answer I also which I think it's important to talk about that we have this concept.
+
+We're an R&D company people most people don't really know what that means so let me just I think it's a research lab.
+
+Yeah.
+
+Yeah.
+
+Today the way that research is done in universities and most research labs like really doesn't make that much sense and is not really good from a historical perspective not that there's not good research being done but it's not the best structure for research to be done because today research and development are separated into two separate activities.
+
+So there's like researchers and developers and they do two different things and every once in a while they throw work across the trans into each other which is not.
+
+I mean can't say that's bad and much of the modern world is built that way.
+
+But there was an older idea that research and development should be co codependent done simultaneously by the same people.
+
+And so there are huge advantages to doing that.
+
+Again there's plenty of research on this point but I also I've worked in actual research labs including the successor to Thomas Edison's actual research lab at GE.
+
+I've seen what it's become now and like again wonderful work being done there but this this connection has been generally lost in the research landscape so we really have this idea that we should be using the the commercialization of the products that are being researched as a way to inform the research and just to give trivial examples of why that would be a good idea.
+
+I have worked with many many researchers who have discovered something that nobody cares about doesn't matter.
+
+Or more likely they discovered the wrong thing.
+
+Like when we're trying to do applied research we're trying to not just learn things in the abstract but we're trying to learn something that is useful to accomplish some goals.
+
+So like I never forget one of my seminal R&D experiences was working on a piece of equipment that was going to be used in data centers.
+
+I'll go into all the reasons why but like this research team had spent years to make a dramatically more energy efficient piece of equipment that would go into data centers.
+
+And yes it was much physically larger than the previous version but it was much more energy efficient and I went to people who build data centers for living and I insisted like look we've I know you've been working on this thing for years but we just need to double check that the attributes that you're optimizing for are in fact the attributes that the customer cares about.
+
+I'm like what else could they possibly care about it's like I don't know I've never built a data center in my life but let's whatever it is let's go double check the reality of the story feel like let's go double check and of course I would be telling the story except that the.
+
+They just sort of people build data centers don't give a crap about energy efficiency because they don't pay for the electricity that somebody else's problem but what they do care about is the footprint on the floor.
+
+That's actually the only thing they care about and so all this research had gone to waste building a product that was 10 times better in a dimension that the customer didn't care about.
+
+That's like so classic it's actually really sad and if you tour a modern research lab.
+
+There's any good you will have that little like tiny like mournful violin sound playing in the background of the soundtrack because you walk around as you meet researcher after researchers like yeah I have a cure for cancer on the shelf here.
+
+I have you know this is like infinite energy for free.
+
+Here's Nantrum materials that will allow us to make a bridge from America to China is just like one extraordinary breakthrough after another like have any of these been commercialized like no they didn't want it they didn't want it they didn't want it they didn't want it.
+
+It's just like it's unbelievable the potential that is sitting in these labs that is never commercialized now.
+
+If you meet the people whose job it is to commercialize that stuff they'll be like those eggheads you know they wouldn't know.
+
+It's just like you know everyone's pointing the finger like this whose fault is it really does a thing actually cure cancer like like sorry right so our concept with answer I was to build a laboratory that does both the way that Thomas Edison basically invented the modern electrical system through this mechanism because it really forces you to direct the research to the things that are the most important.
+
+So we call the collection of deployed research infrastructure the substrate the thing that allows us to build.
+
+I applications faster easier and in a self maintaining way.
+
+That's that's like a thing that we need to build so we have to build stuff and ship it so building solve it is like a part of that substrate or we hope we will.
+
+Yeah yeah we we just like something we needed ourselves and it was also a great way to test out we had done a lot of research in the preceding year of things you know much of which has been open source and not we only build applications.
+
+But I was like look there's a great opportunity to see if the if the pieces of the puzzle actually come together into the development of of an application and you are using the living result of that you can judge for yourself whether in fact it did or not but I think it's pretty good for a month's work.
+
+And the question was really like are there some people in the world who find this useful and you know and if so what what do they find it useful for and yeah it wasn't like it as many as possible and we only opened up sign ups for 48 hours much to the chagrin of many.
+
+Try to convince people most people not to sign up certainly wasn't for money because we did it like 10 times less than my fast AI courses which were much less breakthrough than this.
+
+Well and I use I use this I use solve it all the time now as an example of MVP thinking applied to applications now to connecting back to our previous lesson.
+
+Because I want each of you who are listening to this to ask yourself like really really ask yourself if the announcement about solve it had been new is bang code editing platform now available for $200.
+
+Would you have rushed to buy it.
+
+I don't know.
+
+I think by making it into a course where the customer is guaranteed to get some utility and where they're going to actually learn how to do the thing.
+
+You have a much greater chance of attracting the right kinds of early adopters to this product.
+
+And you get to really disentangle the question of do people want the benefit that is being offered from the limited nature of the software so again you could imagine the situation where we had lots of people sign up for this course and lots of people cancel after two weeks because the product sucks.
+
+That would have been extraordinarily valuable learning.
+
+You could also imagine a scenario where we put this out there for 48 hours and nobody signed up.
+
+You could imagine a lot of scenarios of like a lot of things could have happened and we had a pretty specific idea what we hoped would happen and we very pleased to see what has happened.
+
+So that's kind of like so we talked about like the public benefit then this is like the strategic benefit.
+
+Then from a third thing is why have a community I think is also really important.
+
+We also see this as the promulgation like in some ways the product here is not solve it.
+
+Like solve it is like the container the Petri dish that allows this community to form around it and if you look at the history of technology platforms and developer tools that have been really effective in changing the world.
+
+They all have this this passionate community that pushes forward the envelope of what is possible with the thing and also evangelizes it to other people and brings them into the way of thinking so the community is like a living organism that grows and metabolizes the world into itself.
+
+And so for this we you know we have this revolutionary idea about how programming should be done in the era to come.
+
+And so even if we could just use it ourselves privately like the impact of that compared to having a thriving community is really different and then of course like from a qualitative feedback point of view a community is dramatically better than any kind of split testing surveys you know what just every conceivable kind of other substitute it's much better to be living embedded in the community of people who can tell you directly what they think and show you what they make.
+
+Yeah, people often ask me like how do you how will you know what kinds of people are using solve it how will you know what they're using it for how you know like what are the where is your telemetry what are the metrics like.
+
+Well I know them we chat you know like like.
+
+It's not complicated you know it's like you know and again that is made possible by the decision we made upstream of this is like to walk through the from first principles right because we made the upstream decision not to have too many people using it.
+
+That's actually really important analytics are for situations where you have too many customers to know them individually right you have 20 million customers.
+
+You can't ask them all what they think it's important no human could possibly do that you don't live long enough so we have to use statistics.
+
+So this is our very imperfect way to determine what people want and you know it's better than nothing of course but in a community setting in a limited setting we can get much better intelligence and of course it's a solid community grows we probably will have to trade intimate knowledge of every customer.
+
+For more analytical stuff that's like a natural thing that will happen but you don't want to start with that if you can avoid it.
+
+So it's not just for the feedback is it it's not just for the feedback and so forth like this I'm having trouble I'm sure you'll be captured as much better than me like I know from fast AI like there was something super valuable about having that community in that case it was really the first community of.
+
+Kind of AI research practitioners you know and nowadays I find most AI researchers I come across our first day I alumni.
+
+And there's a certain kind of shared understanding of how one does AI.
+
+Yeah I don't know why do you.
+
+Yeah what are the other things you kind of see coming out of this community because another question we had during the week was from one of the students how can we as individuals or companies of one support answer AI school of having a long term positive impact on society.
+
+I love that question.
+
+Oh that's such a powerful question actually I don't.
+
+People will think I planted it but I didn't I really didn't.
+
+So this is something again one of these open secrets.
+
+People in today's world feel powerless it's very common to feel like we are caught in these big forces big platforms big this big that all these billionaires you know controlling the media or whatever you have heard so many theories of what's the root cause of why we people feel that way and.
+
+We don't have to get into that today.
+
+But I think that's not true.
+
+We are much more powerful than we think.
+
+And it actually is like people make a concerted effort to make us feel powerless it's actually like by design.
+
+Again you can think about why people would want that.
+
+And the way you know that's true is think about all these powerful people and all these super powerful corporations or whatever how much energy they spend trying to be loved and approved of by the public.
+
+Like how much tech you know if you have a billion dollars you can spend your time on a private island doing nothing you don't know we certainly don't need to be out there trying to get people to love you and say you're doing a good job.
+
+So like so why why why why.
+
+And so the the approval that people give is actually like a very important gravitational force that shapes the world in ways that people do not fully appreciate and that's true as consumers is true as citizens but it's also true as employees and it's true as customers.
+
+So by when the reason we talk about something like this as a movement as a community rather than as a product is because we're really consciously trying to get this idea to spread.
+
+And so by acting in line with the values of this community, you you amplify it without having necessarily to do anything else.
+
+So we were like it sounds like virtue signaling yeah doing things that are virtuous is good.
+
+Like and signaling that you're doing them to other people is a very pro social thing it's actually the foundation of civilization like I don't know how virtual thing will be came an insult.
+
+It's good.
+
+So like by living in line with these values you are doing the thing like if you want to also run a blog post about it and go on social media and recruit other people like you could do that if that is the thing you feel so inclined.
+
+Still something might call you a social justice warrior Eric what if you're fighting for your social justice that would be just so embarrassing.
+
+I mean what could what could be worse than justice let me tell you.
+
+It's bizarre.
+
+So now I really lost my turn I thought and I'm like all things were not supposed to talk.
+
+So we have we have users so excited and saying like how can we contribute.
+
+Oh yeah how can I help.
+
+So yeah.
+
+So by by embodying this ethos you spread it.
+
+You naturally signal it to the people around you.
+
+So for example, let's say like you know there's been a lot of talk lately about the how long it will take for the for that to be a one person billion dollar company to be created.
+
+Maybe that happened in one year in five years or whatever.
+
+Imagine that was you.
+
+Imagine that you use solve it to create something new and that like created this incredible amount of value in the world.
+
+You don't need to tell anybody that you use solve it to do it like it will be a massive piece of news.
+
+It will create tremendous gravity as other people see to emulate the thing that you did.
+
+But like let's say you also use this to become a nurse and you took care of people in a hospital in a better way or some other like deeply intimate personal kind of thing.
+
+You didn't make a billion dollars but you nonetheless use these those two.
+
+Like that also has profound impact and gravitational pull to the people around you.
+
+So that's and I think that's the hardest thing for people who are in the kind of company of one or who are truly an entrepreneur is you have actually a lot more control over what you do.
+
+So like so for you it's it's much more can you overcome the mental bias that just we all have been conditioned.
+
+I would say even indoctrinated to do things a certain way.
+
+And now we're asking you to do something different.
+
+It can be difficult if you're in an organizational structure.
+
+You have to find ways to integrate that into the dominant structure.
+
+So like I just I just give you one funny story about that for a time of many years ago there was a group of Google product managers that had a secret meeting in my living room.
+
+Where we would secretly discuss lean startup in the Google context.
+
+Google is like at that time was the ultimate not invented here company and you could not go anywhere in the company if you brought in an idea from the outside.
+
+Ironic for a company that's supposed to be so open source for like that meant Google publishes their open source that other people use not the other way around.
+
+And so these product managers were like really struggling to get Google to do lean startup stuff and part of the reason is they couldn't tell anybody that it was lean startup.
+
+And they had to come up with with original Google isms to explain why they were doing what they're doing.
+
+It was it was totally hilarious and it was just like this this incredibly cumbersome way of trying to like and they thought when they first approached me they thought I was going to be really angry about it.
+
+So like sorry we're not giving you any credit.
+
+We're just stealing your ideas and rebranding them for the Google context.
+
+Like is that okay.
+
+And I was like come to my house and we'll talk about how to do it better like I don't like that doesn't matter.
+
+It doesn't matter whether you call it this or call it they call it whatever you want.
+
+You can find ways to actually live the thing so that you can demonstrate its success.
+
+And then if later you decide you want to be an evangelist for it which of course is wonderful.
+
+You'll be a much more effective evangelist if you can point to examples of how it's actually worked in your own life.
+
+It's so much better than like oh I heard Derek and Jeremy talking about this thing on a video and you should watch the video to like no one cares.
+
+But if you can say look I was able to accomplish something with this.
+
+That's a much more powerful testimony.
+
+A couple of people actually asked about this in our last chat about being at bigger companies.
+
+Maybe I'll just pick one of them as being the strongest version.
+
+He said one experience I have at my workplace is that all our internal users essentially push back and tend to reject every change.
+
+No matter what.
+
+So we need weeks of training and getting on board.
+
+And somebody else said yeah large orgs struggle with bureaucracy and communication challenges.
+
+Yep.
+
+Yep.
+
+So for folks I did write a whole book about that we haven't talked about.
+
+So go check it out.
+
+What's the book Eric?
+
+It's called The Startup Way.
+
+Yeah.
+
+So proud.
+
+It's just called The Startup Way.
+
+It's funny because most people in the startup world know me really for Lean Startup.
+
+But if you go into the corporate world I'm actually known as the author of this other book.
+
+That's as famous to them as Lean Startup is to entrepreneurs.
+
+It's funny like these groups don't talk to each other.
+
+But for me it was like to same intellectual challenge.
+
+It was like what happens to startups as they get bigger?
+
+Today's enterprises are yesterday's startups.
+
+And I used to ask people a lot of people start startups because they hate working in a big company.
+
+And I used to tease them a lot.
+
+I'd be like if you hate big companies so much why are you trying to create a new one?
+
+And they're like well my big company is not going to do that stuff.
+
+And it's like oh really?
+
+What's your plan?
+
+It's like the person who's going on a diet.
+
+I ate healthy meal this morning so therefore I'm not going to get overweight later.
+
+I want to have more of a plan than that so I wrote a book about it.
+
+I will say in an enterprise context it can seem very daunting to do this thing because there's like a dominant way that the company's always done things.
+
+There's already some level of bureaucracy.
+
+And some companies are too far gone for reform honestly.
+
+And if you work at such a place like if you can do solve it you can get a better job.
+
+You don't need to say that.
+
+It's okay.
+
+But if you want to say that.
+
+It is like people, particularly people at big companies have been out there for a while.
+
+I think really don't understand how many opportunities are out there.
+
+Yeah, really you should don't feel trapped.
+
+And we can talk about that if people want tips on how to do that.
+
+But a lot of people stay at big companies because they are afraid of being fired.
+
+And they accept a lot of abuse because the idea of being laid off is too painful to consider.
+
+But they also don't want the hassle.
+
+They have a life.
+
+They don't want to go searching for other jobs.
+
+So one thing I found extremely liberating in my own career.
+
+I think we even maybe talked about this last week is like trying to figure out what you stand for to the degree that you wouldn't be willing to be fired over it.
+
+I work with a lot of corporate executives.
+
+Okay.
+
+I work with CEOs and boards and very high-end executive VPs or whatever.
+
+If you get them alone privately and just ask them about this, they'll all be like, "Man, I wish we fired people around here.
+
+I wish it was easy to fire somebody."
+
+People don't get fired nearly as often as you think that they do.
+
+And so one of the things that can be very liberating is just to be like, "Look, I'm going to try standing for something and let the chips fall where they may."
+
+It means that I get fired like, "Don't worry.
+
+You're here.
+
+I'm very confident in your career prospects, really, truly."
+
+And like it really is like office space, you know, that great movie where the guy like gets hypnotized and never gets dehypnotized.
+
+And he's told he just doesn't give a shit about anything.
+
+And he goes into work and he's just like, "I don't even know what we're doing here."
+
+You know, it's like, "What do you mean by that?"
+
+"Oh, I don't know.
+
+It seems like our management has no clue and these reports are pointless and I'm just wasting my time with them."
+
+People are like, "Oh my God, he's going to get fired."
+
+But like, "No, quite the opposite."
+
+People are like, "This is so refreshing.
+
+There's truth telling.
+
+Tell us more."
+
+Yeah.
+
+Now, don't be an a-hole about it.
+
+You know, don't.
+
+That's part of the movie that's not realistic.
+
+But what is realistic is to then try to find an executive sponsor who actually cares about results.
+
+So like all corporate transformation begin with an executive sponsor who cares about outcomes.
+
+And some people listen to this are so cynical about executives.
+
+They're like, "Executives don't care about outcomes.
+
+Okay, about reaching themselves."
+
+And again, I feel that's how you feel.
+
+I really would consider finding a new job because there are people who went into industry to do something, to actually accomplish something.
+
+There are people who really care about that and believe in it and are really frustrated by the same bureaucratic stuff that you are trapped in.
+
+In fact, many of the people who promulgate these bureaucratic rules themselves don't like them, but feel trapped.
+
+And they feel like they have to promulgate them for the same reason you feel like you would have to obey them.
+
+So if you can find someone, you can say, "Look, I used to call this the golden sword for cutting through bureaucracy."
+
+Which is if you could find someone who actually cares about results, you say, "Listen, I'd like to make you a deal."
+
+And the deal is as follows.
+
+In exchange for, you give me the latitude to pursue this better way of working on this project or in this limited circumstance.
+
+You have to be very explicit about the latitude that you are asking for.
+
+I need you to waive this requirement or get this person off my back or promise me that this thing will happen.
+
+If you give me this, don't ask for money, but ask for anything else.
+
+If you do that, what I will offer you instead is not just like a blanket guarantee that we'll get a lot done in 18 months.
+
+Because who knows?
+
+But I will give you very fine-grained, detailed reports that are scientifically sound where you can see, you can witness our progress for yourself and decide if you want to keep going with the experiment.
+
+I shut it down at any time.
+
+And I have been astonished at what people have been able to get done with this simple formula.
+
+But finding the person is not easy.
+
+And I know this because in my shameful past, I used to work in management consulting.
+
+And a couple of really big companies, one really small company.
+
+The universal thing amongst all the companies was the first month of a two-month project, there would be at least two people in the project team working pretty much full-time on organizational mapping.
+
+Their job was not to figure out how to solve the client's problem.
+
+Their job was to figure out who in the company had what feelings about the thing that they're trying to do and how did they respond to new ideas and which people tried to keep everything the same and which people were into change and which people's promotion KPIs were based on finding new ideas.
+
+That was the job.
+
+And then we'd come back and be like, okay, we have to find one person.
+
+So same deal is what you're saying.
+
+We have to find the one person who's going to be our cheerleader and then we have to show that person that we can help them succeed in their career.
+
+And then now you've got somebody on the inside of the team and then suddenly everything becomes easier because they're like, oh, yeah, all right.
+
+This is going to be a great project.
+
+Great project.
+
+Look out for that Eric guy.
+
+You know, he's totally anti-innovation.
+
+You know, he's going to, you know, but you know, the good news is he's going on a three months sabbatical next month.
+
+That's the time we're going to come in.
+
+That's the kind of intel you have to have.
+
+And I will say that most this this information is more known than people admit to knowing.
+
+So like once you get people who get to a certain level in these organizations have what I call the little black book.
+
+They actually do know like I was like, I was sitting next to listen, if hypothetically the CEO went to like a retreat business retreat for a week and came back with a cool new idea.
+
+And they're always like, oh God, you know, what's it going to be this time?
+
+And said, listen, your life depends on making this magical thing happen for me under these very adverse circumstances.
+
+High state.
+
+Who would you call to assign that project to?
+
+Would you send it?
+
+Would you put it through your normal product development process?
+
+Would you do your normal assignment process?
+
+Every is like, of course not.
+
+That's like career suicide.
+
+You can't put that you can't ask a normal person to do that.
+
+They're going to run for the hills.
+
+And they were, who would you ask?
+
+Everyone's got this little notebook.
+
+And they're like, well, what you really want is Joe Schmo certain person three levels down for me over here.
+
+And you're like, who's that guy's like he we've tried to fire him like 10 times.
+
+He's impossible to work with everybody hates him.
+
+But doesn't mind career suicide assignments.
+
+He actually really likes projects like that.
+
+He knows how to get this kind of thing done.
+
+Calls so and so.
+
+So like there is this like hidden network in most organizations, which is like how you when something must get done.
+
+Who do you call?
+
+And sometimes it's a fancy VP and sometimes it's like, you know, it's like the office based guy with the stapler, except if he actually did real work.
+
+Like there are those guys like in the base, they're just like guy in the basement.
+
+You have to know to call.
+
+I've been in actual basements where the actual guy actually is there.
+
+And it's like, oh, I've been waiting for someone to stop by and ask me to do this project for a long time.
+
+And like, no one thought to do it.
+
+I don't leave my basement.
+
+So I don't know.
+
+Never have any way of telling anybody to do it.
+
+The swing line.
+
+The swing lines, the swing line stapler.
+
+You mentioned.
+
+Metrics.
+
+Quite a bit.
+
+And that's something I'm super interested in.
+
+Like there's something I still find surprising about our relationship here, Eric, which is from from like a somewhat unnuanced view or from a surface view.
+
+You would think that we would be butting heads about metrics all the time because I think a lot of people feel like, oh, Eric, a B tests exact percentages, specific hypotheses.
+
+And like, I'm the guy like who, you know, my wife, Rachel wrote an academic paper.
+
+The problem with metrics is a fundamental problem for AI.
+
+You know, we're kind of known as anti-metrics.
+
+Oh, yeah.
+
+But actually we don't at all.
+
+And I think what's interesting, like so we had quite a few questions from last week, you know, when I think one which maybe really gets the heart of is like, okay, what about Apple, you know, design should be based on taste and intuition.
+
+You know, that's very much me like with all due respect to the people listening.
+
+I don't really listen to customers, you know, like if you had said like, hey, what could you do to have a better, you know, to improve, you know, to have a better AI help with your code.
+
+Like, oh, well, I like Claude, but I don't like the Sarah font, you know, maybe it could be sans-serif or, you know, well, what about cursor, except I want the latency to be a bit longer on the ghost text.
+
+Nobody would have said like, oh, trick my brain into writing less by using a smaller text box and put it further away from the main things.
+
+I don't edit things so much and I'm all created dialogue and, you know, try to trick my brain into thinking this is just a bot, you know.
+
+Yeah, to me, this is very straightforward.
+
+Like if you want a pastry, you don't ask an electrician.
+
+It doesn't mean that electricians not good at their job.
+
+It doesn't mean that pastry chef is not good at their job, but like the customer's job is not to design the product.
+
+That's your job.
+
+So to asking for people to tell you what to do is just a confusion of roles.
+
+It doesn't mean that people aren't smart.
+
+They're probably really good at their job, but that's not their job.
+
+That's your job.
+
+So how to, so I mean, some other questions in this general category of like, well, you know, what about when metrics are really jumpy?
+
+What about the bootstrapping problem when you kind of need experience from the thing to know how it's going?
+
+You know, what if there's a really long lag?
+
+Like, I think a lot of people assume that maybe you think that all metrics have to be like download counts or something, but I think you have a much broader view of it.
+
+Well, that's natural.
+
+It's very hard because the need for analytics, like analytics are an exhaust.
+
+It's like one of the last steps of the process.
+
+And people think, oh, my metrics is better, but I don't think that at all.
+
+We need the necessary metrics to accomplish the goal.
+
+So I think the big part of the problem is that most people have learned metrics and a lot of people even have learned statistics from a certain very narrow number of use cases that are not that helpful for startups.
+
+Presidential polling, right, where the goal, where everyone knows like there's a relationship with sample size and accuracy.
+
+And we in presidential polling or parliamentary polling, we're trying to, we're trying to find very fine grained changes in people's, in something very nebulous.
+
+And so we need these big sample sizes and it's quite, it's quite difficult.
+
+The other context is tend to be like, we will write a lot about metrics and talk about it tend to be big company product managers who are dealing with millions of customers.
+
+And again, you're like, you've got a new version, you're trying to figure out like big statistical changes that are relatively minor.
+
+What people forget is that statistics and sample size, you know, whether you're a Bayesian or a frequentist, either way, the fundamental thing we're looking at is what is the underlying signal to noise ratio of the phenomena in question.
+
+If you have a very high signal to noise ratio, you do not need fine grained analytics to find out if it's true.
+
+So for example, I don't know if you told the story last time, but early on in my career, we were building a product and one of my co founders jobs was to bring in people for usability testing.
+
+We were really proud of ourselves.
+
+Like we're going to be customer centric and we're going to get feedback about our product.
+
+And so we will, I'll never forget as long as I live, we brought the first person in to use our product and they sat down and we explained the value prop and we said, okay, you need to like login with your social credentials here and download the product and here's how it goes.
+
+And they were like, no, thanks.
+
+We're like, I'm sorry, I don't think you understand this works.
+
+We're paying you to be here.
+
+So you kind of have to do that.
+
+And they're like, no, you can keep your money.
+
+It's okay.
+
+So like our product was so bad, we literally couldn't pay people to download it.
+
+That's how bad it was.
+
+Now the first time that happened, I turned to my co founder.
+
+I was like, you are the worst.
+
+How did you find this person of all the people on planet earth?
+
+You get me another one.
+
+Second person comes in, you'll be shocked.
+
+The same thing happens again.
+
+And now I'm like looking at him like you really are bad at this.
+
+Come on, can you please find me someone to use my product for me?
+
+Third time happens happens again.
+
+Now, any of you who are engineers know exactly what's coming next.
+
+I was like, well, is that a statistically significant sample?
+
+And like, yeah, it is when the signal is very high, you do not need a high sample to get it.
+
+So yeah, like, we don't need for the stuff we're doing.
+
+And it's right.
+
+We don't need massive samples.
+
+It's very clear.
+
+The evidence is very clear.
+
+And when you have that kind of direct intimate connection with the customer, you don't need statistics.
+
+You don't need sampling.
+
+You don't need that stuff is useful in very specific situations.
+
+Now, I've been in those situations a lot and written about them a lot.
+
+So of course, I'm associated with those techniques and there are times when you do that is really important.
+
+So I'm not here to say like you should never use it.
+
+It's just this is like, there's all huge suite of tools in the toolbox you can use.
+
+To get through the build measure, learn feedback loop and part of the art of entrepreneurship is you get older, you get better at figuring out what is the right tool, the right tool for the job.
+
+And people who want to make it about analytics or not measurement or not metrics or not are like trying to, it's like, you know, I don't know what the right, I'm trying to come up with a sports analogy, but it's like, you know, is basketball about passing the ball or not?
+
+It's like, that's not helpful.
+
+There is some passing the ball and basketball.
+
+Yeah, some teams passing more.
+
+So I feel a lot about it.
+
+Like we could make a whole theory about it.
+
+But like, then you're like, what about tennis tennis about passing the ball?
+
+It's like, no, it's not.
+
+It's like, well, see, see, if you believed in metrics, you believe in passing the ball all the time.
+
+So no, you do the thing for the thing you're doing.
+
+So it's really about choosing the right thing for the job and also recognizing that that thing is going to change as the product evolves.
+
+So like I said, we have 1000 people in the Solbit course or whatever it is, we have a certain sized community, we have a certain set of practice, it makes sense.
+
+If we had 100,000 people, it wouldn't be the same.
+
+And if we had 100 million people, it would really, really, really not work to do it the way we're doing it now.
+
+We obviously would have to make changes as we go.
+
+But it all goes back to what question are you trying to answer.
+
+And when you're trying to answer the really, really coarse grand questions, will anybody use it?
+
+Do they like it?
+
+Does it come like, that's very different than answering the fine grand questions, which are also important, but just different of like, which button is more efficacious?
+
+How much should we charge for it?
+
+I mean, we definitely saw it this week.
+
+It was great.
+
+You know, my old friend, Radik, who's well known for his meta learning book, you know, took a time, but finally tried Solbit a week ago.
+
+He was like, comes on the forum, like, Hi, I'm here.
+
+I'm going to give this thing a try.
+
+See how it goes.
+
+And then within the latin with over the next week, he basically posted every day with a new thing he's built.
+
+He's never built before because of Solbit.
+
+Okay.
+
+Yeah, that's very simple.
+
+One really confusing.
+
+We don't need to A/B test it.
+
+We don't need to like, it's like, what would the Google Analytics say about a session?
+
+It doesn't matter.
+
+That's not important.
+
+We have the information that we need.
+
+We're able to get it.
+
+Jono, I think there's some questions you wanted to kind of ask both of us.
+
+So is that right?
+
+Or ask Eric or tell me, you know, I don't want to monopolize things.
+
+Yeah, I'm trying to go back through like one, one, one theme that I keep coming back to, even when I was reflecting on last week's sessions with you, Eric, is like, this idea really applies at a lot more scales and topics than I was thinking, right?
+
+So you're talking about like, okay, measure, evolve, like this little loop.
+
+It's not just the like the signups that you're talking about or whatever.
+
+It's also like you're talking about the trustworthiness of a company long term, right?
+
+Like if we're trying to attract the best talent, but then we are breaking against our ideology and providing stuff to the military, that's not like, that's not showing up in your weekly metrics.
+
+And in fact, you can trade off those long term things for these short term things.
+
+So yeah, I guess like, maybe like as a as a homework for people watching and as an exercise for me and I want to go like assign this to my buddies as well.
+
+Like what is what is some ways to start reflecting on that and defining those loops, right?
+
+So like, what is it that I, or the questions that I asked myself to say like, what are my core values, but also to find these places where, oh, I would have thought measure applied to like the speed of my code or the number of downloads.
+
+Or whatever.
+
+But like, you know, it also applies to the company values and the day to day working or, you know, like all these different places.
+
+Yeah, I don't know how do I interrogate that space?
+
+I guess is the the best question.
+
+Like what's the process for finding all of the places where the same kind of idea applies?
+
+Yeah, it's fractal really.
+
+And if I don't think I've ever seen the old Ames movie, Powers of 10.
+
+Those who know what I'm talking about, like camera zooms into the microscopic and then zooms out to the macroscopic and like, I've been thinking about this a lot because one of the questions that comes up a lot in my work is like, what is an organization?
+
+What is it?
+
+What are we actually doing here when we do work?
+
+And there are so many definitions out there.
+
+It's actually kind of interesting.
+
+And people tell the story of a startup like this, you know, like, well, it starts with a vision, an individual person has a vision, and they bring this new idea into life from the vision.
+
+You know, they acquire resources and then from the, you know, they got resources, then they they enact some kind of strategy, the strategy is rise to a business model, the business model that gives rise to a product, the product is used by customers.
+
+And so it's like visionary at the top customers at the bottom.
+
+And at every one of those levels, there's some thinker out there who has said, like Peter Drucker said, the purpose of a company is to make a customer.
+
+So like, oh, but like if you go to Harvard Business School, you say, what is the startup?
+
+They have a definition.
+
+It's like a startup is the organization that makes plans based on resources not currently controlled.
+
+So the acquisition of the resources is the thing.
+
+Obviously, like people who are in the cult of Steve Jobs are like, yeah, it's all about the vision.
+
+So anyway, so there's all these different ideas about what it is.
+
+And you even tell the story completely in reverse.
+
+People who don't like entrepreneurship or who kind of have come from an economics perspective would be like, that's backwards.
+
+The first thing that happens is customers have a need.
+
+The market has a need.
+
+The need causes a product to arise.
+
+Like now that the product has arrived, somebody has to like, we have to build organizations to service the business model that makes it possible to make the product that business model requires the acquisition of resources which requires some kind of strategy.
+
+And like, and like somebody has to be the one to capture the economic rents, having the privilege of filling this hole in the marketplace.
+
+And that's, you know, the entrepreneur is like the trickster, the huckster who shows up at the last second to claim these social profits.
+
+And it's like that's exactly the same story in reverse.
+
+And I think what's really fun.
+
+I like to do this is like, you draw that diagram top to bottom and then the reverse one around and ask yourself like which which story is true.
+
+Which level is true.
+
+Which definition is true.
+
+And it's kind of frustrating.
+
+Like, well, these are actually all true.
+
+And as soon as you have that realization, then you're like, oh, this is not a line but a circle.
+
+If I connect, if you notice that everything starts with the vision and ends with the customer or vice versa, but like the true iteration, the true thing that makes a company possible is that spark of connection between the visionary and people.
+
+Like the first employees you pitch the idea to the co founder who was like that stupid or like, oh, that's really the intriguing and talk to founders who have successful companies.
+
+It's very rarely the first idea they ever had.
+
+Well, how do they know the first idea was bad.
+
+How do they know the second idea like there's this special thing that happens in that connection that back and forth no matter how linear you want to tell the story.
+
+That's, that's how it goes.
+
+And to me when you make this circle, it actually like raised the question for me.
+
+I was like, well, what's in the center of this circle.
+
+This is like a this is actually a border.
+
+Of a space.
+
+What is being circumscribed and the obvious answer to me just came to me one day with this is a being.
+
+These things are alive.
+
+They are super organisms.
+
+They're as alive as you or me.
+
+So we don't own them or control them.
+
+We birth them and then we become like their organs that are cells.
+
+And that's very spooky to think about because then you're like, well, who's in charge of this thing.
+
+But it's really important to have this realization in order to answer your question.
+
+Because think about it like, you know, if you're a doctor and you come to a doctor, like I need you to diagnose me.
+
+I have a problem.
+
+And they're like, and they're like a bone specialist.
+
+And you're like, what is a human being?
+
+Yes, a bone specialist.
+
+It's a skeleton with the stuff wrapped around it.
+
+But like, if the skeleton is broken, it can't function.
+
+And then did you and that's like, oh, yeah, I have a problem.
+
+Is it a broken leg?
+
+If it's a broken leg, I can help you.
+
+But if you're like, no, my pancreas is out of whack.
+
+They're like, there's someone about you're going to find someone else's department.
+
+So you go, someone who studies the endocrine system.
+
+What is a human being?
+
+It is this incredible message passing network of these endocrine messages going back and forth hormones and all this amazing stuff.
+
+If that system is out of whack, the thing dies.
+
+And like, I go to a neurologist, I go, I think about all the people who study the human body, each one of whom has an idea of what it is and none of whom are wrong and yet all of whom are wrong.
+
+Because of course, none of those people can tell you how to be a good person.
+
+That's a much more holistic thing.
+
+And so the same thing is true for organizations at every level of its beingness.
+
+There are these systems, they operate this same way.
+
+There are these questions of the true north and the values and the iteration and the feedback and that's that's real.
+
+And so when you can be very daunting at first to feel like that's just like it's like a dizzying fractal.
+
+It's going all the time.
+
+But I think it's actually very liberating once you realize it because then instead of asking the question where are all the places I can apply this idea, which is actually an infinite set and very overwhelming, you can ask yourself like, what am I doing right now?
+
+What like, there's a reason I'm doing what I'm doing.
+
+It's a good reason.
+
+Do I actually like and whatever that is like whatever you are in the present moment, you can start to apply this thing to the people that are not people don't ask that of themselves enough.
+
+No, not nearly enough.
+
+Most people are completely unconscious on total autopilot doing what they're doing and I do not know why.
+
+And all it takes is a second to just wake up and be like, wait, what am I doing?
+
+Is it what I want to be doing?
+
+So like the first thing I think a very common misconception with these ideas is you're like, oh, I'm doing this thing.
+
+Therefore, I'll use these ideas to make the thing I'm doing better.
+
+But I would say the more better question to ask is, is this what I want to be doing?
+
+And then if it's not what you want to be doing, you can use these ideas to get you from here to there.
+
+Like, okay, well, do you want to be doing it now?
+
+Let's figure out how to make that a reality.
+
+I mean, it's a bit confronting.
+
+It's a bit scary.
+
+Like I've been doing this for years.
+
+So I assume it must be what I want to be doing.
+
+Yeah, well, economists will say that's your revealed preference and it actually is what you want to be doing.
+
+What you think you want to be doing is backwards.
+
+And now we're into spiritual topics that maybe are too far afield for this.
+
+I was going to say that that that economist view that an entrepreneur is merely the vector that happens to have the customer requirement is channeled through.
+
+It reminds me of this thing and Drive to Survive, the Netflix F1 series where like the chief engineer is talking to the camera like all the reasons that they're doing so well at Mercedes or whatever.
+
+And it's like, yeah, you know, our Aero systems this and you and Louis Hamilton is looking over from the side.
+
+And actually it butts in.
+
+He's like, excuse me, you do realize that I'm more than just ballast in the car.
+
+Right.
+
+I operate the vehicle.
+
+Yes, also the drivers.
+
+Yes, technically speaking, that is true.
+
+Yeah.
+
+Something Jono is talking about during the week with me.
+
+It might be worth discussing.
+
+We should wrap up soon.
+
+I don't want to take up all your day.
+
+It's like just Jono is pointing out to me in the nicest possible way.
+
+What a strange company we are.
+
+We, you know, when people say like, oh, this money you've raised, you know, what are your plans for scaling headcounts?
+
+Like, well, we're going to hire 10 to 12 people and then we're going to stop hiring people, you know, how are you managed?
+
+What are your management structure look like?
+
+We don't have any managers.
+
+Cool.
+
+You know, which, you know, sort of paperwork that you pick for your legals and stuff like, oh, we created custom offer letters.
+
+What are your policies?
+
+We don't have policies.
+
+Like, we're weird at every level.
+
+And obviously that's very intentional.
+
+But like, yeah, I guess I was kind of interested in your thoughts there and also like, I guess, maybe it's not that unusual for really early standards of one or two people to think that.
+
+They're going to do everything differently, but never seems to happen in practice and in practice, the fact that we actually do things differently seems to be seems to be different.
+
+Most people assumed we would have capitulated by now.
+
+Yeah, that is the typical pattern.
+
+Yeah.
+
+So I don't think that the, the label of different is useful because most things are totally incoherent.
+
+So being different from them might be good or might be bad.
+
+I don't know.
+
+But like, which things, some people assume that the status quo isn't incoherent.
+
+Like it's, yeah, it's a very natural assumption.
+
+I'm saying it's an open sea among people who study every aspect of the status quo.
+
+Most of them spend most of their time being like, why are things this way?
+
+This makes absolutely no sense.
+
+And that's what I said that there's not a lot of good stuff also, but so incoherence doesn't mean like it's a collapse, but it has, it has these problems.
+
+So to me, I think what we're doing is completely coherent.
+
+That's why I like it.
+
+And it's not even a framework.
+
+I would necessarily recommend anybody else.
+
+I would say completely bespoke derivative from first principles of what we're trying to accomplish.
+
+So like, Doug, take the headcount thing.
+
+That's probably the most controversial thing that we do.
+
+When I tell people that because we want to be due research and development, we want to hire people who are world class at research and development.
+
+They have to be able to do both things better than basically anybody else on the planet.
+
+And people look at me and are like, well, how many such people can there possibly be on this earth who could meet your standard of hiring?
+
+And I'm like, what do you think maybe 10 or 12?
+
+And they're like 10 or 12 million.
+
+Like, no, I don't need 10 million.
+
+We're average 10 or 12.
+
+It's coherent because like we have a set this target and then we can accomplish it.
+
+And so many things we've like, you can't get away with doing that.
+
+I'm like, well, what if we only had 12 people?
+
+Like, oh, sure.
+
+In fact, Jeremy, you remember this.
+
+We were talking to a vendor who was helping us with something and they were really having a hard time understanding it.
+
+And I finally had to be like, look, how about we agree that we'll do it this way for the first 12 people?
+
+Do you think you could live with that?
+
+And they're like, oh, for 12 people, who cares?
+
+And they just like, they couldn't process it.
+
+We were just going to do that and then stop.
+
+They just assumed that we would have to make this work for 100 people and it wouldn't work for 100 people.
+
+You can't do that.
+
+And like, could this company exist if we didn't have AI to make the people super humanly productive?
+
+I don't know.
+
+Would it work if our goal was to build AGI?
+
+And we had to be like, there's so many elements of the strategy that like lock together like a puzzle where every piece fits with the others, that it makes sense for us.
+
+And I wish every company had that level of internal coherence.
+
+Like basically to me, the two dimensions of a company are like, is it coherent and doesn't have integrity?
+
+So like coherence is just do the people inside.
+
+Does a plan make sense?
+
+Does it all fit together?
+
+People aligned to some common goal.
+
+And early Google, early Google did.
+
+Right?
+
+Like this is something that I find like I admired them because they did everything differently to everyone.
+
+And they recruited differently using like, you know, billboards with coding puzzles.
+
+They did, they made money differently by not using banners, but instead having small auction based ads.
+
+They did their IPO differently based on economic first principles.
+
+And at every point I heard everybody saying like, no, they can't do that.
+
+That's not how you do that thing.
+
+Yeah.
+
+They used, you know, they created distributed compute differently.
+
+And what's interesting is as a result of that process, what nearly everybody has been has taken away from it, particularly at startups is, oh, we should do those specific things the same way as Google.
+
+We should hire like Google.
+
+We should do distributed compute like Google.
+
+But they didn't take away the message of what you're saying, which is, yeah, we should go back to first principles and find out what crazy things nobody is.
+
+What crazy things nobody else does.
+
+We should do.
+
+Yeah.
+
+Yeah.
+
+I mean, for those of you that are afraid of cargo culting, that's that we have a term for that behavior, which we don't need to get into the historical origins of that or anything like that.
+
+But the what I think is interesting is this is controversial, even among people who agree with everything we've said so far.
+
+Still, like if you if you listen to like I was the founders of Stripe, for example, I said, like, we're only going to innovate on a few things.
+
+Everything else, we're just going to copy paste.
+
+We don't want to take the risk of doing things differently outside the things that we really know about.
+
+And I just think that's too bad.
+
+Like I think that is, it's understandable and look, they've had a lot of success with that.
+
+So who am I creating a new global financial system is difficult.
+
+So yeah.
+
+So like, yeah, you want to take on extra difficulty.
+
+And again, it's all about whether the thinking question actually matters for the purpose of the corporation.
+
+And I'll say one more thing about purpose because this is I know a lot of product builders here and a very common, especially we're going through an ESG backlash, this whole anti woke thing.
+
+It's like the idea of stakeholder capitalism was like hot for a while.
+
+Now it's bad at people, you know, these fads come and go a very common misconception about purpose that it's always about some kind of high concept social thing.
+
+Like we have this very high concept mission around, you know, promoting the public welfare using a very high concept.
+
+But I was talking to a founder once and he was like, look, I don't care about this stuff.
+
+I'm out woke, you know, whatever.
+
+I just I just want to build a company that it makes great products.
+
+And that is the great like for the engineers that work there, it's the greatest company they've ever worked at.
+
+It's just like, because we're so focused on building awesome products.
+
+And I was like, oh, interesting.
+
+Is it your experience that that just naturally happens in most organizations that they kind of settle into that culture.
+
+And he's like, oh, no, every place I've ever worked was horrible.
+
+And he just explodes at me, even the companies he himself founded all got dragged down by this gravitational force.
+
+I'm like, okay, so but but earlier, but he's like, but anyway, yes, that's all true.
+
+But I listen, I just want to make a lot of money.
+
+That's not true.
+
+I can prove it to you right now that you don't.
+
+He's like, I'm just going to do whatever it takes to make as much money as possible.
+
+I was like, that's not true.
+
+You are only willing to do the things that make money that also allow you to build great products.
+
+He's like, obviously, that's what I just said.
+
+No, that's not what you just said.
+
+What you said was you're going to create an alignment between your business model and your purpose.
+
+And when that model is turning in alignment with that purpose, then you will do whatever it takes to make money that way.
+
+But any other form of making money, you are not willing to do.
+
+He's like, well, what other forms of money are there?
+
+He's like, well, for example, what if someone said, let's make the product shitty on purpose because we can make it extra.
+
+But I would never.
+
+It's like, well, then you do believe in corporate purpose, actually.
+
+And then call it woke if you want to.
+
+I don't care.
+
+Call it what you want.
+
+But it's actually very important.
+
+We live in a world now where people have forgotten why organizations exist.
+
+And so many organizations have descended into bureaucracy or sociopathy because we have a confusion about this root cause.
+
+What is the actual reason we make and maintain these super organisms?
+
+What are they for?
+
+What's their moral compass?
+
+What's their true north?
+
+So yeah, I think this is, you know, we started out just being like, oh, it's a better way to make AI, you know, programs a little faster.
+
+But the implications are much broader.
+
+I think that's the facts like this is it's been funny because at the end, our business model is stupidly simple, but seems to confuse so many people so much, which is like people like, what's your business model?
+
+Well, we want to build products that people like enough that they purchase them for more than it costs us to make them.
+
+And like, so is it like kind of a, you know, data oil offshoot reselling thing or sort of a virus?
+
+It's like, no, no, we want to build products that are good.
+
+They're valuable enough to people that they pay us more than they cost us to make.
+
+Remember that investor who was like, is it B2B SaaS then?
+
+I'm like, no, no, it's not anything.
+
+It's just, it's just making products that people buy.
+
+That's it.
+
+And that's like socially beneficial.
+
+It's like, okay, it's like, I thought you get some kind of like charity thing or something.
+
+Like, no, no, we want to like, how do you know if this thing is providing societal benefit?
+
+Well, people are paying us more than it costs us to make it to use it.
+
+So it's, it's pretty simple.
+
+It's actually a very easy thing to measure.
+
+Yeah.
+
+Jono, did you have anything that we didn't get around to you before we wrote it?
+
+I think that's, I think that's good.
+
+It's been a, been a really fun deep dive.
+
+How about you, Eric?
+
+Kind of thing you wanted to wrap up.
+
+I just wanted to say thanks.
+
+Thanks for having me.
+
+Oh, thank you.
+
+Making me your non-special guest.
+
+I really appreciate it.
+
+It feels like, I don't know, like this is for the benefit of the streets.
+
+I feel like I've just been able to like sit in on the coolest couple of lessons here.
+
+So thank you so much.
+
+My pleasure.
+
+I hope we got everyone's questions answered.
+
+And if we didn't, we'll figure out how to make it.
+
+Yeah, I've looked through them and I think pretty much, pretty much everything.
+
+I feel we should feel free to put more questions in the discord and we'll figure out how to get them all answered if people have them.
+
+Bye, Eric.
+
+Looking forward to all the cool stuff people build.

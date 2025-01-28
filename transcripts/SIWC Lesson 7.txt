@@ -1,0 +1,1117 @@
+Okay, I believe we are live.
+
+Hope everybody can hear us okay.
+
+Hi, Johnno.
+
+Hope you can hear me okay.
+
+Yep, hello everybody.
+
+Do you have a good break?
+
+Mm-hmm.
+
+Yep.
+
+That's a good non-adventive coding time, just spending with family, so that was good.
+
+How about you?
+
+I had lots of good advent of coding time, some of which was with family.
+
+My daughter was getting quite into it, so that was fun.
+
+Although I probably, yeah, 25 days is probably enough advent of it.
+
+By the end of it, I was like, "Oh, okay."
+
+Mm-hmm.
+
+It was hard work.
+
+I was like, "Okay, I'm going to do it."
+
+I was like, "Okay, I'm going to do it."
+
+It was hard work.
+
+(Laughs) Um, so, but I've got to say, I'm really glad we are back here.
+
+Um, partly because I think we've got a really great plan for the next five weeks.
+
+I think it was good that we had this little break in the middle, and hopefully people got a chance to practice and experiment a little bit.
+
+But if you didn't, that's fine, too.
+
+Um, uh, I'm sure everybody who signed up to this course did so feeling like, "Okay, I want to really get the most of it."
+
+And then for a lot of us, when we start doing something, practicality is getting away, and we start feeling like, "Oh, maybe that didn't quite go as well as I'd hoped."
+
+And this is a second chance for those folks who didn't quite get into it the last time.
+
+You can have another try.
+
+I know that a lot of the stuff we've got planned, you know, you're not going to be coming from too far behind, like it's not going to be too much of a problem if you haven't done heaps of homework or practice or whatever, right?
+
+Exactly, yeah.
+
+The lessons will stand alone a little bit, at least.
+
+Yeah.
+
+Um, I will say though that from I did do Advent of Code 2024 reasonably carefully, and maybe the last three or four days I missed as Christmas kind of kicked in to gear in the family.
+
+And I actually learned a lot from it.
+
+Um, and I really do hope we find some time to cover some of that as well, because um, it kind of felt like in some ways, like a little mini "Teach Yourself" computer science course at times.
+
+It involved implementing a virtual machine and doing graph networks and all kinds of stuff.
+
+And it was stuff I have, as a philosophy graduate myself, I had never done these things before and and my daughter hadn't either and we both enjoyed learning together.
+
+I think you didn't do quite as many of them as I did, but did you kind of come across things where, and also I think you've probably done a bit more proper computer science stuff than me, but did you come across stuff where you felt like learning new things and the process of doing this year's, last year's Adventer Code?
+
+Um, I stopped a little early and it felt, there's definitely like lots of small pieces that I learned, but it also felt like it was a lot of good refreshers, right?
+
+So it was like less like, "Oh, I've never come across as before, but well, oh, it's been a while since I, you know, I mean, some of this stuff reminded me of game development, which was my very first coding, like, "Oh, my guy has to go forward until he hits a wall and then turn right."
+
+"Oh, man, that's," you know, looking at the surroundings on the map, yeah, it felt like, it felt like stretching some fun dusty old muscles.
+
+You know, even like, yeah, I don't know, diving into the different passing pieces and the fast course stuff was all like, yeah, stretching some, some limbs that hadn't been stretched in a little while.
+
+For our next lesson, as you know, we're going to be joined by Eric Rees for those folks who don't know Eric.
+
+He's kind of the godfather of the modern startup, I think it's fair to say.
+
+We're lucky enough to work with him here at ENSA AI, and I think we've all learnt a lot from him.
+
+I know I have, and it's been interesting for me to see and and talking to him for us to discover together that a lot of what we're learning in this course and studying this course.
+
+But I've noticed this as I've kind of worked with Eric over the last few years, like there's all these parallels between the lean startup approach and this kind of solvent approach.
+
+They're both about creating short iteration loops and getting rapid feedback and, you know, kind of driving the process in a really flexible way.
+
+So, you know, I guess Jono at ENSA AI because we're such a small team, we're also, we're all, we're kind of all in founder mode a little bit.
+
+We're all like constantly exploring and trying to build stuff and things like that.
+
+So, yeah, what are you kind of hoping to get out of these conversations with with Eric?
+
+It's fun.
+
+Like someone, a friend of mine asked me, this is somebody who's read the lean startup.
+
+I think he said like eight times.
+
+So a big fan of Eric's work is like, hey, so are you doing the I'm gonna, I'm blanking on the term, but this is like validated learning, I think he called it.
+
+And I'm like, well, I haven't read the full book, I'll be honest, but I know a lot of the ideas.
+
+And they're like, well, you know, we don't have those labels on a lot of the things, but as soon as you like look at the descriptions, it's like, oh, yeah, like minimum viable product tool, like this learn, iterate, change or pivoting, like all these ideas that are there like in the vocab measure.
+
+Yeah, we don't say, okay, what I'm doing now is measuring and what I'm doing now is iterating.
+
+This is like, no, but that is what I'm doing, right?
+
+Because we write some code and then we see how it works.
+
+We put it out into something like this course is like, oh, this is us like seeing how things do when they meet the real world and then like adjusting accordingly.
+
+So, yeah, it was really funny to have somebody who is very familiar with Eric's like specific vocabulary say, is this what you're doing?
+
+And then, oh, yes, obviously that is actually what we're doing is just that we don't necessarily use those labels.
+
+And what else have we got to look forward to over the coming weeks, do you know?
+
+Yeah, so I guess like you've alluded to the main broad theme, which is kind of like, okay, we're teaching this approach, right?
+
+Like this whole server methodology, like what now?
+
+So we've been doing some very small, very self-contained problems.
+
+I think as we're going, the plan is to shift and to say, hey, we've been mostly using the standard library, but it turns out learning about other libraries is something very doable, especially with LLMs these days.
+
+So like, how do we explore that?
+
+What are some other like useful pieces of skills if you're, we say you can solve problems with code.
+
+So things like scraping data from the web, things like using language models to categorize that data, learning a new library.
+
+So I think the example is that we're using a new library, so I think the example we'll use is probably doing like some retrieval with the retrieval and re-ranking library.
+
+Yeah, how do I build a web page and put it on a server somewhere?
+
+You know, like these other pieces of infrastructure, but through it all like focusing on the, how do I learn about these new concepts?
+
+How do I apply the solve methodology to some new domain, right?
+
+What does it mean to have a fast iteration loop for a web page or for prompting a language model?
+
+Yeah, and then we'll have a few sessions with Eric kind of talking about the even bigger picture of like, now that you have those skills, what might it look like to apply that to starting a company or starting an endeavor within your company?
+
+And through it all, I think just continuing to practice all of these pieces of the methodology that we're talking about.
+
+And you know, the retrieval thing will be particularly interesting also because kind of the Premier model for basing retrieval models on nowadays is modern but which is an answer I think not that you or I probably get much credit for that.
+
+That was really thanks to Ben and Benjamin and also the folks from you know, the collaborators that we worked with outside of answer AI that it'll be cool to kind of, yeah, maybe explore a little bit and of course also Ben Clavier, one of our colleagues has created probably the best library for working with these things, Regatouille, so yeah, we'll get to see some really cutting edge approaches but also hopefully see how easy it is.
+
+One thing I did want to highlight there is you mentioned a bit of a change in direction towards not just using the standard library but leveraging other libraries as well.
+
+So that change of direction yeah, is kind of comes a bit from this realization I had as I was doing Advent of Code 2024 with the Hopper Solver that it felt like a really different experience to me and things that previously I had been felt a bit intimidated to try like doing graph problems using the Network X library it was like this is a whole big world and I'm like, I don't want to terrify our students by saying like, okay every time you've got another problem in a different sub-domain you're going to have to learn a whole new library and I suddenly realized maybe this is obvious in hindsight you don't have to anymore, I could just get Solver to teach me the little bit I needed and so it worked out quite well because there were I don't know, a good seven or eight problems in Advent of Code 2024 that were basically graph problems and so by choosing to do it that way I suddenly discovered I'm actually slightly less incompetent at using Network X than I used to be so which brings me to my suggestion for what we could do today, Jono, which is since we've both been a bit busy writing the next version of Solver, we still need the material for our following lessons I do think we should cover graphs I do think we should cover Network X so since you're going to be doing screen scraping I think let's screen scrape Advent of Code get all of the problems in 2024 and somehow figure out which ones of those are potentially amenable to using graphs and Network X and then we can explore maybe even with Solver's help figuring out a bit of a plan for covering graphs and Network X in our course and in the process we'll cover screen scraping all right, yeah that sounds pretty doable do you want to kick us off by looking at the data that we're going to be trying to get or shall I dive straight into Code yeah okay I mean I can probably even go up a level which is you know what is screen scraping/webscraping and why are we looking at it so screen scraping and web scraping are kind of homonyms near enough and they refer to getting information out of a web page using a programmatic approach so a really common one people use through exploring screen scraping or web scraping is grabbing hacker news for instance grab all the in fact you did this recently Jono you had this distil HN thing didn't you so what is called distil HN yeah it may not be running right at this moment oh okay I won't try to put it now then and so like yeah how would you so that was something that Jono built that goes through each day's hacker news posts and summarizes them for you so how would you go about doing that well you know basically you can view the source to a page in a couple of different ways one is View Source which on a Mac is command option you and you can see you get the HTML if you look at it Solve it however you won't quite see the same thing so here I've got a day 23 advent of code and if I do command option you actually find that the dialogue that you see on the screen is not entirely here it's not necessarily identical and that's because a lot of this is in JavaScript so a second way you could so the way to actually see the exact same source that's on your screen is to click inspect and that actually shows you the exact thing so it's kind of nice you can inspect a specific thing like here it's got input equals get 23 and as I move up and down you can see up here that the highlighted bit changes so here's the whole thing here's the header, there's the footer so I kind of like using right down, right down, right down here I've got to be at imp equals get imp so screens scraping refers to kind of grabbing pieces of the page in order to get some information you want or interact with a service that's only available as a web page not as an API such as for example what Jono did which is to grab Advent of Codes daily links and also I think distio HN also summarizes the comments so yeah that's basically what web scraping is so what happens then you know is really good idea in my opinion is to kind of get familiar with quite a few of these tabs and so for example what happens when we actually go to hack and use if I click hack and use here you'll see at the bottom it's it's caused a number of different pages to get retrieved so it's retrieved here news, right so it asked for the information from /news said I want to get the contents of /news and the hack and use server said okay and it got a response and the response it gave us as you can see is the HTML of the page and the HTML of the page also said oh by the way to style it how do I want it to look you should go to news.css to get the style sheet and you'll see over here here is news.css and again it said okay news.css get it said okay here it is there's a little logo up here that's an SVG so you can see here it tried to get the SVG and there it is and so yeah this is how you can see all the stuff that's going on and you can even kind of zoom into one part okay so something happened 200 milliseconds later which was grabbing some JavaScript apparently so that's what's going on behind the scenes like one of the things I want to call out is when Jeremy is flashing up the HTML there or you're looking at the network tab a lot of the thing with web sites and web script like trying to deal with this is that there's a lot of information here there's lots of different tabs there's lots of different text that isn't the text that you actually see and so that's a big part of what we want to try and do is like how do I extract the bits that I actually care about and it's even worse than it looks because it actually goes right along where as well yeah so like if you're looking at this and going like wow how can they read all of that code so quickly we really aren't I promise yeah and in fact like this brings me to a kind of high level thing we'll show a few times and maybe we'll even see a bit of today which is when I want to create a screen scraper for example or or a transcription tool or a blog post generator or whatever that is working with some large external resource or resources the Solvert way is not to write the code to automate the thing it's to do the whole thing once totally manually you know just like we do with advent of code you do part A kind of totally manually and then you wrap it into a function you say solve it you know with the sample and you say solve it with the full input and then you're done so we're going to be seeing that same thing quite a few times now well I shouldn't assume but is that how you're kind of thinking we might tackle today's screen scraping exercise yeah I think so I think that's exactly it okay great I mean actually I guess actually I think our plan was I was going to navigate and you were going to drive so it's actually going to be my choice help you do it your job to type it in I will follow your orders so I'm here waiting I've got Solvert loaded up and then I've also got an example of one day of the advent of code so Jono just to jump out one level can you bring up just an empty well actually let's do it in Solvert so I think let's go to Solvert and we're going to create a note because what I want to do is I'm really distractible and I get lost in rabbit holes all the time so I want to start by just writing down what we're going to the plan what we're going to do exactly so let's start with a goal so the goal is make a list of all the you know you've just roughly speaking make a list of all the 2024 hack advent of code problems which seem like they might be amenable to a graph based network X solution something like that so the rough steps you know would be like read a page from advent of code and these steps might be worth numbering so we can refer to them when we talk to Solvert you know and then you know figure out which bit contains the pros of the problem one thing to think about is deal with like logging in so that we can see the part 2 as well because sometimes maybe it'll only be obvious from part 2 that network X was used for I think to be with this markdown it might be one dot to be markdown or to parenthesis work I don't know always use one dot let's do that just to be safe see something different okay and then extract that part gosh it's actually pretty straightforward right if that all worked then wrap that into a function and apply it to all 25 days and that's kind of part one right because that's going to then give us the pros of each one and should we stop there because when we can plant then we can just say like after this we will create a separate thing to figure out which ones are graph slash network X related which I guess we'll probably involve asking a language model assuming we don't want to do it ourselves obviously we shouldn't do because we're programmers so we're lazy exactly great so I mean obviously you and I know a lot about how to do these things but let's assume we didn't because the whole point of this is to show how to do these things without knowing stuff so yeah okay you look like you've got day one there so let's just pop that into a variable called URL equals and that variable okay so yeah how do we so I specifically have a quite a specific prompt which is say what is the modern concise way to read the text of URL something like that I always have to say modern concise way because language models otherwise towards older ways and particularly less concise ways because they have more tokens so that looks good yeah I would put response to the bottom of that so that we can see it okay great so how do we see that text which we ask it knows about the AOCD package but we're going to do this the good old fashioned way because we're talking about scripting okay so we have big wall of text great yeah cool I think like I'm kind of curious about this because the way I often like to do this so I would collapse that and I would say let's see if it's enough to be in context I think it will because it's not been great out when we click prompt so we've added this feature now to solve it where if something is not in context it'll kind of be great out so it looks like it's all going to fit so let's collapse that and let's ask it so let's do this a couple of different ways one would just be to ask it how do I find the part of this which contains the pros of the problem something like that okay great so then the other way I would do it is the inspect way so you can right click on the page here and say inspect and then I can see the article the story is the article and did you see how when you waved on it it became blue that's what I do and so my trick then is I would right click on that and I would choose copy and I would choose selector and then I would go back to solve it and I would say something like when I click copy selector I got back this can you explain what this means or something like that which page did you click on by the way that's not quite what oh I see how it's yeah okay yeah so I mean it's a little odd but you know somewhere between asking the model for suggestions and looking at the code yourself and seeing like okay this is an article that contains all of these ones that I want yeah there'll be lots of different ways to do it and is it called daydisk is that the correct article name I didn't actually notice it looks like that is right yeah class equals daydisk great so let's just like maybe have a little pause here to talk about you know what we would do here well let's go back and let's let's uh so I would now delete the print response dot text cell because we've kind of got the information we needed and that's gonna make everything a bit faster and I'd say something like I would create a new cell underneath the one where it says we can use beautiful suit to extract this cleanly oh yeah on your screen right so I think I need to click because we've got something underneath that so you need to click the add below button I did it there oh I wanted to keep that one can we put that one back nope but we can ask it again yeah I'm just trying to show some other features we can use and how we can jump around as well okay so let's now add a cell underneath the previous one underneath a message underneath the one that says how do I find the part of this problem that has the pros and so these buttons have changed now right so there's a add below add above there's run after and run before and then there's also on the far right there's now move up and move down which are kind of fun so you can actually move the whole thing around um so yeah let's add a prompt and say um yes please um uh show me how yeah so it's suggesting we use beautiful soup um let's see what it says uh and somebody on the um chat is asking just to pump up your font size by oh good suggestion great okay great um okay and like a lot of this stuff like some of the other ones will show as well there's there's a default library that everyone uses for grabbing chunks of html right like beautiful soup is there's others but it's the one that will come up in a million tutorials so um it's nice to have the llm like proactivity suggesting it and if instead we'd said what's the way that I might extract just this article that I want um it would almost certainly suggest could you perfect just don't run this just yet um could you uh uh now at the bottom uh ask like how do I how do I do it using this selector it's it's kind of given us I'll show us there cool so soup.find soup.select great um yeah so what I wanted to do is just have a little sidebar now to talk about so scroll to the bottom and I wanted to talk about that soup.select one um so the way I would do this without um a uh AI helper was I would always use the soup.select option and I want to talk about why and what that is so the thing inside soup.select there is what's called a CSS selector and this is like you know how we've seen regular expressions and they're like this super powerful way to grab arbitrary stuff out of arbitrary text or check check it's there um this thing called a CSS selector is kind of like that it's like a regex but it's streamlined specifically for uh html or to some extent xml documents so I think what we should do maybe Johnno is just explore it a little bit um so um and I think we should look at a couple of simple ways of doing this so can you ask it um how do we retrieve just the first uh or just one you know the first one um element based on a CSS selector because otherwise we're going to get overwhelmed with the amount of output um okay so it's kind of assuming we've got soup so I might just go and um great run these things here so add below just great and so that's passing so soup it's passing in the text of the response so it's that soup object is specifically something that's allowing us to search through um this particular response cool let's try that rather than first heading equals let's just run soup.select1h1 yeah okay I'm just going to see okay so we pass in the selector and this is the CSS selector you can run I would use single question mark not two question marks because two question marks gives you the source code great yeah so yeah so exactly so it looks like you've got the same idea as me which is um so let's first or run it see what it looks like and then the second thing I would suggest cool so you can see it's returned back the first h1 so this CSS selector if you pass it just a normal string like this it's looking for everything with that tag that's going to return everything with an h1 tag so if you change select one to select it would give you all of the h1s cool looks like we only have one h2 um which is interesting so that's a reminder that we have not logged in so part two hasn't appeared here um so yeah the second thing I would do then is this is something that I find a lot of people miss is the AI has just told us about two libraries um which you know particularly if you're a beginner if you come across a library for the first time like this it's almost certainly not some one off weird thing you'll never see again it's quite likely to be generally useful and certainly HTTPX and beautiful soup both are whenever I come across a new library in my conversation or technique or anything in my conversation with um a model is I always look up the docs so yeah should we look up beautiful soup select for instance cool yeah that's right I think beautiful soup is all basically on one page so let's search for select open parenthesis for example so the nice thing about this is it does have a quick start um so actually let's go back to the top because you can see uh searching the tree going up it's a huge amount of docs it's really big yeah so if you go all the way to the top you'll see there's on the far left top left it says quick start so we can click there top left that's it so you know I would definitely read the quick start I would like run it you know um play around with it um and kind of get the understand like maybe spend 10 minutes you know understanding the basic idea and it's kind of nice with these bits of code that they have there and solve it you can and should actually paste that into your dialogue try it out you know before you move on so let's um yeah let's pretend we've done all that um because uh you know we're gonna be doing it right here okay so the second um thing I wanted to mention for um CSS selectors is instead of putting just a bear string you can put a full stop before it if you put a full stop before it that's gonna find everything with a particular class so here we've got something with a class title dash global so you should be able to say dot title dash global yeah dot title dash global there we go okay and class is that like that's like a styling thing usually or I mean yeah it is used for styling but it's it's very you know if something's been given a class it's very likely like they're trying to make it look a certain way and everything with that class looks the same okay so it's very likely to be semantic as well you know um and then let's go back to the advent of code HTML so maybe go back to your next tab and um go to the View Source um it might be easier to actually go View Source so you can search it uh cool so I just got various zoom things in the way um what do I do I think it might be control you in um so if you just click um oh you could do it that way as well that's well yeah okay um I'll show you yeah so I would go yeah so then okay search for id equals see if they use any ids cool so you can see here um as well as class there's also something called id id is uh there's only one thing with an id so if we wanted to get the sponsor message then we would find the thing with the id sponsor so to do that we use a hash instead of a dot so let's get the sponsor message there we go okay so um I think these are the key ones right and then we'll just talk about combining them okay so um let's scroll up to the selector we copied and you'll see that there's um we can understand quite a bit of this body refers to the body tag okay that's pretty unnecessary obviously we're the things we're interested in inside a body tag um and then it's saying there's going to be a main tag so should we have a look at views source and maybe search for open angle bracket main oh in fact it's right there there you go so that's pretty common and then inside so inside body we just line 89 is main inside main my 96 is article my 97 so you might be able to guess now the CSS selector that right angle bracket means descendant it means it's inside um and it specifically means it's an immediate descendant it can't be a grandchild or a great grandchild or something um if you replace that with a space um let's try it will also work because space means descendant at any level means it can be a grandchild or a great grandchild or anything so that should give us yep there it is um and then you'll see uh finally we won't talk about this too much here but there's a a colon nth child there um and actually I want to show an example of this so that just means only include it if it's the first child of main which is a bit unnecessary here but it's you know being a bit if we always wanted the second paragraph right you could say oh there's the second paragraph in the well no this let's talk about that that's a really great question um so I would let's ask Claude uh does this return the second paragraph it ought to say no let's see if it's being careful um so it's actually it's first sentence is not very clear what it actually returns yeah it's right it returns all paragraphs that are the second child of their parent it's not the second paragraph and so as it says there in bullet point two you actually need nth of type would give you the second paragraph specifically yeah so this is where it's kind of useful to yeah really like explore with Solvert if you're needing to get like for example we might later on be wanting to get the second heading to in order to get part two um if it doesn't have an ID or something which case we would say definitely you know nth of type we'd say you know h2 nth of type 2 or something like that or just get them all and get the second one right like yeah absolutely yeah that's probably much more sound there's depths that I tend to ignore and it's like okay I can get everything as a list like cool so you have this tendency to find easier ways of doing things and it always makes it seem to be like I'm intentionally making things hard but actually it's just you're very good at making things easy so I appreciate that about you okay so like yeah maybe somebody up there you can click on that delete everything after this button whatever the point is all right so we've cleared actually I can delete that as well so just stop it it's okay all right there we go great so I've got a soup and I can do soup.selects with a selector or with the cross so let's actually let me just show you something here let's use a soup.select but I'm going to show a slightly better way to do this so we want so I always prefer to use the most general purpose way of doing things so soup.find isn't very general purpose it's using like soup specific stuff but let's do it the soup.find way but with a CSS selector so let's replace the string with article and then to say an article with a particular class we actually haven't mentioned this before we can't say space.daydesk we actually want to say the article itself has to have the class so it's actually article.daydesk with no space so that's how you say like so you just need a dot that's right that should be select not find oh it's okay so it's still select okay great so this is now like if there was a content body in between main and the article right because they changed the styling or something we're saying look rather than relying on it always being the child of main which is the child of body we're hoping there's going to be an article with a class of day desk in there yeah it feels a bit safer exactly and there's a certain amount of artisan ship in screen scraping so let's put that in a variable rather than printing it out so let's just call it art or article or whatever you feel like calling it page putting lots and lots of characters there I knew you wouldn't yeah alright so let's ask Solvert you know what's next yeah it should still have our plan up at the top absolutely okay okay it's a little bit oh it should be select one shouldn't it oh right yeah because this is giving us a list okay what's next I'm just going to specify yeah okay okay so we've looked at this I can but that's interesting it says actually you need the dot text I'm guessing that article HTML actually has a repra which causes it to be printed nicely so actually let's do the dot text like it suggests right this is so this is not actual text that we could use elsewhere okay so I'll call it T just to be confusing not doing this text you can press tab to select the default one by the way okay so this is the text and actually it looks like we've lost all of the tags and things not the raw HTML but this might be fine I don't know if we want to no I think we want it because we'd like it to be I think generally you know markdown is better so maybe we should ask it how to get the tags I put it in the previous one we don't really want to keep all that in context okay so I'll do this I'll tell us we just put a prompt and say how do we get the raw HTML loses has one oh by the way cool it's there okay oh we actually want to act down so should we ask it to help with that let's see if we have it it's already installed cool okay and something we were quite careful about with solvert is like when a lot of people building these things don't do this is that our system prompt tells solvert like what it is and how it works and what the screens look like and what libraries are installed so generally speaking you should be able to ask okay so it's on the Amiga you can probably just do the whole thing so I just say yeah copy code yeah and great that's looking a lot nicer and you know something I like to do is actually so let's edit that import cell and something I quite like to do is to say from ipython.display import markdown with a capital M maybe there'll be less confusing can we call it MD instead of markdown for the line 3 that way we've got two things that differ in more than just capitalization this ipython.display includes a way to display markdown and we're using that to display this markdown exactly that should give us a nice pretty rendering cool okay great you can get to me what should we ask for what next should we make our pro which model alright and Jeremy I'm feeling really lazy here so you guys can say put this into a function we've done it once put a roll together for me get a list of problems run through the advent of code get the response get the soup find the article turn it into markdown it's looking good to me it's looking good to me I feel a little offended about the lack of use of a dictionary comprehension but I will yeah a little bit of a pass there's one thing I wanted to mention before I run this though and it's actually like if we look at the source there's a big little piece that we've been missing which is that there's a little note for us in a common source good idea and so this is a note from the creator of advent of code it's so cool I encourage you looking at the source and you'll see this if you get into the habit of view source you'll see people swing a little and just to explain in line 10 there it's hard to see but there's the start of an HTML comment that's why it's green I like this so it's higher contrast cool so he's telling us look he's written this himself he's a small project one man band not a massive company can only take so much traffic and you're not going to find the answers in here so maybe like a lot of people are viewing source hoping to be the first on the leaderboard by grabbing the answer but this is worth noting please be careful with automated requests I can only handle so much traffic and so if you said look every second on the second I'm going to scrape the advent of code site so that as soon as the problem is released I can be the first one to submit right it doesn't take many people running something like that to overwhelm someone's server or to to really like ruin their day or to make the site slow for everyone and so before I run a for loop here I'm going to do one more thing which is just import time and also before you do I do want to make a change to it as well which is we're not really doing it the solvout way here and this is going to burn us in a moment so I'm going to want to redo this with logging in so the solvout way would actually be to take the inside of that loop and to put it into a function so could we do that yeah let's do that so let's go so delete the first four lines and yeah make it deaf get article or whatever yep give it a day number day yeah cool and then just return and then just rather than you can get rid of seven and eight and just return line six oh yeah return H to the handle exactly sorry something okay I guess we changed the accept to right arrow or tab I've been using enter so yeah it's tab now yeah okay so this is nice get rid of line three and then de-dent lines four to seven yeah we don't need that we don't need that and we can try it by just calling but I wouldn't put it in the same cell because oh you can if you like well I'll show you something fancy okay a new thing control shift minus is going to split you're correct everything above that line into its own little cell and then everything below that line is in a separate cell so that's a nice new piece of so that we have and we also have merge on the far right which does the opposite yeah so if I wanted to merge those two together oops and we do currently have a bug which is it because girls yeah it's fine it's also seems to add an extra line unfortunately okay few little bugs but we'll fix them up let's get in there all right so now my fall it would be problems is equal to why should yeah problem equals curly bracket I think we want well yeah you can do it that way but let's use it let's use a dictionary or list comprehension or L let's use L although I want the sleeping the pause between each one in that case I'd pop that inside get problem oh good idea so every time we get a problem we'll do time but sleep just a little a little pause just this is like over the top but so I would say want to be nice to them yeah problems equals oh sorry from fastcore.util import star I always have that anyway and run that and then okay problems equals capital L dot range does it start at zero or I can't quite remember is it one I think it's one okay so one comma 26 dot map get problem that's under is more mm-hmm cool and then maybe print out problems too or something just a yes so that's going to take at least 13 seconds mm-hmm and that should be square bracket around bracket yeah okay so we've got 25 problems and this is the last one looks like it's working pretty well yeah I would also do Len problems dot filter and that will give you a length of how many problems have non empty results my goodness problems dot filter nice great okay so let's delete the or yeah delete that all that output all right cool seems like that's the point at which we stopped our plan we've applied it to all days that was great so is this a good time for a break I think so yeah all right so 500 break so you back at 5 to the hour sounds good all right again you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you launch Chrome in the background and run it's window for you.
+
+That won't work inside Solvert because we don't have Chrome installed and all that kind of thing, so that would be something you would need to play with locally.
+
+And I guess later in this course we'll explore, like maybe we can even try that as an example, it's like how do you replicate a somewhat Solvert like experience in places where you can't use Solvert like using Puppeteer, Piperteer.
+
+But the basic technique is very similar and there's still going to be a way to grab something by CSS selector.
+
+So this general skill you've got, you'll find suddenly it's going to appear, you'll see it in the world everywhere, it's like my god, suddenly it turns out you can do everything with CSS selectors, so it's a really useful technique.
+
+So do you want to write the plan for part two of this thing, Johnno?
+
+I guess the basic idea is we're going to ask Claude to, it's kind of weird, isn't it?
+
+We're working inside something that itself uses Claude and we're going to have to help us use Claude to recognize which ones of these seem like they could be graph problems.
+
+So I guess as you write that plan and describe the outcome we're looking for, then maybe you could also talk to us a bit about how we're going to go, like how we're going to prompt Claude to ask it for this information.
+
+And I guess I'll just say like since we're doing an answer AI thing and since we're using Claude, answer AI does have a library for that which I guess is what your dot dot dot at the bottom is.
+
+We'll use Claude at, but gosh there's a few issues here, isn't there?
+
+One is like we've got to think about how to prompt this thing, but the other is that Claude at was written after Claude was trained, so Claude doesn't know about Claude at.
+
+I mean sometimes you don't necessarily know whether it knows, but we could ask it.
+
+Hey, are you familiar with the Claude at library for?
+
+Yeah, I would be pretty confident it won't.
+
+No, I agree, but I just thought in terms of like as like as a more general tip.
+
+Right.
+
+Yeah.
+
+Like let's see what happens if we do ask it like does it hallucinate because sometimes they're overly keen to say yes to everything.
+
+Let's see if it knows it at all.
+
+And this it's funny like, you know, writing Python to process things.
+
+Okay, well that's impressive that it admits it a lot.
+
+A lot of times I see all this go, oh yes, the Claude at library of course, the transform is based, you know, local whatever.
+
+Okay, so we can delete that we've got a plan.
+
+Yeah, so this is a good case of something that's fairly recent, not yet in the training data, maybe it's something slightly more obscure, you know, some smaller software project that someone else has written.
+
+So let's go and look at the like, I was going to search it, but I guess I have the URL saved.
+
+This is a helper library that we've written.
+
+So this is exactly this category we want to talk about next something a little smaller, something not well known.
+
+How do we tell solve it about this?
+
+Right, I have some documentation here.
+
+And like you're probably thinking, oh, we're in a web scraping lesson, right?
+
+What do we just do like, was it controls, controls of C, like let's look at the source.
+
+Okay, we've got all the documentation there.
+
+But we want to show some other ways basically like how do I ingest this.
+
+So Jamie, you had a good tip that you mentioned for like, open source projects like this.
+
+So yeah, what's a good way.
+
+Okay, so we could we could jump to the GitHub for it.
+
+There's a GitHub icon on the right hand side there you could click on, or you could do that.
+
+Either way, and what you generally find is that most open source documentation is not written in HTML, it's generally written in markdown or something similar.
+
+And yeah, you can see actually there there is the exact markdown file.
+
+So if you click on the read me dot read me dot md, scroll up a little bit, and then click on raw.
+
+Fantastic.
+
+That's something you can just HT, HTTPS dot get or you know, we probably actually rather than HTTPS dot getting it, it'll work a little bit better for various reasons around caching if we put it into context and solve it.
+
+So in solver context is like the information you want to provide to the model for pretty much everything.
+
+So okay, I'm actually not going to copy this because I want to show one other way, which is I've copied the URL, and then web to md.onser.ai is a little tool that we've written so I can paste the URL there.
+
+And then it's pulled out the HTML but you can see there's a go to markdown button that takes me to a markdown version.
+
+Maybe zoom in.
+
+Oh yeah, good point.
+
+But it also shows the HTML in this like collapsible sort of navigable piece here.
+
+And so I can minimize all of these ones and all of this stuff like you see I've got sidebars and headers I don't really need.
+
+And then table contents I don't really need.
+
+So you can start like if you've got a really, really long document and you only need some pieces of it, you can start to drill down and reduce the different parts of a document and only grab what you need.
+
+So it's like checking all the section folds here I see.
+
+Yeah, exactly.
+
+So I'm like reducing down as much of the fluff as I can.
+
+And that's a good idea even for models which can have quite long context is the less you give them the better it's able to use the context you provide.
+
+I see there's a section ID equals install we should add line numbers to this so it's easier.
+
+Yeah, so we got install getting started chat prompt caching tool use structured data this if you're in the alarm space feels like probably something you want images you probably don't care about that.
+
+But providers don't care about that.
+
+Extensions.
+
+I don't think we want to use by Dantex.
+
+So yeah, cool.
+
+So just it's like very, very similar to just copying what you need from the read me.
+
+But this works for general pages and this being able to like fold it up and pick out the pieces you want gives us just the chunk of markdown that I can then copy.
+
+And the other way I like to do this just to show you John always if you go back to the Claudette.
+
+Yep, and then go to right click somewhere and choose inspector.
+
+Inspect.
+
+Yeah.
+
+Now in this one, you can do exactly the same thing by folding up sections.
+
+Right here like, yeah, and what I'll often do is I'll then kind of right click on the parent of all the sections I want and say copy out HTML.
+
+It's not quite as good because I can't exactly.
+
+Well, like you kind of can actually because like if you click and let us show you if you click on one of those sections like the images one, don't click on the arrow, but click on the section itself.
+
+And then if you right click, you should be to delete it.
+
+Yeah.
+
+Or just pressing delete.
+
+It's delete element.
+
+Yeah.
+
+So you can, you know, then you can right click on the thing above it and copy out of HTML and then you can paste that into Webto MDs.
+
+You know, same text box.
+
+So, you know, a couple of different ways of doing the same thing.
+
+Yeah, there we go.
+
+Okay, so little little diversion.
+
+Solve it.
+
+If I go to settings and then LLM context, I can call this cool debt and I can put in that documentation we just copied.
+
+We also have a load from URL, which spoiler is going to get you the same stuff, right?
+
+It's going to do the whole site web to MD and then put that mark down in.
+
+Yeah.
+
+And I don't know that I would use that much myself because I feel like doing this slightly more curated approach is generally going to give you a better answer.
+
+Mm hmm.
+
+Yeah.
+
+Yeah.
+
+I mean, even just like seeing that table of contents or like skimming through reading, it's not that much docs enough to see kind of what the model is capable of.
+
+It's a good idea to get some hints.
+
+But even if you just did that then and then this is now in the context.
+
+So now if I ask about, Can we just ask it like, yeah, what can you tell me about claw debt and what it's for and whether it might be able to help us identify which problems are graph problems?
+
+Something like that.
+
+While it's doing that, I'll just say like, you know, we are obviously fans of Claude at answer AI.
+
+It's amazing how it's been around for a few months now, which is a long time in dog years, AI years, but it's still like reliably tops like all the most practical benchmarks I see come up.
+
+And most people I know who do a lot of stuff with LLMS use it.
+
+And Claude at really does make it quite easy to use the full power of it.
+
+So it's definitely if you're interested in playing with LLMS at a deeper and more sophisticated level than you get with just using a tool, even a sophisticated tool like solve it, you know, you can start writing your own tools.
+
+You can use solve it like we are now to write all that use Claude at and of course solve it itself uses Claude at.
+
+And suggesting importing a few things.
+
+It looks like it's doing chat, which cool.
+
+I guess we can try this.
+
+And I'm not sure if models one is on it.
+
+Can you just double check the reading because this is the kind of actually just type model.
+
+Yeah.
+
+Yeah.
+
+Models.
+
+Okay.
+
+Models one is great.
+
+So, oh, that's interesting.
+
+That's a old version of Claude debt.
+
+I think or at least it's picking an old version of sonnet.
+
+So that's something we should look at it.
+
+There was one from like December or something.
+
+I'll add that to my list of things to check hopefully by the time folks run this in a day or two that will be updated to the latest sonnet.
+
+Now, why did you say structured output specifically there, John?
+
+What are you, what are you looking for there?
+
+So I kind of know that I don't just want to ask the model like generically chat about these things.
+
+We want to get a like a true or false label, right?
+
+So I guess that was the the buzzword that most fits.
+
+There's also function calling.
+
+But like this year, yeah, is graph boolean, it feels like the right direction, but maybe that's assuming too much knowledge and I should ask, you know, I should show more generally like, okay, how would I use this to get the classification?
+
+And John, do folks need to put a API key somewhere?
+
+I guess they put it in secrets.
+
+Is that something you've already done, I guess?
+
+Yes, that's something I've already done.
+
+I just want to check what I'm sharing.
+
+Okay.
+
+Well, I guess we'll trust people.
+
+Yeah.
+
+So in my my secrets, I have an anthropic API key.
+
+But that will be like if you were to run the code that it gave, you'll probably get like a, you know, a key not found or an authentication header.
+
+And then it'll be worth just looking to the like getting started page that'll say, hopefully, well, okay, you need the anthropic SDK installed.
+
+And then at some point, you need to specify an API key, I guess we should really add that to the Oh, yeah, here we go.
+
+You'll need to set this environmental variable to use this library.
+
+So And note that Claude.ai, the web UI is different to the Claude API.
+
+So you have to sign up to the Claude API.
+
+It's super cheap, you know, unless you're doing masses of stuff.
+
+That's yeah, well worth paying for.
+
+Okay, so this is suggesting that we just have a function which makes a prompts, and then sends it to the chat.
+
+Which feels like kind of not quite what I want.
+
+But we can try this the solvout way.
+
+Well, I mean, why don't you say that's not quite what I want.
+
+I want to be guaranteed.
+
+I mean, in the end, what if it can't tell us would just tell it, we want to be guaranteed to get a specifically, you know, structured Python variable answer or something.
+
+So the reason we're doing this is Yeah, there we go.
+
+Okay.
+
+Yeah, try that.
+
+So yeah, so there's, that's interesting.
+
+It's not the little of the rails.
+
+Yeah, that's interesting.
+
+It's, it's definitely on the right track.
+
+So one thing I sometimes do like, okay, we've sort of stayed off a little bit.
+
+And so maybe like I come back to the plan and be more specific of like, okay, what I actually want is So you'd probably actually want to actually read the read me.
+
+And if you did, you would find there's a section in the read me called structured output.
+
+Do we want to have a quick look at it so we can see what it looks like.
+
+And this is a general LLN concept that's worth learning about as well.
+
+So the idea of structured output is something which basically instead of giving you back a prose answer, you get back, you know, a data structure basically with specific things you want such as information about a president.
+
+If you're their first name, last name, etc.
+
+Cool.
+
+So this is like a way of enforcing that I have these fields, right?
+
+Like rather than giving me just general chat like answers, I really want just the specific field.
+
+Yeah.
+
+And you can see underneath there when it says client structure, provide key information about the third president, it's actually returning a president object, which is pretty cool rather than something that we have to pass.
+
+Okay.
+
+So now I'm going to be a bit more specific.
+
+And folks should remember to stop their solver instance and restart it because I believe we increased the context size in the last couple of days to ensure that people have enough context to do this.
+
+Okay.
+
+So it's just creating a class that's going to have two things.
+
+And that looks pretty good.
+
+Cool.
+
+Okay.
+
+I don't mind that it's using a reason.
+
+Store adder is a piece of FOSCORE.
+
+Yep.
+
+Stuff that we have around.
+
+Yeah.
+
+So this is best.
+
+This is just all that does is exactly the same as writing self.isgraph equals isgraph self.reason equals reason.
+
+And then that wrapper bit is just something that's going to cause it to actually print out is graph and the reason.
+
+So just maybe we'll just type graph problem parentheses and pass in a couple of things just to see how that works.
+
+Pass in an isgraph and a reason.
+
+So that's how that looks.
+
+Nice.
+
+It renders it up nicely for us.
+
+So how would you go about creating a prompt for this?
+
+So this, like the way I think of this is kind of like, this is telling the LLMD the output format that we want.
+
+And can I just go through this a bit more before you just go on.
+
+So you'll see here, there's kind of three parts.
+
+There's a doc string, right?
+
+And all of these are going to be passed to Claude.
+
+This doc string says this is what this class is for.
+
+And then it's got a list of parameters.
+
+And then next to each parameter is a comment saying what that parameter is.
+
+So it's really quite cool the way Claude and LLMs work together here is all that information is going to be passed to Claude.
+
+And to tell it, please give us the information necessary to create a graph problem output.
+
+And it's going to need this information.
+
+And so it's really important to make sure that's all written carefully.
+
+And Stefano is asking, is this just a dummy function call at the end of the day?
+
+And yeah, it is.
+
+You don't have to be a class.
+
+This could be a function that returns a tuple.
+
+For example, but it's going to, this is the thing that Claude is going to call in order to create your structured output result.
+
+So yeah, sorry, John, you were saying about the prompt.
+
+Oh, yeah.
+
+So just, I mean, it's giving us a suggestion here, which is not loading.
+
+Why not?
+
+Oh, because I'm going to copy button, not the add code button.
+
+Okay, so I'm going to split this up.
+
+We're importing Claude, that's fine.
+
+It actually, when you, when you split it auto executes, I think just fyi.
+
+Okay, nice.
+
+Definitely don't print.
+
+So we're making a prompt and I'm just going to show that prompt and then I'm going to split this up again.
+
+Okay, so this is, this is kind of like one key thing that people often skip for some reason is like, if you're, you're putting together a prompt that you want to send to the language model, like print it out and make sure before you run anything, like, can I do this?
+
+So analyze this coding problem and determine if it would benefit from a graph based solution.
+
+Then I've got my problem day one hysteria.
+
+Okay.
+
+Like, so it's a small thing, but it's worth checking.
+
+Like, is, is the problem in there?
+
+Is the, is the question in there?
+
+And then like, okay, I'm going to call client that structured.
+
+So it's going to pass in both that prompt and that structure that we specified.
+
+So we'll, I guess we'll run that and check.
+
+But then I'll also show you something from the documentation.
+
+So the language.
+
+So, so, so Solvert wrote all this Claudette code for us.
+
+Yes.
+
+Yes.
+
+Yes.
+
+So Solvert gave me the suggestion.
+
+And so this is something that we could definitely like tweak or look at.
+
+But we can also just try it out.
+
+So on this first prompts, it says, is graph is equal to false?
+
+And it gives me the reason this reason's quite handy, actually.
+
+Yeah.
+
+So at this point, like I could run this on all of them, like run this on like one that I know is a graph problem and check it.
+
+Or I could look at like printing out the anthropic debug stuff.
+
+If you want to see the and I would delete that big output again.
+
+So I think it's really helpful to keep your context reasonably clean.
+
+Yeah.
+
+Now that we've validated it, like prompt does have what we want.
+
+Yeah.
+
+How about we ask it to wrap this all up into a function and then we can just run it Solvert style?
+
+Actually, I mean, it's so tiny, we can actually run it ourselves so easily.
+
+Well, whatever.
+
+That's our problem problem text as the prompts does the structured.
+
+Yeah, you're right.
+
+It's very small.
+
+We could have done that.
+
+But it's nice to have the, you know, this is the like the version that we tweak the wording.
+
+Like if I wanted to specify, you know, And then, you know, but actually, I have with this, Johnno is that the problem text is not at all separate there.
+
+So can we fix that?
+
+Because, yeah, it's really helpful if we can and there's a very specific way that Claude likes things, which is it likes things to be wrapped in XML tags.
+
+So I would write problem and slash problem.
+
+And if you've kind of done a lot of XML type programming, you might be worrying here that that's wrong.
+
+Yeah, that, you know, we're not like escaping things and whatever.
+
+But actually LLMs don't care too much about little details.
+
+But it is, yeah, it's nicer than to be at least know exactly where the problem starting and stopping.
+
+I would also say rather than consider whether the problem I would say consider whether the problem can be structured in such a way that it could, you know, something like that because often these problems require a certain amount of lateral thinking.
+
+And I'd say like, you know, if unsure, you know, like, we will consider it as a graph problem if there may be some way to structure it in this form or something because we could rather err on the side of more than less.
+
+Because we're probably going to then look at each one in turn to see whether we want to teach it in the course.
+
+And if it never mentions one to us, then we won't, we won't miss it.
+
+Right.
+
+And so if you were running, I guess on like tens of thousands of things and you ran it and then you saw, oh, I'm missing some, you know, that might be where you become in and start fiddling and tweaking and really caring about these things.
+
+This is not that.
+
+This is just like us thinking like proactively, I'd want this to be fairly trigger happy.
+
+I'd rather get a few extra ones and then I'm going to review them all anyway.
+
+So that's why you're tweaking the wording to say err on the side of classifying it as true.
+
+And then And how about like changing it so instead of passing problem text, we could, well, I guess it's fine.
+
+Yeah, not science because other problems.
+
+Yeah, ignore me.
+
+So cool.
+
+Yeah.
+
+Great.
+
+I'm going to try it on the first one.
+
+And then do you happen to remember any days off hand that were true or should we just run this on all of them?
+
+I'd run it on all of them.
+
+And this is one where we don't have to worry about overloading the server because this is specifically a company that is happy for us to do that.
+
+So I would say from fast core dot parallel import parallel.
+
+Okay, cool.
+
+Do them parallel.
+
+And again, I'm just kind of skipping a little bit of time here.
+
+Normally we would ask it, hey, what's a good way of running this in parallel?
+
+And then I would write parallel question mark.
+
+And then you could ask solvert return.
+
+Yeah.
+
+Run all problems in parallel or whatever.
+
+No, or you can do it the hardcore way to yourself.
+
+I'm typing it all out.
+
+Problems.
+
+I think that's going to work just fine.
+
+So that's a prompt.
+
+Okay, well, in that case, just change it into a list comprehension and that's a challenge with sequentially sending them off.
+
+Yeah, actually, we should have done it in a thread.
+
+We might have got better.
+
+That's the issue with parallel stuff is often it's a little bit harder to get the find out exactly what's gone wrong.
+
+So the way what I would have done in that case, if I did want to definitely run it in parallel is I would, which we may yet have to do because if this takes more than two minutes, we're going to get a timeout error.
+
+So the trick to that is to edit the function we're calling to wrap it in a try accept.
+
+And in the accept, I would print the exception.
+
+So that's how you would, yeah, that's how you deal with that issue.
+
+So as we're waiting for this, sorry, go ahead.
+
+Oh, I was just going to say, well, while I watched the loading thing to tease some things that we're planning to add, we're hoping to shift around some of the backend stuff so that we have, for example, easy ways to cancel and like a different way of running the code.
+
+So that might make it so the easier to see, like, you know, we can have a progress bar going and interrupt that if it's taking too long.
+
+And that's exactly I remember this being pretty fast when I tried this out.
+
+So maybe I was using, oh, there we go.
+
+Okay.
+
+All right, let's just look at it.
+
+It's a list of 25 items.
+
+Maybe I should just do like graphs to results dot filter.
+
+Lambda is graph equals true.
+
+I was just going to see how many that see the truth and forces.
+
+Okay, so it's done false for a bunch of them true for some of them.
+
+Let's look at the ones that are true.
+
+So I would say results dot filter lambda O colon O dot is graph.
+
+Cool.
+
+So let's look at.
+
+Okay.
+
+So this is why it took so long is because it was writing us essays for the reason why this problem could be a thing.
+
+This is actually going to be quite useful.
+
+It might be useful.
+
+Yeah.
+
+Okay.
+
+So thanks number.
+
+Well, you know what you should do is you should say results dot.
+
+And then I think that if you start typing enumerate, you'll find there's a something like that.
+
+Yep.
+
+Okay. parentheses dot filter.
+
+And then this time it's lambda I comma O.
+
+Is graph and that's going to give us the index of each one as well, which is what we want.
+
+What was the issue there?
+
+Oh, it's going to pass in both together.
+
+So lambda O and then O square bracket one is graph.
+
+Nice.
+
+Cool.
+
+Okay.
+
+So number four is apparently a graph because Should we have a look at it?
+
+Ordering rules.
+
+Yeah.
+
+Okay.
+
+So I can just do problems.
+
+Oh, I thought of that.
+
+Print queue.
+
+Well, actually I should do markdown I suppose.
+
+So in our chat, one of the folks there says if you've all you've got his network X, everything looks like a graph.
+
+Yeah.
+
+You know, we could have asked for a score from one to 10 of like how graphy the problem is.
+
+Yeah.
+
+If you wanted to find that.
+
+Anyhow, it's going to be fun.
+
+That's cool.
+
+There's the problem.
+
+One final thing like we're in, we're in Solvit.
+
+Solvit is smart, like, especially if we'd use a small cheap model to do the classifications we might got it.
+
+So you can just ask.
+
+What do you reckon?
+
+You know, like, it's a small, it's a small thing, but like, yeah, you've got something that can see the problem and see the question and see the prompts and see the goal.
+
+Yes, I agree with the classifications graph problem.
+
+The reasoning is solid, you know, yeah.
+
+So just one extra way to check.
+
+No, that's great.
+
+Yeah.
+
+That's great.
+
+So to summarize, Johnno, the important thing here wasn't so much like, hey, here's how to do screen scraping or here's how to work with Claudette.
+
+The important thing here was to say like, you know, we had a piece of work that had to get done.
+
+We're busy people.
+
+So we might as well paralyze this, teach a course and get our work done at the same time.
+
+So please do export that as a gist and send it to me because we'll use that for our next thing.
+
+And you know, this is how we work, right?
+
+This is how we actually work at Ansure AI is we build stuff up incrementally.
+
+I mean, we would skip a lot of the prompting because we know most of these APIs.
+
+Although I prompt more than people might expect just to keep my brain from, you know, getting tired.
+
+I do like to kind of say like, okay, just do that bit for me.
+
+But yeah, I mean, this is, we went through each step incrementally.
+
+We printed as we went, you know, we didn't really have to debug anything much except for that one parallel thing.
+
+Because obviously things can't go that wrong given that we were checking each bit as we went.
+
+So hopefully like that gives folks a sense of like doing an actual piece of work.
+
+We like we had a real problem to solve.
+
+It didn't look that different to solving an OEC problem.
+
+Did it really?
+
+No.
+
+Yeah.
+
+I'm not sure I put so I've got this big thing.
+
+How do I filter down to the part that I want?
+
+Okay, like what's my next step?
+
+Yeah, like if I was to verbalize some of the techniques that we did in this one that maybe we did less earlier, like learning about new libraries, right?
+
+Like asking what are some options for me to try and find specific tags?
+
+Oh, beautiful soup.
+
+Like what functions should I be looking at?
+
+Okay, there was find or there was select.
+
+You know, reading the documentation for a new thing because going and finding.
+
+In this case, it wouldn't have given us the most convenient way of using structured output if we didn't read the docs first to see what was there.
+
+Yeah.
+
+And that I mean, it's a good point.
+
+Like it's it's reasoning from the context that we've given it and it's was able to eventually get there.
+
+The first time I tried it, it worked flawlessly.
+
+I actually did this as a podcast there.
+
+Listen to so this exact process like inspect the browser to get some information, scrape the pages like, you know, it did it just fine.
+
+Sorry, what are you doing podcast?
+
+You were like, there's a podcast I listened to that has like different tools that guests talk about.
+
+So I wanted to list of all the tools that I could search.
+
+Oh, cool.
+
+But yeah, it's like, oh, okay.
+
+It ended up being the inspiration for this example.
+
+But yeah, even if it didn't, like that process of saying, how do I give the language model the right context for this problem?
+
+And then how do I learn enough myself to know like what that right context might be?
+
+Because definitely like I studied the entire documentation and the source code and that took too long like that side of things.
+
+And there's the I didn't look at all, which if we just started without looking at it, we might not have known to like stare it in the right way.
+
+So I think yeah, it's finding that balance of saying, okay, how do I explore this new library?
+
+How do I test ideas?
+
+Somebody's asking what podcast you're referring to.
+
+Oh, the cool tools show.
+
+I called Kevin Kelly.
+
+I was going to say that sounds like Kevin Kelly.
+
+Yeah.
+
+Yeah.
+
+Yeah.
+
+Oh, gee of the internet.
+
+I know Kevin.
+
+Yeah.
+
+I wanted to, it's like a search.
+
+When we do the search thing, you guys will know like in the background, we're doing the advent of code search or something.
+
+I'll be doing my cool tools, semantic search that I can see what tools people have recommended.
+
+And Eric's asking, other than a gist, are you able to take something like this and deploy it?
+
+Do you want to just share your screen and click on a couple of export buttons and click on export to dot pie just to show that.
+
+So yes, you can export this.
+
+You can export.
+
+And from a gist, you can download the gist.
+
+So let's do this actually.
+
+So let's first of all, export the gist just to see what that looks like.
+
+Settings.
+
+So zoom is just hovering over my.
+
+Yes, settings.
+
+Yeah.
+
+Oh, what's happening?
+
+That's interesting.
+
+Okay.
+
+That was good timing for you to lose your network connection to solve it.
+
+I think I might have a gist open with, if not this, then a very similar one.
+
+So I'll pull that up.
+
+So if people are trying to find out whether it's pronounced gist or gist, they have not ended to do so today because apparently, I'm sure when I use the opposite.
+
+So there's a download zip button on the top right.
+
+So that gives you something you can open up in JupyterLab or Jupyter Notebook or whatever or VS code.
+
+Or yeah, you can export as pie and that will give you a Python module.
+
+Before you export to the Python module, you have to choose which messages you want to include in the Python module.
+
+There's a little button that you can click on to do that.
+
+Although exactly the right moment we've seen to have lost our connection to solve it to show you that button, but wave over each one and you'll see it.
+
+We will be doing that like one of the future lessons the plan is to talk about exporting as a library to use later and putting that up on PyPy so that other people can install your library.
+
+And generally like focusing on that sharing the project beyond the gist.
+
+I guess, yeah, scraping is an odd one where in general you'd probably just be grabbing some data and then putting it into some format to store for later.
+
+I probably want to store these problems now rather than rescraping the site every time.
+
+But if you did want to, for example, get something new every day, then yeah, it's worth packaging that up into something reusable.
+
+All right.
+
+Thanks, Johnno.
+
+That was a lot of fun.
+
+I hope people found that useful.
+
+Next lesson is going to be slightly different with Eric joining.
+
+But in the meantime, if you're practicing this out or you're hitting some novel, I can't figure out how to extract this data, working along with this at home.
+
+Do message on the Discord or come join.
+
+I think there might be some office hours starting to ramp up again as the year kicks off.
+
+Yeah.
+
+Yeah, reach out to us.
+
+If you're somebody who hasn't yet asked a question on the Discord, I know there's always that certain amount of activation energy to be like, oh my God, I'm about to talk to a bunch of people who don't know me.
+
+But don't worry, there's a thousand people in this course.
+
+People won't even know whether they know you.
+
+Don't be scared.
+
+Just dive one in.
+
+And if you've got any questions, just ask.
+
+There is a new solvers channel specifically for folks who feel a bit more like beginners in any way.
+
+I think people will be very gentle and helpful regardless of where you ask.
+
+But you can certainly treat that as a channel, which specifically anybody reading it is either a beginner or somebody who's there who wants to help beginners.
+
+All right.
+
+Well, we will see you all in three days time.
+
+Thanks, Johnno.
+
+Thanks, everybody.
+
+Bye.

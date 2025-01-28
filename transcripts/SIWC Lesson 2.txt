@@ -1,0 +1,2243 @@
+Okay.
+
+Thanks, gang.
+
+Hi, Johnno.
+
+Hello.
+
+A couple of quick logistics announcements first.
+
+It's totally fine to ask about things on Discord, which we've already told you about in announcements or in the lesson.
+
+It's all right.
+
+But just to save yourself and others some time.
+
+I just wanted to point out that a lot, maybe even most of the questions that I'm seeing are answered either in the announcements channel or in the lessons.
+
+So just a couple of suggestions.
+
+The first one is a reminder to right-click on the announcements channel and maybe do this now while I'm saying it.
+
+Choose notification settings and set it to all messages.
+
+That way you'll get a notification about everything.
+
+And then for the rest of the server, right-click on the server and turn off that feature so that you only get notified of mentions.
+
+So that way you see a notification.
+
+You'll know there's an announcement.
+
+And yeah, in the lessons, you know, watch them pretty closely if you can.
+
+Maybe even take some notes because, you know, there's a lot of little details that we sneak in there and which hopefully are useful.
+
+As I say, it's totally fine to ask about these things if I say, hey, that was actually mentioned in announcements.
+
+It's not a criticism.
+
+It's just a reminder to keep your eye out.
+
+We haven't yet turned on the quotas I mentioned last time.
+
+I just thought I'd give a couple more days.
+
+So over the weekend, I will be turning on the two gigabyte quota on your Solvet volumes.
+
+So please make sure that you don't have any large files or anything like that.
+
+Any normal use of it will be way less than two gig.
+
+But just be a bit careful because if it's larger than two gig, you're going to lose your work.
+
+Our wonderful community member, Vishal, had a great suggestion that it would be nice to practice pairing because one of the things we talk about is, and demonstrate me and Jono, is pair programming.
+
+And so he has suggested maybe organizing some special types of study sessions which are about practicing and using pairing.
+
+So have a look on the server, discord server for that idea.
+
+Because I think it's a good one.
+
+And if you're interested in trying that out, then maybe create a thread or somebody can help organize a Google Doc or something.
+
+You guys are all welcome to figure out any ways you like to organize things.
+
+Don't wait for us.
+
+This is a very community driven exercise, as always, with Fast.ai, because the community is so great.
+
+And then immediately after whenever this finishes today, there will be an office hours with Alexis and any other, sorry, I folks who might join.
+
+Alexis is totally awesome.
+
+He's really, really great.
+
+And so if you're interested in doing even more coding after this is finished, you should join the voice channel afterwards where there will be an office hours.
+
+We can chat, ask questions, whatever you like, or just hang out.
+
+And I'm glad to hear my attempt at making the 1080 stream worked.
+
+Thanks for telling me that on the chat, David.
+
+That's super cool.
+
+And I think that's it for logistics.
+
+So I'm going to hand it over to Jono to do the official start of the lesson.
+
+Great.
+
+Welcome everybody.
+
+This is lesson two.
+
+So this is still the first week.
+
+We're going to have two more weeks after this, then a break and then believe five more is the current plan.
+
+And so yeah, I thought I'd just give you a rundown of what's going to happen in the next lesson or two just so that you can get a feel for how things are going.
+
+One thing is we're going to carry on with advent of code.
+
+I saw a question or two on the discord is that all we'll be doing and it's not but it's nice to be building the foundations.
+
+So you'll see we started out the whole of last lesson, I think was just part one a hopefully will speed through one be and most of you know, advent of code day two today.
+
+And then as we go forward, we'll go faster and faster through those as we sort of build the building blocks we need.
+
+And we'll also start slipping in some other content.
+
+So I think next week's lesson on Tuesday next week.
+
+So lesson three, we'll do some advent of code.
+
+We'll do a little side tutorial on regular expressions and then we'll do a completely different sort of practical demo, I guess you call it on language model evaluation using the same techniques using all the pieces that we've just learned.
+
+And I've had a preview of that so you know, be patient.
+
+It's going to be hard to be patient, but it's actually absolutely awesome.
+
+So I think you guys are all going to really enjoy John.
+
+He knows amazing walkthrough of how he does language model evaluations in a much more interesting and I think effective way than the traditional approaches.
+
+Yeah, so that I think the be patient applies to more than just waiting for my model thing but it's going to hopefully be this like this gradient as we as we ramp up.
+
+Okay, but all that being said we're going to jump pretty much back in where we left off last time.
+
+But before I hand over to Jeremy, there is another thing again looking through the discord feedback which is very helpful.
+
+Actually several things on discord I should say it's really fun seeing everyone's activity there that's been like a highlight so far, watching everybody dive in so thank you so much to everyone who is especially sharing dialogues right chatting about different ways of doing things, helping each other I see lots of community members stepping up to answer questions or give hints when we aren't online or even before I get the chance to type something someone else has done something helpful.
+
+So thank you all for that and do keep that going that's that's pretty wonderful.
+
+And also keep the questions coming there was one theme that sprung up as we looked through some of the dialogues that were solved, or shared that I wanted to kind of flag and then Jeremy's going to give us some tips based on that so I'll share my screen.
+
+I'll make sure I'm sharing the right one.
+
+Okay, so this is a solid window.
+
+Hopefully you can see that I'm working on part maybe zoom in one more level just for those, you know, with smaller screens.
+
+Cool.
+
+Okay, so this is something that I don't want to call out anyone and say this is wrong but this is a pattern that I've noticed that sometimes pops up.
+
+You have the problem, then you have a chunk of code that's a solution.
+
+Right.
+
+And this, even in like requests say oh could we have a full screen editor or something like that.
+
+This is a fine way of coding but it's not the way that we're trying to teach.
+
+And just explain again what's not the way you know what he is what jumps out at you here John I was being like that's not quite what I was expecting to see as a solver way of doing things.
+
+Right.
+
+So one hint would be that the first like most glaring issue you can't even fit all of this code on the screen.
+
+And so the solver approach where we're doing one step at a time and looking at those intermediate outputs.
+
+There's no introspection here to say, what am I finding what am I looking through what am I adding what does this matches list look like at different stages there's just the code that takes it and it's with other solution.
+
+And so this is functional we can check that it works.
+
+But it's also not code that I wrote.
+
+I just had chat CPT write it.
+
+So I don't understand it.
+
+And there's no way for me to debug it other than running and trying to find if there's errors or or the output isn't what I expect.
+
+And so I think this is something to start working away from as we specifically do this practice the whole editor is designed to move away from this the whole course is designed to move away from this and we're not saying you should never ever code like this.
+
+We're just saying we think it's useful to practice the other technique.
+
+And I just explain like you got the right answer.
+
+Why is that not sufficient.
+
+Um, so so occasionally it is right I use this type of coding a lot when I can check the right answer straight away and I never have to ever look at the code again.
+
+But imagine we were actually doing this we were actually trying to calibrate some tribuchet and deal with some messy data.
+
+And so right.
+
+And so then I you know hey John, can you solve this sure.
+
+And then someone says oh the code's not working.
+
+You know we got a new batch of numbers in and and you know I got some error.
+
+If I come to this and it's been a few days or I got a language model to write it in the first case.
+
+Okay, where do I start to start changing this.
+
+I could ask the language model say hey I'm not getting this error.
+
+Can you fix it and hope for the best.
+
+But what this is at the moment is an artifact that I don't really have ownership of.
+
+It's not in my style.
+
+It's not.
+
+It's not something that I'm like fluently able to change straight away.
+
+And so I have to then climb that hill of understanding this and loading it into my head before I could make any useful changes.
+
+Whereas if it was something that I built up piece by piece and I could still test those pieces in isolation.
+
+Then I get the new input I put it through.
+
+There's a problem in the really initial like splitting.
+
+And I can change it there.
+
+It's like all pieces that I understand and it's very easy to check.
+
+Like is it still working as I expect.
+
+So it's it's much more like a long term value.
+
+Do I want this to be what exists going forward or or do I want this to be a one-off thing.
+
+And if you want the long term thing I think that's why we kind of care about that.
+
+Cool.
+
+So Jeremy has some tips to try and I don't know build those muscles.
+
+I guess.
+
+Yeah.
+
+And I'll just say John, I think you know one thing I'm going to do actually I just want to think which order to do this in because one thing I wanted to show is that doing things the way we're teaching you needn't be any slower than jumping to the solution.
+
+Even for really simple problems.
+
+And I think for most of us here would say one a was a really simple problem for new programmers.
+
+It definitely wasn't simple at all for my daughter.
+
+It definitely wasn't simple at all.
+
+So that's fine.
+
+But for those of you who are like, oh, that was a really simple problem.
+
+Actually doing it the step by step way is not actually necessarily slower.
+
+And in fact, I normally make a mistake even when I'm doing simple things.
+
+And if you make like more than zero mistakes, I think it's almost certainly going to be faster because.
+
+And yeah, so what I'm actually jumped to that I'm going to do a demo.
+
+And the current plan is to do this demo for every problem.
+
+And it's what I'm going to call Jeremy speedrun.
+
+Okay, so Jeremy speedrun is going to be me showing you how I would solve the problem.
+
+But you know, before I do, John, my speedrun is going to show a new feature of Python new to some people and maybe the most important feature of Python that some people don't know.
+
+We're going to try to introduce one interesting feature of Python each lesson.
+
+And today's is going to be list comprehensions.
+
+And John is really, really good at explaining this kind of stuff.
+
+So actually I'm going to hand it over to John to explain list comprehensions.
+
+And then I'm going to do the speedrun using list comprehensions.
+
+And then I'm going to show you some tips.
+
+When you ask yourself the question, hey, am I doing it the course way to kind of check to check in?
+
+All right, that sounds good.
+
+We're iterating on the fly side don't have an example.
+
+We're not doing this as part of part two, but we'll be able to put it in practice later.
+
+So maybe this is actually a really nice way to do it.
+
+Okay, I'll zoom in a bit more.
+
+So the feature here is something that you can do completely without if you want to code Python.
+
+Is that fair to say Jeremy?
+
+Yeah, but it also is something that as soon as you learn it, you use almost all the time.
+
+I think maybe like you can show me like the, you know, the normal Python way.
+
+Okay, you know, let's say I've got a list of the numbers 12345 for example, and I wanted to pick out just the odd ones and convert them to strings for example, you could write that without list comprehension right?
+
+Yeah, so let's do strings.
+
+So I want to put the string as equal to this is the container that I want to put the ones I want to keep in.
+
+And so then I might iterate through for a if you said we want the odd ones right?
+
+So if I modulus two, one strings dot append I, and we want to, And I want to append the string of five version of it.
+
+All right, so we can check for that works.
+
+So this is a very common pattern you're looping through some set of items and list of items.
+
+You want to pick out some going to do something to them.
+
+And you can even imagine like the simpler case where I wanted to do just the string and I didn't need the check.
+
+So this gets pretty tiring pretty quickly.
+
+Once you see the faster way.
+
+So the list comprehension version is I can create a list in fact I'll call it strings still.
+
+And then instead of creating an empty list and then filling it separately, we can use this condensed syntax to put this all at once.
+
+So for example, I could do str i for I in what did I call them for a string.
+
+Yeah.
+
+So now if I run that, I've done some operation on all of the elements of a.
+
+So this is a short hand for for I and a strings that depends through I.
+
+So sorry, John, I just when I first saw this, I found this really confusing because it's like, okay, in both of those cells, you've got for I and a, but they're not the same thing.
+
+That is not a for loop you just wrote, right, even though it uses almost the same syntax in some ways that's good, but in some ways that's really confusing.
+
+It is not the same.
+
+Yeah.
+
+But I find the way this clicks in my head at least is to is to read it out loud almost as if it's an English.
+
+And so maybe strings and counts is a little abstract to visualize but I'm saying oh for string of something.
+
+I want on a list it's string of something for all the things in a right string of I for all the eyes and a.
+
+And if we want to get fancy, we could even add a condition that says if I was too is one right so this still like an English sentence, the strings is equal to string of I for I in a if I divided by two sorry I'm just to is equal to one.
+
+And so it's it's a very weird syntactic sentence you wouldn't say that out loud in English, but it does sort of make sense we're going through this still.
+
+And so it's this idea of like, applying something to all items in this list.
+
+And then we can do whatever we want, and we can use this I here even though it's defined later it's kind of like, yeah, you write it it flips the usual syntax on its head.
+
+And we can optionally add as many like conditionals and things as we'd like.
+
+And just to be clear, this is not a for loop and therefore you can't do all the things you can do in a for loop you can only do the things john I showed.
+
+You can only have an if after that a and you can only have a single expression before the four.
+
+And that's it.
+
+This is a much simpler construct in the for loop it's much more limited.
+
+Yeah, exactly.
+
+So you couldn't, for example, create other other variables and then be updating them and so on.
+
+As soon as you get something that looks too tangly and complex, you probably should split it out into a for loop.
+
+And then you'll find very often what we want is something like just want to do one quick operation and maybe some sort of filtering.
+
+And so then you'll end up with something that looks like this.
+
+So a question from somebody in the chat, john, what's the point of a less comprehension when doing it normally works perfectly fine.
+
+Because this is such a common thing.
+
+It can be a little bit distracting when you you have say I needed to do three versions of this and we'll see this in the practice when we do this.
+
+I might need to go through and find all the games, then I need to go through in each game and find all the max values.
+
+And then I need to, you know, do something else but all of those individual operations can be put down into one line.
+
+And once you're familiar with the syntax, this is a lot easier to read.
+
+And it's also something that then maybe even I want to do something else instead of even having to do this step, I could just take this small chunk of code, pop it in somewhere else and it's not breaking the flow.
+
+I'm not having to stop whatever I was working on and write a for loop before everything else.
+
+I feel like it is the most important reason which is without this Jeremy speed run is going to be less speedy.
+
+A lot more lines of code.
+
+So yeah, you can do anything you can do with this with a for loop to write like this.
+
+There's no reason that you have to have to have to use this, but it's such a convenient and powerful primitive that you'll see us bringing this in more and more just so that we can look our eye over everything all at once without having to like keep track of what did I call it I and that loop and then a and another loop or you know anything else that might be potentially confusing there.
+
+John, I, you know, I, I know you're familiar with this already, but I just want to point out like this idea of list processing like a list comprehension processes lists that filters them to use kind of computer science terms that filters them and it maps them, which is to say it creates a subset of them and then does something to the subset.
+
+That combination of things list processing.
+
+It's actually such a critical idea.
+
+There's a whole language called lisp, which is one of the most important languages in computer science history.
+
+Lisp stands for list processing and the entire language is built entirely on top of list processing.
+
+If you wanted to have a bit of fun, you could like try converting your code to only list comprehension and it should theoretically be possible to do so.
+
+So, I guess in lisp, the idea was like, oh, what happens if we create a language where basically the only thing you can do with this is list processing.
+
+Python is saying like, well, let's make it easy for when you need it.
+
+You don't have to use it all the time.
+
+Yeah, I think that's fair.
+
+Okay, so are we ready for my speed run?
+
+Speed run, any percent.
+
+Okay.
+
+Don't tie me.
+
+I'll be overracing.
+
+So, I've even figured out the shortcuts for screen sharing today.
+
+So hopefully this will be a bit better.
+
+So, my rules for my speed runs is I'm allowed to do the basic setup first.
+
+The basic setup is I've pasted in the data.
+
+You'll zoom in a little bit more.
+
+Okay, just let me know in the chat, folks, if you're anybody, this is too small.
+
+I've pasted in the data and I've also just pasted in the, you know, thing to get it from Advent of Code data.
+
+So, let's get started.
+
+Right?
+
+So, and I'm not going to do it the same way as last time partly because it's kind of cheating if I just do the same thing again.
+
+Right?
+
+So, my step one would always be, you know, Polya, think about Polya, his step one also is, you know, right down the problem.
+
+So, I remember the problem.
+
+The problem was for each line.
+
+So, we're going to go through each line.
+
+We're going to get first and last digits.
+
+We're going to concatenate them.
+
+We're going to convert them to ints.
+
+And then we're going to sum that up.
+
+Does that sound right, Johnno?
+
+Mm-hmm.
+
+Okay.
+
+So, I just popped that in as a note.
+
+Right?
+
+And now my brain's in the right zone there.
+
+Cool.
+
+So, for each line, we're going to need the lines.
+
+And I'm going to do things a bit more how I normally do things.
+
+I normally don't like to think too much about the semantics or everything.
+
+I try to like to keep it symbolic.
+
+So, my lines are just X's, right?
+
+So, it's going to be a bunch of X's.
+
+So, first of all, I see what my X's are.
+
+And so, that's going to be, let's make sure we've run this, of course.
+
+And I knew I hadn't run it because my auto-complete wasn't working.
+
+Now it is.
+
+So, Samplot split lines.
+
+And then immediately, I run it and I check.
+
+That looks good.
+
+The next thing I do is I pick one.
+
+And I'm going to try to pick the one that's like hardest.
+
+So, the first one is a special case because the first and the last.
+
+The last one is a special case.
+
+It's only one of them.
+
+The second, this one here is pretty good because it's got more than two.
+
+So, I'm going to pick that.
+
+So, X's.
+
+And you see, I don't even have to think about what it's called because anything I've got X's is all good.
+
+So, again, print it out.
+
+Okay.
+
+And then I don't have to think because I've got it right here to tell me what to do.
+
+So, I go through and I'm going to get the first and last digits.
+
+Okay.
+
+So, I'm not going to do anything to each one.
+
+So, I'm just going to go 0, 4, 0 in X.
+
+So, this is the most basic possible list comprehension.
+
+It doesn't do anything at all.
+
+Okay.
+
+And then I'm going to build it up.
+
+So, as I build things up, I always go to click on add copy of message.
+
+And the first thing I need to do is get the first and last digits.
+
+So, I just need to make sure that it's that they're only digits.
+
+If O dot is digit.
+
+Okay.
+
+That's looking good.
+
+And so, I need to get the first and last one.
+
+So, add copy of message.
+
+Digits equals digits first comma.
+
+I'll just say digits first.
+
+And so, what I did here is I applied a poly heuristic, which is can you simplify the problem.
+
+So, I figured the problem would be simpler if I didn't have the letters.
+
+Okay.
+
+So, now that it's simpler and I can see just the digits, it's very obvious how to get the first and the last.
+
+Right.
+
+So, then I'm going to check my status here.
+
+So, get the first one.
+
+Can cat them and convert them to int.
+
+Okay.
+
+No worries.
+
+So, add copy of message.
+
+Can cat them.
+
+That's plus.
+
+And convert them to int.
+
+Okay.
+
+Great.
+
+And so, then we need to sum them up by doing that for each line.
+
+Okay.
+
+So, easiest way to do things for each line is to make things a function.
+
+So, I press command a command right square bracket.
+
+Def get digits.
+
+And remember, just use X, right?
+
+Because it's already called X.
+
+Okay.
+
+Cool.
+
+And then of course, as soon as I've done it, I use it as per usual.
+
+Okay.
+
+You might want to turn.
+
+And it didn't work.
+
+Okay.
+
+No worries.
+
+And this is good.
+
+Right.
+
+I made a mistake and I found out straight away there's going to be no debugging later of like what the hell went wrong.
+
+I know what went wrong.
+
+It's like just happened.
+
+Right.
+
+And of course, my pair programmer, Jono, saw it anyway.
+
+But if I didn't have a Jono with me, that sure would have been handy.
+
+And this is where this is so much easier.
+
+Right.
+
+Okay.
+
+Great.
+
+So, that's done.
+
+Sum them up for each line.
+
+Cool.
+
+So, get digits.
+
+Oh, again.
+
+Right.
+
+I don't have to think.
+
+Correct.
+
+So, always use the same thing in the list comprehensions or in my loops if I'm looping through something.
+
+For O in.
+
+And then I'm going to do that for each of my X's.
+
+Okay.
+
+There they all are.
+
+Great.
+
+How do I sum things up?
+
+Well, that's very straightforward in Python.
+
+You just type sum.
+
+Okay.
+
+And I remember from last time that's the correct answer.
+
+So, that's good.
+
+So, now to get my final one, it should be just my inputs.
+
+Inputs.split lines.
+
+54601.
+
+And I've done this already so we can check 54601.
+
+There we go.
+
+We've done.
+
+Okay.
+
+So, you know, I don't think that was necessarily much slower, particularly because I was chatting to you folks about it as I went.
+
+So, if I was just doing it, you know, the key things I think is not to really skip the steps, make sure you write down the problem, make sure you simplify it as you go, make sure you write, you know, after everything, you should have something to output.
+
+There you go.
+
+What do you think, Jono?
+
+How was that?
+
+Yeah, that was great.
+
+So, maybe just like you asked me, like, what is hitting you about the solution I showed that isn't right?
+
+What are the questions that you'd look at on yours?
+
+And then also, like, maybe an extra one that I want you to address is when we're sharing dialogue, sometimes we'll put a ton of notes.
+
+Sometimes we'll narrate the inner thought process.
+
+Whereas yours I noticed it was basically all code.
+
+There was no AI.
+
+There was no things.
+
+Yeah, just if you had any comments on like when you'd type in more notes than that.
+
+Yeah, yeah.
+
+So, in this case, that worked for me because it's using a language I'm very familiar with.
+
+And I'm not using any new libraries.
+
+I'm only using features I'm familiar with.
+
+And once you use a language for a while, and the features of that language for a while, I can read code at least as quickly as I can read a description of it.
+
+So, for me, that works for me, you know.
+
+And, you know, it also depends a bit on the style of the code, right?
+
+So, I code in a particular way.
+
+And I can read code written in that way, particularly fast, particularly because it is quite a compressed notation.
+
+And so, you know, I don't really need, and in that case, I didn't need AI because I didn't need help.
+
+You know, I would only ask AI if I needed help.
+
+It's just as fast for me to type the code as to ask the AI to type the code and the code that I get by typing it myself is the code I want.
+
+I could certainly ask it afterwards, hey, what do you think?
+
+You know, did I, you know, did that, does that all look good?
+
+Do you think, see opportunities?
+
+And I think people who are, you know, anytime I'm using a library or a programming language I'm less familiar with or I'm tackling a problem that not sure if it's the best solution, I would always ask, you know, solve it.
+
+Do you have any thoughts about improvements?
+
+And I would prompt it with that.
+
+And so, in fact, I guess before I come back to tips about the solver process and the environment, I wanted to ask you, John, I was an AI researcher.
+
+So I've seen this come up a lot.
+
+Like, yeah, when should you use AI?
+
+Right.
+
+And, and what's AI going to be good at?
+
+And how do you make it focus on the things it's good at, I guess.
+
+Right.
+
+Yeah, I saw some discussion on this, you know, I think earlier this morning, Andre Carpathi had a note of like, asking AI makes it seem like you're invoking this completely mythical magical entity.
+
+But if you remember how these are trained at the moment, at least these language models are trained, predicting next tokens on the internet, right, so trying to learn general patterns there, and then predicting next tokens in like example conversations that have been written by people.
+
+And then finally, being rewarded for responses that people rate is helpful.
+
+And so what's answering you in some ways is like an average of human knowledge or an average of the kind of data labelers who work for OpenAI.
+
+And so what that means is that if you've got some pattern that's very common across the internet and across code and the internet across the kinds of examples people might write in a helpful demonstration chat.
+
+Those are the kinds of patterns that it'll be very good at recreating.
+
+But if you have something that's very unusual, very out of domain, right, something completely novel and a different style and different language, then the language model is going to be far worse at that just because it hasn't seen any close samples to extrapolate from.
+
+And in fact, so for example, when I ask it for feedback about my code, which is more inspired by mathematical notation and kind of a different class of programming languages and what's called the APL tree, it'll very often say, oh, you could improve your code by adding more comments and using longer, more descriptive variable names and so forth, which is not actually saying this is a better way to write code.
+
+It's actually saying like most of the code I saw in the corpus looks like this.
+
+Right.
+
+Yeah, so there's this ongoing, you know, discussions as to what's ideal because if you want the language model to be really good at completing your code, then maybe following that common style a little more might help.
+
+But it's also, yeah, like you like Jeremy says, it's not a validation that somewhere is better than the other.
+
+And likewise for like responses to questions.
+
+If you're rating answers in a chat thing, you know, something that does the full solution with lots of logging and error checking and helpful additional tests.
+
+That's, that's really great, you know, well done language model you get this big thing.
+
+But as you've seen for our style of coding often what you want is something small atomic easily checkable.
+
+And the language model said, look, well, let's just do step one and just print out the lines.
+
+I anticipate that getting rated very badly.
+
+And I also just step back.
+
+I think you've jumped over a slight step here, which is you mentioned.
+
+So there's actually two steps in training a language model.
+
+The first is the bit that looks at lots of code and so forth and says like, what words going to probably come next.
+
+But you're now referring to the result of the second bit, the reinforcement learning from human feedback.
+
+Explain how that works.
+
+So then you can explain why you get this slightly annoying tendency of LLMs.
+
+Right.
+
+And I mean, the behavior is going to come from both right because most code that's in a repository that's finished is not going to be piece by piece by piece.
+
+It's going to be the finished artifact.
+
+But yeah, you're right.
+
+The piece that I was referencing is more the final stage of training on a lot of these models is to have them generate multiple responses to a given question or to have them generate some responses and then mix those in with sort of ground truth human responses.
+
+And then somebody comes along and looks at two choices or multiple choices of like which response do you prefer and they kind of vote on the ones they like.
+
+And that signal is used to train the model to produce more desirable outputs.
+
+And so this covers a lot of things like trying to avoid unsafe outputs or, you know, the model outright insulting the person or anything like that.
+
+But it also is very much happening into yeah what appeals to people.
+
+People love to be validated.
+
+People love to be validated.
+
+Yeah, we'll talk about this when we talk about like how do I check my work.
+
+And then you say what do you think of this code and the model says wow, you've clearly a very clever programmer Jeremy, I like that you've, you know, you such high ranking response.
+
+Yes.
+
+Yeah, I love that that's such a helpful friendly model by stars exactly and so that kind of like they call it sicker fancy is actually a real problem in some of these models they're not going to tell you, oh there's a better way to do it they're going to say, that's very good.
+
+Perhaps I could suggest, you know, something along those lines.
+
+But yeah, it's it's worth keeping in mind that the style of response the link to response the using markdown headings and and using raising language all of these things are not necessarily the absolute truth.
+
+They're, they're artifacts of something that's based on humans liking the outputs.
+
+And how can I like, how can I encourage it like if I want an actual critique, if I actually want to know is there a better way, you know, can I ask things in a different way or what should I do to try and avoid the sicker fancy.
+
+So, there's, there's multiple techniques one that that you're a big fan of a we're all a big fan of is using the past exchanges with the model to steer the conversation.
+
+So for example, if you've asked for some code and it gave something very verbose, but then you edited that output down to something nice and concise and only one step.
+
+It's now completing a document that starts with short concise responses.
+
+And so the most likely response to the next question might also be something short and concise.
+
+Right.
+
+And so if you can set the tone by editing the models outputs, that's very helpful and staring it.
+
+So that's taking advantage of part one of the training process the language model completion bit.
+
+Exactly.
+
+The good news is that model providers are working to try and make these models better and better.
+
+And so the newer models are favorite models that are more recent also tend to be very good if you explicitly ask them.
+
+Please only do one step at a time or please behave in this way or please give me rigorous feedback push back.
+
+And you have noticed this with Solvitt the prompt that we've given the model asks it to do these more atomic steps and it doesn't tend to give you the full answer.
+
+It's imperfect, but it's much more likely to follow that staring that we provided.
+
+So that's another way is just simply to ask for it.
+
+And then finally, thinking about the psychology of how to get stuff out of humans is not that different because humans also tend to want people to like them.
+
+And so if I was asking Johnno for, I mean, Johnno knows I like people being ruthless, but but then he didn't, you know, I was asking him for feedback and I want real feedback.
+
+I would probably say like, hey, Johnno, you know, I really want to know how I could do this better.
+
+You know, I'm, you know, I would like it to be better than it is now.
+
+I'm not looking for validation.
+
+Can you tell me if you think there are some ways to make it better now.
+
+If I ask a model that it will err on the side of always saying yes, Jeremy, there are ways to make it better.
+
+So he's still going to be careful because now the sicker fancy, I'm kind of tricking the sicker fancy tendency to now always tell me there are ways to make it better.
+
+And then we'll have to look at that with a bit of a critical eye and say, are they really better, you know, but I think that's a technique I would use to at least get it to not say like, Jeremy, that was so good.
+
+You're a great programmer and I love you so much.
+
+Yeah.
+
+Okay, great.
+
+So, yeah, it's very interesting that learning a bit about how language models work can be helpful for using them because you can take advantage of knowing these two, these two steps.
+
+Okay, so with that said, I'm going to share my screen because there's stuff in discord.
+
+So if you're looking at announcements, this is partly to remind myself, I've got a list of review questions for quite a few people have asked me for feedback and feel free.
+
+I'm happy to give feedback to be clear.
+
+But you can get your own feedback about, hey, did I did I use Solv-it-Well?
+
+Am I following your lessons advice?
+
+Here's some questions you can ask yourself or copy and paste them into your dialogue at the bottom in a prompt and ask Solv-it.
+
+Hey, my teacher said I should review these things with you.
+
+Can you tell me, you know, based on the Solv-it method, do you feel like I did a good job of these things?
+
+Not all of them work.
+
+Let's go through them.
+
+Generally speaking, if you're following our approach, you'll have written most of the code yourself.
+
+And in fact, I got a really nice quote here from one of our terrific community members, Marius, who said he went back to an advent of code problem from 2022, advent of code problem 7a.
+
+And I know Marius is a very strong coder because I know him from the fast HTML community.
+
+And even he found it hard.
+
+He said, it was super hard for me.
+
+And I tried multiple times before without Solv-it and failed.
+
+Now, it still wasn't smooth.
+
+But every time I got stuck, I asked the LLM how to proceed.
+
+And that worked nicely.
+
+Now I have a clean solution that I fully understand and where I wrote 90% of the code myself.
+
+So I think that's a good sign.
+
+If you can say I fully understand this code and I wrote 90% of it myself, that's a good sign.
+
+You'll see in my speed run, there's generally just one or two lines of code per message.
+
+And immediately after that, I always had the output.
+
+So after--maybe we should even add that here.
+
+Did you generally just write one, two lines of code per message and ensure that every message outputs something useful?
+
+So useful as in, does it help you see whether that code was correct?
+
+If you're creating a function, did you first write each of those--run each of those lines of code separately?
+
+And then who's solving the problem, you or the AI, right?
+
+If you're feeling at all times like you're in control and driving the solution process, then that's a good sign.
+
+So those four are the most important.
+
+So you might have noticed I did something that some of you may have found really odd, which was in my approach.
+
+I was constantly, you know, using ad copy of message and even redefining the same symbol multiple times, right?
+
+That's good, right?
+
+That's much better than going back and editing.
+
+So you can edit by clicking on the title bar here, right?
+
+I can now edit that cell.
+
+But I use that less often than adding a copy because that way I can iterate, right?
+
+And sometimes I'll make mistakes, sometimes it won't be better, and then I can always go back and delete those crappy ones and keep the one that worked.
+
+But generally speaking, I like to have, you know, the dialogue there.
+
+And so that's how Python works.
+
+Python is perfectly happy for you to rewrite the same thing multiple times, right?
+
+And in the end, you'll see, you know, in the variables panel, what's the version that you ended up with, and it's whatever you ran last, right?
+
+So this was run at 9/24/13.
+
+This was run at 9/24/33.
+
+So that's the one that's actually working.
+
+Okay, so let's go back to our list.
+
+That was that one, out a copy of message.
+
+If you're not clicking that button, it's not necessarily the end of the world, but, you know, it does suggest you're not quite iterating and changing and checking each point.
+
+Redefine existing variables and functions.
+
+That was what we just discussed.
+
+Okay, edit outputs.
+
+I didn't use AI at all then.
+
+But as Jono said, let's have a look.
+
+Watch this.
+
+So can you review my Rappall-driven process for solving this, please?
+
+Does it look good to you?
+
+And so here's its answer, right?
+
+And like, I'm like, that's not what I wanted.
+
+Then I would click on it and I would say, let's do the exact opposite of what I want.
+
+Let's say, actually, I would suggest modifying it to follow traditional software engineering practices so you can fit in with your workplace coding standards.
+
+Would you like me to explain how?
+
+And so now I've changed, right?
+
+And so then I can say prompt, like, oh, yes, please, that would be really helpful.
+
+And so now it thinks that's what it answered.
+
+And so now it's like, oh, testing, function organization, documentation, right?
+
+Which is actually terrible for Rappall stuff.
+
+But this is the trick, right?
+
+And now we're in the flow.
+
+We're in that flow.
+
+Yeah.
+
+And then did you follow this framework or parts of it?
+
+When you got stuck, did you consider some of these heuristic strategies?
+
+So did you, at the end, look back and reflect?
+
+And AI can help you with these things.
+
+So we verify results.
+
+Well, that's easy because we're doing it out of code, right?
+
+But you can ask the AI, give me five alternative approaches.
+
+It looks great, you know, let's actually use our voice here.
+
+But in order to really maximize our learning, perhaps we could look at a few other approaches.
+
+I could think of five or more different ways of doing this.
+
+Would you like to hear about them?
+
+So, yes, please, that would be really helpful.
+
+And so, or you could just ask it, tell me five approaches.
+
+You know, it's like, okay, let's look at one at a time.
+
+Okay, we could use a look at the filter.
+
+Oops, okay, so I made a mistake there, which is fine.
+
+And this is a good moment actually for me to explain a little bit about how Solvert works, which I saw a lot of people during the week were a bit confused about.
+
+It's fine, it's a, you know, not a particularly traditional UX, which is, okay, how do I edit this now?
+
+So to edit a cell, I click on its title bar, anywhere at all on its title, it's fine.
+
+Okay, you see it's been selected so we can see what it's editing.
+
+And what happens is you'll see at the bottom of the screen, it's immediately flashing there, right?
+
+So I don't need to move my mouse at that point.
+
+So I can scroll anywhere, click anything, and I can start typing straight away.
+
+Okay, and I'm editing that thing, right?
+
+If I click cancel, then by default, we're always editing a new message that's going to appear at the bottom.
+
+And then these buttons here, these are the buttons tell you what kind of message will it be when I hit submit, right?
+
+So to change this to a prompt, I just click prompt or control shift L or command shift L and click submit.
+
+Okay, so that's kind of how this system works.
+
+So a lot of folks, for example, have asked, you know, could we have inline edits, right?
+
+That would be more efficient.
+
+But like if you think about it, would it really, right?
+
+If I click here and I can immediately start printing, typing at the bottom and I can hit my keyboard, like you can't really get much more efficient than that, right?
+
+It's super fast, right?
+
+So it's a bit like it's a bit of an unusual UX, but it's one that we found works pretty well.
+
+Oh, regular expressions.
+
+John is going to teach us a bit about those next time.
+
+Great.
+
+Okay, so I think that's all I wanted to say about this bit, John.
+
+Anything I forgot to add or anything you would like to mention?
+
+I think that was good.
+
+I don't feel bad that we promised people we'd be speeding up.
+
+We really will spend less and less time per problem.
+
+But I think it's so useful to, this is not about the advent of code.
+
+This is about the process.
+
+Yeah, I don't feel bad.
+
+I think that's people we're here to learn, right?
+
+So we're learning.
+
+I mean, we're not going to, I don't actually think that's true that we're going to speed up because the problems are going to get harder.
+
+So I mean, we'll see.
+
+I'm sure they're going to get faster.
+
+Okay, so I think we're ready to do one B, right?
+
+So let me share my screen.
+
+So next question then often I've seen asked is like, well, should I create a new dialogue?
+
+And I would lean towards no, right?
+
+So I'm going to click copy here, and then I'm going to click note and paste and change that to be right.
+
+And I'm going to grab the question for B, which says, oh, your calculation is not right.
+
+Actually, some of the digits are spelled out with letters.
+
+Okay, so how do we actually solve this if the word one or the word two, etc. are also digits?
+
+So I'm actually going to go through this one recently fast.
+
+So I'm going to start by copying this.
+
+So we're still doing the adding.
+
+So it's basically the same as before.
+
+This bit here, I would just pull out and put into, right, so that's our note.
+
+And then I'm going to go, and then I'm going to go X's.
+
+Well, actually, sorry, this is going to be Sam.
+
+It's not X's yet.
+
+Great.
+
+So the problem we're trying to solve here and the way I think it's best to do this, and we're going to particularly look at this when we look at day two, which is kind of confusing, but I really like to see the examples and check I understand.
+
+So 29 should be the first one, two, nine.
+
+Okay, 76 is the last one, 76.
+
+Okay, got it.
+
+Here's an interesting one, one, eight.
+
+That definitely always on the lookout for weird things, right?
+
+And that one should probably be one, four.
+
+Yeah, one, four.
+
+Okay, cool.
+
+So, Sam.
+
+Okay, so the first steps are going to be exactly the same, right?
+
+So you can either copy and post them from earlier.
+
+You know, I'm pretty fast coder, so I can just type them, and I never skip these steps of going like this.
+
+Okay, and then I would pick one, and I would probably pick the hardest one, which is going to be zero, one, two, three, four, five.
+
+Okay, and don't forget to print it out.
+
+You can see I always forget things.
+
+All right, and so this one's a little bit less obvious.
+
+So I'm going to think about devising a plan.
+
+In this case, draw on similar problems.
+
+Well, we've obviously already solved a similar problem.
+
+So last time, Jono, you asked me, I remember, hey, how would you solve it, you know, in your head?
+
+And I just said, look, I would just go through each one one at a time and see if it's a digit.
+
+I think this time I can't just see if that's a digit, but I can go through each starting point and say, is that starting a digit?
+
+So this is not starting a digit, because ZO isn't a digit.
+
+O-N-E, that starts at a digit.
+
+That's not, that is, so I'm going to use exactly the same process that I suggested last time.
+
+I think it was me that suggested it.
+
+Sorry for this, Jono.
+
+I'm not very good at remembering.
+
+So I'm just going to go through each position one at a time, right?
+
+So O for O-N-X, OK, start there.
+
+And so this is where we can start using, there's two bits here.
+
+This bit's got the mapping part.
+
+This bit's called the filtering part.
+
+So instead of just printing out O, right, I'll show you something that actually makes life a lot easier for this kind of thing.
+
+Instead of going through X, there's a really nice function in Python called enumerate.
+
+And what enumerate does is it returns two things, the position of the thing and the thing itself.
+
+So by going through that, I'm going to get two things back.
+
+And so something that we can do that Jono didn't show you is if you're getting more than one thing back for each, you can give each bit a name.
+
+And I nearly always call things either, well, quite often I'll use A and B or O and P.
+
+So this is going to pick the two things and it's going to call the first thing O and the second thing P.
+
+So here is O for O comma P.
+
+And here is P for O comma P.
+
+So if you haven't used this before, then when you're going back over this through the video, right, and recreating what I'm showing you if you haven't done it before, this is the bit where you should pause, go through and make sure you understand exactly what's going on.
+
+Anyway, I should have gone and copy of message for these two examples, because this is really critical.
+
+So what I want to do is I want to basically get the string starting at position 0, 1, 2, 3, etc.
+
+So you know perfectly well now you can ask AI if you don't know how to do that.
+
+I'm not going to ask AI because I do know how to do that.
+
+And the way you do it is you say, I'm looking at X, that's my string, and I want starting at O to the end.
+
+And so you can see here, I'm like doing every step in small pieces and I can see immediately like, okay, that's going to be what I want.
+
+That's going to be what I want.
+
+So I need all of the numbers written out in English. "core" - create a list of all of the digits starting from 0 written out as English words.
+
+Sometimes some things just do it directly for you, rather than transcribing, which is actually kind of annoying.
+
+This is a case where the co-pilot style goes text is very nice.
+
+I would type out 0 and 1 and then the language model code autocomplete is going to be smart enough to figure out that the next things I want are 2, 3, 4, etc.
+
+So if you're in other editors, that might be a feature you use.
+
+And that's a feature we will be adding in the future.
+
+So I'm going to go kind of like digit names equals dot split.
+
+That way I don't have to type because I'm lazy.
+
+There we go.
+
+So close enough.
+
+All right.
+
+So now I need to basically find out which of these start with one of these.
+
+So I would be inclined at this point to first of all just do that for one of them.
+
+So again, we always like this to do for one piece at a time.
+
+So this is if.
+
+And so you can say, actually, let's first of all put that into, let's call this starts.
+
+And it's very nice to do things in small steps, right?
+
+Because then I can say 0, 4, 0 in starts.
+
+If 0.starts with say 0.
+
+And they're actually the roundtrips.
+
+That's not great.
+
+So let's pick a different one other than 0.
+
+I think I saw an 8 there.
+
+There we go.
+
+Okay.
+
+And then another thing we could do would be just to pick one of them.
+
+All right.
+
+So let's pick.
+
+So let's pick this one.
+
+So we're going to call this a since we're working with something else here.
+
+We could also say 0, 4, 0 in digit names.
+
+If a.starts with 0.
+
+So this is like doing the other approach, right?
+
+So we're going through each of the digit names and seeing whether this starts with any of those.
+
+And so what we want is to basically grab that.
+
+Right?
+
+Okay.
+
+So if we go back up to here, this is just doing 0.starts with 8.
+
+We want, we could create a little function to do that actually, couldn't we?
+
+And so let's see.
+
+So we're going to create a little function def.
+
+I don't know what we call it.
+
+DIGIT_STARTS.
+
+So we would be looking through, we call it a, some particular string a.
+
+And so that would be return that.
+
+So a.dige.starts a.
+
+Cool.
+
+So that's going to go through all of our possible things and see what's there.
+
+So we should now, I think, John, I'll be able to do that for this list of starts, right?
+
+So we could go 0, 4, 0 in starts.
+
+Right.
+
+So that's our list.
+
+And we could do.
+
+DIGIT_STARTS.
+
+Yeah, that's not looking bad, right?
+
+What do you think, Jodo?
+
+Was that on the right track?
+
+I think so.
+
+Sometimes at a point like this where there's been enough little experiments and things, I'll step back and say, okay, what am I doing again?
+
+So it's maybe helpful to think, okay, this looks like we're able to pull out the number words and then, like, okay, what was our original goal?
+
+It was those or the digits themselves.
+
+And yeah, that just would help then put me back on track if I was, because even watching this, like, oh, okay.
+
+Cool.
+
+What's the next step after this again?
+
+Yeah, and it's actually suggesting jumping a little bit too far for me.
+
+I would actually say, you know, we should actually probably be returning the numbers here rather than the string one.
+
+So, like, I would be inclined to actually say, you know, we could actually say, let's do this in little steps.
+
+We actually want the numbers, right?
+
+So why don't we say, give this a name.
+
+I might just edit this directly.
+
+We'll call this, like, found equals.
+
+And so I just edit it directly there.
+
+So we've now got something we can go through.
+
+And so we don't want the number one.
+
+We want the digit one.
+
+You know, we want the actual int one.
+
+We don't want eight.
+
+We actually want the int eight.
+
+And so, again, I already know how to do this.
+
+You know, we've got our digit names.
+
+Oops.
+
+So to basically, this one here is the first thing in the list.
+
+This one here is the third thing in the list.
+
+So if you go three, actually, so I go denames.index.
+
+I think that's what you do.
+
+We can always check by asking with a question mark, right?
+
+Yeah, returns the first index of a value.
+
+Okay, so we can go denames.index, for example, eight.
+
+And there's the number eight.
+
+So that's great.
+
+That's basically what we want, right?
+
+So I would say at this point then, how are we doing?
+
+We've got our found, right?
+
+So I might even just print that out.
+
+So we don't have to scroll up and down all the time.
+
+So now I would basically go through and I'd say, we can just do it manually, for O in found.
+
+If -- I'd say like -- what should we call this one?
+
+Denames.index eight.
+
+So we'll say denames.
+
+Actually, we'll say let's do our found.
+
+So that's it here, right?
+
+So we -- maybe just copy that.
+
+See, for O in found -- well, let's just print.
+
+Okay, so for O in found, if O print denames.index O.
+
+Okay.
+
+Ah, so there's the problem.
+
+One is not in the list.
+
+So actually, it's in square brackets.
+
+Right?
+
+So that's kind of nice.
+
+We immediately call the error.
+
+So we can immediately look it up.
+
+Right.
+
+I think we've basically got all the pieces now with our functions.
+
+So this is a list of everything that's been found in our string.
+
+One and eight.
+
+And actually, the only one we care about is the first one.
+
+Right?
+
+So I won't show you new ways of doing this today, but instead, we're just going to do this kind of -- the obvious way.
+
+So we could basically say first digit.
+
+And we're just going to use this.
+
+We're going to go through -- so we first of all need to find them.
+
+Right?
+
+So we can use our trick from up here.
+
+Found equals digit starts O for O in starts.
+
+Right?
+
+And then we can -- that's fine.
+
+So we're actually -- let's take starts.
+
+That's even better.
+
+So I always like to use the same names that I've used before.
+
+And then we're going to go through each one.
+
+And if there's something there, we can return it.
+
+Return that.
+
+And so then we can immediately try it out.
+
+First digit starts, which is what we wanted for that -- for that list.
+
+Cool.
+
+So I think in the problem, it still wants the digits as well, right?
+
+It doesn't just want the ones spelled out in words.
+
+Mm-hmm.
+
+Great.
+
+Okay.
+
+So let's fix that.
+
+So basically, if we found something, then we found that's great.
+
+But we can actually basically say exactly what we had before, right?
+
+If -- oh, if -- so we went through each of the starts.
+
+So actually, one way to do that would be -- to modify digit starts, right?
+
+So we could go up to that, digit starts.
+
+This is actually kind of cool.
+
+I can click Add Copy of Message.
+
+Do I type that twice by mistake?
+
+Actually, you probably want to put it at the bottom.
+
+Yeah.
+
+Let's put it at the bottom.
+
+So if I say copy and put it at the bottom, it's kind of nice.
+
+I can press submit straight away and it just adds it to the bottom, right?
+
+So I could say -- so when we use that, digit starts.
+
+We did it on A.
+
+So let's just remind ourselves what A looked like.
+
+So that was 8, 2, 3, 4.
+
+So actually, we can simply go, hey, you know, if A dot is digit, then we're done, right?
+
+Return.
+
+We might as well just do it straight away.
+
+And then we can just go up and see where we last used it.
+
+Get digits, right?
+
+And then I'm just going to say -- we said get digits X last time.
+
+So we could just put exactly the same thing here again.
+
+Get digits X.
+
+And remember, anything you put in the bottom by default goes to the bottom.
+
+So I didn't have to scroll or anything, right?
+
+Wait, get digits is not right.
+
+Dig starts.
+
+See, I should have done that.
+
+Dig starts.
+
+Here we go.
+
+So I just go copy, paste.
+
+Okay.
+
+So let's get rid of that mistake.
+
+And get rid of that mistake.
+
+Okay.
+
+So we should probably test it out then on -- add copy of message. 2, 8, for example.
+
+That gives us 2.
+
+There we go.
+
+So notice how we've just redefined things to add the functionality we want.
+
+So now -- this is the one that was returning our ints.
+
+So that's how digit starts.
+
+But before that, this is where we used it, first digit.
+
+So now I would say, okay, let's check if -- we actually already have an integer.
+
+So if -- to check if something is an integer, you can use something called is instance.
+
+So if is instance found, integer return found.
+
+Starts.
+
+Great.
+
+So we could try that on -- digit starts.
+
+Digit starts.
+
+Hang on.
+
+I got myself slightly confused.
+
+Where am I?
+
+If is digit.
+
+Did I edit something in place by mistake rather than adding -- You added copy below, but it did it way up.
+
+Because it adds a -- Oh, I forgot how that button works.
+
+Okay.
+
+Thanks.
+
+Thanks.
+
+My bad.
+
+Okay.
+
+This one here.
+
+Thank you.
+
+Yeah, I'm not sure if that's kind of how we want it or not.
+
+So delete that.
+
+You should have put it at the bottom.
+
+Thanks, Jono.
+
+Okay.
+
+Great.
+
+Okay.
+
+So we've got -- Okay.
+
+So we've basically got something now which can go through and find the first digit for everything in that list, which is nice.
+
+So I'd be inclined to check how we define starts in the first place by just going back and clicking on that.
+
+So that's how we found starts in the first place.
+
+And again, we can put it straight in the bottom again by just pasting it, right?
+
+Delete.
+
+Okay.
+
+So that gives us all of our starting points.
+
+And then for a particular start, that finds the first digit.
+
+So I guess at this point, we could then create a little function from that.
+
+Def.
+
+What should we call this one?
+
+So we're going to get -- Get first digit that takes x as opposed to the starts.
+
+Ah, nice.
+
+Get first that takes an x.
+
+I like that.
+
+And then we're going to get starts.
+
+And then we can simply call first digit.
+
+Is that what you're thinking, Jono?
+
+Yeah.
+
+I'd almost be like, oh, I might just as often copy first digit to take x instead of starts and add that one line.
+
+But having a couple of things with similar names is not too bad.
+
+Yeah.
+
+As long as -- yeah.
+
+I don't mind your idea.
+
+So what you're saying is let's copy this line of code.
+
+And instead we'll say -- you know, we can put this straight underneath, I think.
+
+And you're saying basically put this here and change this to x.
+
+And then first digit x.
+
+I don't mind that.
+
+I like it.
+
+Otherwise I just get confused.
+
+I'll type first digit.
+
+Wait, did I mean -- Yeah, you don't want too many things with really similar names.
+
+Great.
+
+Okay.
+
+So that was -- that's good.
+
+And, you know, because I don't change my names of things, it's nice.
+
+I don't have to think like, oh, what did I call my lines?
+
+You know, if there's more than one x, I'm going to call it x's.
+
+So I guess that's something we can now apply to map.
+
+Let's use the correct terminology.
+
+We can map that.
+
+Like so.
+
+First digit x.
+
+Okay.
+
+Cool.
+
+So what do we do wrong?
+
+So we've got -- you know, this is actually where list comprehension sometimes we're a bit of a problem, right?
+
+If we had used a normal loop for this, we'd be able to see how we were going.
+
+Print -- print x, print first digit x.
+
+Great.
+
+And so I'm guessing here -- we might have made a mistake.
+
+So we've got an issue, which is this one here, 49872, right?
+
+So I'd be inclined here to say x equals that, right?
+
+So we're now debugging, right?
+
+And then I'd say first digit x.
+
+And so then we can have a look at first digit, copy, paste it.
+
+And we can check here.
+
+So this said here int object is not subscriptable.
+
+So that means that found here was an int.
+
+And I think -- is that right?
+
+Did we -- so what we should probably do then is like -- the nice thing is we can now do our like steps one little bit at a time, right?
+
+I can see if we can do it.
+
+No worries.
+
+But I'm going to ask you to hold off.
+
+So this is what I would do is I would look at each bit one at a time, right?
+
+So there's our starts and they look good.
+
+Okay.
+
+And so then we do found -- and print those out.
+
+Okay.
+
+And then we do if instance found comma int.
+
+So I would then do that.
+
+And now I can see the problem.
+
+The issue is that we shouldn't be checking because that is not an int.
+
+That is an int.
+
+Is that what you're thinking, Jono?
+
+Cool.
+
+So, you know, we've got a couple of choices as to how we proceed here.
+
+But in this case, I'm kind of thinking like, yeah, it's pretty obvious that all what I did was I made a mistake by putting the if instance outside the loop rather than inside.
+
+So what I should have instead done is, you know, I could just edit this, right?
+
+So all that debugging, well, let's see.
+
+Let's make sure it works first.
+
+So I would edit this.
+
+I would grab that and move it down here and indent it.
+
+And we should now be doing -- oh, does it sound right, Jono?
+
+Mm-hmm.
+
+Okay.
+
+And so we can now rerun this, right?
+
+Mm-hmm.
+
+And that's good.
+
+So that's now working.
+
+So that's nice.
+
+So now you can just hit this little delete below button because we've done our debugging.
+
+We've got a bit of a bug that it currently puts you right back at the top of the dialogue, which I don't love.
+
+And so, you know, if we're getting a bit lost, which I certainly am, I'd say, "Rind me where we are up to."
+
+Okay.
+
+Cool.
+
+So the first digit takes the string, looks at all the possible starting positions, returns the first digit that it finds.
+
+So, yeah, we could -- now, basically, apply that to everything, right?
+
+So I thought we already had something which did that.
+
+Did we delete it?
+
+Perhaps we did.
+
+First digit, O, well, X for X in X's.
+
+Probably round brackets for that, right?
+
+Yeah, maybe.
+
+Again, it's -- you know, I know exactly where it went wrong, so that's good.
+
+So, yeah, basically, then, we want -- let's try to think about how we want to do this.
+
+We've got the found here.
+
+You know, we could return both the -- you know, we've got something that works to find the first digit of something.
+
+Yeah, what do you think, Jono?
+
+How would we find the last digit?
+
+We basically want to go backwards, right?
+
+So rather than enumerate X, we would want to go in the opposite direction.
+
+Well, you know, I'm lazy, so when I started thinking about going backwards, it's like, oh, do I have to write out, you know, eno, owt, like, all the letters backwards and do all of this again?
+
+Or is there something like intermediate thing that has the ones in order that I could reverse?
+
+And so rather than, like, reversing X and then solving the backwards version of the whole problem, we could probably just reverse found, right?
+
+So our code for first digit and for last digit would be the same.
+
+It's just that when we have these, oh, we've already found the numbers.
+
+We could reverse that first and then I think it would be a lot easier.
+
+So that's my, like, I'm looking to see if there's anything we've done that's close.
+
+And, like, what is a way to do it again without having to write letters backwards, you know, write numbers backwards.
+
+Great.
+
+Great.
+
+Okay.
+
+So this one here is going through it forwards.
+
+So then we could also go through it backwards.
+
+How does that sound?
+
+Yeah.
+
+Okay.
+
+Um, so, you know, to do that, we could.
+
+Change this to, like, both digits.
+
+Right.
+
+And then this bit here finds the first digit.
+
+Right.
+
+So I could say, um, first or we could basically say I could say first equals get first from found.
+
+Right.
+
+Or, oh, even better.
+
+I could just say get digit from found.
+
+Now this is quite interesting.
+
+You might think this is going to die, but if I run it, it actually doesn't die, even though I haven't written get digit yet, because I didn't run it.
+
+Right.
+
+So I can now write get digit.
+
+I just pasted in my code, right.
+
+And I'm just going to give it the same name.
+
+Okay.
+
+And get digit found.
+
+Right.
+
+Remember this is found.
+
+Um, like a close it up.
+
+So the first is going to be get digit found.
+
+So we could now, like, you know, just take little, little steps here.
+
+So copy, paste, and just say return first.
+
+First.
+
+Both.
+
+So it's not both digits yet.
+
+Both digits and it's taking X.
+
+Okay.
+
+And so.
+
+Last equals get digit reversed.
+
+So this is how you just reverse the list.
+
+How does that sound?
+
+Do I know something like that?
+
+I'll let that.
+
+Okay.
+
+And so let's double check.
+
+It's actually not a great X is it?
+
+So pick a different end.
+
+So let's do one, which has got a, here we go.
+
+Let's use this one again.
+
+0, 1, 2, 3, 4, 5.
+
+X equals X is 5.
+
+Okay.
+
+And let's rerun both digits X.
+
+And so that should be one for call.
+
+And so specifically we need to concatenate those and turn it into an inch, right?
+
+Cool.
+
+So copy, paste.
+
+And so a nice little trick that I saw somebody suggest is just to go first times. 10 plus last is another way of doing the same thing.
+
+There we go.
+
+Both digits X for X in X's.
+
+How does that look?
+
+I don't have to check the values they gave, but it seems like it's working.
+
+So they said 281 and is 281.
+
+Okay.
+
+And our input doesn't change between parts A and B, right?
+
+We don't have to get new input.
+
+So our input, we can still do the same thing.
+
+So I'm just going to go copy of message and change X's to imp.split lines. 5, 4, okay.
+
+Let's try it, I guess.
+
+Good.
+
+Okay, you're right, John.
+
+That did take a lot longer than I expected.
+
+But we've never done this before.
+
+So.
+
+So be it.
+
+But it has been nearly 90 minutes.
+
+So I guess we can't really do probably part two.
+
+Otherwise people are going to be exhausted.
+
+So instead, I don't know, what do you think, John?
+
+After seeing that, like what's your feeling about takeaways or whatever?
+
+For me, something I noticed is it's way harder to live code solve that when I'm not doing it on camera, compared to doing it on my own.
+
+So like that's probably a takeaway that other people don't have to deal with.
+
+Yeah.
+
+Yeah.
+
+I think we can -- there's a few takeaways I had from that.
+
+One is that it's always tricky when you're on camera.
+
+We could do, if we wanted to go faster, like a walkthrough of an existing solution versus live coding.
+
+But I think the live coding shows a lot more of the actual importance.
+
+Nice to see the debugging and stuff, isn't it?
+
+Yeah.
+
+So like I can show other solutions to this.
+
+And we could -- if we wanted to skip a little faster, start, oh, well, let's just show some solutions to two and then jump straight into three.
+
+But I also think we can see what people in the chat feel.
+
+I also think we can just go a little slower.
+
+It's not a worry.
+
+Yeah.
+
+Do you want to end it here?
+
+People on the chat are saying they like the live coding.
+
+So I guess we'll stick with that.
+
+So I mean, I guess we're not in a hurry.
+
+The goal of this is not to actually solve advent of code.
+
+But I will say when people in the Discord are sharing their solutions, the thing I would most like to see shared is the dialogue.
+
+So export the gist of the dialogue.
+
+Because I think that's the thing we're all trying to learn from here is not like -- the answer to the question, how did you solve it, is not here's my code.
+
+Because that's not how you solved it.
+
+So the question, how do you solve it, is the process that you went through.
+
+And so hopefully your exported gist is going to represent to some extent what that process was.
+
+So we'd love to see that.
+
+And if people see exported gist that they found revealing and helpful, maybe just pop a thumbs up emoji on it.
+
+And the ones with the most thumbs up emojis that we think are interesting, we'll pick also to talk about.
+
+And the next lesson, because you and I do not have a monopoly on -- yeah, coming up with these solutions.
+
+There's a part, like speaking of the dialogue, there is a thing that I noticed there, which is that we got to a point where there's a lot of symbols and a lot of iterations and things.
+
+And I think, like, you know, you're mostly keeping on top of it, but I think that's very hard for especially new coders to, like, maintain this memory of, like, what variables are defined where.
+
+And so if you're going to share a notebook or if you're finding that feeling, like stepping back and just adding some headings, adding some recaps -- like you were doing with the AI, like, where are we again?
+
+Well, the other thing I'd say is, like, you can absolutely and should absolutely have multiple copies of Solvert running.
+
+Now, just to explain, if you create a new tab with another copy of Solvert running, when you load it, it will clear out your Python interpreter state.
+
+And the two of them will share the same Python interpreter state.
+
+But if you use one of them, like, side by side to scroll up and down, that can be quite helpful.
+
+And then also I was thinking, like, or even if we had a little VIM window or text editor window, just with some notes, I think -- yeah, like, for me, obviously, a much worse coder when I'm doing it live on video, which is actually useful, because it's like, okay, I'm going to need to use better more.
+
+More rigorous practice to keep track of things, because my brain goes crazy, you know, when I'm trying to do it with an audience, which is good, right?
+
+So if we can figure out a way for even Jeremy when live coding to be able to do this effectively, then that's a really good test of our processes.
+
+So yeah, I think you're right.
+
+The processes in that were not good enough, so we should try and do better ones next time.
+
+Awesome.
+
+All right.
+
+Thank you, everybody.
+
+And yeah, as we -- so for the next lesson, Jono's going to be in the main driving seat around creating the solution.
+
+And you can also maybe also actually might be good to be in the driving seat around process, you know, around like, hey, Jeremy, why don't you create a heading now, or why don't you put a text editor window on the side with some notes, or why don't you, you know, whatever you think would be helpful.
+
+And then my job will be to be your typist and syntax creator.
+
+How does that sound?
+
+>> Okay.
+
+Sounds good.
+
+>> All right.
+
+Thanks everybody and see you all on Discord.

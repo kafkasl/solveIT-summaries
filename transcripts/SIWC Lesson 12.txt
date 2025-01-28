@@ -1,0 +1,2325 @@
+Okay, here we are.
+
+Hello, John O.
+
+Nice to see you again.
+
+And hello, Isaac, as is now tradition based on Eric's experience, you have been relegated and are no longer a special guest.
+
+So welcome back.
+
+Regular guest.
+
+All right, thank you.
+
+Joining us from the hotel this time.
+
+Thanks for joining us from your, from your trip.
+
+Appreciate it.
+
+Yeah, I wouldn't want to miss it.
+
+This is pretty cool stuff.
+
+John O.
+
+I think we all understand that everybody's talking about one thing and one thing only, which is the status of your uncle's Sasquatch live coaching only fan site.
+
+I know, following the lesson, there's obviously been a lot of new competition appearing.
+
+It's, it's, it's going to be obviously a very big space.
+
+How are things getting along with it?
+
+You know, I saw some clones happening.
+
+I think there was some attempts to build a monster UI version.
+
+So obviously the market is very appropriate.
+
+I mean, they don't like being called monsters, I think, but No, well, yeah, exactly.
+
+Some sort of a little bit turned off exactly.
+
+But also it prompted a release from opening eye, like they'd clearly been holding back because they really want to use their canvas feature that shows HTML.
+
+Yes.
+
+So I tried that out and it seems to work.
+
+So this is a new feature just just launched this morning, I think.
+
+Well, my few few hours ago, yeah.
+
+So like some of the others we showed, you can put in a There's a canvas.
+
+Exactly.
+
+Yes.
+
+There's a special little flag to take it on.
+
+It should be, I think, in most accounts rolling out.
+
+And so one thing I forgot to mention the previous time we were doing this, and this came up when I was chatting with someone who was new to Web Dev, like, how do I even know what's possible?
+
+One thing these types of interfaces are really good for is just seeing whether there's an obvious way to do something.
+
+So when you say, oh, did you add some testimonials and then you see how it does it?
+
+Or like, oh, I want something that folds up or expands.
+
+It's hard to know whether that's an easy thing that every Web Dev knows or that's something that's going to require a lot of custom work.
+
+And so when you can say, hey, you know, can you add feature X and it turns out it's just one component that already exists, then you can take that into your fast HTML project or whatever way that you're building your app.
+
+But you can at least see it in action really quickly.
+
+So another reason why these kind of instant app things are fun is just like prototyping those ideas and seeing what the standard Web Dev patterns are that you can maybe adapt and make the fast HTML equivalent or whatever you need.
+
+Nice.
+
+Well, that's very exciting.
+
+I hope we'll continue to hear updates on how this is going.
+
+And I hope it inspires more activity from the frontier labs.
+
+I feel this is something that they've obviously been sleeping on a little bit.
+
+So great news there.
+
+In our last episode, we were, we'd made quite some progress in creating a non-bigfoot, bigfoot related blog.
+
+But you know, your uncle could use this for his blog as well using fast HTML.
+
+Now, we're going to keep going.
+
+And we heard from a lot of students during the week loud and clear that they really liked last week's content, even the non-bigfoot bits.
+
+That, you know, the idea that we can apply Solvert to building up Web application GUIs is perhaps surprised people a bit and excited people a lot.
+
+So I guess the main thing I wanted to do first is dig more into like making this really Solvert-ish.
+
+You know, how do we do this in a much more step-by-step way.
+
+And I need to get good at this because I'm not a particularly natural front-end guy myself, to be honest.
+
+So part of the plan today is finish out our mini blog, our code blog site.
+
+But then we're going to start to build things that you can't have in any static site generator, at least anyone that exists right now.
+
+And so we're going to start with a feature that I actually think is pretty exciting, but also incredibly simple because we've already implemented basically all of it, which is we're going to grab the retrieval stuff that we've done for random Wikipedia pages and instead apply it to our blog pages.
+
+So I think one of the things you'll be surprised by here is how surprisingly easy it is to create what is as far as I know an entirely new product that doesn't really exist in the world.
+
+And so like you could literally go and polish this up and launch it next week, launch people money and be like, "Check this out."
+
+I think people would be excited.
+
+And there's lots of other things we could add or you could add depending on what feedback we get about this, like for example, proper comments rather than spammy external sites like Discus and stuff that people have to sign up to and take all of your...
+
+I shouldn't say about that service in particular.
+
+I don't know which service does which, but the idea of having a third party doing comments for you rather than having it run on your own site, then imagine like all of your search, semantic search could go over comments as well.
+
+There's all kind of interactive stuff that you can add.
+
+You could add kind of authentication so that different groups of people have access to different parts of the blog.
+
+Maybe an admin panel.
+
+Yeah, an admin panel would be great, wouldn't it?
+
+So it's starting to sound more and more like a CMS, I guess at that point, but it's not going to combine CMS, blog thing, and they're not separate pieces anymore.
+
+Yeah, that'd be fun.
+
+So depending on where we go, we might do like a lesson that starts to talk about SQL, learning SQL and solve it.
+
+Is a really delightful experience, by the way.
+
+So we've got...
+
+What is it after this?
+
+Four more lessons, Johnno?
+
+It says 12, 13, 14, 14.
+
+Yeah, four.
+
+We've got a bit of a special thing planned, a special mini launch of a big new feature plan for our last lesson.
+
+So I won't talk too much about that, but suffice to say, it's going to show you yet another different thing you can do with solve it.
+
+Yeah, ideally, I'd love to find some time to kind of talk about helping with your writing, you know, as well.
+
+So maybe that's something we can try to aim for for the penultimate lesson.
+
+So we'll see how things go.
+
+We don't exactly have plans, but we have things that we would love to share with you all.
+
+Anything to add to that, Johnno?
+
+I think that's good.
+
+It's been nice having feedback for like seeing what questions people had after the first Web Dev one was very helpful.
+
+You know, I think seeing people saying, "Where do I deploy this?"
+
+or "How do I make it dynamic?"
+
+or, you know, that kind of feedback that you all gave us on Discord is very helpful.
+
+Keep that coming, especially as we try and pick and choose between the lessons for the final few weeks.
+
+That'd be great.
+
+And then good news, Nate, who a lot of you know, and we all love, has offered to be available after every lesson, including this one from here on to do office hours.
+
+So let's try to remember Johnno and Isaac before we close out today's lesson to remind people to head over to the Discord voice.
+
+That's a good place to make requests.
+
+I don't think Nate has any special information about the Susquatch business, so maybe hold off on those questions.
+
+But other than that, you should be able to answer questions, give feedback, and of course, ask for help.
+
+Okay, great.
+
+And then we've got some really interesting new features as well.
+
+We're going to show you today one of which is in Solvert, one of which is not in Solvert at all, but is extremely Solvert-like.
+
+So we've got quite a few things, new things to show you.
+
+So let's start by, I guess, going back to our blog, shall we?
+
+Is that where we should start, Johnno?
+
+I'm going to kind of let you navigate today.
+
+So share entire screen.
+
+This is our blog.
+
+And like, just the first thing I think I'm going to do is kind of delete all the stuff.
+
+Let's see, from, short codes, show, let's see, I, it's really just the last bit.
+
+So I'll get rid of that.
+
+Cool.
+
+And maybe get rid of this, that appearing twice.
+
+And I'll do a run all.
+
+And so, okay, so Johnno, just to remind you where we're up to, we imported all the stuff from Fast HTML and Monster UI.
+
+We set up a fast app.
+
+So that's the thing that, you know, runs the application.
+
+I guess, we didn't strictly speaking probably need this actually, do we, right?
+
+You only need this in the server side.
+
+So that's probably just confusing to have it there.
+
+So, because we're just doing it inside Solvit here.
+
+Solvit already has Monster UI loaded in as a style sheet.
+
+So I want to say clear and run all again just to make sure that works okay.
+
+So then we talked about the different kinds of tags that are in HTML and how they map directly one-on-one to functions.
+
+We looked at how you can use show to make them render.
+
+And so just to clarify, I don't know if we looked at this, but all that does is when you say show I am, this here is literally directly inserted into your web page.
+
+See, there is, so if you say right click and say inspect, it's super helpful.
+
+And it's just inserted directly into your web page.
+
+There's image source equals image source equals P.
+
+This is a preview of P.
+
+This is a preview of, and that's exactly what is here.
+
+You can kind of see it as I select them and highlights them.
+
+Okay.
+
+So I think the plan was to construct the pieces of the UI that we needed for our blog, right?
+
+And so I think we experimented with some different cards.
+
+We had it write a card.
+
+We tried our copying and pasting some from the doc that we can also.
+
+Yeah.
+
+So I mean, we can use that.
+
+We do have a post.
+
+Right.
+
+So we read the file into text.
+
+We split it into the metadata and the post.
+
+Then the metadata is now a dictionary.
+
+And I actually uploaded the entire first, sorry, the entire Ansari blog to solve it.
+
+So, and using a approach I'll talk about later, I actually added categories to everything, which is nice.
+
+Nice.
+
+Yeah.
+
+So we've got that.
+
+So we got to the point we can render the markdown.
+
+So I guess that's kind of where we're at is we've, yeah, we've rendered the markdown and got the metadata in a dictionary.
+
+My view was that like, I thought I might try and just draw for you guys what I have in my mind for what I think it should look like.
+
+Because I think it's very hard to, I think maybe if you're really good at CSS and HTML and design web design, you can just lay it out directly.
+
+But I feel like for people like me, I should draw it first, you know?
+
+So I was thinking we would have a, you know, a kind of index page, you know, just kind of like log.
+
+And in there, there would be a bunch of cards that might look like something like this.
+
+Mm-hmm.
+
+Okay.
+
+And if I was to expand one of these out, then we would have, there's a few ways of doing it, but maybe we would have like the full title.
+
+Yeah.
+
+We would have the preview image here.
+
+And then we would have the description here.
+
+And then author, I don't know, how things fit in, you know, and then maybe like tag one, tag two, something like that.
+
+I don't know.
+
+Isaac, what do you think of, I mean, I know you've done lots of these kind of things.
+
+Does this seem like it's going to look all right, something like that?
+
+Yeah.
+
+Yeah, I think so.
+
+I think we'll play around with the text color, like which ones are gray versus dark, but it kind of depends on, you know, like, do you want the description to be the gray text or the date and then author to be the gray text and a little bit of what you want.
+
+So we can play with that when we get there.
+
+Okay.
+
+All right, Jono.
+
+There it is.
+
+Yeah, I think it's good.
+
+Okay.
+
+So we can deal with things like, I think I remember one of our posts having tons of authors and the rest having one, you know, we can play with those ones we get to them.
+
+But for now, why don't we, well, we can see, we know how to get the title out.
+
+And so we basically like, how do I put the things into structure?
+
+I think something that might be nice would be to convert it from a dictionary to a, what we call an add a dict just to make it a little more convenient to work with.
+
+So fast HTML has this nice little thing called dict to object, which just lets us not have to write square brackets and quotes everywhere.
+
+It kind of turns it into a normal object.
+
+That's including the post as well, which probably needs to be a little bit more convenient.
+
+And actually, we could just make posts like an attribute of this object, right?
+
+Like, Do you want to, which do you think is better?
+
+I don't mind either way.
+
+You know, keeping track of one list of blogs versus a list of blog contents and a separate list of blog matters.
+
+Probably with tuples, you know, I guess, okay.
+
+Yeah.
+
+We can talk like this then.
+
+Yeah.
+
+I think we could like say like, yeah, you know what I'd probably do is have like post equals get post, you know, and then that's the tuple that we move around as being the thing with all the posts.
+
+And then inside the code, it'd be kind of like, add a comma, you know, contents or something.
+
+And you know, you can kind of do that, I guess.
+
+Does that seem reasonable?
+
+Yeah.
+
+Yeah, I think you had an extra.
+
+Oh, cool.
+
+Okay.
+
+So then, yeah, so what I was saying is now you're saying we can get the title out so we can actually get it out a bit more conveniently now.
+
+And the nice thing is in Solvit, you know, because it's fully dynamic, you can see with autocomplete the list of options, which you won't get in something like VS code or cursor.
+
+Then just tab to select it there.
+
+And the other thing we're going to need in a moment, of course, is the image.
+
+Okay.
+
+So, I mean, I know we have this existing card component, or maybe multiple of them.
+
+So should we look at what, yeah, what arguments it takes and start putting some things in?
+
+Also, we do like people using the documentation, and we're people.
+
+So we could also do that.
+
+So monster UI.
+
+And we do save, going to use something new, then look it up.
+
+So cards.
+
+All right.
+
+A card has a header and a footer.
+
+He is also in the header and then the input and the range.
+
+Okay.
+
+So that's the header.
+
+That's the footer input range.
+
+Okay.
+
+Cool.
+
+So I guess if we're to build up that we could start with a card with the header being the title and the footer being some of the categories.
+
+But I don't know.
+
+I would like go inside out like I feel like doing it the Solvit way.
+
+We should start with the lowest level things.
+
+So like maybe create the header, create the image, create the thing with the image and the description stuff next to each other, create the tags list.
+
+You know.
+
+Okay.
+
+My counter.
+
+Oh yeah, go Isaac.
+
+You know, actually when I'm working trying to build these cards, I often start out simple by just saying like, okay, I'm going to put everything in the body.
+
+And then when I have it everything in the card, then I'm like, okay, this should be in the header.
+
+This should be in the footer because it doesn't make a huge difference aesthetically at the start.
+
+So I often just throw it all in the body and then I clean it up, you know, at the end and say like, okay, this, these first two things should be the header and these past two things should be the footer.
+
+Yeah, I guess I was just saying like I just kind of felt like it might be nice to just do little pieces like this.
+
+Like, okay, we got a header image.
+
+Is it not a header image?
+
+I am.
+
+I am G.
+
+I am G.
+
+See, this is why it's good to do these things slowly.
+
+And that should be show my bit of pop show in my buffer.
+
+So I can just keep pasting it.
+
+I'm just thinking, you know, there is a, oh yeah, and then that's another thing then we're going to have to deal with the path.
+
+I'm just thinking there is a thing.
+
+I haven't tried this in Solvr.
+
+Render FT, I think might save us some time here.
+
+Yes.
+
+Sorry, I'm very bad at trying things out live, but I have a feeling if you go render, so I think we have to go, oopsie-daisy import the Jupyter module. import render FT and then you go render FT.
+
+So FT stands for fast tags.
+
+These things like image and H2 strictly speaking, there's a fast tags.
+
+And once I run that function, in theory, I don't need to say show anymore.
+
+Ah, look at that.
+
+So copy, paste.
+
+I think we have a path, right?
+
+Now, how do you deal with sizes?
+
+I feel like we want it to be like 300 or 400 pixels.
+
+Is there some particular way you recommend isek for making this image a reasonable size?
+
+Yeah, so you can, I guess one way I do this in the past is you can just use a style attribute.
+
+So you could do style equals width colon 200 pixels.
+
+And so that would go inside that image tag.
+
+Next row.
+
+Yep.
+
+To me fair, I didn't actually remember, so I just opened up my docs.
+
+And there's a nice example of a card that had to be filtered for it.
+
+So.
+
+Right.
+
+And if we were a social media savvy designer focused company, maybe all of our images would be the exact same aspect ratio for all of our posts, but they're definitely not.
+
+So we might have to work around that a little bit if we're wanting to see them all together and aligned nicely.
+
+All right.
+
+Cool.
+
+All right.
+
+So the hardest part to me feels like the side by side.
+
+Right.
+
+Okay, we're starting to get into layout.
+
+But I know Isaac had some div that's aligned or div right aligned things that might save us.
+
+Grid looks good for the whole listing of the blogs.
+
+Oh yeah, definitely.
+
+Grid.
+
+Okay.
+
+You happy?
+
+Isaac, if we use grid for the whole.
+
+Yeah.
+
+This bit over here.
+
+Okay.
+
+And that's what I would do.
+
+Yeah.
+
+Dev L aligned.
+
+Do you think it's only like that?
+
+Jono?
+
+Yeah.
+
+Yeah.
+
+Cool.
+
+So.
+
+All right.
+
+Div L, okay.
+
+Div L aligned.
+
+Okay.
+
+So the first thing, maybe let's pop this into an image actually.
+
+So that like it's kind of just like we normally do with this stuff.
+
+We can kind of put it all together.
+
+This is going to be fun.
+
+I've never quite done this before.
+
+Div L aligned.
+
+Image comma title, something like that.
+
+Nice.
+
+Cool.
+
+And a trick for people like, you know, some of these HTML components like an H1, like that's a heading.
+
+It's kind of self-explanatory what it is.
+
+A div is often used as kind of a container to group things together.
+
+So for example, here on the left, you'll want the image on the right.
+
+We'll want multiple things.
+
+And so for all of those things, I'm going to call that details.
+
+Okay.
+
+Div.
+
+Okay.
+
+That's what we have on the title.
+
+Yeah.
+
+Maybe the description.
+
+Okay.
+
+So that would be meta.description.
+
+Nice.
+
+And we could put that, what in a paragraph maybe?
+
+Sure.
+
+Okay.
+
+Does it have an author?
+
+Oh, look at that.
+
+It's nice.
+
+Oh, what just happened?
+
+Oh, I pressed tap.
+
+I always forget the string tap and right arrow.
+
+Okay.
+
+Shall we stop there for now and see how that looks?
+
+Yeah.
+
+And see how they, see how they're there now.
+
+And so then, you know, maybe we'll copy this and pop details here instead.
+
+Cool.
+
+Nice.
+
+So I feel like Isaac, I do want this to be like different somehow.
+
+Do you feel like slightly grayed out or something?
+
+Like do you have a suggestion as to what I might want to use?
+
+Yeah, there's, there's some muted text that we can use with text.
+
+And that would be a class, right?
+
+Yes, exactly.
+
+Class equals.
+
+And we want to do something with text.
+
+So, you know, a lot of times I'll do, you can do text or if you want to do something with it, div, start with that and then use the tab completion.
+
+Use the ID.
+
+Use solvents tab.
+
+Yeah.
+
+Right now.
+
+Text font.
+
+Oh, okay.
+
+Yeah.
+
+All right.
+
+I guess the point you are making is that I could have done that to see my options.
+
+Exactly.
+
+And there's more detailed options under a t attribute as well.
+
+But, but yeah, you can, you can always kind of see here and think like, what do I, you don't know exactly what you want.
+
+Sometimes it's nice to look at the list of options.
+
+I'm just going to, you guys chat for a moment.
+
+I'm going to turn my phone off.
+
+Excuse me.
+
+Okay.
+
+And Isaac, so if I wasn't using those built-in classes, I could also have asked a language model or something, hey, I could maybe show it the HTML and say, how would I make the description text green?
+
+Right.
+
+And then it could say, oh, your style equals, you know, a colon green, or if it knows using tailwind, it could suggest some tailwind classes that would also achieve the same thing.
+
+So if the, the lovely thing with monster UIs that it's got these pre-packaged, we've looked up what some good cohesive equivalents for a lot of these things are and put them in these enums.
+
+But you could also just like manually define every color and everything if you really wanted to go that route.
+
+And one of the tricky things, you know, it's like, you can definitely just manually define colors.
+
+And sometimes I'm tempted to do that and I do it.
+
+And, you know, I did it for, for Solvent and totally screwed up the dark versus light theme.
+
+And that's really one of the challenges that like, if you start saying like, hey, I want to make this green, like, oh, I really wish the text was, was, you know, white on this background, you know, it looks good.
+
+And then you can put dark and light theme, you know, everything, everything kind of goes wonky.
+
+And so it can get tricky really fast and unexpected ways.
+
+I've tried to make the stuff in Monster UI kind of fit with any light or dark or any color theme.
+
+There's ways around it, but it, I was going to show how great the tab completion is with it.
+
+And then, unfortunately, our ghost text was so good, it just recommended it for us.
+
+Kind of ruined, ruined my explanation, but that's okay.
+
+Huh.
+
+It's getting fancy here.
+
+I know what this icon looks like.
+
+Oh, I rather like that.
+
+Oh, beautiful.
+
+That is very cool.
+
+I somewhat suspect there must be this code in the context that it's using.
+
+Does that look familiar from something you've written?
+
+I've never put the calendar icon next to the date.
+
+I wish I'd thought of it, but I hadn't done that icon there before, to be honest.
+
+So I was, I was looking at that and I was like, oh, that's cool.
+
+I don't, not that I remember at least.
+
+All right.
+
+So all those icons come from a thing called Lucid icons.
+
+So you can go to Lucid icons if you want to like find your own.
+
+Usually the models are good at like recommending ones to use.
+
+But if you want to scroll through and look at all the options is over a thousand on Lucid icons and anything there will fit in your UK icon class.
+
+Again, it's kind of nice here because if we do it this way, actually probably here, okay, which may I'm going to be like, I'm going to put on my Isaac hat.
+
+Div L aligned, bracket, comma, okay, let me see if I can get this right.
+
+Then I'll put detail.
+
+Then I'll put date and then I'll put class equal.
+
+Damn it.
+
+It's done it for me.
+
+I swear Isaac was going to be impressed there.
+
+But I remembered from last time you taught us about gap.
+
+I don't quite remember.
+
+There was like gap and there was space, I think.
+
+So in this case, you probably do want space actually space X generally.
+
+Yeah.
+
+So it's around the X axis.
+
+Mostly, if you're working with a grid, you want gap and if you're not, you don't want space.
+
+Okay.
+
+It gets you pretty close.
+
+Okay.
+
+And I actually probably want that R aligned maybe.
+
+Or just fully spread because these are going to be squished a little bit.
+
+They're going to be in a grid.
+
+So that's a nice idea.
+
+So there's a div fully spaced in which case I don't need the class and that's going to make them as far apart as possible, right?
+
+Nice.
+
+And so then if I rerun that, that's cool.
+
+And I can try.
+
+It's not that easy.
+
+All right, it's cool.
+
+So then I could kind of see what that looks like again.
+
+So I could say card equals.
+
+And again, I think I remember this from last time you went grid.
+
+Card.
+
+That's probably both.
+
+Did you see that?
+
+Look at that.
+
+There you go.
+
+I mean, if you want to test a lot of them, you could do it that way.
+
+Oh, dear.
+
+And we can say how many columns you want.
+
+That's nice.
+
+Is it calls equals or class equals?
+
+Oh, here we are.
+
+So the default is it tries to pick for you.
+
+So if you pass in two items, it'll be a grid with two columns.
+
+It also has some defaults for the different sizes, but you can define how many you want on different size screens.
+
+So if you just say I want.
+
+So one thing I would probably do here, instead of saying calls large, I would say calls max, which is like, what are the maximum numbers of columns that this can have?
+
+And then it just says that's the most it'll ever have, but it still uses the default.
+
+So if you make the screen small enough, it should stack for you.
+
+Okay.
+
+Like for mobile.
+
+Cool.
+
+And then I might just add a thing here.
+
+Can you create a function which truncates text and if the text is longer than that amount, it adds an ellipsis to the end.
+
+It's a kind of thing that's super easy to write and it's like, but I don't want to because it should be fine.
+
+So I think, you know, I haven't, I think I've used it, but there is a truncate under text t.
+
+Oh, really?
+
+That's like a style.
+
+Okay.
+
+Yeah, it's part of frankenewi.
+
+I haven't actually used it before, but I know it's there.
+
+Okay.
+
+Tell me what to type and I'll give it a go.
+
+So you can do text t.
+
+So this is another class.
+
+So if you want more than one class, you can put them into a string and space separate them or you can use the tuple.
+
+And with these enums here, you can also use addition, but I quite like the tuple.
+
+Text t. t.
+
+Then you can look at all the options there, but in this case, we know it's truncate.
+
+Okay.
+
+And what does that mean?
+
+Like, it doesn't know how to truncate it.
+
+Right?
+
+No, like I said, I have not used it.
+
+I don't actually know.
+
+Okay.
+
+So be new for me.
+
+Cool.
+
+Oh, I see it just does one line.
+
+Truncate to one line.
+
+Which isn't really what we want.
+
+That might not be what we want.
+
+Okay.
+
+No worries.
+
+Okay. .
+
+That looks good.
+
+Okay.
+
+All right.
+
+So you guys happy we just used that?
+
+Yeah, it looks great.
+
+Okay.
+
+All right.
+
+I don't really feel I need to keep this stuff in my dialogue as I go.
+
+So then maybe I'm just going to move this up a little bit to try it out.
+
+So I truncate text.
+
+Am I going to use that there?
+
+So then we'll change this from description to truncate text.
+
+That's interesting.
+
+It kind of slightly went wrong there.
+
+Oh, I see because it doesn't know how to delete things.
+
+It's fine.
+
+Okay.
+
+So then I can just go run below.
+
+And yeah, looks reasonable.
+
+I guess the last thing I do on this, well, we haven't actually put this in a card.
+
+We've just called that Divar card, but sometimes it's nice to have a border.
+
+Yeah.
+
+Yeah.
+
+You also don't have a text.
+
+Should we do a text and then we'll put it all together?
+
+Okay.
+
+Yeah.
+
+Good idea.
+
+I think they're actually called categories there.
+
+And I remember last time we learned, I believe that we should use a label for that.
+
+And based on what I've learned so far, I'm going to guess that Isaac would tell me to use div, L alone.
+
+And so we've learned about map so we can map a label.
+
+Look at that to each of those categories.
+
+Is that am I on the right track there, Isaac?
+
+Yeah, it's exactly what I do.
+
+Okay.
+
+That's a great question.
+
+I haven't heard it.
+
+It doesn't need it anymore.
+
+I would start with just the default.
+
+There is a default spacing for you.
+
+Oh, trust trust.
+
+That's judgment.
+
+Oh, it's actually pretty good.
+
+Yeah.
+
+I think at some point in the last few months, I added the ability for FT components to take a generator or iterator or things like that without the star.
+
+And I keep forgetting it exists.
+
+So probably everybody's now following my lead by adding the star when we haven't needed it for months.
+
+So sorry about that.
+
+That's a good question in the chat, which is what about adding semantic tags like section and article and so forth.
+
+And instead of using div everywhere, how would you do that, Isaac?
+
+Yeah, so there are, you know, in the containers part of the docs, you can see there's, you know, there's articles there, there's containers, there's sections.
+
+And so we do have those.
+
+Where would I find that?
+
+Is that in containers?
+
+There's also every single HTML tag can be written as a function.
+
+So you can always do that.
+
+Yeah.
+
+So that's a monster UI one.
+
+So I'm just trying to think what's an example of one which wouldn't be, do you have details?
+
+Do you know?
+
+Thanks, sir.
+
+See if we got one that's there we go.
+
+And you can see all the various things you can add to it.
+
+So yeah, you can use any HTML tag.
+
+You can even, I use fast HTML create ones if you've got, you know, very, very custom tags.
+
+That's not part of standard HTML.
+
+So, okay.
+
+So I guess we, yeah, so maybe I'll just say please wrap the card creation into a concise function and also include the category labels in it.
+
+Obviously I could copy and paste, but who's got the time?
+
+We're busy answer AI staff members.
+
+We don't have time to type things ourselves.
+
+Did we not end up creating a function for our little calendar thing?
+
+No, we didn't.
+
+Oh, it's nice of it.
+
+That's cool.
+
+I feel like this isn't, this is very solvent like Rax.
+
+I feel like I understand this function, you know, which is saying something.
+
+Okay.
+
+And I don't think we should put image path equals there.
+
+This is something of a mistake.
+
+So I think paths are mutable.
+
+So for various reasons, it's actually a terrible idea.
+
+And notice it's also putting the categories.
+
+Oh, where are the categories?
+
+Yeah, like before the date there, but after the, yeah, so not such a fan of putting those there.
+
+Maybe one down.
+
+So this is still in that would be in the fully spaced bit, or do we want it underneath the author and the date?
+
+I think either I think it was in the date, or maybe even in the footer of the card.
+
+Oh, in the footer of the card.
+
+I like that idea.
+
+Footer.
+
+I can't see why it's not giving me, I can't, I can't see footer as an autocomplete option, which is a bit strange.
+
+Anyway.
+
+Like so.
+
+Yeah, I think so.
+
+And I know you briefly mentioned this before, Isaac, but like, what's the, what's, what's the difference conceptually?
+
+I don't like it in the footer because I really wanted to, I don't think I want it underneath the image, you know, okay.
+
+What's conceptually the difference between a footer and a header?
+
+The card will look just fine.
+
+Maybe you don't use footers headers.
+
+Okay.
+
+You know, my understanding is it helps for, you know, scraping and for sites to kind of understand how it's rendered.
+
+But in this case, in some frameworks, there's kind of like a big stylistic thing.
+
+And if you wanted to customize this and say like, hey, you know what, I really want the, the headers to stand out.
+
+So give those a light blue background.
+
+If you put it all in the body, you don't really have the ability to, to do that.
+
+Maybe you say like, hey, I want a divider between the header and the body, or I really want the footer to stand out because that's my, that's where I'm asking people to like make their purchase or something.
+
+So kind of remove some of that flexibility if you put it all there.
+
+If you're just using the defaults, it doesn't.
+
+How do I add a bit of spacing vertically here then?
+
+So let's go into our div that is that has all that stuff.
+
+And we can add a space, a class.
+
+And I'm just going to mention, I think it's quite nice to actually merge these and that way we'll immediately see the result as soon as we edit things.
+
+So your authors moved out of the div fully spaced is another.
+
+Oh, is that a mistake it made?
+
+Because I don't feel like I did that.
+
+Yeah.
+
+Interesting.
+
+Okay.
+
+So maybe I should have copied and pasted.
+
+Very interesting.
+
+Okay, cool.
+
+Yes.
+
+So sorry.
+
+I think you were saying to get a bit of space vertically.
+
+It's this div here needs some space vertically, right?
+
+Yeah.
+
+So we can add space, the class of space dash y.
+
+Ah, of course.
+
+Y axis space instead of x.
+
+Yeah, three sounds like a great start.
+
+Nice.
+
+Pretty perfect.
+
+Oh, it's interesting.
+
+It made me bold.
+
+I never asked it to do that.
+
+But I guess it decided.
+
+I don't mind.
+
+And I don't side of the author is very important.
+
+So oh, yeah.
+
+Yeah.
+
+Absolutely.
+
+Okay, great.
+
+Nice.
+
+So, so I feel like this is the key part of our index page, right?
+
+We're going to have a bunch of these in the grid.
+
+And when you click on one, we want to see the full post.
+
+And the full post, I believe, is going to be a lot easier because we just have the title and then the content, both of which we have.
+
+So great.
+
+We can put those together.
+
+Should we do the index page first to just do this?
+
+Yeah.
+
+Because we were kind of close, right?
+
+So, yeah.
+
+Grid.
+
+Let's do, oh, let's do that.
+
+But I was just going to call it four.
+
+Does that look all right?
+
+I'm asking when I could just try it.
+
+Oh, right.
+
+We need to get them all.
+
+I haven't got matters.
+
+And I guess we will want matters.
+
+So, matters equals.
+
+So I guess we need to list files in a directory.
+
+Well, we've kind of already got all that, right?
+
+So I guess let's just have the AI do that for us.
+
+Create a function which creates a list of the metadata sections for the grid using code that we've written already.
+
+So, okay.
+
+So I think we should pass in post file names.
+
+And very surprised to do it this way.
+
+Or if in post files get post zero.
+
+Okay.
+
+Oops.
+
+So get the post, get the metadata from it, and then sort all that by the date.
+
+Yep.
+
+Return it, I guess.
+
+And then that's it.
+
+Oh, return it.
+
+I think.
+
+Okay.
+
+That's fair.
+
+I could return it.
+
+And do we have, and I haven't been doing a good job of creating headings as I've gone.
+
+You've got post F names.
+
+But we do have post F names.
+
+It's kind of nice with this.
+
+It's doesn't matter quite so much if you're a little bit lazy.
+
+Okay.
+
+And then that's post F names.
+
+Okay.
+
+Yes.
+
+Cool.
+
+So we have to compare strings.
+
+That's call.
+
+Please create a function that we can use as our key function here.
+
+So it's going to, so the key is the function that's called gets called to decide how to sort things.
+
+So it just should be hopefully doing a convert the good heavens.
+
+That is way too complicated.
+
+Okay.
+
+No worries.
+
+Please create a simple concise function.
+
+It only needs to handle the date format that we've seen so far.
+
+I think this is the thing because a lot of people focus so much on like really enterprisey type stuff and people get points with their boss for creating stuff that's really over engineered.
+
+So this is kind of what you often find when you get it back.
+
+So you kind of have to convince it to actually write same things.
+
+Well, walls of code can look very impressive at a glance.
+
+I know, right?
+
+It's like, well, look at all the code you wrote.
+
+Yeah, have a pay rise.
+
+Well, so advanced area, it's like, look at all the code you wrote.
+
+What were you thinking?
+
+Why is there so much code?
+
+Okay.
+
+This instance, date time, date time is one of these very confusing modules in Python.
+
+And so we actually have, we've imported.
+
+Yes.
+
+I was going to say, is it that or is it that we're now using key equals post date and that isn't pulling out the date from the post?
+
+It's, oh, it is doing meta.date.
+
+Sorry.
+
+Ignore me.
+
+Yeah.
+
+Yeah.
+
+Now the issue is arg2 must be a type.
+
+And actually, date time.date is not a type.
+
+It's a method.
+
+How do we fix this?
+
+We pass it in a string.
+
+Does that convert it to a type?
+
+No, it doesn't.
+
+I don't think so.
+
+I have one in first core, which does code like r is instance.
+
+Yeah, that's what we needed, right?
+
+Copy.
+
+Paste.
+
+So that's what I was saying about date time.
+
+Date time module has a date time class in it.
+
+So date time.date was then referring to the method of date and the date time class.
+
+It's like insanely complicated, weird, and easy to confuse.
+
+Cool.
+
+But I think it's helpful to see all the ways in which one can mess this stuff up.
+
+All right.
+
+So then metas.
+
+Ah.
+
+So sometimes we don't have an image.
+
+So that's a good point.
+
+Um, what would you do in that situation, Isaac?
+
+Would you just put some kind of, I guess it depends, right?
+
+Could put a random placeholder image or?
+
+Yeah, there's, um, you can pick a placeholder image to use for everything if you want.
+
+Or you can go to pick some and you can either have a random image or you can pick an image that they've got available.
+
+And just load that if there's no, there's no image.
+
+Pick some, I like, because it's super easy.
+
+But yeah, eventually we could, I don't know, put a big image.
+
+Can you provide a URL for a random image that we could use when one is missing?
+
+I remember last time I think it used pick some for it last week, right?
+
+Yeah.
+
+I think there's a whole industry of placeholder kittens and placeholder trees and other such delightful services that you can use as well.
+
+All right.
+
+Okay.
+
+I only asked for a URL.
+
+It was a bit over enthusiastic.
+
+Okay.
+
+So we can delete that one.
+
+Delete that one.
+
+Delete that one.
+
+Okay.
+
+And then our image here will now be meta.get image comma, we've got path slash, right?
+
+So that's actually a bit of an issue.
+
+So I guess we'd say if image in meta image source equals image source equals else.
+
+So it's going to be that.
+
+Cut that out.
+
+Paste that there.
+
+Meta image if image in meta.
+
+Otherwise that source equals image source.
+
+And then we should probably move it out of the card, right?
+
+Oh, I thought I had, but I just missed it slightly.
+
+I was so proud of myself for moving it upwards.
+
+Okay.
+
+So then we should be able to say run below.
+
+Okay.
+
+Oh, and some things don't have a description.
+
+Well, that's one very easy to fix.
+
+So just put nothing at all there, right?
+
+Okay.
+
+Yeah, it's interesting how many little things you have to deal with, but I quite like doing it this way because I feel like we can fix things pretty directly.
+
+Cool.
+
+So yeah, how do you kind of deal with this kind of issue then?
+
+I guess I feel like this should probably be grid's one column grid at this point.
+
+Maybe the needs to, should we say like col small equals?
+
+Yeah, I would, I mean, in this case, if you're like, I always want it to be one column wide, you can say cols equals one and it'll never, it'll be that at all sizes.
+
+You want it to be two on larger screens?
+
+So you could also say like cols small is always going to be one as the default.
+
+You can say cols md from medium and you can also set that to one.
+
+Okay.
+
+Say like, you know, on medium screen a bit.
+
+Maybe I'll say like large or something.
+
+I guess it's actually a bit tricky because I don't know, like it doesn't know that it's actually inside a div here and because it's really not about the screen size.
+
+Oh, it's done four by default.
+
+So I should say cols equals.
+
+Oh, I see what you're saying that cols equals one.
+
+Cols.
+
+So I say cols equals one like that.
+
+Well, let's see.
+
+So this is, cols equals one is going to say it's going to be one at all, at all screen sizes.
+
+Yeah.
+
+And so if you want it too wide on some sizes, then what you would do is you would say, you know, like cols max of two and you can say I'm going to override maybe the medium size and say medium is also going to be size one.
+
+Okay.
+
+And that would have a small as well.
+
+And we can do cols underscore medium of two.
+
+The small size is in this case is as, yeah, it's covered because that's the default.
+
+Cool.
+
+Cool.
+
+Okay.
+
+I do find that like a side by side when you have an image and then text to the right of it is pretty hard to look great when you have multiple of them unless you're on a pretty large screen.
+
+So like in the, okay, documentation, I have one like a blog card and then like when I go small, you know, I have a swap out to say like image on top and then all the text below it.
+
+Oh, okay.
+
+All right.
+
+Well, now for now, let's just do it this way.
+
+We won't worry about fixing all these issues, but this is popping up things like, okay, we should have called render MD in our description.
+
+And apparently also we have sometimes names have URLs.
+
+Other than that, that looks pretty good.
+
+Yeah.
+
+Okay.
+
+Cool.
+
+And I would say like, when I, when I work on posts like this, can you scroll up some of the errors there?
+
+Like, you know, sometimes it's like, if I see, hey, I should have called render MD on that description, I might do it and see what it looks like.
+
+You know, for that first one, though, where it's like a list of dictionaries, rather than kind of trying to fix it on the function, I would kind of take a step back and be like, okay, I'm going to rebuild the function up and define on just that one blog card.
+
+Because that seems like it's complete.
+
+I'd be fiddling around with this.
+
+Yeah.
+
+So where we said post equals, we would close that with post equals the first chronologically.
+
+Yep.
+
+And then walk through the process step by step again until we're back to the function.
+
+Okay.
+
+All right.
+
+All right.
+
+So, John, I think we're finally up to your point, which was, yep.
+
+Well, so, okay, so now for both this and for any individual blog sites, I guess all we're doing is putting a title on it.
+
+And then in the blog case, we just put the markdown content, which we already have.
+
+And in the listings place, we put our grid.
+
+So I don't know if you want to do that final piece in here too, like combining it with the title and, you know, maybe like an article tag or something, or you want to do that.
+
+Yeah.
+
+Yeah.
+
+I wanted to have everything.
+
+I think it's a good idea to do everything here, like except for at this point, we can't handle interactivity, but we could do everything else.
+
+So we've got a blog card.
+
+And the thing to see.
+
+And then there's the path, there's the file names.
+
+Yeah.
+
+So here we are as well.
+
+Cool.
+
+So we can look at titles.
+
+And if you just do titles with like, give it a title and a, you know, a single paragraph, we can see what the HTML looks like, right?
+
+Oh, actually, well, because we won't, because it'll render it now, but we can, that's fine.
+
+We can print it.
+
+So print titled meta.title.
+
+Oh, that's right.
+
+Yeah.
+
+And this probably won't give us the XML still, right?
+
+This will give us the, oh, okay, I can do that too.
+
+Yep.
+
+This is the post.
+
+Okay, cool.
+
+And then to XML.
+
+Cool.
+
+And so this is something I'm guessing you'd see on the containers page on the most UI docs and in other various places as well, having this container class right here, it's called main and it's classes UK container.
+
+This is just like keeping it centered if the screen is ultra wide and applying a couple of extra styling tweaks and so on.
+
+But and then titled is our combining the, the heading and you can read a program and also the title up in the browser.
+
+So this seems like what we need for the post except we put the post mark down as the contents and then the same for the main page, right?
+
+The title would be answer your eyes blog and then the contents would be the grid that we made.
+
+Cool.
+
+Can you please create a simple function which displays the main post page?
+
+Given a file name.
+
+Okay.
+
+And this time it's kind of nice because even though it read all this for us, I understand all of it because it's copying everything from stuff we've done before, which is nice.
+
+The image normally you don't show again.
+
+I don't know if F name is defined.
+
+I don't know if it is.
+
+Okay.
+
+I guess that should be text text t bold or a text bold small either would work.
+
+Text t dot bold would be what the what it's trying to do.
+
+And I can fix this.
+
+It got left aligned.
+
+We've got the fully spaced author and then the calendar is tough.
+
+And then keep an eye on these parentheses, right?
+
+You can kind of see how they're colored and highlighted so you can see where you are.
+
+And then we've got our categories left aligned inside the left aligned.
+
+So presumably Well, this is going to be left to right, right?
+
+So we've got our title and author and then our categories and then our content, which seems like we'd want them vertically rather than.
+
+Yeah, exactly.
+
+I was not going to say so.
+
+So presumably you would just say div, right?
+
+Yeah, even needed a container.
+
+Yeah, you don't really.
+
+Well, I guess it's got spacing there.
+
+Yeah.
+
+So the div for those that use some CSS stuff, the div L aligned, I believe, is using Flexbox.
+
+Is that right?
+
+Isaac?
+
+That's right.
+
+Yeah.
+
+There's a fun, if you want to learn more about Flexbox, there's a fun Flexbox probably game you can look up or go to the back.
+
+Thank you for sharing it with me at one point.
+
+I did.
+
+But it's a really nice way to get a little bit of information about what it's doing.
+
+So your job is to make a cute frog get to their lily pad in 24 lessons.
+
+Cool.
+
+Okay.
+
+We are done, I guess.
+
+Ready to, do you think we're ready to move to Visual Studio?
+
+Yeah, I think so.
+
+Okay.
+
+So I'm just going to export and, or just copy and paste, I guess we only got like two of them, right?
+
+Basically, oh no, we've got more than two.
+
+Save ourselves a little bit of time.
+
+So we want this one and this one, this one, this one.
+
+Do we end up with two format dates?
+
+I'm not sure.
+
+I feel like we might have that somewhere else.
+
+Cool.
+
+Everything else we should have there already.
+
+So we go settings and export and download file.
+
+To downloads, call, go away.
+
+It's kind of to turn a nut to.
+
+Thanks Mac OS.
+
+There we go.
+
+Finally.
+
+Open downloads, that one.
+
+Great.
+
+Okay.
+
+That's stuff we've already got.
+
+I see because we already had some stuff exported from last time.
+
+That's stuff we can get rid of.
+
+That we can get rid of.
+
+So you can get rid of that.
+
+Okay.
+
+And then we can pop that over here.
+
+Move our import up to the top.
+
+Oopsie daisy.
+
+Okay.
+
+So we've got all of our bits kind of ready to go.
+
+Actually, that's...
+
+Oh, bad as it is.
+
+Yeah.
+
+And you can really see, I think we mentioned the extension called block man last time.
+
+You can see how helpful it is for this, you know, when you're using a kind of functional components approach to HTML, like we are here with fast HTML, you can really clearly see when I click on something exactly what is inside those parentheses.
+
+Or even if I don't click inside it, you can kind of see how it's all structured.
+
+And so to get that, you just go to extensions and you can search for block man.
+
+And the key thing in it is to make sure you go to settings.
+
+And there's a section here.
+
+Make sure you turn on analyze round brackets.
+
+And I basically turn off everything else and that's going to make round brackets get these nice things.
+
+The other thing that I wanted to show you all is that we showed this amazing, we're using a bit now, ghost text slash gray text slash inline completions in fast HTML.
+
+And in solve it, you mean in solve it.
+
+Thank you.
+
+And there's a really great new pair of things called llama.vim and llama.vs code by Giorgi Gjurganov, who is the creator of llama.cpp, really great guy.
+
+And he totally independently, we didn't know each other's work was happening, basically created exactly the same thing using exactly the same approach as our ghost text, but for vim and for visual studio code.
+
+And so I highly recommend giving it a go if you can.
+
+And like I'm just going to try it here.
+
+It might be interesting to see how it goes.
+
+So I'm going to go double quote.
+
+There we go.
+
+So I just hit tab and I can say format a date object as a string.
+
+And in fact, I could delete this now.
+
+Right.
+
+And then I could type e g.
+
+Isn't that sweet?
+
+So it's great for yeah, it's not just for like code completions, but also, you know, adding documentation.
+
+And does that model running on your machine?
+
+Yeah, it is.
+
+It's all about local.
+
+Let's add docs to all of these things.
+
+Oh, look, do you see how fast it is?
+
+It's like, it's insane, you know.
+
+What happened to our dict to option, by the way?
+
+Oh, I know, we've got like two versions of it now, I think is the post date get matters.
+
+Get post.
+
+Oh, I don't know.
+
+Yeah, so that is running here.
+
+So you can see I've run llama server.
+
+And I've said using the hugging face model Gwen Coder 14 B.
+
+And then there's a thing called speculative decoding, which basically says try and use a smaller three B model as much as you can.
+
+Get a whole bunch of tokens.
+
+And then later on, check with the bigger model to see if they look great.
+
+So this is like super fast.
+
+And yeah, everything here is just copied and pasted from the llama dot VS code and llama dot VIM websites.
+
+So like, you know, something that just happened totally accidentally today actually was I installed this into VIM as well.
+
+And we didn't have any categories on any of our blog posts or nearly none of our blog posts.
+
+And so I was like, okay, I don't know.
+
+So I was like, okay, I want to add categories to them.
+
+So I kind of start typing categories, colon, company, whatever.
+
+And it's kind of really interesting because then once I started like adding more your service not running anymore, my service not running anymore.
+
+Okay.
+
+So I guess that's going to be totally confused now.
+
+So I don't know if it's okay that it's not running company categories.
+
+Hmm.
+
+Yeah, it's possibly not having it running when I ran VIM caused the whole thing to fall apart.
+
+Oh, well, never mind.
+
+So basically what happened is it was great.
+
+I basically lined up whatever it was like 30, 40 something posts and added tags to the first one.
+
+I did that manually.
+
+And then the second one VIM just or you know, I typed CA and it auto generated categories, colon, square bracket, you know, and after did a couple more started generating the whole categories, colon, square bracket and the list of categories, they were nearly always correct.
+
+It was very impressive.
+
+So John, maybe in the last 10 minutes, is that enough time to give us a quick demo of like, what's going to happen next?
+
+Like we've, we saw this briefly in terms of like running our server, but it was really just quick overview.
+
+I think it'd be helpful to show people a bit more detail of what happens and then we'll kind of finish that off next time and add the interactivity to it.
+
+Does that sound reasonable?
+
+That sounds good.
+
+Yeah.
+
+Since that are working with the blog, I'll just go to a very minimal example.
+
+So, but this is pretty cool about like, I feel like the solvert way is taking off a bit here.
+
+Like if you check once you, once you all check this out, llama.vscode, you'll see how like, Giorgi's actually got like, quite a small number of tokens, it creates at a time, like I can really tell he's got the same spirit, you know, and it felt very solvety as I was adding tags to our posts.
+
+And even though it wasn't in a dialogue, because it had seen the edits in the same session, it knew exactly what tags I had, it knew how I was categorizing things.
+
+It was, it was amazing.
+
+Cool.
+
+So what I have here is a very minimal fast HTML app, right?
+
+So I'm creating the app and then this root decorator RT is how we specify different routes, which we'll talk about.
+
+And then the other thing I'm going to be using is I have opened a little debug window, right?
+
+So I'm going to clear this and then whenever I refresh this page, you'll be able to see, so I hit Ctrl R to refresh, my browser here makes a request to the server.
+
+And the request is to get you make that a little bigger.
+
+Yeah.
+
+Thanks.
+
+So I'm asking, please go to have this URL.
+
+And I'm feeding in some extra things as well.
+
+And the response comes back title container with Hello World and with our two paragraphs, right?
+
+So you can see how this code here, this is saying when someone gets the route, you know, just slash no, nothing else.
+
+That's the special index page.
+
+Return back this snippet.
+
+And what it's sending is this piece of HTML.
+
+And you can also see this if you go, I'm just going to make this one large and hit Ctrl Shift C to open the browser console, the network tab.
+
+So if I refresh here, you'll see a bunch of extra things because I have a bunch of extensions.
+
+But here, this is the main request.
+
+And I'll zoom in again shortly.
+
+The preview is what it's showing.
+
+This is the details, right?
+
+It's getting this URL and it's getting back a response.
+
+Our heading, our container, our paragraphs, and fast HTML is adding some extra things, right?
+
+Some styling and some default scripts and so on.
+
+Which is not getting shown in that debug view.
+
+But apart from that, you can see this idea.
+
+>> Comment in the chat.
+
+Debugging console is awesome.
+
+What is this?
+
+How do we use it?
+
+>> So for now, this is something I just whipped together for this lesson.
+
+I can show you what it looks like real quickly and I'll share this as well.
+
+Oops.
+
+Oh my goodness.
+
+Sorry.
+
+I don't know how Windows does things sometimes.
+
+This is something that's just listening.
+
+Before we process any request, we store it.
+
+After we process a request, we store the response and then display that.
+
+I'll share a post.
+
+>> You need to scroll how many lines of code you have.
+
+>> It's mostly styling.
+
+So that's what, 80 lines.
+
+>> I've been very good at that.
+
+>> This is all like, I just want to make things pretty and AI wrote it for me.
+
+So, yeah, the main part is adding this before and after listener and then having a page that shows those.
+
+>> What AI wrote it for you?
+
+Was that co-pilot chat?
+
+>> It was only this bit and I can't remember.
+
+Yeah, probably co-pilot chat.
+
+I just said, okay.
+
+Can you re-print this into something nice?
+
+Anyways, but don't worry about that.
+
+>> We'll make it available, right?
+
+>> But you can also do the same thing by looking at the network tab.
+
+Okay.
+
+So, there's this kind of like call and response thing.
+
+My browser requests the page and then it gets back the HTML.
+
+So, we can add another root.
+
+We can make an about page, right?
+
+The title is about page.
+
+And then we can add some content.
+
+This is my page.
+
+I guess I can make that a paragraph.
+
+And we can also add links.
+
+So, a link.
+
+Thank you, co-pilot.
+
+Very nice.
+
+Can tell us how to navigate.
+
+So, for the moment, if I want to navigate around, I have to manually enter in the address bar to about.
+
+And then I should.
+
+>> I think you need a print to see.
+
+>> Oh, thank you.
+
+Okay.
+
+So, here's my about page.
+
+And I'll head over to the debug view.
+
+You can see there was a request for localhost slash about.
+
+And the response came back with the HTML.
+
+And now, if I click this link, it triggers another request.
+
+Back to home.
+
+And I get the home page again.
+
+Right?
+
+So, this is kind of like the foundation of a lot of interactivity on the web is sending these requests and getting back these responses.
+
+And so, small spoiler alert for next week.
+
+We're also going to start to want to say, well, what if I don't want to change everything on the page?
+
+I want to keep the nav bar and most of the content.
+
+But I want to be able to, you know, give some search results or add a comment.
+
+One thing we can do is we can have some extra functionality through something that isn't default in all of the web, but that is used with a library called HTML.
+
+It plays very nicely with fast HTML.
+
+So, I'll put a little button and I'll say, click me.
+
+And then I will put a little container for the results, which is where I want to put something.
+
+You can imagine search results or a comment.
+
+Okay.
+
+So, I would like when I click this button.
+
+Live 11 days to come are at the end.
+
+Thank you.
+
+When I click this button, I would like something to appear in the results.
+
+And so, I can specify this behavior and we'll explain how this all works with HTML.
+
+So, okay.
+
+We'll call it search.
+
+Which results and then HX swap equals, let's go.
+
+All right.
+
+So, there's a few things I'm specifying here.
+
+But the key, the way to read this without that extra parentheses is this button is saying, when you click me, I want to send another request to a different address, but I want to do something with the results.
+
+I don't want to just replace the whole page.
+
+So, if I make a little root quickly, and then we're going to respond with just a paragraph that says, clicked.
+
+And hopefully, now when I go to my page, and I'll open the debug view as well, and clear that, I have my home page that I've got.
+
+When I click the button, there's a request.
+
+But instead of responding with the whole page, I just responded with this little snippet.
+
+And it went back into some part of the page.
+
+Right.
+
+And so, this kind of functionality of being able to either update the whole page if I want to go to about, or being able to update some part of the page with a very small snippet of HTML, all we're sending is this little paragraph.
+
+That's going to be the foundation on which we build these ideas of, okay, what if I put a request to search for a specific query, and then I come back with my results that are the results of that search.
+
+Or I put a request with a comment.
+
+We can feed in data using things called forms.
+
+I might get back something to add to the page that shows my comment.
+
+And be able to build up a lot more interactivity that way.
+
+So, small taste on a little demo of hopefully some pieces that we'll be expanding in the next lesson.
+
+Yeah.
+
+And I think if people are, you know, really can't wait till the next lesson, the Fast HTML Gallery has lots of examples of small pieces of this interactivity in different contexts.
+
+So, that's gallery.fastht.demo.
+
+Maybe drop a link in the Discord channel later.
+
+Yeah.
+
+Okay, great.
+
+So, yeah, this is something pretty new.
+
+I think the idea of developing interfaces in this kind of solvility way.
+
+Bottom up small pieces, two lines at a time, immediate results.
+
+I'd have to say for me that felt really good.
+
+It felt a lot better than my normal approach, but I'm just me.
+
+I don't know.
+
+Jono, what did you think of the process?
+
+Yeah.
+
+So, I've been trying this out on a few like little personal projects.
+
+And there's something about the immediacy of, oh, I've got just the piece that I'm looking at, right?
+
+And I want to change how this one bit of it looks or how it acts.
+
+Yeah.
+
+It's really nice being able to go to the place where I developed that.
+
+Like, oh, got the title bit and then I got the grid bit.
+
+I put them together.
+
+Yeah.
+
+So, it feels kind of nice.
+
+I don't know that I have the habit yet for what happens once I put it all into the app.
+
+And I want to work on it some more, you know, the back and forth.
+
+But it definitely feels very fun to have like, okay, I've got my dialogues, which are like my role, like building up of pieces.
+
+And then I put them all together in the app.
+
+And then at least for the things I'm building, they're small enough that I push them off into the world and I don't worry about them too much after that.
+
+So yeah, but I think it's fair to say that the fact that we ended up, we'll end up with, we have ended up with code in two places, isn't ideal.
+
+So as a company, hopefully we will continue to make, move more and more of stuff into, you know, into the Solvert platform or into a way that it's directly integrated or something so that you don't have to be copying and pasting.
+
+And particularly if you start then fixing bugs in VS code, rather than in Solvert, you kind of end up with this fork between the two.
+
+And then if you've got to try and add features, and you do it in Solvert, because it's convenient, but all the bug fixes aren't there, could get messy.
+
+So yeah, so this, anyway, but nonetheless, I do feel like that process, the thing that we just built felt much better than the kinds of things I normally build in HTML.
+
+So I'm encouraged, I would have to say.
+
+It's very exciting.
+
+It's, I don't know, it's very different to be able to like understand all the, all the drive pieces and like quickly change small things and constantly be seeing you know, what it looks like and if it errors.
+
+Definitely.
+
+Very helpful.
+
+Another current problem, minor problem, well, I don't know, a current problem is Solvert, the language model, can't see any of those outputs.
+
+So if you say like, why does that look wonky on the left hand side, it can't see that.
+
+So I'm thinking about stuff like, oh, it'll be cool.
+
+Maybe we can add like a ability to automatically include a screenshot of the output into the dialogue and stuff like that.
+
+So there's, I think there's things we can do to keep making this better, but it's already, yeah, it's already working well.
+
+So we'll finish that off next time.
+
+And I'm really looking forward to Jono seeing how you add in the, or you're going to have me add in the embeddings.
+
+And then we're going to have like a blog with Semantic Search.
+
+And at that point, since I've actually imported the entire Ansari blog into Solvert now, the posts, we're actually going to have a real life like I lived only running on my machine, I guess, but Semantic Search of the Ansari blog, which I don't know, I'm going to be very annoyed at the fact in the future that our real blog is in Quarto.
+
+So I think we're going to have to make this a proper blog product now.
+
+Otherwise, seems like it's going to be annoying.
+
+Cool.
+
+All right, we'll see some of you in the office hours.
+
+Otherwise, see you all next week.
+
+Oh yeah, office hours with Nate.
+
+Awesome.
+
+Bye.
+
+Bye.
